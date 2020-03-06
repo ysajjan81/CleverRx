@@ -8,7 +8,11 @@ import rootReducer from './reducers';
 import './assets/css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import DisplayMessage from './DisplayMessage'
+import RenderComp from './RenderComp';
+// import Student from './components/Student';
 
+// ReactDOM.render(<Student />, document.getElementById("root"));
 const store = createStore(
   rootReducer,
   compose(
@@ -29,13 +33,14 @@ styleLink.href = "https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css
 document.head.appendChild(styleLink);
 // end
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router>
-      <Route path={global.BASE_PATH} component={App} />
-    </Router>
-  </Provider>,
-  document.getElementById('root')
-);
+// ReactDOM.render(
+//   <Provider store={store}>
+//     <Router>
+//       <Route path={global.BASE_PATH} component={App} />
+//     </Router>
+//   </Provider>,
+//   document.getElementById('root')
+// );
+ReactDOM.render(<RenderComp />, document.getElementById("root"));
 
 serviceWorker.unregister();

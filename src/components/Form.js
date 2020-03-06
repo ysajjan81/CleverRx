@@ -281,6 +281,10 @@ class DetailsForm extends React.Component {
     return(
       <Row>
         <Form style={{'background':'#7DABEE', 'padding':'30px'}}>
+        <Form.Group widths='equal'>
+                <Form.Select fluid label='Hatespeech Category' options = {this.state.allCategories} onChange={this.handleMediaInputChange} />
+                <Form.Select fluid label='Hatespeech Target' options = {this.state.allTargets} onChange={this.handleSocietyInputChange} />
+          </Form.Group>
         <Form.Field style={{'width': '750px', 'textAlign':'center', 'margin': '0 auto'}} >
           <label>Search</label>
           <input />
@@ -292,10 +296,10 @@ class DetailsForm extends React.Component {
           </Form.Group>
           <Button type='submit' onClick = {this.sendData}>ADD</Button>
         <Form.Field  />
-          <Form.Group widths='equal'>
+          {/* <Form.Group widths='equal'>
                 <Form.Select fluid label='Hatespeech Category' options = {this.state.allCategories} onChange={this.handleMediaInputChange} />
                 <Form.Select fluid label='Hatespeech Target' options = {this.state.allTargets} onChange={this.handleSocietyInputChange} />
-          </Form.Group>
+          </Form.Group> */}
           <Button type='submit' onClick = {this.fetchData}>Search</Button>
 
         </Form>
