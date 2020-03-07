@@ -574,3 +574,9 @@ ul.twPc-Arrange {
   width: 100px;
   height: 50px;
 }
+.center-col {
+  flex: 1;
+  background: rgb(17, 3, 3);
+  height: 250px; 
+  overflow-y: scroll;
+}

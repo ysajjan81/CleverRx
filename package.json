@@ -38,6 +38,7 @@
     "react-tweet-embed": "^1.1.1",
     "react-twitter-embed": "^2.0.4",
     "react-twitter-widgets": "^1.7.1",
+    "react-wordcloud": "^1.1.1",
     "react-youtube": "^7.9.0",
     "reactstrap": "^7.1.0",
     "redux": "^4.0.1",
