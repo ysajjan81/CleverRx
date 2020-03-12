@@ -601,7 +601,8 @@ position: sticky;
   position: sticky;
   top: 0;
 }
-.Table{
+.Table
+{
   width: 100%;
   text-align: left;
   padding: 15px;
