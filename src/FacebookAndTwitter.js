@@ -1,7 +1,7 @@
 import React from "react";
 import { Icon, Table, Checkbox, Tab } from "semantic-ui-react";
 import DisplayMessage from './DisplayMessage';
-
+import MyTweets from './MyTweets';
 // const panes = [
 //   { menuItem: 'Facebook', render: () => <Tab.Pane loading>Tab 1 Content</Tab.Pane> },
 //   { menuItem: 'Twitter', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
@@ -23,7 +23,7 @@ const panes = [
   },
   {
     menuItem: 'Twitter',
-    render: () => <Tab.Pane attached={false}>{<DisplayMessage title="Tweets"/>}</Tab.Pane>,
+    render: () => <Tab.Pane attached={false}>{<MyTweets />}</Tab.Pane>,
     // render: () => <Tab.Pane attached={false}>Twitter Content ... </Tab.Pane>,
   },
 ]

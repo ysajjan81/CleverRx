@@ -178,7 +178,6 @@ getData = () =>
       <Form.Group>
       <Form.Field width ={14}>
     <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
-    {/* {this.getTopicData()} */}
     </Form.Field>
     <Form.Field>
       <Button onClick={this.getData}>Submit</Button>

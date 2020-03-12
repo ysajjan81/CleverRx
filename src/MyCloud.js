@@ -8,8 +8,9 @@ const styles = {
   large: {
     fontSize: 60,
     fontWeight: "bold"
-  },
-  small: {
+        },
+  small: 
+  {
     opacity: 0.7,
     fontSize: 16
   }
