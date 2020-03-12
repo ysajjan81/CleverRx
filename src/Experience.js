@@ -38,9 +38,7 @@ const Experience = () => (
             <Checkbox label='lupus' />
             </div>
             </Table.Cell>
-           
         <Table.Cell></Table.Cell>
-
       </Table.Row>
     </Table.Body>
   </Table>

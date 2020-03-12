@@ -134,7 +134,7 @@ class DetailsForm extends React.Component {
             var obj = {};
             for(var i = 0; i<data.length; i++){
               obj = {};
-              obj.key = i; obj.text = data[i]; obj.value = data[i];
+              obj.key = i; obj.text = data[i]; obj.value = data[i]; 
               cat.push(obj);
             }
           }
@@ -143,8 +143,6 @@ class DetailsForm extends React.Component {
             allTargets: cat
           });
   		});
-
-
   }
   fetchData(){
     this.setState({loading:true});

@@ -576,7 +576,34 @@ ul.twPc-Arrange {
 }
 .center-col {
   flex: 1;
-  background: rgb(17, 3, 3);
-  height: 250px; 
+  /* background: rgb(12, 0, 0); */
+  height: 500px; 
   overflow-y: scroll;
+  color: #364d79;
+  table-layout: fixed;
+  position: sticky;
 }
+.word-cloud {
+  height : 400px;
+  background-color: white;
+}
+.sticky{
+top: 0;
+position: sticky;
+}
+.card-st {
+  flex: 1;
+  /* background: rgb(12, 0, 0); */
+  height: 200px; 
+  overflow-y: scroll;
+  color: #364d79;
+  table-layout: fixed;
+  position: sticky;
+  top: 0;
+}
+.Table{
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+}
+
