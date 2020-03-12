@@ -22,7 +22,7 @@ class RenderComp extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
             myTopic:'',
             allInformation:[],
          }
@@ -34,8 +34,8 @@ class RenderComp extends Component {
     }
 
     render() {
-        return ( 
-            <div> 
+        return (
+            <div>
                 <HeaderBar></HeaderBar>
                 <Grid celled columns={2} divided inverted>
                     <Grid.Row stretched>
@@ -48,20 +48,40 @@ class RenderComp extends Component {
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-                    <Grid.Column width={16}>
-                        {/* <Segment><CardTable/></Segment> */}
+
+                    <Grid.Column width={8}>
+                    <h2>Card/Customer</h2>
                         <Segment>
-                            <SimpleTable title="Card/Customer"/></Segment>
-                        {/* <Segment><TableExampleError/></Segment> */}
+                            <h3>Card</h3><Segment><MyCloud/></Segment>
+                            <h3>Disease</h3><Segment><MyCloud/></Segment>
+                            <h3>Medication</h3><Segment><MyCloud/></Segment>
+                        </Segment>
+                    </Grid.Column>
+                    <Grid.Column width={8}>
+                      <Segment>
+                        <h3>Customer</h3><Segment><MyCloud/></Segment>
+                        <h3>Health</h3><Segment><MyCloud/></Segment>
+                        <h3>Inhaler</h3><Segment><MyCloud/></Segment>
+                      </Segment>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={16}>
-                        {/* <Segment><CardTable/></Segment> */}
-                        <Segment>
-                            <SimpleTable title="Insurance/Patient"/></Segment>
-                        {/* <Segment><TableExampleError/></Segment> */}
-                    </Grid.Column>
+
+                <Grid.Column width={8}>
+                <h2>Insurance/Patient</h2>
+                    <Segment>
+                        <h3>Insurance</h3><Segment><MyCloud/></Segment>
+                        <h3>Patient</h3><Segment><MyCloud/></Segment>
+                        <h3>Medication</h3><Segment><MyCloud/></Segment>
+                    </Segment>
+                </Grid.Column>
+                <Grid.Column width={8}>
+                  <Segment>
+                    <h3>Customer</h3><Segment><MyCloud/></Segment>
+                    <h3>Health</h3><Segment><MyCloud/></Segment>
+                    <h3>Inhaler</h3><Segment><MyCloud/></Segment>
+                  </Segment>
+                </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={16}>
@@ -76,12 +96,12 @@ class RenderComp extends Component {
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
-                        <h3>Memes</h3>
+                        <h3>Links</h3>
                         <DisplayMessage title='Memes'/>
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row> 
+                <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
                             <h3>Gifs</h3>
@@ -96,5 +116,5 @@ class RenderComp extends Component {
          );
     }
 }
- 
+
 export default RenderComp;
