@@ -1,0 +1,8234 @@
+[
+    {
+      "": 0,
+      "Phrase": "antibiotic overuse",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1,
+      "Phrase": "race patients",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 2,
+      "Phrase": "reimbursement",
+      "Frequency": 39,
+      "Topic": ""
+    },
+    {
+      "": 3,
+      "Phrase": "mail order",
+      "Frequency": 27,
+      "Topic": ""
+    },
+    {
+      "": 4,
+      "Phrase": "amoxicillin",
+      "Frequency": 4,
+      "Topic": "infection"
+    },
+    {
+      "": 5,
+      "Phrase": "synthroid",
+      "Frequency": 7,
+      "Topic": "thyroid"
+    },
+    {
+      "": 6,
+      "Phrase": "pharmacy membership programs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 7,
+      "Phrase": "#exercise",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 8,
+      "Phrase": "medication therapies",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 9,
+      "Phrase": "#support",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 10,
+      "Phrase": "quality transparency",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 11,
+      "Phrase": "problem",
+      "Frequency": 1018,
+      "Topic": ""
+    },
+    {
+      "": 12,
+      "Phrase": "penicillin",
+      "Frequency": 2,
+      "Topic": "common diseases"
+    },
+    {
+      "": 13,
+      "Phrase": "weight loss meds",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 14,
+      "Phrase": "hope",
+      "Frequency": 217,
+      "Topic": ""
+    },
+    {
+      "": 15,
+      "Phrase": "memory bracelets",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 16,
+      "Phrase": "medication savings",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 17,
+      "Phrase": "transparency solutions",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 18,
+      "Phrase": "healthcare transformers",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 19,
+      "Phrase": "gabapentin",
+      "Frequency": 8,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 20,
+      "Phrase": "insurance prices",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 21,
+      "Phrase": "consumer power",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 22,
+      "Phrase": "med pack",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 23,
+      "Phrase": "scam",
+      "Frequency": 122,
+      "Topic": ""
+    },
+    {
+      "": 24,
+      "Phrase": "congratulations",
+      "Frequency": 667,
+      "Topic": ""
+    },
+    {
+      "": 25,
+      "Phrase": "rebate system",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 26,
+      "Phrase": "sleep medication",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 27,
+      "Phrase": "consumer healthcare",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 28,
+      "Phrase": "quality control",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 29,
+      "Phrase": "healthcare landscape",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 30,
+      "Phrase": "rx discounts",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 31,
+      "Phrase": "shingles vaccines",
+      "Frequency": 1,
+      "Topic": "skin"
+    },
+    {
+      "": 32,
+      "Phrase": "insurance troubles",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 33,
+      "Phrase": "rosacea treatment",
+      "Frequency": 1,
+      "Topic": "skin"
+    },
+    {
+      "": 34,
+      "Phrase": "#competition",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 35,
+      "Phrase": "pillpack account today",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 36,
+      "Phrase": "ellipta inhaler",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 37,
+      "Phrase": "insulins",
+      "Frequency": 10,
+      "Topic": "diabetes"
+    },
+    {
+      "": 38,
+      "Phrase": "health",
+      "Frequency": 1904,
+      "Topic": ""
+    },
+    {
+      "": 39,
+      "Phrase": "retail price",
+      "Frequency": 16,
+      "Topic": ""
+    },
+    {
+      "": 40,
+      "Phrase": "health care pricing transparency",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 41,
+      "Phrase": "inflation",
+      "Frequency": 48,
+      "Topic": ""
+    },
+    {
+      "": 42,
+      "Phrase": "#marijuana",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 43,
+      "Phrase": "medications",
+      "Frequency": 697,
+      "Topic": ""
+    },
+    {
+      "": 44,
+      "Phrase": "#resolution",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 45,
+      "Phrase": "experts",
+      "Frequency": 347,
+      "Topic": ""
+    },
+    {
+      "": 46,
+      "Phrase": "#inclusion",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 47,
+      "Phrase": "pain medication",
+      "Frequency": 3,
+      "Topic": "pain"
+    },
+    {
+      "": 48,
+      "Phrase": "healthcare consumer",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 49,
+      "Phrase": "luxury",
+      "Frequency": 47,
+      "Topic": ""
+    },
+    {
+      "": 50,
+      "Phrase": "pill reminder app",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 51,
+      "Phrase": "prescription cream",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 52,
+      "Phrase": "tamiflu",
+      "Frequency": 15,
+      "Topic": "common diseases"
+    },
+    {
+      "": 53,
+      "Phrase": "blink health price",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 54,
+      "Phrase": "healthcare prices",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 55,
+      "Phrase": "plans",
+      "Frequency": 433,
+      "Topic": ""
+    },
+    {
+      "": 56,
+      "Phrase": "blood pressure medicine",
+      "Frequency": 1,
+      "Topic": "heart"
+    },
+    {
+      "": 57,
+      "Phrase": "community health center patients",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 58,
+      "Phrase": "treatment scams",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 59,
+      "Phrase": "#scams",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 60,
+      "Phrase": "#cancer treatments",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 61,
+      "Phrase": "insurance premiums",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 62,
+      "Phrase": "savings options",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 63,
+      "Phrase": "flu treatment",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 64,
+      "Phrase": "antibiotic resistance",
+      "Frequency": 5,
+      "Topic": "infection"
+    },
+    {
+      "": 65,
+      "Phrase": "health deals",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 66,
+      "Phrase": "travel meds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 67,
+      "Phrase": "#copay",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 68,
+      "Phrase": "#metformin",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 69,
+      "Phrase": "price cuts",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 70,
+      "Phrase": "healing power",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 71,
+      "Phrase": "improvement",
+      "Frequency": 52,
+      "Topic": ""
+    },
+    {
+      "": 72,
+      "Phrase": "income",
+      "Frequency": 232,
+      "Topic": ""
+    },
+    {
+      "": 73,
+      "Phrase": "#aspirin",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 74,
+      "Phrase": "copay cards",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 75,
+      "Phrase": "cost",
+      "Frequency": 646,
+      "Topic": ""
+    },
+    {
+      "": 76,
+      "Phrase": "disability entrance",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 77,
+      "Phrase": "premiums",
+      "Frequency": 68,
+      "Topic": ""
+    },
+    {
+      "": 78,
+      "Phrase": "#viagra",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 79,
+      "Phrase": "specialty drugs",
+      "Frequency": 29,
+      "Topic": ""
+    },
+    {
+      "": 80,
+      "Phrase": "blink price",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 81,
+      "Phrase": "goodrx customer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 82,
+      "Phrase": "prescription drug costs",
+      "Frequency": 26,
+      "Topic": ""
+    },
+    {
+      "": 83,
+      "Phrase": "#hope",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 84,
+      "Phrase": "drug combination",
+      "Frequency": 2,
+      "Topic": "cancer"
+    },
+    {
+      "": 85,
+      "Phrase": "comedians",
+      "Frequency": 20,
+      "Topic": ""
+    },
+    {
+      "": 86,
+      "Phrase": "specialty rx",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 87,
+      "Phrase": "drugs prices",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 88,
+      "Phrase": "flu vaccine options",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 89,
+      "Phrase": "shipment",
+      "Frequency": 28,
+      "Topic": ""
+    },
+    {
+      "": 90,
+      "Phrase": "prices today",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 91,
+      "Phrase": "costs",
+      "Frequency": 390,
+      "Topic": ""
+    },
+    {
+      "": 92,
+      "Phrase": "healthcare services",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 93,
+      "Phrase": "coupons",
+      "Frequency": 104,
+      "Topic": ""
+    },
+    {
+      "": 94,
+      "Phrase": "medicare",
+      "Frequency": 211,
+      "Topic": "insurance"
+    },
+    {
+      "": 95,
+      "Phrase": "lorazepam",
+      "Frequency": 2,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 96,
+      "Phrase": "mobility issues",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 97,
+      "Phrase": "valsartan",
+      "Frequency": 6,
+      "Topic": "heart"
+    },
+    {
+      "": 98,
+      "Phrase": "diabetes test strips",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 99,
+      "Phrase": "chaos",
+      "Frequency": 121,
+      "Topic": ""
+    },
+    {
+      "": 100,
+      "Phrase": "blink account",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 101,
+      "Phrase": "price madness",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 102,
+      "Phrase": "birth control pills",
+      "Frequency": 12,
+      "Topic": "birth control"
+    },
+    {
+      "": 103,
+      "Phrase": "fishing",
+      "Frequency": 18,
+      "Topic": ""
+    },
+    {
+      "": 104,
+      "Phrase": "solution",
+      "Frequency": 341,
+      "Topic": ""
+    },
+    {
+      "": 105,
+      "Phrase": "prescription drug prices",
+      "Frequency": 62,
+      "Topic": ""
+    },
+    {
+      "": 106,
+      "Phrase": "ointment",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 107,
+      "Phrase": "expense",
+      "Frequency": 66,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 108,
+      "Phrase": "#diabetes meds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 109,
+      "Phrase": "beta blockers",
+      "Frequency": 8,
+      "Topic": "heart"
+    },
+    {
+      "": 110,
+      "Phrase": "counter medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 111,
+      "Phrase": "bill",
+      "Frequency": 1026,
+      "Topic": ""
+    },
+    {
+      "": 112,
+      "Phrase": "coupon cards",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 113,
+      "Phrase": "savings club membership",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 114,
+      "Phrase": "januvia",
+      "Frequency": 7,
+      "Topic": "diabetes"
+    },
+    {
+      "": 115,
+      "Phrase": "specialty medications",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 116,
+      "Phrase": "#god",
+      "Frequency": 16,
+      "Topic": ""
+    },
+    {
+      "": 117,
+      "Phrase": "antihistamines",
+      "Frequency": 5,
+      "Topic": "allergy"
+    },
+    {
+      "": 118,
+      "Phrase": "brand drugs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 119,
+      "Phrase": "jardiance",
+      "Frequency": 1,
+      "Topic": "diabetes"
+    },
+    {
+      "": 120,
+      "Phrase": "epinephrine",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 121,
+      "Phrase": "cost savings",
+      "Frequency": 21,
+      "Topic": ""
+    },
+    {
+      "": 122,
+      "Phrase": "apologies",
+      "Frequency": 60,
+      "Topic": ""
+    },
+    {
+      "": 123,
+      "Phrase": "allergy medications",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 124,
+      "Phrase": "non coverage",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 125,
+      "Phrase": "medication prices",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 126,
+      "Phrase": "humana",
+      "Frequency": 18,
+      "Topic": "insurance"
+    },
+    {
+      "": 127,
+      "Phrase": "#advocate",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 128,
+      "Phrase": "shortage",
+      "Frequency": 65,
+      "Topic": ""
+    },
+    {
+      "": 129,
+      "Phrase": "acetaminophen",
+      "Frequency": 15,
+      "Topic": "pain"
+    },
+    {
+      "": 130,
+      "Phrase": "anxiety meds",
+      "Frequency": 2,
+      "Topic": "mental health"
+    },
+    {
+      "": 131,
+      "Phrase": "enrollment period",
+      "Frequency": 15,
+      "Topic": ""
+    },
+    {
+      "": 132,
+      "Phrase": "employer plans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 133,
+      "Phrase": "#healthcare #consumer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 134,
+      "Phrase": "model health care",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 135,
+      "Phrase": "health care savings",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 136,
+      "Phrase": "#experts",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 137,
+      "Phrase": "life changer",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 138,
+      "Phrase": "drug price information",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 139,
+      "Phrase": "migraine medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 140,
+      "Phrase": "flu vaccine",
+      "Frequency": 35,
+      "Topic": "common diseases"
+    },
+    {
+      "": 141,
+      "Phrase": "hiv status",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 142,
+      "Phrase": "hooch prednisone",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 143,
+      "Phrase": "eliquis",
+      "Frequency": 6,
+      "Topic": "heart"
+    },
+    {
+      "": 144,
+      "Phrase": "progesterone",
+      "Frequency": 4,
+      "Topic": "pregnancy"
+    },
+    {
+      "": 145,
+      "Phrase": "cancer meds",
+      "Frequency": 2,
+      "Topic": "cancer"
+    },
+    {
+      "": 146,
+      "Phrase": "healthcare nerds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 147,
+      "Phrase": "kick ass",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 148,
+      "Phrase": "medicare drug costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 149,
+      "Phrase": "blink voucher",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 150,
+      "Phrase": "patient",
+      "Frequency": 296,
+      "Topic": ""
+    },
+    {
+      "": 151,
+      "Phrase": "beer",
+      "Frequency": 120,
+      "Topic": ""
+    },
+    {
+      "": 152,
+      "Phrase": "#care",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 153,
+      "Phrase": "birth control subscription options",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 154,
+      "Phrase": "#misinformation",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 155,
+      "Phrase": "clinician",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 156,
+      "Phrase": "refundable",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 157,
+      "Phrase": "effectiveness concerns",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 158,
+      "Phrase": "god",
+      "Frequency": 1789,
+      "Topic": ""
+    },
+    {
+      "": 159,
+      "Phrase": "goodrx hq",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 160,
+      "Phrase": "disabilities",
+      "Frequency": 124,
+      "Topic": ""
+    },
+    {
+      "": 161,
+      "Phrase": "prescription costs",
+      "Frequency": 18,
+      "Topic": ""
+    },
+    {
+      "": 162,
+      "Phrase": "sufferers",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 163,
+      "Phrase": "support team",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 164,
+      "Phrase": "medication compliance",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 165,
+      "Phrase": "healthcare expenses",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 166,
+      "Phrase": "kind note",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 167,
+      "Phrase": "subscription service",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 168,
+      "Phrase": "insurance information",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 169,
+      "Phrase": "advantage plan",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 170,
+      "Phrase": "health care cost",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 171,
+      "Phrase": "health coverage",
+      "Frequency": 50,
+      "Topic": ""
+    },
+    {
+      "": 172,
+      "Phrase": "flu shot day",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 173,
+      "Phrase": "#goals",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 174,
+      "Phrase": "manufacturer savings cards",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 175,
+      "Phrase": "competence",
+      "Frequency": 13,
+      "Topic": ""
+    },
+    {
+      "": 176,
+      "Phrase": "kind words",
+      "Frequency": 20,
+      "Topic": ""
+    },
+    {
+      "": 177,
+      "Phrase": "asthma medications",
+      "Frequency": 1,
+      "Topic": "asthma"
+    },
+    {
+      "": 178,
+      "Phrase": "prescription decision support platform",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 179,
+      "Phrase": "treatment drug trials",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 180,
+      "Phrase": "pharmacy prices",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 181,
+      "Phrase": "#medicine",
+      "Frequency": 23,
+      "Topic": ""
+    },
+    {
+      "": 182,
+      "Phrase": "#insurance plans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 183,
+      "Phrase": "copay-insurance",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 184,
+      "Phrase": "copay",
+      "Frequency": 62,
+      "Topic": ""
+    },
+    {
+      "": 185,
+      "Phrase": "contraception",
+      "Frequency": 3,
+      "Topic": "birth control"
+    },
+    {
+      "": 186,
+      "Phrase": "coverage today",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 187,
+      "Phrase": "healthcare tech",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 188,
+      "Phrase": "arikayce",
+      "Frequency": 1,
+      "Topic": "infection"
+    },
+    {
+      "": 189,
+      "Phrase": "antihistamine",
+      "Frequency": 4,
+      "Topic": "allergy"
+    },
+    {
+      "": 190,
+      "Phrase": "#truth",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 191,
+      "Phrase": "blink health nation",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 192,
+      "Phrase": "membership prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 193,
+      "Phrase": "differences",
+      "Frequency": 103,
+      "Topic": ""
+    },
+    {
+      "": 194,
+      "Phrase": "medication optimization",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 195,
+      "Phrase": "healers",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 196,
+      "Phrase": "affordability",
+      "Frequency": 32,
+      "Topic": ""
+    },
+    {
+      "": 197,
+      "Phrase": "counter meds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 198,
+      "Phrase": "ambien",
+      "Frequency": 5,
+      "Topic": "addiction"
+    },
+    {
+      "": 199,
+      "Phrase": "cost transparency",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 200,
+      "Phrase": "honeybee tip",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 201,
+      "Phrase": "answers",
+      "Frequency": 155,
+      "Topic": ""
+    },
+    {
+      "": 202,
+      "Phrase": "ibuprofen",
+      "Frequency": 20,
+      "Topic": "inflammation"
+    },
+    {
+      "": 203,
+      "Phrase": "mica",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 204,
+      "Phrase": "transplant anti rejection",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 205,
+      "Phrase": "medication synchronization",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 206,
+      "Phrase": "startup health company",
+      "Frequency": 26,
+      "Topic": ""
+    },
+    {
+      "": 207,
+      "Phrase": "honeybee",
+      "Frequency": 32,
+      "Topic": ""
+    },
+    {
+      "": 208,
+      "Phrase": "#technology expertise",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 209,
+      "Phrase": "coverage sitch",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 210,
+      "Phrase": "pillpack schedule",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 211,
+      "Phrase": "satisfaction",
+      "Frequency": 49,
+      "Topic": ""
+    },
+    {
+      "": 212,
+      "Phrase": "state medicaid plans",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 213,
+      "Phrase": "blink health representative",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 214,
+      "Phrase": "yoga",
+      "Frequency": 39,
+      "Topic": ""
+    },
+    {
+      "": 215,
+      "Phrase": "savings tips page",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 216,
+      "Phrase": "birth control implant essure",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 217,
+      "Phrase": "humalog insulin",
+      "Frequency": 1,
+      "Topic": "diabetes"
+    },
+    {
+      "": 218,
+      "Phrase": "customers information",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 219,
+      "Phrase": "dysfunction drugs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 220,
+      "Phrase": "inhaler symbicort",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 221,
+      "Phrase": "customer service representative",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 222,
+      "Phrase": "#medicaid",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 223,
+      "Phrase": "brain medicine",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 224,
+      "Phrase": "middle-men",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 225,
+      "Phrase": "meditation",
+      "Frequency": 36,
+      "Topic": ""
+    },
+    {
+      "": 226,
+      "Phrase": "blood pressure drug",
+      "Frequency": 6,
+      "Topic": "heart"
+    },
+    {
+      "": 227,
+      "Phrase": "erectile dysfunction drugs",
+      "Frequency": 2,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 228,
+      "Phrase": "#medicines",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 229,
+      "Phrase": "pharmacy plan",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 230,
+      "Phrase": "health insurer",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 231,
+      "Phrase": "insurance co-pay",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 232,
+      "Phrase": "health services",
+      "Frequency": 23,
+      "Topic": ""
+    },
+    {
+      "": 233,
+      "Phrase": "rx price nightmares",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 234,
+      "Phrase": "allergy relief meds",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 235,
+      "Phrase": "savings",
+      "Frequency": 157,
+      "Topic": ""
+    },
+    {
+      "": 236,
+      "Phrase": "promotions",
+      "Frequency": 21,
+      "Topic": ""
+    },
+    {
+      "": 237,
+      "Phrase": "cost/quality options",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 238,
+      "Phrase": "chat functionality",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 239,
+      "Phrase": "iehp",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 240,
+      "Phrase": "security",
+      "Frequency": 436,
+      "Topic": ""
+    },
+    {
+      "": 241,
+      "Phrase": "frustration",
+      "Frequency": 58,
+      "Topic": ""
+    },
+    {
+      "": 242,
+      "Phrase": "drive prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 243,
+      "Phrase": "access",
+      "Frequency": 739,
+      "Topic": ""
+    },
+    {
+      "": 244,
+      "Phrase": "hiv prevention drug truvada",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 245,
+      "Phrase": "club prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 246,
+      "Phrase": "blink purchase",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 247,
+      "Phrase": "rx gold",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 248,
+      "Phrase": "#vaccinations",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 249,
+      "Phrase": "asthma drug qvar",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 250,
+      "Phrase": "honeybee pharmacists",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 251,
+      "Phrase": "prayers",
+      "Frequency": 335,
+      "Topic": ""
+    },
+    {
+      "": 252,
+      "Phrase": "birth",
+      "Frequency": 199,
+      "Topic": "birth control"
+    },
+    {
+      "": 253,
+      "Phrase": "cancer patients",
+      "Frequency": 19,
+      "Topic": ""
+    },
+    {
+      "": 254,
+      "Phrase": "insulin cost",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 255,
+      "Phrase": "opioids",
+      "Frequency": 19,
+      "Topic": "addiction"
+    },
+    {
+      "": 256,
+      "Phrase": "manufacturer coupons",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 257,
+      "Phrase": "hassle",
+      "Frequency": 23,
+      "Topic": ""
+    },
+    {
+      "": 258,
+      "Phrase": "derek goodrx gold",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 259,
+      "Phrase": "accountability",
+      "Frequency": 113,
+      "Topic": ""
+    },
+    {
+      "": 260,
+      "Phrase": "complications",
+      "Frequency": 43,
+      "Topic": ""
+    },
+    {
+      "": 261,
+      "Phrase": "healthcare disrupters",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 262,
+      "Phrase": "co-pays",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 263,
+      "Phrase": "headache med",
+      "Frequency": 1,
+      "Topic": "migraine"
+    },
+    {
+      "": 264,
+      "Phrase": "nsaids",
+      "Frequency": 14,
+      "Topic": "inflammation"
+    },
+    {
+      "": 265,
+      "Phrase": "botox",
+      "Frequency": 22,
+      "Topic": "migraine"
+    },
+    {
+      "": 266,
+      "Phrase": "beta blocker",
+      "Frequency": 1,
+      "Topic": "heart"
+    },
+    {
+      "": 267,
+      "Phrase": "hydrocodone-acetmtamin",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 268,
+      "Phrase": "health site",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 269,
+      "Phrase": "disability",
+      "Frequency": 176,
+      "Topic": ""
+    },
+    {
+      "": 270,
+      "Phrase": "bydureon",
+      "Frequency": 1,
+      "Topic": "diabetes"
+    },
+    {
+      "": 271,
+      "Phrase": "#security",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 272,
+      "Phrase": "antidepressant meds",
+      "Frequency": 1,
+      "Topic": "depression"
+    },
+    {
+      "": 273,
+      "Phrase": "asthma treatment qvar",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 274,
+      "Phrase": "albuterol",
+      "Frequency": 10,
+      "Topic": "asthma"
+    },
+    {
+      "": 275,
+      "Phrase": "flu treatment options",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 276,
+      "Phrase": "saviours",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 277,
+      "Phrase": "money saver",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 278,
+      "Phrase": "blood pressure medication",
+      "Frequency": 10,
+      "Topic": "heart"
+    },
+    {
+      "": 279,
+      "Phrase": "ritalin",
+      "Frequency": 2,
+      "Topic": "addiction"
+    },
+    {
+      "": 280,
+      "Phrase": "#vision",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 281,
+      "Phrase": "price",
+      "Frequency": 620,
+      "Topic": ""
+    },
+    {
+      "": 282,
+      "Phrase": "work/life balance",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 283,
+      "Phrase": "healthcare service",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 284,
+      "Phrase": "gift",
+      "Frequency": 855,
+      "Topic": ""
+    },
+    {
+      "": 285,
+      "Phrase": "health app today",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 286,
+      "Phrase": "kratom",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 287,
+      "Phrase": "#vaccine",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 288,
+      "Phrase": "#blessing",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 289,
+      "Phrase": "cost medications sales",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 290,
+      "Phrase": "contrave",
+      "Frequency": 1,
+      "Topic": "weight loss"
+    },
+    {
+      "": 291,
+      "Phrase": "asthma meds",
+      "Frequency": 2,
+      "Topic": "asthma"
+    },
+    {
+      "": 292,
+      "Phrase": "#medication costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 293,
+      "Phrase": "health care prices",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 294,
+      "Phrase": "qualifying items",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 295,
+      "Phrase": "thyroid med",
+      "Frequency": 2,
+      "Topic": "thyroid"
+    },
+    {
+      "": 296,
+      "Phrase": "opioid",
+      "Frequency": 15,
+      "Topic": "addiction"
+    },
+    {
+      "": 297,
+      "Phrase": "diet",
+      "Frequency": 130,
+      "Topic": ""
+    },
+    {
+      "": 298,
+      "Phrase": "medication transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 299,
+      "Phrase": "#medx",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 300,
+      "Phrase": "workout",
+      "Frequency": 68,
+      "Topic": ""
+    },
+    {
+      "": 301,
+      "Phrase": "middlemen profit",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 302,
+      "Phrase": "proof",
+      "Frequency": 342,
+      "Topic": ""
+    },
+    {
+      "": 303,
+      "Phrase": "price lookup",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 304,
+      "Phrase": "#cancer patients",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 305,
+      "Phrase": "pain relievers",
+      "Frequency": 4,
+      "Topic": "pain"
+    },
+    {
+      "": 306,
+      "Phrase": "cancer drug prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 307,
+      "Phrase": "drug test",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 308,
+      "Phrase": "jesus",
+      "Frequency": 638,
+      "Topic": ""
+    },
+    {
+      "": 309,
+      "Phrase": "price hike controversy",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 310,
+      "Phrase": "price transparency tools",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 311,
+      "Phrase": "healthcare transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 312,
+      "Phrase": "day med supply",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 313,
+      "Phrase": "#stress",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 314,
+      "Phrase": "#church",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 315,
+      "Phrase": "cbd",
+      "Frequency": 46,
+      "Topic": "addiction"
+    },
+    {
+      "": 316,
+      "Phrase": "life expectancy",
+      "Frequency": 29,
+      "Topic": ""
+    },
+    {
+      "": 317,
+      "Phrase": "prescriptions drug solutions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 318,
+      "Phrase": "#healthcare #innovation",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 319,
+      "Phrase": "effectiveness",
+      "Frequency": 36,
+      "Topic": ""
+    },
+    {
+      "": 320,
+      "Phrase": "stimulants",
+      "Frequency": 2,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 321,
+      "Phrase": "name drugs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 322,
+      "Phrase": "xarelto",
+      "Frequency": 6,
+      "Topic": "heart"
+    },
+    {
+      "": 323,
+      "Phrase": "asthma inhalers",
+      "Frequency": 8,
+      "Topic": "asthma"
+    },
+    {
+      "": 324,
+      "Phrase": "consumers",
+      "Frequency": 354,
+      "Topic": ""
+    },
+    {
+      "": 325,
+      "Phrase": "fight",
+      "Frequency": 409,
+      "Topic": ""
+    },
+    {
+      "": 326,
+      "Phrase": "prescription price",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 327,
+      "Phrase": "price comparison shopping",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 328,
+      "Phrase": "pressure",
+      "Frequency": 222,
+      "Topic": ""
+    },
+    {
+      "": 329,
+      "Phrase": "resolution",
+      "Frequency": 193,
+      "Topic": ""
+    },
+    {
+      "": 330,
+      "Phrase": "blink user",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 331,
+      "Phrase": "price information",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 332,
+      "Phrase": "day co-pay",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 333,
+      "Phrase": "name drug prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 334,
+      "Phrase": "keppra er",
+      "Frequency": 1,
+      "Topic": "addiction"
+    },
+    {
+      "": 335,
+      "Phrase": "cost reasons",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 336,
+      "Phrase": "medication costs",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 337,
+      "Phrase": "payment method",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 338,
+      "Phrase": "insurance company price",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 339,
+      "Phrase": "#payments",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 340,
+      "Phrase": "rx's",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 341,
+      "Phrase": "customer service",
+      "Frequency": 77,
+      "Topic": ""
+    },
+    {
+      "": 342,
+      "Phrase": "specialty drugs designation",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 343,
+      "Phrase": "allergy prescriptions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 344,
+      "Phrase": "spray flu vaccine",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 345,
+      "Phrase": "aspirin",
+      "Frequency": 25,
+      "Topic": "common diseases"
+    },
+    {
+      "": 346,
+      "Phrase": "insulin",
+      "Frequency": 233,
+      "Topic": "diabetes"
+    },
+    {
+      "": 347,
+      "Phrase": "disability rights advocate",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 348,
+      "Phrase": "#flu treatment",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 349,
+      "Phrase": "customer service specialists",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 350,
+      "Phrase": "hypertension drug",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 351,
+      "Phrase": "#diet",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 352,
+      "Phrase": "medication side effects",
+      "Frequency": 2,
+      "Topic": "side effects"
+    },
+    {
+      "": 353,
+      "Phrase": "prescription drug cartels",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 354,
+      "Phrase": "perles",
+      "Frequency": 1,
+      "Topic": "common diseases"
+    },
+    {
+      "": 355,
+      "Phrase": "gym",
+      "Frequency": 168,
+      "Topic": ""
+    },
+    {
+      "": 356,
+      "Phrase": "sanofi",
+      "Frequency": 49,
+      "Topic": "diabetes"
+    },
+    {
+      "": 357,
+      "Phrase": "home delivery experience",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 358,
+      "Phrase": "#healthcare landscape",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 359,
+      "Phrase": "non-insulin diabetes drugs work",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 360,
+      "Phrase": "nsaid",
+      "Frequency": 4,
+      "Topic": "inflammation"
+    },
+    {
+      "": 361,
+      "Phrase": "customer data",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 362,
+      "Phrase": "medicine",
+      "Frequency": 469,
+      "Topic": ""
+    },
+    {
+      "": 363,
+      "Phrase": "blink health customer care team",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 364,
+      "Phrase": "#premiums",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 365,
+      "Phrase": "#risk",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 366,
+      "Phrase": "day supply",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 367,
+      "Phrase": "crestor)",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 368,
+      "Phrase": "policy changes",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 369,
+      "Phrase": "hiv drugs",
+      "Frequency": 7,
+      "Topic": "hiv"
+    },
+    {
+      "": 370,
+      "Phrase": "blink health team",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 371,
+      "Phrase": "competition",
+      "Frequency": 185,
+      "Topic": ""
+    },
+    {
+      "": 372,
+      "Phrase": "beelievers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 373,
+      "Phrase": "ingredient quality issues",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 374,
+      "Phrase": "quality",
+      "Frequency": 304,
+      "Topic": ""
+    },
+    {
+      "": 375,
+      "Phrase": "telemedicine service",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 376,
+      "Phrase": "#medication",
+      "Frequency": 19,
+      "Topic": ""
+    },
+    {
+      "": 377,
+      "Phrase": "proton pump inhibitors",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 378,
+      "Phrase": "price data",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 379,
+      "Phrase": "birth control package",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 380,
+      "Phrase": "inconveniences",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 381,
+      "Phrase": "savings tips",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 382,
+      "Phrase": "rx cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 383,
+      "Phrase": "anti-epileptic",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 384,
+      "Phrase": "heartburn drug",
+      "Frequency": 1,
+      "Topic": "side effects"
+    },
+    {
+      "": 385,
+      "Phrase": "honeybee health",
+      "Frequency": 17,
+      "Topic": ""
+    },
+    {
+      "": 386,
+      "Phrase": "drug price relief",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 387,
+      "Phrase": "customer support team",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 388,
+      "Phrase": "friendships",
+      "Frequency": 31,
+      "Topic": ""
+    },
+    {
+      "": 389,
+      "Phrase": "client",
+      "Frequency": 109,
+      "Topic": ""
+    },
+    {
+      "": 390,
+      "Phrase": "#prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 391,
+      "Phrase": "rebate",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 392,
+      "Phrase": "honeybee pharmacist",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 393,
+      "Phrase": "convenience",
+      "Frequency": 49,
+      "Topic": ""
+    },
+    {
+      "": 394,
+      "Phrase": "mail pharmacy",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 395,
+      "Phrase": "cholesterol drug",
+      "Frequency": 3,
+      "Topic": "cholesterol"
+    },
+    {
+      "": 396,
+      "Phrase": "#love",
+      "Frequency": 13,
+      "Topic": ""
+    },
+    {
+      "": 397,
+      "Phrase": "medicare plan",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 398,
+      "Phrase": "pain relief options",
+      "Frequency": 2,
+      "Topic": "pain"
+    },
+    {
+      "": 399,
+      "Phrase": "drug pricing transparency law",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 400,
+      "Phrase": "care",
+      "Frequency": 1229,
+      "Topic": ""
+    },
+    {
+      "": 401,
+      "Phrase": "protonix coupon",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 402,
+      "Phrase": "advil",
+      "Frequency": 9,
+      "Topic": "inflammation"
+    },
+    {
+      "": 403,
+      "Phrase": "cash pay",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 404,
+      "Phrase": "price drop",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 405,
+      "Phrase": "decongestants",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 406,
+      "Phrase": "drug pricing today",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 407,
+      "Phrase": "insurance plans",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 408,
+      "Phrase": "#opportunity",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 409,
+      "Phrase": "mercy",
+      "Frequency": 74,
+      "Topic": ""
+    },
+    {
+      "": 410,
+      "Phrase": "healthcare transformer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 411,
+      "Phrase": "thyroid medication",
+      "Frequency": 7,
+      "Topic": "thyroid"
+    },
+    {
+      "": 412,
+      "Phrase": "technology expertise",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 413,
+      "Phrase": "cancer drugs",
+      "Frequency": 9,
+      "Topic": "cancer"
+    },
+    {
+      "": 414,
+      "Phrase": "support staff",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 415,
+      "Phrase": "epilepsy drug epidiolex",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 416,
+      "Phrase": "#jesus",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 417,
+      "Phrase": "medigap plan",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 418,
+      "Phrase": "availability",
+      "Frequency": 37,
+      "Topic": ""
+    },
+    {
+      "": 419,
+      "Phrase": "drug cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 420,
+      "Phrase": "amzn",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 421,
+      "Phrase": "name medications",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 422,
+      "Phrase": "estrogen",
+      "Frequency": 14,
+      "Topic": "birth control"
+    },
+    {
+      "": 423,
+      "Phrase": "prescription prices way",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 424,
+      "Phrase": "medication discount program",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 425,
+      "Phrase": "sleep apnea sufferers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 426,
+      "Phrase": "patients",
+      "Frequency": 2039,
+      "Topic": ""
+    },
+    {
+      "": 427,
+      "Phrase": "#healthcare options",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 428,
+      "Phrase": "insurance- cost",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 429,
+      "Phrase": "overpayments",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 430,
+      "Phrase": "risks",
+      "Frequency": 162,
+      "Topic": ""
+    },
+    {
+      "": 431,
+      "Phrase": "customer experience",
+      "Frequency": 34,
+      "Topic": ""
+    },
+    {
+      "": 432,
+      "Phrase": "godsend",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 433,
+      "Phrase": "relaxant",
+      "Frequency": 4,
+      "Topic": "heart"
+    },
+    {
+      "": 434,
+      "Phrase": "discount services",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 435,
+      "Phrase": "blood donation",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 436,
+      "Phrase": "blink experience",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 437,
+      "Phrase": "empathy cards",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 438,
+      "Phrase": "affiliate program",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 439,
+      "Phrase": "coverage networks",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 440,
+      "Phrase": "insurance giants",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 441,
+      "Phrase": "hiv medications",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 442,
+      "Phrase": "hipaa-compliant",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 443,
+      "Phrase": "flu shots",
+      "Frequency": 37,
+      "Topic": "common diseases"
+    },
+    {
+      "": 444,
+      "Phrase": "drug rebates",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 445,
+      "Phrase": "benadryl",
+      "Frequency": 7,
+      "Topic": "allergy"
+    },
+    {
+      "": 446,
+      "Phrase": "dialysis",
+      "Frequency": 23,
+      "Topic": ""
+    },
+    {
+      "": 447,
+      "Phrase": "sport",
+      "Frequency": 64,
+      "Topic": ""
+    },
+    {
+      "": 448,
+      "Phrase": "#rx costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 449,
+      "Phrase": "#diskus",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 450,
+      "Phrase": "problems",
+      "Frequency": 485,
+      "Topic": ""
+    },
+    {
+      "": 451,
+      "Phrase": "prescription discounts",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 452,
+      "Phrase": "healthcare innovation",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 453,
+      "Phrase": "#healthcare price transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 454,
+      "Phrase": "privacy",
+      "Frequency": 194,
+      "Topic": ""
+    },
+    {
+      "": 455,
+      "Phrase": "savings program information",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 456,
+      "Phrase": "common antibiotic",
+      "Frequency": 3,
+      "Topic": "infection"
+    },
+    {
+      "": 457,
+      "Phrase": "referral coupons",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 458,
+      "Phrase": "medicare insurance",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 459,
+      "Phrase": "#cms",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 460,
+      "Phrase": "brand name drug",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 461,
+      "Phrase": "doxycycline",
+      "Frequency": 4,
+      "Topic": "infection"
+    },
+    {
+      "": 462,
+      "Phrase": "pricing info",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 463,
+      "Phrase": "anxiety medications",
+      "Frequency": 2,
+      "Topic": "mental health"
+    },
+    {
+      "": 464,
+      "Phrase": "#dialysis",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 465,
+      "Phrase": "brand name listing",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 466,
+      "Phrase": "medicare benefit",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 467,
+      "Phrase": "#chaos",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 468,
+      "Phrase": "accept blink",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 469,
+      "Phrase": "#cbd",
+      "Frequency": 13,
+      "Topic": ""
+    },
+    {
+      "": 470,
+      "Phrase": "prescription eyedrops",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 471,
+      "Phrase": "reminders app",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 472,
+      "Phrase": "weight loss options",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 473,
+      "Phrase": "hospital funds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 474,
+      "Phrase": "vaccines",
+      "Frequency": 109,
+      "Topic": "common diseases"
+    },
+    {
+      "": 475,
+      "Phrase": "drug savings programs",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 476,
+      "Phrase": "pocket costs",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 477,
+      "Phrase": "rx price",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 478,
+      "Phrase": "patients access",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 479,
+      "Phrase": "heaven",
+      "Frequency": 118,
+      "Topic": ""
+    },
+    {
+      "": 480,
+      "Phrase": "saving",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 481,
+      "Phrase": "price hikes",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 482,
+      "Phrase": "quantity limits",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 483,
+      "Phrase": "blinkers",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 484,
+      "Phrase": "shipments",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 485,
+      "Phrase": "#antibiotics",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 486,
+      "Phrase": "customer care team",
+      "Frequency": 20,
+      "Topic": ""
+    },
+    {
+      "": 487,
+      "Phrase": "glucose monitors",
+      "Frequency": 4,
+      "Topic": "diabetes"
+    },
+    {
+      "": 488,
+      "Phrase": "humalog",
+      "Frequency": 12,
+      "Topic": "diabetes"
+    },
+    {
+      "": 489,
+      "Phrase": "urea",
+      "Frequency": 3,
+      "Topic": "skin"
+    },
+    {
+      "": 490,
+      "Phrase": "healthcare consumer solution",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 491,
+      "Phrase": "#birthcontrol",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 492,
+      "Phrase": "healing",
+      "Frequency": 65,
+      "Topic": ""
+    },
+    {
+      "": 493,
+      "Phrase": "#gift",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 494,
+      "Phrase": "doctor-recommended alternatives",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 495,
+      "Phrase": "blink health site",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 496,
+      "Phrase": "ins",
+      "Frequency": 34,
+      "Topic": ""
+    },
+    {
+      "": 497,
+      "Phrase": "deal-finding services",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 498,
+      "Phrase": "price-fixing",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 499,
+      "Phrase": "coreg",
+      "Frequency": 1,
+      "Topic": "heart"
+    },
+    {
+      "": 500,
+      "Phrase": "pricing transparency hype",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 501,
+      "Phrase": "rx delivery",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 502,
+      "Phrase": "coupon",
+      "Frequency": 97,
+      "Topic": ""
+    },
+    {
+      "": 503,
+      "Phrase": "cost healthcare",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 504,
+      "Phrase": "drug errors",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 505,
+      "Phrase": "cigna",
+      "Frequency": 27,
+      "Topic": "insurance"
+    },
+    {
+      "": 506,
+      "Phrase": "medicines",
+      "Frequency": 120,
+      "Topic": ""
+    },
+    {
+      "": 507,
+      "Phrase": "#customer service",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 508,
+      "Phrase": "blink rx",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 509,
+      "Phrase": "pharmacy reimbursement",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 510,
+      "Phrase": "clopidogrel",
+      "Frequency": 4,
+      "Topic": "heart"
+    },
+    {
+      "": 511,
+      "Phrase": "#clients",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 512,
+      "Phrase": "blink today",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 513,
+      "Phrase": "relationships",
+      "Frequency": 205,
+      "Topic": ""
+    },
+    {
+      "": 514,
+      "Phrase": "price options",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 515,
+      "Phrase": "greed",
+      "Frequency": 103,
+      "Topic": ""
+    },
+    {
+      "": 516,
+      "Phrase": "#accountability",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 517,
+      "Phrase": "cost information",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 518,
+      "Phrase": "advocate",
+      "Frequency": 214,
+      "Topic": ""
+    },
+    {
+      "": 519,
+      "Phrase": "list manufacturer coupons",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 520,
+      "Phrase": "medication discount card",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 521,
+      "Phrase": "promotion",
+      "Frequency": 43,
+      "Topic": ""
+    },
+    {
+      "": 522,
+      "Phrase": "consumer reports",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 523,
+      "Phrase": "shipping time",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 524,
+      "Phrase": "medication mistakes",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 525,
+      "Phrase": "mail delivery process",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 526,
+      "Phrase": "prescription coverage policy",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 527,
+      "Phrase": "medicaid",
+      "Frequency": 43,
+      "Topic": "insurance"
+    },
+    {
+      "": 528,
+      "Phrase": "medicare/medicaid",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 529,
+      "Phrase": "truvada",
+      "Frequency": 4,
+      "Topic": "hiv"
+    },
+    {
+      "": 530,
+      "Phrase": "thnx",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 531,
+      "Phrase": "snacks",
+      "Frequency": 59,
+      "Topic": ""
+    },
+    {
+      "": 532,
+      "Phrase": "longevity",
+      "Frequency": 34,
+      "Topic": ""
+    },
+    {
+      "": 533,
+      "Phrase": "fluoxetine",
+      "Frequency": 2,
+      "Topic": "depression"
+    },
+    {
+      "": 534,
+      "Phrase": "smartwatch",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 535,
+      "Phrase": "service expectation",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 536,
+      "Phrase": "#flu shot",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 537,
+      "Phrase": "churches",
+      "Frequency": 55,
+      "Topic": ""
+    },
+    {
+      "": 538,
+      "Phrase": "lamotrigine",
+      "Frequency": 2,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 539,
+      "Phrase": "#healthcare consumer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 540,
+      "Phrase": "weight loss medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 541,
+      "Phrase": "pain reliever",
+      "Frequency": 4,
+      "Topic": "pain"
+    },
+    {
+      "": 542,
+      "Phrase": "#health",
+      "Frequency": 85,
+      "Topic": ""
+    },
+    {
+      "": 543,
+      "Phrase": "healthcare access",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 544,
+      "Phrase": "patients thousands",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 545,
+      "Phrase": "insulin pens",
+      "Frequency": 5,
+      "Topic": "diabetes"
+    },
+    {
+      "": 546,
+      "Phrase": "worry",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 547,
+      "Phrase": "sildenafil",
+      "Frequency": 1,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 548,
+      "Phrase": "zyrtec",
+      "Frequency": 2,
+      "Topic": "allergy"
+    },
+    {
+      "": 549,
+      "Phrase": "overdose",
+      "Frequency": 19,
+      "Topic": ""
+    },
+    {
+      "": 550,
+      "Phrase": "blood glucose meters",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 551,
+      "Phrase": "#healthcare prices",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 552,
+      "Phrase": "paxil",
+      "Frequency": 2,
+      "Topic": "depression"
+    },
+    {
+      "": 553,
+      "Phrase": "day glucose monitoring system",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 554,
+      "Phrase": "nerve pain medicines",
+      "Frequency": 6,
+      "Topic": "pain"
+    },
+    {
+      "": 555,
+      "Phrase": "obamacare",
+      "Frequency": 110,
+      "Topic": "insurance"
+    },
+    {
+      "": 556,
+      "Phrase": "worries",
+      "Frequency": 55,
+      "Topic": ""
+    },
+    {
+      "": 557,
+      "Phrase": "diskus",
+      "Frequency": 3,
+      "Topic": "asthma"
+    },
+    {
+      "": 558,
+      "Phrase": "diabetes patient",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 559,
+      "Phrase": "treatment costs",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 560,
+      "Phrase": "insurer",
+      "Frequency": 30,
+      "Topic": ""
+    },
+    {
+      "": 561,
+      "Phrase": "#obamacare",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 562,
+      "Phrase": "#healthcare access",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 563,
+      "Phrase": "relief",
+      "Frequency": 84,
+      "Topic": ""
+    },
+    {
+      "": 564,
+      "Phrase": "hair loss meds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 565,
+      "Phrase": "drug delivery",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 566,
+      "Phrase": "cards",
+      "Frequency": 167,
+      "Topic": ""
+    },
+    {
+      "": 567,
+      "Phrase": "shout",
+      "Frequency": 59,
+      "Topic": ""
+    },
+    {
+      "": 568,
+      "Phrase": "middleman",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 569,
+      "Phrase": "membership discount programs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 570,
+      "Phrase": "#honeybee",
+      "Frequency": 28,
+      "Topic": ""
+    },
+    {
+      "": 571,
+      "Phrase": "lasix",
+      "Frequency": 5,
+      "Topic": "heart"
+    },
+    {
+      "": 572,
+      "Phrase": "#ambien",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 573,
+      "Phrase": "manufacturer copay offer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 574,
+      "Phrase": "inhalation",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 575,
+      "Phrase": "weight loss medication contrave",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 576,
+      "Phrase": "medication pricing transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 577,
+      "Phrase": "#opioids",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 578,
+      "Phrase": "rip-off",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 579,
+      "Phrase": "insurance deductibles",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 580,
+      "Phrase": "rescue inhalers",
+      "Frequency": 3,
+      "Topic": "asthma"
+    },
+    {
+      "": 581,
+      "Phrase": "savings club",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 582,
+      "Phrase": "cash prices",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 583,
+      "Phrase": "#generics",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 584,
+      "Phrase": "generics",
+      "Frequency": 50,
+      "Topic": "diabetes"
+    },
+    {
+      "": 585,
+      "Phrase": "health solutions",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 586,
+      "Phrase": "#customer",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 587,
+      "Phrase": "thanks",
+      "Frequency": 5181,
+      "Topic": ""
+    },
+    {
+      "": 588,
+      "Phrase": "price alert",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 589,
+      "Phrase": "epi-pen",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 590,
+      "Phrase": "expenses",
+      "Frequency": 44,
+      "Topic": ""
+    },
+    {
+      "": 591,
+      "Phrase": "lipitor",
+      "Frequency": 4,
+      "Topic": "cholesterol"
+    },
+    {
+      "": 592,
+      "Phrase": "athletes",
+      "Frequency": 76,
+      "Topic": ""
+    },
+    {
+      "": 593,
+      "Phrase": "rob americans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 594,
+      "Phrase": "#insurance payments",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 595,
+      "Phrase": "humira",
+      "Frequency": 13,
+      "Topic": "arthritis"
+    },
+    {
+      "": 596,
+      "Phrase": "pharmacy care",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 597,
+      "Phrase": "refusal",
+      "Frequency": 38,
+      "Topic": ""
+    },
+    {
+      "": 598,
+      "Phrase": "warfarin",
+      "Frequency": 14,
+      "Topic": "heart"
+    },
+    {
+      "": 599,
+      "Phrase": "allergy meds",
+      "Frequency": 7,
+      "Topic": "allergy"
+    },
+    {
+      "": 600,
+      "Phrase": "healthcare transparency shopping",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 601,
+      "Phrase": "dissatisfaction",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 602,
+      "Phrase": "flu meds",
+      "Frequency": 3,
+      "Topic": "common diseases"
+    },
+    {
+      "": 603,
+      "Phrase": "coverage options",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 604,
+      "Phrase": "rx affiliate programs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 605,
+      "Phrase": "rise",
+      "Frequency": 385,
+      "Topic": ""
+    },
+    {
+      "": 606,
+      "Phrase": "payments",
+      "Frequency": 89,
+      "Topic": ""
+    },
+    {
+      "": 607,
+      "Phrase": "healthcare transparency consumer payments",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 608,
+      "Phrase": "billing",
+      "Frequency": 59,
+      "Topic": ""
+    },
+    {
+      "": 609,
+      "Phrase": "cash money",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 610,
+      "Phrase": "insurance design model",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 611,
+      "Phrase": "pens cost",
+      "Frequency": 1,
+      "Topic": "diabetes"
+    },
+    {
+      "": 612,
+      "Phrase": "diabetes medication",
+      "Frequency": 5,
+      "Topic": "diabetes"
+    },
+    {
+      "": 613,
+      "Phrase": "#consumers",
+      "Frequency": 42,
+      "Topic": ""
+    },
+    {
+      "": 614,
+      "Phrase": "abomination",
+      "Frequency": 32,
+      "Topic": ""
+    },
+    {
+      "": 615,
+      "Phrase": "revolution",
+      "Frequency": 101,
+      "Topic": ""
+    },
+    {
+      "": 616,
+      "Phrase": "customer service person",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 617,
+      "Phrase": "#brand equivalent",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 618,
+      "Phrase": "rx plan",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 619,
+      "Phrase": "patient solutions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 620,
+      "Phrase": "viagra",
+      "Frequency": 34,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 621,
+      "Phrase": "honey",
+      "Frequency": 70,
+      "Topic": ""
+    },
+    {
+      "": 622,
+      "Phrase": "government health plan",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 623,
+      "Phrase": "#telemedicine",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 624,
+      "Phrase": "pharmacy patients",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 625,
+      "Phrase": "tadalafil",
+      "Frequency": 2,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 626,
+      "Phrase": "honeybee health owner",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 627,
+      "Phrase": "drug-discount website",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 628,
+      "Phrase": "rehab rating",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 629,
+      "Phrase": "levothyroxine",
+      "Frequency": 5,
+      "Topic": "thyroid"
+    },
+    {
+      "": 630,
+      "Phrase": "glucose monitor",
+      "Frequency": 6,
+      "Topic": "diabetes"
+    },
+    {
+      "": 631,
+      "Phrase": "lifetime",
+      "Frequency": 165,
+      "Topic": ""
+    },
+    {
+      "": 632,
+      "Phrase": "home delivery service",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 633,
+      "Phrase": "price transparency/empowering",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 634,
+      "Phrase": "chantix",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 635,
+      "Phrase": "healthcare solutions",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 636,
+      "Phrase": "bill insurance",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 637,
+      "Phrase": "deductibles",
+      "Frequency": 46,
+      "Topic": ""
+    },
+    {
+      "": 638,
+      "Phrase": "bfs insurance limits",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 639,
+      "Phrase": "birth control medications",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 640,
+      "Phrase": "price transparency panel",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 641,
+      "Phrase": "treatment accuracy",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 642,
+      "Phrase": "nightmares",
+      "Frequency": 36,
+      "Topic": ""
+    },
+    {
+      "": 643,
+      "Phrase": "#patients",
+      "Frequency": 67,
+      "Topic": ""
+    },
+    {
+      "": 644,
+      "Phrase": "premium savings program",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 645,
+      "Phrase": "prescription drug delivery",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 646,
+      "Phrase": "#healthcare cost",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 647,
+      "Phrase": "difference",
+      "Frequency": 669,
+      "Topic": ""
+    },
+    {
+      "": 648,
+      "Phrase": "blink",
+      "Frequency": 86,
+      "Topic": ""
+    },
+    {
+      "": 649,
+      "Phrase": "#brands",
+      "Frequency": 15,
+      "Topic": ""
+    },
+    {
+      "": 650,
+      "Phrase": "benefit",
+      "Frequency": 161,
+      "Topic": ""
+    },
+    {
+      "": 651,
+      "Phrase": "hsa",
+      "Frequency": 13,
+      "Topic": ""
+    },
+    {
+      "": 652,
+      "Phrase": "xanax",
+      "Frequency": 24,
+      "Topic": "mental health"
+    },
+    {
+      "": 653,
+      "Phrase": "diazepam",
+      "Frequency": 5,
+      "Topic": "mental health"
+    },
+    {
+      "": 654,
+      "Phrase": "#experience",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 655,
+      "Phrase": "zolgensma",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 656,
+      "Phrase": "tylenol",
+      "Frequency": 14,
+      "Topic": "common diseases"
+    },
+    {
+      "": 657,
+      "Phrase": "goal",
+      "Frequency": 475,
+      "Topic": ""
+    },
+    {
+      "": 658,
+      "Phrase": "safety standards",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 659,
+      "Phrase": "pharmacy coupon",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 660,
+      "Phrase": "#prescriptiondrugs",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 661,
+      "Phrase": "invincibility",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 662,
+      "Phrase": "hug",
+      "Frequency": 43,
+      "Topic": ""
+    },
+    {
+      "": 663,
+      "Phrase": "benzodiazepines",
+      "Frequency": 1,
+      "Topic": "mental health"
+    },
+    {
+      "": 664,
+      "Phrase": "life saver",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 665,
+      "Phrase": "#insurance coverage",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 666,
+      "Phrase": "insurance status",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 667,
+      "Phrase": "brand name drugs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 668,
+      "Phrase": "skin creams",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 669,
+      "Phrase": "holistic environment",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 670,
+      "Phrase": "#health site",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 671,
+      "Phrase": "cancer drug",
+      "Frequency": 9,
+      "Topic": "cancer"
+    },
+    {
+      "": 672,
+      "Phrase": "consumer guidance",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 673,
+      "Phrase": "rebates",
+      "Frequency": 28,
+      "Topic": ""
+    },
+    {
+      "": 674,
+      "Phrase": "#healthcare sector",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 675,
+      "Phrase": "prices",
+      "Frequency": 438,
+      "Topic": ""
+    },
+    {
+      "": 676,
+      "Phrase": "truth",
+      "Frequency": 1219,
+      "Topic": ""
+    },
+    {
+      "": 677,
+      "Phrase": "inhalers",
+      "Frequency": 15,
+      "Topic": "asthma"
+    },
+    {
+      "": 678,
+      "Phrase": "co-pay money",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 679,
+      "Phrase": "customers",
+      "Frequency": 684,
+      "Topic": ""
+    },
+    {
+      "": 680,
+      "Phrase": "shingles shot",
+      "Frequency": 2,
+      "Topic": "skin"
+    },
+    {
+      "": 681,
+      "Phrase": "drug price hikes",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 682,
+      "Phrase": "hospital art",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 683,
+      "Phrase": "mealtime insulin humalog",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 684,
+      "Phrase": "savings tip",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 685,
+      "Phrase": "pocket healthcare costs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 686,
+      "Phrase": "proton-pump inhibitors",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 687,
+      "Phrase": "weight loss medication",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 688,
+      "Phrase": "#rx price",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 689,
+      "Phrase": "#opioid",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 690,
+      "Phrase": "imitrex",
+      "Frequency": 2,
+      "Topic": "migraine"
+    },
+    {
+      "": 691,
+      "Phrase": "sufferer",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 692,
+      "Phrase": "benefits",
+      "Frequency": 384,
+      "Topic": ""
+    },
+    {
+      "": 693,
+      "Phrase": "quickcare",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 694,
+      "Phrase": "drug pricing transparency",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 695,
+      "Phrase": "metformin",
+      "Frequency": 50,
+      "Topic": "diabetes"
+    },
+    {
+      "": 696,
+      "Phrase": "healthcare sector",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 697,
+      "Phrase": "coverage restrictions",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 698,
+      "Phrase": "jesus christ",
+      "Frequency": 96,
+      "Topic": ""
+    },
+    {
+      "": 699,
+      "Phrase": "#healthcare tech",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 700,
+      "Phrase": "pricing",
+      "Frequency": 106,
+      "Topic": ""
+    },
+    {
+      "": 701,
+      "Phrase": "death",
+      "Frequency": 718,
+      "Topic": ""
+    },
+    {
+      "": 702,
+      "Phrase": "cost/quality transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 703,
+      "Phrase": "crestor",
+      "Frequency": 1,
+      "Topic": "cholesterol"
+    },
+    {
+      "": 704,
+      "Phrase": "treatment options",
+      "Frequency": 39,
+      "Topic": ""
+    },
+    {
+      "": 705,
+      "Phrase": "drug shortage",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 706,
+      "Phrase": "#wheelchair",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 707,
+      "Phrase": "honesty",
+      "Frequency": 74,
+      "Topic": ""
+    },
+    {
+      "": 708,
+      "Phrase": "asthma medication",
+      "Frequency": 1,
+      "Topic": "asthma"
+    },
+    {
+      "": 709,
+      "Phrase": "commercial payments",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 710,
+      "Phrase": "healthcare",
+      "Frequency": 1039,
+      "Topic": ""
+    },
+    {
+      "": 711,
+      "Phrase": "diets",
+      "Frequency": 22,
+      "Topic": ""
+    },
+    {
+      "": 712,
+      "Phrase": "bible",
+      "Frequency": 82,
+      "Topic": ""
+    },
+    {
+      "": 713,
+      "Phrase": "cash",
+      "Frequency": 417,
+      "Topic": ""
+    },
+    {
+      "": 714,
+      "Phrase": "claritin",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 715,
+      "Phrase": "#disability",
+      "Frequency": 15,
+      "Topic": ""
+    },
+    {
+      "": 716,
+      "Phrase": "retail pharmacy pricing",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 717,
+      "Phrase": "uncertainty",
+      "Frequency": 31,
+      "Topic": ""
+    },
+    {
+      "": 718,
+      "Phrase": "quality guidelines",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 719,
+      "Phrase": "diabetes drug",
+      "Frequency": 14,
+      "Topic": "diabetes"
+    },
+    {
+      "": 720,
+      "Phrase": "nerve pain medication",
+      "Frequency": 3,
+      "Topic": "pain"
+    },
+    {
+      "": 721,
+      "Phrase": "rebates limit consumer choice",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 722,
+      "Phrase": "heartburn treatments",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 723,
+      "Phrase": "kudos",
+      "Frequency": 21,
+      "Topic": ""
+    },
+    {
+      "": 724,
+      "Phrase": "blood monitoring",
+      "Frequency": 3,
+      "Topic": "diabetes"
+    },
+    {
+      "": 725,
+      "Phrase": "sleep supplements",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 726,
+      "Phrase": "advantage",
+      "Frequency": 222,
+      "Topic": ""
+    },
+    {
+      "": 727,
+      "Phrase": "positivity",
+      "Frequency": 27,
+      "Topic": ""
+    },
+    {
+      "": 728,
+      "Phrase": "health costs /price transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 729,
+      "Phrase": "patients health",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 730,
+      "Phrase": "employer health plans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 731,
+      "Phrase": "hormone-free treatment",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 732,
+      "Phrase": "support group",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 733,
+      "Phrase": "allergy reliever zyrtec",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 734,
+      "Phrase": "acyclovir",
+      "Frequency": 1,
+      "Topic": "common diseases"
+    },
+    {
+      "": 735,
+      "Phrase": "allergy medication prescriptions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 736,
+      "Phrase": "care plans",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 737,
+      "Phrase": "aetna",
+      "Frequency": 18,
+      "Topic": "insurance"
+    },
+    {
+      "": 738,
+      "Phrase": "discounts",
+      "Frequency": 88,
+      "Topic": ""
+    },
+    {
+      "": 739,
+      "Phrase": "medicaid/molina",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 740,
+      "Phrase": "prescriptions cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 741,
+      "Phrase": "limitations",
+      "Frequency": 32,
+      "Topic": ""
+    },
+    {
+      "": 742,
+      "Phrase": "card",
+      "Frequency": 243,
+      "Topic": ""
+    },
+    {
+      "": 743,
+      "Phrase": "wellbeing",
+      "Frequency": 55,
+      "Topic": ""
+    },
+    {
+      "": 744,
+      "Phrase": "drug hikes",
+      "Frequency": 2,
+      "Topic": "addiction"
+    },
+    {
+      "": 745,
+      "Phrase": "co-pay",
+      "Frequency": 16,
+      "Topic": ""
+    },
+    {
+      "": 746,
+      "Phrase": "goals",
+      "Frequency": 222,
+      "Topic": ""
+    },
+    {
+      "": 747,
+      "Phrase": "combination meds",
+      "Frequency": 1,
+      "Topic": "cancer"
+    },
+    {
+      "": 748,
+      "Phrase": "#longevity",
+      "Frequency": 42,
+      "Topic": ""
+    },
+    {
+      "": 749,
+      "Phrase": "sleep aid",
+      "Frequency": 4,
+      "Topic": "addiction"
+    },
+    {
+      "": 750,
+      "Phrase": "coupon app",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 751,
+      "Phrase": "drug costs",
+      "Frequency": 57,
+      "Topic": ""
+    },
+    {
+      "": 752,
+      "Phrase": "rx discount",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 753,
+      "Phrase": "price prescription drugs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 754,
+      "Phrase": "drug prices",
+      "Frequency": 168,
+      "Topic": ""
+    },
+    {
+      "": 755,
+      "Phrase": "#cannabis",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 756,
+      "Phrase": "heart medicine",
+      "Frequency": 2,
+      "Topic": "heart"
+    },
+    {
+      "": 757,
+      "Phrase": "vaccine",
+      "Frequency": 121,
+      "Topic": "common diseases"
+    },
+    {
+      "": 758,
+      "Phrase": "healthcare advocates",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 759,
+      "Phrase": "cost barriers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 760,
+      "Phrase": "drug interactions",
+      "Frequency": 7,
+      "Topic": "side effects"
+    },
+    {
+      "": 761,
+      "Phrase": "#gym",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 762,
+      "Phrase": "price transparency",
+      "Frequency": 36,
+      "Topic": ""
+    },
+    {
+      "": 763,
+      "Phrase": "insurance provider",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 764,
+      "Phrase": "insurance benefits",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 765,
+      "Phrase": "prescription medicine mistakes",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 766,
+      "Phrase": "sports",
+      "Frequency": 158,
+      "Topic": ""
+    },
+    {
+      "": 767,
+      "Phrase": "triathlete",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 768,
+      "Phrase": "denial",
+      "Frequency": 86,
+      "Topic": ""
+    },
+    {
+      "": 769,
+      "Phrase": "manufacturer coupon",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 770,
+      "Phrase": "amlodipine",
+      "Frequency": 4,
+      "Topic": "heart"
+    },
+    {
+      "": 771,
+      "Phrase": "hiv treatments",
+      "Frequency": 4,
+      "Topic": "hiv"
+    },
+    {
+      "": 772,
+      "Phrase": "cvs caremark plan",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 773,
+      "Phrase": "zoloft",
+      "Frequency": 3,
+      "Topic": "depression"
+    },
+    {
+      "": 774,
+      "Phrase": "med errors",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 775,
+      "Phrase": "#contraception",
+      "Frequency": 25,
+      "Topic": ""
+    },
+    {
+      "": 776,
+      "Phrase": "thc",
+      "Frequency": 16,
+      "Topic": "pregnancy"
+    },
+    {
+      "": 777,
+      "Phrase": "#benefits",
+      "Frequency": 16,
+      "Topic": ""
+    },
+    {
+      "": 778,
+      "Phrase": "health app",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 779,
+      "Phrase": "#insurance",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 780,
+      "Phrase": "medication optimization api",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 781,
+      "Phrase": "solutions",
+      "Frequency": 291,
+      "Topic": ""
+    },
+    {
+      "": 782,
+      "Phrase": "prices update",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 783,
+      "Phrase": "allergy relief med",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 784,
+      "Phrase": "injection process",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 785,
+      "Phrase": "prescription policies",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 786,
+      "Phrase": "#humana",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 787,
+      "Phrase": "#goodrx",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 788,
+      "Phrase": "drug list",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 789,
+      "Phrase": "inhaler",
+      "Frequency": 18,
+      "Topic": "asthma"
+    },
+    {
+      "": 790,
+      "Phrase": "drugs cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 791,
+      "Phrase": "#savings",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 792,
+      "Phrase": "customer",
+      "Frequency": 158,
+      "Topic": ""
+    },
+    {
+      "": 793,
+      "Phrase": "#insurance companies",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 794,
+      "Phrase": "vision",
+      "Frequency": 212,
+      "Topic": ""
+    },
+    {
+      "": 795,
+      "Phrase": "fitness resolutions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 796,
+      "Phrase": "consumer experience",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 797,
+      "Phrase": "spironolactone",
+      "Frequency": 3,
+      "Topic": "heart"
+    },
+    {
+      "": 798,
+      "Phrase": "#tylenol",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 799,
+      "Phrase": "coupon provider",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 800,
+      "Phrase": "price transparency manifesto part",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 801,
+      "Phrase": "price difference",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 802,
+      "Phrase": "consumer empowerment",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 803,
+      "Phrase": "cannabis",
+      "Frequency": 65,
+      "Topic": "addiction"
+    },
+    {
+      "": 804,
+      "Phrase": "shingles pain relief",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 805,
+      "Phrase": "keppra rx",
+      "Frequency": 1,
+      "Topic": "addiction"
+    },
+    {
+      "": 806,
+      "Phrase": "flu medicines",
+      "Frequency": 2,
+      "Topic": "common diseases"
+    },
+    {
+      "": 807,
+      "Phrase": "dysfunction meds",
+      "Frequency": 2,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 808,
+      "Phrase": "brands",
+      "Frequency": 209,
+      "Topic": ""
+    },
+    {
+      "": 809,
+      "Phrase": "marijuana",
+      "Frequency": 126,
+      "Topic": "addiction"
+    },
+    {
+      "": 810,
+      "Phrase": "#goodrxhelps",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 811,
+      "Phrase": "stress",
+      "Frequency": 174,
+      "Topic": ""
+    },
+    {
+      "": 812,
+      "Phrase": "adderall",
+      "Frequency": 20,
+      "Topic": "addiction"
+    },
+    {
+      "": 813,
+      "Phrase": "wheelchair",
+      "Frequency": 51,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 814,
+      "Phrase": "drug pricing",
+      "Frequency": 47,
+      "Topic": ""
+    },
+    {
+      "": 815,
+      "Phrase": "drug price transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 816,
+      "Phrase": "customer service team",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 817,
+      "Phrase": "blood pressure meds",
+      "Frequency": 5,
+      "Topic": "heart"
+    },
+    {
+      "": 818,
+      "Phrase": "job pill pack",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 819,
+      "Phrase": "treatments",
+      "Frequency": 119,
+      "Topic": ""
+    },
+    {
+      "": 820,
+      "Phrase": "heart medications",
+      "Frequency": 2,
+      "Topic": "heart"
+    },
+    {
+      "": 821,
+      "Phrase": "assistance",
+      "Frequency": 116,
+      "Topic": ""
+    },
+    {
+      "": 822,
+      "Phrase": "#healthcare costs",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 823,
+      "Phrase": "limits consumer choice",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 824,
+      "Phrase": "#flu meds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 825,
+      "Phrase": "self-worth",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 826,
+      "Phrase": "rewards",
+      "Frequency": 43,
+      "Topic": ""
+    },
+    {
+      "": 827,
+      "Phrase": "gifts",
+      "Frequency": 467,
+      "Topic": ""
+    },
+    {
+      "": 828,
+      "Phrase": "help desk",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 829,
+      "Phrase": "tele-health",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 830,
+      "Phrase": "#snacks",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 831,
+      "Phrase": "diabetes medicine",
+      "Frequency": 7,
+      "Topic": "diabetes"
+    },
+    {
+      "": 832,
+      "Phrase": "drug list prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 833,
+      "Phrase": "health data",
+      "Frequency": 47,
+      "Topic": ""
+    },
+    {
+      "": 834,
+      "Phrase": "shipping methods",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 835,
+      "Phrase": "telemedicine apps",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 836,
+      "Phrase": "medication thanks",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 837,
+      "Phrase": "supply shortages",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 838,
+      "Phrase": "assistance program",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 839,
+      "Phrase": "kind feedback",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 840,
+      "Phrase": "medications cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 841,
+      "Phrase": "specialty drugs cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 842,
+      "Phrase": "hepatitis drug",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 843,
+      "Phrase": "qvar redihaler",
+      "Frequency": 1,
+      "Topic": "asthma"
+    },
+    {
+      "": 844,
+      "Phrase": "z-pak",
+      "Frequency": 1,
+      "Topic": "infection"
+    },
+    {
+      "": 845,
+      "Phrase": "cross",
+      "Frequency": 58,
+      "Topic": ""
+    },
+    {
+      "": 846,
+      "Phrase": "strength",
+      "Frequency": 228,
+      "Topic": ""
+    },
+    {
+      "": 847,
+      "Phrase": "#client",
+      "Frequency": 25,
+      "Topic": ""
+    },
+    {
+      "": 848,
+      "Phrase": "data-driven healthcare",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 849,
+      "Phrase": "#customers",
+      "Frequency": 36,
+      "Topic": ""
+    },
+    {
+      "": 850,
+      "Phrase": "antibiotic",
+      "Frequency": 21,
+      "Topic": "infection"
+    },
+    {
+      "": 851,
+      "Phrase": "asthma prescriptions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 852,
+      "Phrase": "#medicare",
+      "Frequency": 86,
+      "Topic": ""
+    },
+    {
+      "": 853,
+      "Phrase": "antibiotics",
+      "Frequency": 71,
+      "Topic": "infection"
+    },
+    {
+      "": 854,
+      "Phrase": "caregiving",
+      "Frequency": 16,
+      "Topic": ""
+    },
+    {
+      "": 855,
+      "Phrase": "sudafed",
+      "Frequency": 2,
+      "Topic": "infection"
+    },
+    {
+      "": 856,
+      "Phrase": "price comparisons",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 857,
+      "Phrase": "error",
+      "Frequency": 121,
+      "Topic": ""
+    },
+    {
+      "": 858,
+      "Phrase": "#meds",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 859,
+      "Phrase": "prescription pain relievers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 860,
+      "Phrase": "anticoagulant",
+      "Frequency": 3,
+      "Topic": "heart"
+    },
+    {
+      "": 861,
+      "Phrase": "statins",
+      "Frequency": 11,
+      "Topic": "cholesterol"
+    },
+    {
+      "": 862,
+      "Phrase": "#flu vaccine",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 863,
+      "Phrase": "#workout",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 864,
+      "Phrase": "#costs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 865,
+      "Phrase": "shame",
+      "Frequency": 390,
+      "Topic": ""
+    },
+    {
+      "": 866,
+      "Phrase": "text message reminders",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 867,
+      "Phrase": "medication therapy management",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 868,
+      "Phrase": "misinformation",
+      "Frequency": 72,
+      "Topic": ""
+    },
+    {
+      "": 869,
+      "Phrase": "coverage gap",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 870,
+      "Phrase": "infant antibiotics",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 871,
+      "Phrase": "insurance companies",
+      "Frequency": 77,
+      "Topic": ""
+    },
+    {
+      "": 872,
+      "Phrase": "misdiagnosis",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 873,
+      "Phrase": "clarinex",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 874,
+      "Phrase": "flu vaccines",
+      "Frequency": 14,
+      "Topic": "common diseases"
+    },
+    {
+      "": 875,
+      "Phrase": "prescription ins",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 876,
+      "Phrase": "pharmacy discount programs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 877,
+      "Phrase": "coaching",
+      "Frequency": 54,
+      "Topic": ""
+    },
+    {
+      "": 878,
+      "Phrase": "treatment cream",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 879,
+      "Phrase": "disruptor",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 880,
+      "Phrase": "name brand",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 881,
+      "Phrase": "cash price",
+      "Frequency": 40,
+      "Topic": ""
+    },
+    {
+      "": 882,
+      "Phrase": "withdrawals",
+      "Frequency": 4,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 883,
+      "Phrase": "choices",
+      "Frequency": 154,
+      "Topic": ""
+    },
+    {
+      "": 884,
+      "Phrase": "day supplies",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 885,
+      "Phrase": "actos",
+      "Frequency": 7,
+      "Topic": "diabetes"
+    },
+    {
+      "": 886,
+      "Phrase": "flu treatment tamiflu",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 887,
+      "Phrase": "weight loss drugs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 888,
+      "Phrase": "anticoagulant medications",
+      "Frequency": 1,
+      "Topic": "heart"
+    },
+    {
+      "": 889,
+      "Phrase": "athlete",
+      "Frequency": 49,
+      "Topic": ""
+    },
+    {
+      "": 890,
+      "Phrase": "birth control taytulla",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 891,
+      "Phrase": "roses",
+      "Frequency": 15,
+      "Topic": ""
+    },
+    {
+      "": 892,
+      "Phrase": "#scam",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 893,
+      "Phrase": "blink health purchase",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 894,
+      "Phrase": "health equity",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 895,
+      "Phrase": "insurance corporations",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 896,
+      "Phrase": "card information",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 897,
+      "Phrase": "tips",
+      "Frequency": 743,
+      "Topic": ""
+    },
+    {
+      "": 898,
+      "Phrase": "#meditation",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 899,
+      "Phrase": "cost/qual transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 900,
+      "Phrase": "allergy med",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 901,
+      "Phrase": "lyrica",
+      "Frequency": 27,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 902,
+      "Phrase": "health insurance",
+      "Frequency": 270,
+      "Topic": "insurance"
+    },
+    {
+      "": 903,
+      "Phrase": "prescription transfers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 904,
+      "Phrase": "rx costs",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 905,
+      "Phrase": "#tips",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 906,
+      "Phrase": "#health insurance",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 907,
+      "Phrase": "face barriers",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 908,
+      "Phrase": "vial",
+      "Frequency": 17,
+      "Topic": "diabetes"
+    },
+    {
+      "": 909,
+      "Phrase": "#corruption",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 910,
+      "Phrase": "singulair",
+      "Frequency": 1,
+      "Topic": "allergy"
+    },
+    {
+      "": 911,
+      "Phrase": "#wellbeing",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 912,
+      "Phrase": "corruption",
+      "Frequency": 645,
+      "Topic": ""
+    },
+    {
+      "": 913,
+      "Phrase": "medication's",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 914,
+      "Phrase": "gut health",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 915,
+      "Phrase": "insurance copays",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 916,
+      "Phrase": "quantity discrepancy",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 917,
+      "Phrase": "health website",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 918,
+      "Phrase": "coupon voteblink",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 919,
+      "Phrase": "rabbit hole",
+      "Frequency": 19,
+      "Topic": ""
+    },
+    {
+      "": 920,
+      "Phrase": "save",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 921,
+      "Phrase": "customer care",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 922,
+      "Phrase": "#ehrs",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 923,
+      "Phrase": "specialty drugs-",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 924,
+      "Phrase": "pricing variations",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 925,
+      "Phrase": "anxiety medication costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 926,
+      "Phrase": "#aging",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 927,
+      "Phrase": "thyroid pill",
+      "Frequency": 1,
+      "Topic": "thyroid"
+    },
+    {
+      "": 928,
+      "Phrase": "#drugprices",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 929,
+      "Phrase": "insurance deductible",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 930,
+      "Phrase": "discounts/rebates",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 931,
+      "Phrase": "cost medication",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 932,
+      "Phrase": "blood pressure drugs stack",
+      "Frequency": 1,
+      "Topic": "heart"
+    },
+    {
+      "": 933,
+      "Phrase": "therapy",
+      "Frequency": 227,
+      "Topic": "addiction"
+    },
+    {
+      "": 934,
+      "Phrase": "blink health",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 935,
+      "Phrase": "breakthrough technology",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 936,
+      "Phrase": "inconvenience",
+      "Frequency": 29,
+      "Topic": ""
+    },
+    {
+      "": 937,
+      "Phrase": "power soccer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 938,
+      "Phrase": "dosage",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 939,
+      "Phrase": "step therapy",
+      "Frequency": 11,
+      "Topic": "addiction"
+    },
+    {
+      "": 940,
+      "Phrase": "healthcare quality cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 941,
+      "Phrase": "#shortage",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 942,
+      "Phrase": "#blinksavings",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 943,
+      "Phrase": "aviva",
+      "Frequency": 2,
+      "Topic": "insurance"
+    },
+    {
+      "": 944,
+      "Phrase": "cough medication",
+      "Frequency": 3,
+      "Topic": "common diseases"
+    },
+    {
+      "": 945,
+      "Phrase": "health data analytics",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 946,
+      "Phrase": "dementia sufferers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 947,
+      "Phrase": "price match",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 948,
+      "Phrase": "q3 goodrx",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 949,
+      "Phrase": "#vaccines",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 950,
+      "Phrase": "#therapy",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 951,
+      "Phrase": "anemia drugs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 952,
+      "Phrase": "cms",
+      "Frequency": 64,
+      "Topic": ""
+    },
+    {
+      "": 953,
+      "Phrase": "proair coupon",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 954,
+      "Phrase": "members",
+      "Frequency": 765,
+      "Topic": ""
+    },
+    {
+      "": 955,
+      "Phrase": "latuda",
+      "Frequency": 2,
+      "Topic": "mental health"
+    },
+    {
+      "": 956,
+      "Phrase": "upgrade",
+      "Frequency": 16,
+      "Topic": ""
+    },
+    {
+      "": 957,
+      "Phrase": "pocket expenses",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 958,
+      "Phrase": "cancer treatments",
+      "Frequency": 6,
+      "Topic": "cancer"
+    },
+    {
+      "": 959,
+      "Phrase": "price quote",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 960,
+      "Phrase": "drug interaction issues",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 961,
+      "Phrase": "prescription prices",
+      "Frequency": 15,
+      "Topic": ""
+    },
+    {
+      "": 962,
+      "Phrase": "enrollees",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 963,
+      "Phrase": "cough medicine",
+      "Frequency": 1,
+      "Topic": "common diseases"
+    },
+    {
+      "": 964,
+      "Phrase": "professional",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 965,
+      "Phrase": "weight",
+      "Frequency": 297,
+      "Topic": ""
+    },
+    {
+      "": 966,
+      "Phrase": "#savings story",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 967,
+      "Phrase": "#fitness",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 968,
+      "Phrase": "insurance industry",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 969,
+      "Phrase": "russ",
+      "Frequency": 10,
+      "Topic": "asthma"
+    },
+    {
+      "": 970,
+      "Phrase": "membership",
+      "Frequency": 78,
+      "Topic": ""
+    },
+    {
+      "": 971,
+      "Phrase": "allergy medication",
+      "Frequency": 8,
+      "Topic": "allergy"
+    },
+    {
+      "": 972,
+      "Phrase": "cialis",
+      "Frequency": 3,
+      "Topic": "erectile dysfunction"
+    },
+    {
+      "": 973,
+      "Phrase": "breast cancer survivors",
+      "Frequency": 4,
+      "Topic": "cancer"
+    },
+    {
+      "": 974,
+      "Phrase": "specialty drug prices",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 975,
+      "Phrase": "medication",
+      "Frequency": 492,
+      "Topic": ""
+    },
+    {
+      "": 976,
+      "Phrase": "testimonial",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 977,
+      "Phrase": "packaging materials",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 978,
+      "Phrase": "#inhalers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 979,
+      "Phrase": "shipping box",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 980,
+      "Phrase": "coupon prices",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 981,
+      "Phrase": "alcohol",
+      "Frequency": 135,
+      "Topic": ""
+    },
+    {
+      "": 982,
+      "Phrase": "weightlifting",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 983,
+      "Phrase": "z-packs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 984,
+      "Phrase": "referral program",
+      "Frequency": 32,
+      "Topic": ""
+    },
+    {
+      "": 985,
+      "Phrase": "discount programs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 986,
+      "Phrase": "hypertension medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 987,
+      "Phrase": "discount card",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 988,
+      "Phrase": "thx",
+      "Frequency": 72,
+      "Topic": ""
+    },
+    {
+      "": 989,
+      "Phrase": "robaxin",
+      "Frequency": 1,
+      "Topic": "pain"
+    },
+    {
+      "": 990,
+      "Phrase": "medication optimization #api",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 991,
+      "Phrase": "walk",
+      "Frequency": 98,
+      "Topic": ""
+    },
+    {
+      "": 992,
+      "Phrase": "price transparency solution",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 993,
+      "Phrase": "#cure",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 994,
+      "Phrase": "prescription coverage",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 995,
+      "Phrase": "wellness consultant",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 996,
+      "Phrase": "drug overdose deaths",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 997,
+      "Phrase": "cholesterol treatment ellazor",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 998,
+      "Phrase": "price tag",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 999,
+      "Phrase": "blood pressure medications",
+      "Frequency": 3,
+      "Topic": "heart"
+    },
+    {
+      "": 1000,
+      "Phrase": "advantage beneficiaries",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1001,
+      "Phrase": "music healer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1002,
+      "Phrase": "drug plan",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1003,
+      "Phrase": "honeybee health pharmacy",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1004,
+      "Phrase": "quality product",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1005,
+      "Phrase": "anticoagulant drugs",
+      "Frequency": 1,
+      "Topic": "heart"
+    },
+    {
+      "": 1006,
+      "Phrase": "#beauty",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1007,
+      "Phrase": "prescription drug coverage]",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1008,
+      "Phrase": "health healthcare ecosystem",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1009,
+      "Phrase": "#sanofi",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1010,
+      "Phrase": "customer care team members",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1011,
+      "Phrase": "care services",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1012,
+      "Phrase": "atorvastatin",
+      "Frequency": 4,
+      "Topic": "cholesterol"
+    },
+    {
+      "": 1013,
+      "Phrase": "health costs",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 1014,
+      "Phrase": "drug pricing expert",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1015,
+      "Phrase": "#statins",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1016,
+      "Phrase": "assistance programs",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 1017,
+      "Phrase": "thanks honeybee health",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1018,
+      "Phrase": "lifesaver",
+      "Frequency": 15,
+      "Topic": ""
+    },
+    {
+      "": 1019,
+      "Phrase": "prescription cost",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1020,
+      "Phrase": "provider notes",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1021,
+      "Phrase": "perks",
+      "Frequency": 44,
+      "Topic": ""
+    },
+    {
+      "": 1022,
+      "Phrase": "novolog",
+      "Frequency": 3,
+      "Topic": "diabetes"
+    },
+    {
+      "": 1023,
+      "Phrase": "scams",
+      "Frequency": 28,
+      "Topic": ""
+    },
+    {
+      "": 1024,
+      "Phrase": "congrats",
+      "Frequency": 23,
+      "Topic": ""
+    },
+    {
+      "": 1025,
+      "Phrase": "ventolin",
+      "Frequency": 6,
+      "Topic": "asthma"
+    },
+    {
+      "": 1026,
+      "Phrase": "specialty medication price",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1027,
+      "Phrase": "price-disclosure requirement",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1028,
+      "Phrase": "rx prices",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 1029,
+      "Phrase": "medicare billing",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1030,
+      "Phrase": "treat cancers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1031,
+      "Phrase": "#myths",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1032,
+      "Phrase": "patients money",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1033,
+      "Phrase": "#asthma meds",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1034,
+      "Phrase": "medication cost savings opportunities",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1035,
+      "Phrase": "self-care",
+      "Frequency": 31,
+      "Topic": ""
+    },
+    {
+      "": 1036,
+      "Phrase": "payment methods",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1037,
+      "Phrase": "prescription drug pricing",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1038,
+      "Phrase": "travel ailments",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1039,
+      "Phrase": "telemedicine",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 1040,
+      "Phrase": "plavix",
+      "Frequency": 3,
+      "Topic": "heart"
+    },
+    {
+      "": 1041,
+      "Phrase": "insurance",
+      "Frequency": 484,
+      "Topic": ""
+    },
+    {
+      "": 1042,
+      "Phrase": "drug adherence",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 1043,
+      "Phrase": "birth birth control medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1044,
+      "Phrase": "diabetes meds",
+      "Frequency": 1,
+      "Topic": "diabetes"
+    },
+    {
+      "": 1045,
+      "Phrase": "therapies",
+      "Frequency": 52,
+      "Topic": "addiction"
+    },
+    {
+      "": 1046,
+      "Phrase": "prescription skin creams",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1047,
+      "Phrase": "anticoagulants",
+      "Frequency": 10,
+      "Topic": "heart"
+    },
+    {
+      "": 1048,
+      "Phrase": "pill pack team",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1049,
+      "Phrase": "#shipping",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1050,
+      "Phrase": "drug price",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 1051,
+      "Phrase": "drug transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1052,
+      "Phrase": "#mentalhealth",
+      "Frequency": 46,
+      "Topic": ""
+    },
+    {
+      "": 1053,
+      "Phrase": "service questions",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1054,
+      "Phrase": "pocket expense",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1055,
+      "Phrase": "cheapprescriptions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1056,
+      "Phrase": "church",
+      "Frequency": 445,
+      "Topic": ""
+    },
+    {
+      "": 1057,
+      "Phrase": "#walk",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1058,
+      "Phrase": "#relationships",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1059,
+      "Phrase": "prozac",
+      "Frequency": 10,
+      "Topic": "depression"
+    },
+    {
+      "": 1060,
+      "Phrase": "mail delivery",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1061,
+      "Phrase": "mucinex",
+      "Frequency": 3,
+      "Topic": "heart"
+    },
+    {
+      "": 1062,
+      "Phrase": "chat feature",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1063,
+      "Phrase": "insulin savings program",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1064,
+      "Phrase": "coverage",
+      "Frequency": 327,
+      "Topic": ""
+    },
+    {
+      "": 1065,
+      "Phrase": "blink story",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1066,
+      "Phrase": "gap coverage",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1067,
+      "Phrase": "fitness",
+      "Frequency": 47,
+      "Topic": ""
+    },
+    {
+      "": 1068,
+      "Phrase": "#beer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1069,
+      "Phrase": "answer",
+      "Frequency": 631,
+      "Topic": ""
+    },
+    {
+      "": 1070,
+      "Phrase": "cost saver",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1071,
+      "Phrase": "injection pen",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1072,
+      "Phrase": "quality care",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 1073,
+      "Phrase": "emergency contraception",
+      "Frequency": 2,
+      "Topic": "birth control"
+    },
+    {
+      "": 1074,
+      "Phrase": "marinol",
+      "Frequency": 1,
+      "Topic": "side effects"
+    },
+    {
+      "": 1075,
+      "Phrase": "cancer medications",
+      "Frequency": 2,
+      "Topic": "cancer"
+    },
+    {
+      "": 1076,
+      "Phrase": "drug coverage",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 1077,
+      "Phrase": "breath-actuated",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1078,
+      "Phrase": "chemo",
+      "Frequency": 15,
+      "Topic": "cancer"
+    },
+    {
+      "": 1079,
+      "Phrase": "price transparency map",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1080,
+      "Phrase": "hhs",
+      "Frequency": 47,
+      "Topic": ""
+    },
+    {
+      "": 1081,
+      "Phrase": "#blinkhealth",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 1082,
+      "Phrase": "creams",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1083,
+      "Phrase": "sprays",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1084,
+      "Phrase": "blink card",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1085,
+      "Phrase": "healthcare costs",
+      "Frequency": 38,
+      "Topic": ""
+    },
+    {
+      "": 1086,
+      "Phrase": "cures",
+      "Frequency": 62,
+      "Topic": ""
+    },
+    {
+      "": 1087,
+      "Phrase": "kaiser",
+      "Frequency": 31,
+      "Topic": ""
+    },
+    {
+      "": 1088,
+      "Phrase": "pharmas drug price stranglehold",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1089,
+      "Phrase": "#prescription costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1090,
+      "Phrase": "health plan",
+      "Frequency": 50,
+      "Topic": ""
+    },
+    {
+      "": 1091,
+      "Phrase": "anxiety medication",
+      "Frequency": 1,
+      "Topic": "mental health"
+    },
+    {
+      "": 1092,
+      "Phrase": "employee drug benefits plans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1093,
+      "Phrase": "z-paks",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1094,
+      "Phrase": "zantac",
+      "Frequency": 5,
+      "Topic": "side effects"
+    },
+    {
+      "": 1095,
+      "Phrase": "employee insurance plans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1096,
+      "Phrase": "russ inhaler",
+      "Frequency": 1,
+      "Topic": "asthma"
+    },
+    {
+      "": 1097,
+      "Phrase": "honeybee pharmacist's today",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1098,
+      "Phrase": "medicare cards",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1099,
+      "Phrase": "max solostar",
+      "Frequency": 2,
+      "Topic": "diabetes"
+    },
+    {
+      "": 1100,
+      "Phrase": "#birth",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1101,
+      "Phrase": "allergy relief options",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1102,
+      "Phrase": "pharmacy costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1103,
+      "Phrase": "insulin discount program",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1104,
+      "Phrase": "blessing",
+      "Frequency": 83,
+      "Topic": ""
+    },
+    {
+      "": 1105,
+      "Phrase": "#chemo",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1106,
+      "Phrase": "health care cost transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1107,
+      "Phrase": "cord injury",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1108,
+      "Phrase": "care solutions",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1109,
+      "Phrase": "hoyrx",
+      "Frequency": 6,
+      "Topic": ""
+    },
+    {
+      "": 1110,
+      "Phrase": "spam",
+      "Frequency": 28,
+      "Topic": ""
+    },
+    {
+      "": 1111,
+      "Phrase": "medicare system",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1112,
+      "Phrase": "commitment",
+      "Frequency": 130,
+      "Topic": ""
+    },
+    {
+      "": 1113,
+      "Phrase": "shoutout",
+      "Frequency": 46,
+      "Topic": ""
+    },
+    {
+      "": 1114,
+      "Phrase": "influenza vaccination week",
+      "Frequency": 19,
+      "Topic": "common diseases"
+    },
+    {
+      "": 1115,
+      "Phrase": "insurance plan",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 1116,
+      "Phrase": "#innovation",
+      "Frequency": 34,
+      "Topic": ""
+    },
+    {
+      "": 1117,
+      "Phrase": "contraception insurance coverage",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1118,
+      "Phrase": "shipping department",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1119,
+      "Phrase": "nurses association",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1120,
+      "Phrase": "#quality",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1121,
+      "Phrase": "#innovators",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 1122,
+      "Phrase": "relaxants",
+      "Frequency": 2,
+      "Topic": "heart"
+    },
+    {
+      "": 1123,
+      "Phrase": "inactivity",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1124,
+      "Phrase": "deductible",
+      "Frequency": 24,
+      "Topic": ""
+    },
+    {
+      "": 1125,
+      "Phrase": "#christian",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1126,
+      "Phrase": "kroger rx",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1127,
+      "Phrase": "insurance copay",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1128,
+      "Phrase": "risk",
+      "Frequency": 601,
+      "Topic": ""
+    },
+    {
+      "": 1129,
+      "Phrase": "platinum plans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1130,
+      "Phrase": "cure",
+      "Frequency": 97,
+      "Topic": ""
+    },
+    {
+      "": 1131,
+      "Phrase": "goodrx cigna",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1132,
+      "Phrase": "birth control packaging errors",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1133,
+      "Phrase": "#gabapentin",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1134,
+      "Phrase": "price controls",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 1135,
+      "Phrase": "asthma inhaler",
+      "Frequency": 6,
+      "Topic": "asthma"
+    },
+    {
+      "": 1136,
+      "Phrase": "healthcare cost",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1137,
+      "Phrase": "#healthcare",
+      "Frequency": 334,
+      "Topic": ""
+    },
+    {
+      "": 1138,
+      "Phrase": "recovery",
+      "Frequency": 108,
+      "Topic": ""
+    },
+    {
+      "": 1139,
+      "Phrase": "allergy relief aisle",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1140,
+      "Phrase": "competition prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1141,
+      "Phrase": "asthma inhaler ventolin hfa",
+      "Frequency": 3,
+      "Topic": "asthma"
+    },
+    {
+      "": 1142,
+      "Phrase": "bravo",
+      "Frequency": 49,
+      "Topic": ""
+    },
+    {
+      "": 1143,
+      "Phrase": "#hsa",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1144,
+      "Phrase": "#improvement",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1145,
+      "Phrase": "side effects",
+      "Frequency": 92,
+      "Topic": "side effects"
+    },
+    {
+      "": 1146,
+      "Phrase": "neurontin",
+      "Frequency": 1,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 1147,
+      "Phrase": "cost difference",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1148,
+      "Phrase": "#patient",
+      "Frequency": 27,
+      "Topic": ""
+    },
+    {
+      "": 1149,
+      "Phrase": "pharmacy discount cards",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1150,
+      "Phrase": "cost medications",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1151,
+      "Phrase": "#deductibles",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1152,
+      "Phrase": "support",
+      "Frequency": 1075,
+      "Topic": ""
+    },
+    {
+      "": 1153,
+      "Phrase": "disappointment",
+      "Frequency": 46,
+      "Topic": ""
+    },
+    {
+      "": 1154,
+      "Phrase": "consumer review",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1155,
+      "Phrase": "med copay",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1156,
+      "Phrase": "medication discount",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1157,
+      "Phrase": "health care information market",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1158,
+      "Phrase": "medicine cost",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1159,
+      "Phrase": "diet changes",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1160,
+      "Phrase": "drug shortages",
+      "Frequency": 12,
+      "Topic": ""
+    },
+    {
+      "": 1161,
+      "Phrase": "healthcare analytics",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1162,
+      "Phrase": "incomes",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 1163,
+      "Phrase": "pain medications",
+      "Frequency": 28,
+      "Topic": "pain"
+    },
+    {
+      "": 1164,
+      "Phrase": "refund",
+      "Frequency": 26,
+      "Topic": ""
+    },
+    {
+      "": 1165,
+      "Phrase": "cycling",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 1166,
+      "Phrase": "#epipen",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1167,
+      "Phrase": "meds/pills",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1168,
+      "Phrase": "#diabetes medication",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1169,
+      "Phrase": "#healthcare innovation",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1170,
+      "Phrase": "#middlemen",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1171,
+      "Phrase": "survival",
+      "Frequency": 55,
+      "Topic": ""
+    },
+    {
+      "": 1172,
+      "Phrase": "healthcare price transparency",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1173,
+      "Phrase": "delivery problems",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1174,
+      "Phrase": "blood pressure drugs",
+      "Frequency": 12,
+      "Topic": "heart"
+    },
+    {
+      "": 1175,
+      "Phrase": "maintenance inhaler",
+      "Frequency": 6,
+      "Topic": "asthma"
+    },
+    {
+      "": 1176,
+      "Phrase": "ehrs",
+      "Frequency": 25,
+      "Topic": ""
+    },
+    {
+      "": 1177,
+      "Phrase": "shipping",
+      "Frequency": 81,
+      "Topic": ""
+    },
+    {
+      "": 1178,
+      "Phrase": "nsaids ibuprofen",
+      "Frequency": 1,
+      "Topic": "inflammation"
+    },
+    {
+      "": 1179,
+      "Phrase": "home delivery",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 1180,
+      "Phrase": "eternity",
+      "Frequency": 29,
+      "Topic": ""
+    },
+    {
+      "": 1181,
+      "Phrase": "cholesterol medicines",
+      "Frequency": 1,
+      "Topic": "cholesterol"
+    },
+    {
+      "": 1182,
+      "Phrase": "diabetes medications",
+      "Frequency": 15,
+      "Topic": "diabetes"
+    },
+    {
+      "": 1183,
+      "Phrase": "seizure medication",
+      "Frequency": 3,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 1184,
+      "Phrase": "lomotil",
+      "Frequency": 1,
+      "Topic": "common diseases"
+    },
+    {
+      "": 1185,
+      "Phrase": "killer",
+      "Frequency": 57,
+      "Topic": ""
+    },
+    {
+      "": 1186,
+      "Phrase": "condition others",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1187,
+      "Phrase": "inclusion",
+      "Frequency": 80,
+      "Topic": ""
+    },
+    {
+      "": 1188,
+      "Phrase": "birth control implant",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1189,
+      "Phrase": "pricing medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1190,
+      "Phrase": "savings card",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1191,
+      "Phrase": "healthcare stakeholder triangle",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1192,
+      "Phrase": "brand name medication",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1193,
+      "Phrase": "#death",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1194,
+      "Phrase": "christian",
+      "Frequency": 416,
+      "Topic": ""
+    },
+    {
+      "": 1195,
+      "Phrase": "prescriptions discounts",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1196,
+      "Phrase": "shingles vaccine",
+      "Frequency": 9,
+      "Topic": "skin"
+    },
+    {
+      "": 1197,
+      "Phrase": "#lifesaver",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1198,
+      "Phrase": "therapeutics",
+      "Frequency": 56,
+      "Topic": "mental health"
+    },
+    {
+      "": 1199,
+      "Phrase": "#insulin",
+      "Frequency": 9,
+      "Topic": ""
+    },
+    {
+      "": 1200,
+      "Phrase": "pill box",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1201,
+      "Phrase": "#acetaminophen",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1202,
+      "Phrase": "relaxer",
+      "Frequency": 2,
+      "Topic": "heart"
+    },
+    {
+      "": 1203,
+      "Phrase": "comparison shop",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1204,
+      "Phrase": "sunlight",
+      "Frequency": 19,
+      "Topic": ""
+    },
+    {
+      "": 1205,
+      "Phrase": "shipment today",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1206,
+      "Phrase": "med costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1207,
+      "Phrase": "hiv vaccine",
+      "Frequency": 2,
+      "Topic": "hiv"
+    },
+    {
+      "": 1208,
+      "Phrase": "side effect",
+      "Frequency": 13,
+      "Topic": "side effects"
+    },
+    {
+      "": 1209,
+      "Phrase": "health savings account",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1210,
+      "Phrase": "bed rest",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1211,
+      "Phrase": "time delivery",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1212,
+      "Phrase": "insurance terminology",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1213,
+      "Phrase": "#healthcare transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1214,
+      "Phrase": "advocate team",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1215,
+      "Phrase": "thyroid meds",
+      "Frequency": 2,
+      "Topic": "thyroid"
+    },
+    {
+      "": 1216,
+      "Phrase": "parents insurance",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1217,
+      "Phrase": "consumer enablement",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1218,
+      "Phrase": "#billing",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1219,
+      "Phrase": "#caregiving",
+      "Frequency": 15,
+      "Topic": ""
+    },
+    {
+      "": 1220,
+      "Phrase": "price-transparency movement",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1221,
+      "Phrase": "health care shopping platform",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1222,
+      "Phrase": "ins costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1223,
+      "Phrase": "#flushot",
+      "Frequency": 17,
+      "Topic": ""
+    },
+    {
+      "": 1224,
+      "Phrase": "health site category",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1225,
+      "Phrase": "refund request",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1226,
+      "Phrase": "employee values",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1227,
+      "Phrase": "hiv prevention drug",
+      "Frequency": 9,
+      "Topic": "hiv"
+    },
+    {
+      "": 1228,
+      "Phrase": "medication cost",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1229,
+      "Phrase": "solostar pens",
+      "Frequency": 1,
+      "Topic": "diabetes"
+    },
+    {
+      "": 1230,
+      "Phrase": "substances",
+      "Frequency": 27,
+      "Topic": ""
+    },
+    {
+      "": 1231,
+      "Phrase": "#healthcare solutions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1232,
+      "Phrase": "procrit",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1233,
+      "Phrase": "#pillpack",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1234,
+      "Phrase": "errors",
+      "Frequency": 138,
+      "Topic": ""
+    },
+    {
+      "": 1235,
+      "Phrase": "coverage gaps",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1236,
+      "Phrase": "#disabilities",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1237,
+      "Phrase": "honey bee",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1238,
+      "Phrase": "yeast infection treatments",
+      "Frequency": 1,
+      "Topic": "std"
+    },
+    {
+      "": 1239,
+      "Phrase": "beauty",
+      "Frequency": 213,
+      "Topic": ""
+    },
+    {
+      "": 1240,
+      "Phrase": "insurance coverage",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 1241,
+      "Phrase": "restrictions",
+      "Frequency": 75,
+      "Topic": ""
+    },
+    {
+      "": 1242,
+      "Phrase": "medicare advantage plan",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1243,
+      "Phrase": "#russ",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1244,
+      "Phrase": "wait",
+      "Frequency": 29,
+      "Topic": ""
+    },
+    {
+      "": 1245,
+      "Phrase": "customers privacy",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1246,
+      "Phrase": "pillpak today",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1247,
+      "Phrase": "retail self-pay prices",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1248,
+      "Phrase": "exercise",
+      "Frequency": 140,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 1249,
+      "Phrase": "patient costs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1250,
+      "Phrase": "#killer",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1251,
+      "Phrase": "savings program",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1252,
+      "Phrase": "savings programs",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1253,
+      "Phrase": "technology solutions",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1254,
+      "Phrase": "drug side effects",
+      "Frequency": 5,
+      "Topic": "side effects"
+    },
+    {
+      "": 1255,
+      "Phrase": "member",
+      "Frequency": 685,
+      "Topic": ""
+    },
+    {
+      "": 1256,
+      "Phrase": "quality transparency healthcare costs",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1257,
+      "Phrase": "faith",
+      "Frequency": 339,
+      "Topic": ""
+    },
+    {
+      "": 1258,
+      "Phrase": "equivalent drug",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1259,
+      "Phrase": "#medications",
+      "Frequency": 11,
+      "Topic": ""
+    },
+    {
+      "": 1260,
+      "Phrase": "cinryze",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1261,
+      "Phrase": "#sports",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1262,
+      "Phrase": "blink users",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1263,
+      "Phrase": "blinkhealth",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1264,
+      "Phrase": "#overdose",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1265,
+      "Phrase": "resources",
+      "Frequency": 272,
+      "Topic": ""
+    },
+    {
+      "": 1266,
+      "Phrase": "prescription sticker shock",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1267,
+      "Phrase": "cancer patient",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1268,
+      "Phrase": "deal price",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1269,
+      "Phrase": "healthcare disparity",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1270,
+      "Phrase": "prednisone",
+      "Frequency": 6,
+      "Topic": "inflammation"
+    },
+    {
+      "": 1271,
+      "Phrase": "insulin costs",
+      "Frequency": 13,
+      "Topic": ""
+    },
+    {
+      "": 1272,
+      "Phrase": "healthcare delivery",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1273,
+      "Phrase": "c-braces",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1274,
+      "Phrase": "innovators",
+      "Frequency": 59,
+      "Topic": ""
+    },
+    {
+      "": 1275,
+      "Phrase": "blink bulletin",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1276,
+      "Phrase": "depressants",
+      "Frequency": 4,
+      "Topic": "depression"
+    },
+    {
+      "": 1277,
+      "Phrase": "copays",
+      "Frequency": 24,
+      "Topic": ""
+    },
+    {
+      "": 1278,
+      "Phrase": "antidepressants",
+      "Frequency": 14,
+      "Topic": "depression"
+    },
+    {
+      "": 1279,
+      "Phrase": "#alcohol",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1280,
+      "Phrase": "eyedrops",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1281,
+      "Phrase": "#cost",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1282,
+      "Phrase": "discount program",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1283,
+      "Phrase": "safety measure",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1284,
+      "Phrase": "#gifts",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1285,
+      "Phrase": "discount prices",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1286,
+      "Phrase": "#price",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 1287,
+      "Phrase": "levalbuterol",
+      "Frequency": 3,
+      "Topic": "asthma"
+    },
+    {
+      "": 1288,
+      "Phrase": "experience",
+      "Frequency": 900,
+      "Topic": ""
+    },
+    {
+      "": 1289,
+      "Phrase": "price increase",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1290,
+      "Phrase": "#diabetes medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1291,
+      "Phrase": "contraceptives",
+      "Frequency": 11,
+      "Topic": "birth control"
+    },
+    {
+      "": 1292,
+      "Phrase": "impact",
+      "Frequency": 453,
+      "Topic": ""
+    },
+    {
+      "": 1293,
+      "Phrase": "#dosage",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1294,
+      "Phrase": "health #insurance",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1295,
+      "Phrase": "health centers",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1296,
+      "Phrase": "promo",
+      "Frequency": 32,
+      "Topic": ""
+    },
+    {
+      "": 1297,
+      "Phrase": "health price transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1298,
+      "Phrase": "cannabis-derived medication",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1299,
+      "Phrase": "ketamine",
+      "Frequency": 2,
+      "Topic": "depression"
+    },
+    {
+      "": 1300,
+      "Phrase": "consumer health",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 1301,
+      "Phrase": "health information",
+      "Frequency": 23,
+      "Topic": ""
+    },
+    {
+      "": 1302,
+      "Phrase": "price bumps",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1303,
+      "Phrase": "discount providers",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1304,
+      "Phrase": "discount cards",
+      "Frequency": 7,
+      "Topic": ""
+    },
+    {
+      "": 1305,
+      "Phrase": "healthcare options",
+      "Frequency": 5,
+      "Topic": ""
+    },
+    {
+      "": 1306,
+      "Phrase": "bionic",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1307,
+      "Phrase": "pricing transparency",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1308,
+      "Phrase": "naproxen",
+      "Frequency": 2,
+      "Topic": "pain"
+    },
+    {
+      "": 1309,
+      "Phrase": "#healthsavingsaccount funds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1310,
+      "Phrase": "blink nation",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1311,
+      "Phrase": "prescription quantity limits",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1312,
+      "Phrase": "#faith",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1313,
+      "Phrase": "insurance providers",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1314,
+      "Phrase": "beta-blockers",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1315,
+      "Phrase": "medication value transparency",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1316,
+      "Phrase": "pill pack genius thing",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1317,
+      "Phrase": "name meds",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1318,
+      "Phrase": "customer experience team",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1319,
+      "Phrase": "medicare card",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1320,
+      "Phrase": "clients",
+      "Frequency": 356,
+      "Topic": ""
+    },
+    {
+      "": 1321,
+      "Phrase": "med coverage",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1322,
+      "Phrase": "vaccinations",
+      "Frequency": 31,
+      "Topic": "common diseases"
+    },
+    {
+      "": 1323,
+      "Phrase": "meds",
+      "Frequency": 493,
+      "Topic": ""
+    },
+    {
+      "": 1324,
+      "Phrase": "rx cost analysis",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1325,
+      "Phrase": "middle man",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1326,
+      "Phrase": "goodrx",
+      "Frequency": 188,
+      "Topic": ""
+    },
+    {
+      "": 1327,
+      "Phrase": "antidepressant",
+      "Frequency": 10,
+      "Topic": "depression"
+    },
+    {
+      "": 1328,
+      "Phrase": "#yoga",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 1329,
+      "Phrase": "meloxicam",
+      "Frequency": 1,
+      "Topic": "inflammation"
+    },
+    {
+      "": 1330,
+      "Phrase": "health plans",
+      "Frequency": 33,
+      "Topic": ""
+    },
+    {
+      "": 1331,
+      "Phrase": "topamax",
+      "Frequency": 3,
+      "Topic": "nerve autoimmune"
+    },
+    {
+      "": 1332,
+      "Phrase": "epilepsy medication",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1333,
+      "Phrase": "love",
+      "Frequency": 1345,
+      "Topic": ""
+    },
+    {
+      "": 1334,
+      "Phrase": "pillpack",
+      "Frequency": 104,
+      "Topic": ""
+    },
+    {
+      "": 1335,
+      "Phrase": "germs",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 1336,
+      "Phrase": "employee plans",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1337,
+      "Phrase": "rosacea treatments",
+      "Frequency": 2,
+      "Topic": "skin"
+    },
+    {
+      "": 1338,
+      "Phrase": "pcp",
+      "Frequency": 14,
+      "Topic": ""
+    },
+    {
+      "": 1339,
+      "Phrase": "lifestyle",
+      "Frequency": 83,
+      "Topic": ""
+    },
+    {
+      "": 1340,
+      "Phrase": "asthma relief",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1341,
+      "Phrase": "flu shot",
+      "Frequency": 69,
+      "Topic": "common diseases"
+    },
+    {
+      "": 1342,
+      "Phrase": "brand drug",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1343,
+      "Phrase": "choice",
+      "Frequency": 546,
+      "Topic": ""
+    },
+    {
+      "": 1344,
+      "Phrase": "advantage enrollment window",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1345,
+      "Phrase": "aging",
+      "Frequency": 75,
+      "Topic": ""
+    },
+    {
+      "": 1346,
+      "Phrase": "pharmacy lines",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1347,
+      "Phrase": "astrid",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1348,
+      "Phrase": "drug lobby",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1349,
+      "Phrase": "insulin prices",
+      "Frequency": 26,
+      "Topic": ""
+    },
+    {
+      "": 1350,
+      "Phrase": "ellipta",
+      "Frequency": 1,
+      "Topic": "heart"
+    },
+    {
+      "": 1351,
+      "Phrase": "waste",
+      "Frequency": 211,
+      "Topic": ""
+    },
+    {
+      "": 1352,
+      "Phrase": "opportunity",
+      "Frequency": 695,
+      "Topic": ""
+    },
+    {
+      "": 1353,
+      "Phrase": "dream",
+      "Frequency": 219,
+      "Topic": ""
+    },
+    {
+      "": 1354,
+      "Phrase": "innovation",
+      "Frequency": 378,
+      "Topic": ""
+    },
+    {
+      "": 1355,
+      "Phrase": "epipen",
+      "Frequency": 7,
+      "Topic": "asthma"
+    },
+    {
+      "": 1356,
+      "Phrase": "goodrx february",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1357,
+      "Phrase": "#cancer medications",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1358,
+      "Phrase": "hospital bills",
+      "Frequency": 4,
+      "Topic": ""
+    },
+    {
+      "": 1359,
+      "Phrase": "flu products",
+      "Frequency": 8,
+      "Topic": ""
+    },
+    {
+      "": 1360,
+      "Phrase": "pillpacks",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1361,
+      "Phrase": "prescription coupon",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1362,
+      "Phrase": "myths",
+      "Frequency": 49,
+      "Topic": ""
+    },
+    {
+      "": 1363,
+      "Phrase": "blockbuster cancer drug",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1364,
+      "Phrase": "lantus",
+      "Frequency": 1,
+      "Topic": "diabetes"
+    },
+    {
+      "": 1365,
+      "Phrase": "middlemen",
+      "Frequency": 32,
+      "Topic": ""
+    },
+    {
+      "": 1366,
+      "Phrase": "prescription insurance",
+      "Frequency": 3,
+      "Topic": ""
+    },
+    {
+      "": 1367,
+      "Phrase": "price gouging",
+      "Frequency": 10,
+      "Topic": ""
+    },
+    {
+      "": 1368,
+      "Phrase": "medication options",
+      "Frequency": 2,
+      "Topic": ""
+    },
+    {
+      "": 1369,
+      "Phrase": "#privacy",
+      "Frequency": 17,
+      "Topic": ""
+    },
+    {
+      "": 1370,
+      "Phrase": "wellness issue",
+      "Frequency": 1,
+      "Topic": ""
+    },
+    {
+      "": 1371,
+      "Phrase": "#antibiotic",
+      "Frequency": 2,
+      "Topic": ""
+    }
+  ]

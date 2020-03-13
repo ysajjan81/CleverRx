@@ -18,7 +18,8 @@ function MyTweets(props) {
   var clr = 'green';
   if(data.length != 0 )
   {
-      if(props.insurance == true){
+      if(props.insurance == true && data.insurance_dict.tweets)
+      {
   for(let i = 0 ; i<data.insurance_dict.tweets.length; i++)
   {
       l.push(<TableRow>
@@ -30,7 +31,7 @@ function MyTweets(props) {
       </TableRow>)
   }
 }
-if(props.card == true){
+if(props.card == true && data.card_dict.tweets){
   for(let i = 0 ; i<data.card_dict.tweets.length ; i++)
   {
     l.push(<TableRow>

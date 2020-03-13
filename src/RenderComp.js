@@ -20,24 +20,26 @@ import MyTweets from './MyTweets';
 import Mylinks from './Mylinks';
 // import tableJson from './topicData.json';
 // const { Header, Footer, Content } = Layout;
+import WordCloud from './WordCloud';
+import phrase from './phrase_frequency.json';
 
 const topicOptions = [
     {
       key: 'Heart Hypertension',
       text: 'Heart Hypertension',
-      value: 'Heart Hypertension',
+      value: 'heart hypertension',
       // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
     },
     {
       key: 'Diabetes',
       text: 'Diabetes',
-      value: 'Diabetes',
+      value: 'diabetes',
       // image: { avatar: true, src: '/images/avatar/small/elliot.jpg' },
     },
     {
       key: 'Cancer',
       text: 'Cancer',
-      value: 'Cancer',
+      value: 'cancer',
       // image: { avatar: true, src: '/images/avatar/small/stevie.jpg' },
     },
     {
@@ -49,43 +51,43 @@ const topicOptions = [
     {
       key: 'Allergy',
       text: 'Allergy',
-      value: 'Allergy',
+      value: 'allergy',
       // image: { avatar: true, src: '/images/avatar/small/matt.jpg' },
     },
     {
       key: 'Liver',
       text: 'Liver',
-      value: 'Liver',
+      value: 'liver',
       // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Adiction',
       text: 'Adiction',
-      value: 'Adiction',
+      value: 'adiction',
       // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Alzheimer',
       text: 'Alzheimer',
-      value: 'Alzheimer',
+      value: 'alzheimer',
       // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Pain',
       text: 'Pain',
-      value: 'Pain',
+      value: 'pain',
       // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Asthma',
       text: 'Asthma',
-      value: 'Asthma',
+      value: 'asthma',
       // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Pregnancy',
       text: 'Pregnancy',
-      value: 'Pregnancy',
+      value: 'pregnancy',
       // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
@@ -107,7 +109,8 @@ class RenderComp extends Component {
             card:false,
             insur:false,
             data: [],
-            img:""
+            img:"",
+            cloudData:[]
          }
         //  this.changejsonData = this.changejsonData.bind(this);
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
@@ -132,6 +135,36 @@ class RenderComp extends Component {
         this.setState({insur: temp});
         console.log("Insurance checked =" + this.state.insur);
     }
+
+    arrayBufferToBase64(buffer) {
+        var binary = '';
+        var bytes = [].slice.call(new Uint8Array(buffer));
+        bytes.forEach((b) => binary += String.fromCharCode(b));
+        return window.btoa(binary);
+    };
+    createWordCloudData = () =>
+    {
+        var myData = [];
+        for(let i = 0 ; i<phrase.length ; i++)
+        {
+          var temp = [];
+          // console.log(phrase[i].Topic);
+          if(phrase[i].Topic == this.state.myTopic)
+          {
+            // console.log("Here =  " + phrase[i].Phrase);
+
+            temp.push(phrase[i].Phrase);
+            temp.push(phrase[i].Frequency);
+            myData.push(temp);
+          }
+        }
+        this.setState({cloudData: myData});
+        // console.log("cloudData =");
+        // console.log(this.state.cloudData);
+        // // console.log(phrase);
+        // // console.log(phrase.length);
+    }
+    
     getData = () =>
     {
     // alert("button clicked !! and topic selected is " + this.state.myTopic);
@@ -164,15 +197,19 @@ class RenderComp extends Component {
       }).then((data) => {
   			if(data == -1)
           return;
-          this.setState({data: data})
+          this.setState({data: data});
+          this.createWordCloudData();
           console.log("data = " );
           console.log(data);
         //   console.log("data = " + JSON.stringify(this.state.data));
         //   console.log( );
         // gif = str(open(img_file, 'rb').write())
         // var base64Flag = 'data:image/jpeg;base64,';
-        // var imageStr = this.arrayBufferToBase64(this.state.data.insurance_dict.gifs.data.data);
-        // this.setState({img: imageStr});
+        // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+        // // this.setState({img: imageStr});
+        // this.setState({
+        //     img: imageStr + base64Flag
+        // });
         // console.log("Image = ");
         // console.log(this.state.img);
   		}
@@ -184,6 +221,7 @@ class RenderComp extends Component {
             fontSize: '20px',
         }
         // const { myTopic } = this.state
+        const {img} = this.state
         return (
             <div>
                 <div>
@@ -204,7 +242,8 @@ class RenderComp extends Component {
                             </Form.Group>
                              </Form>
                             </Segment>
-                            <Segment><MyCloud /></Segment>
+                            {/* <Segment><MyCloud data={this.state.data}/></Segment> */}
+                            <Segment><WordCloud data = {this.state.cloudData}/></Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
                             <Segment><FacebookAndTwitter data = {this.state.data}/></Segment>
@@ -217,8 +256,8 @@ class RenderComp extends Component {
                     {/* <h2>Card/Customer</h2> */}
                         <Segment>
                             {/* <h3>Card</h3><Segment><MyCloud data={this.state.data.insurance_dict.health_list}/></Segment>
-                            <h3>Disease</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
-                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.medication_list}/></Segment> */}
+                            <h3>Disease</h3><Segment><MyCloud data={this.state.data.insurance_dict.health_list}/></Segment>
+                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.insurance_dict.medication_list}/></Segment> */}
                         </Segment>
                     </Grid.Column>
                     <Grid.Column width={8}>
@@ -270,7 +309,10 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                             <h3>Gifs</h3>
-                            <DisplayMessage title='Gifs'/>
+                            <img
+                            src={img}
+                            alt='Helpful alt text'/>
+                            {/* <DisplayMessage title='Gifs'/> */}
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
