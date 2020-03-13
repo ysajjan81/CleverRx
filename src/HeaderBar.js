@@ -15,27 +15,23 @@ class HeaderBar extends Component {
     //     textAlign: "center",
     //     backgroundColor: 'black'
     // }
-    render() { 
-        return ( 
+    render() {
+        return (
             <div>
                 {/* <h1 style={this.styleObj} >CleverRx</h1> */}
                 {/* <h1 style={{color:'white'}}>CleverRx</h1> */}
         <Layout >
-            
+
         <Header
           style={{
             width: '100%',
-            height:"8vh",
-            // backgroundColor:"#000000",
-            color: 'white',
             textAlign: 'center',
-            backgroundImage: './assets/img/cleverRxImage.png'
           }}
-        ><h1><b>CleverRx</b></h1></Header>
+        ><h1 style={{color:"#FFFFFF", fontSize:50}}><b>CleverRx</b></h1></Header>
        </Layout>
         </div>
          );
     }
 }
- 
+
 export default HeaderBar;
