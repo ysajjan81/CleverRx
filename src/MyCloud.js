@@ -21,41 +21,61 @@ class MyCloud extends Component {
   constructor(props){
     super(props)
     this.state={
-      data: this.props.data,
+      li: [],
     }
   }
+  componentDidMount(prevProps){
+     if(this.props.data != null){
+      let temp = []
 
-  render() {
+      if(Object.keys(this.props.data).length != 0){
 
-    let li = [];
-    if(this.props.data != null){
-      for(var i = 0; i<this.props.data.length; i++){
-        li.push(<div style={styles.medium}>{this.props.data[i]}</div>);
+        var total_size = 1;
+        var size = 0
+        for (var i in this.props.data){
+          total_size+=this.props.data[i][0]
+        }
+
+
+
+        for (var i in this.props.data){
+          size = (this.props.data[i][0]/total_size)*100;
+          if(this.props.data[i][1] == '-')
+            temp.push(<div style={{fontSize: size, color:"red"}}>{i}</div>);
+          else
+            temp.push(<div style={{fontSize: size, color:"green"}}>{i}</div>);
+        }
+        this.setState({li:temp});
       }
     }
-    return (
-    <div className="word-cloud">
-      <div className="app-outer">
-        <div className="app-inner">
-          <TagCloud
-            className="tag-cloud"
-            style={{
-              fontFamily: "sans-serif",
-              fontSize: 30,
-              color: () =>
-                randomColor({
-                  hue: "blue"
-                }),
-              padding: 5
-            }}
-          >
-          {li}
-          </TagCloud>
-        </div>
-      </div>
-      </div>
-    );
   }
+  render() {
+    return (
+      <div>
+      {
+        this.state.li.length == 0 ?
+        (<div></div>) :
+        (
+        <div className="word-cloud">
+        <div className="app-outer">
+          <div className="app-inner">
+            <TagCloud
+              className="tag-cloud"
+              style={{
+                fontFamily: "sans-serif",
+                padding: 2,
+                whitespace:"no-wrap off"
+              }}
+            >
+            {this.state.li}
+            </TagCloud>
+          </div>
+        </div>
+        </div>
+      )
+    }
+    </div>
+  )}
 }
 
 export default MyCloud;
