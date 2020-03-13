@@ -2,17 +2,6 @@ import React from "react";
 import { Icon, Table, Checkbox, Tab } from "semantic-ui-react";
 import DisplayMessage from './DisplayMessage';
 import MyTweets from './MyTweets';
-// const panes = [
-//   { menuItem: 'Facebook', render: () => <Tab.Pane loading>Tab 1 Content</Tab.Pane> },
-//   { menuItem: 'Twitter', render: () => <Tab.Pane>Tab 2 Content</Tab.Pane> },
-// ]
-
-// const FacebookAndTwitter = () => <Tab panes={panes} />
-
-// export default FacebookAndTwitter;
-
-// import React from 'react'
-// import { Tab } from 'semantic-ui-react'
 
 const panes = [
   {

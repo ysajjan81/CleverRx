@@ -8,21 +8,6 @@ import Paper from '@material-ui/core/Paper';
 // import data from'./tempData.json';
 import Checkbox from '@material-ui/core/Checkbox';
 
-// class MyTweets extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {  }
-//     }
-//     render() { 
-//         return (  );
-//     }
-// }
- 
-// export default MyTweets;
-
-
-
-
 function MyTweets(props) {
 
   var l = [];
@@ -33,15 +18,30 @@ function MyTweets(props) {
   var clr = 'green';
   if(data.length != 0 )
   {
+      if(props.insurance == true){
   for(let i = 0 ; i<data.insurance_dict.tweets.length; i++)
   {
       l.push(<TableRow>
           <TableCell>{i+1}</TableCell>
           <TableCell>
               {data.insurance_dict.tweets[i][0]}
+              {}
           </TableCell>
       </TableRow>)
   }
+}
+if(props.card == true){
+  for(let i = 0 ; i<data.card_dict.tweets.length ; i++)
+  {
+    l.push(<TableRow>
+        <TableCell>{i+1}</TableCell>
+        <TableCell>
+            {data.card_dict.tweets[i][0]}
+            {}
+        </TableCell>
+    </TableRow>)
+  }
+}
   }
     return (
       <div className="center-col">

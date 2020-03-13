@@ -3,7 +3,7 @@ import DisplayMessage from './DisplayMessage';
 import TextContent from './TextContent';
 // // import Mytable from './MyTable';
 import TableExampleError from './TableExampleError';
-import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button } from 'semantic-ui-react';
+import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
 import Experience from './Experience'
 import App from './App';
@@ -17,6 +17,7 @@ import SimpleTable from './components/table';
 // import tweets from './tweets'
 // import myTweets from './myTweets'
 import MyTweets from './MyTweets';
+import Mylinks from './Mylinks';
 // import tableJson from './topicData.json';
 // const { Header, Footer, Content } = Layout;
 
@@ -101,20 +102,36 @@ class RenderComp extends Component {
      {
         super(props);
         this.state = {
-            myTopic:'',
+            myTopic:"",
             allInformation:[],
+            card:false,
+            insur:false,
             data: [],
+            img:""
          }
         //  this.changejsonData = this.changejsonData.bind(this);
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
+         this.cardSelected = this.cardSelected.bind(this);
+         this.insuranceSelected = this.insuranceSelected.bind(this);
     }
 
     handleTopicSelect(event, {value})
     {
       this.setState({myTopic: value});
     }
-
+    cardSelected(event)
+{
+    var temp = !(this.state.card);
+    this.setState({card: temp});
+    console.log(" card checked = " + this.state.card);
+}
+    insuranceSelected(event)
+    {
+        var temp = !(this.state.insur);
+        this.setState({insur: temp});
+        console.log("Insurance checked =" + this.state.insur);
+    }
     getData = () =>
     {
     // alert("button clicked !! and topic selected is " + this.state.myTopic);
@@ -148,15 +165,24 @@ class RenderComp extends Component {
   			if(data == -1)
           return;
           this.setState({data: data})
-          console.log("data = " + JSON.stringify(this.state.data));
+          console.log("data = " );
+          console.log(data);
+        //   console.log("data = " + JSON.stringify(this.state.data));
         //   console.log( );
         // gif = str(open(img_file, 'rb').write())
+        // var base64Flag = 'data:image/jpeg;base64,';
+        // var imageStr = this.arrayBufferToBase64(this.state.data.insurance_dict.gifs.data.data);
+        // this.setState({img: imageStr});
+        // console.log("Image = ");
+        // console.log(this.state.img);
   		}
   		)
     }
 }
     render() {
-
+        const checkBoxStyle = {
+            fontSize: '20px',
+        }
         // const { myTopic } = this.state
         return (
             <div>
@@ -178,34 +204,36 @@ class RenderComp extends Component {
                             </Form.Group>
                              </Form>
                             </Segment>
-                            {/* <Segment><MyCloud/></Segment> */}
+                            <Segment><MyCloud /></Segment>
                         </Grid.Column>
-                        <Grid.Column width={8} >
+                        <Grid.Column width={8}>
                             <Segment><FacebookAndTwitter data = {this.state.data}/></Segment>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
 
                     <Grid.Column width={8}>
-                    <h2>Card/Customer</h2>
+                    <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
+                    {/* <h2>Card/Customer</h2> */}
                         <Segment>
-                            <h3>Card</h3><Segment><MyCloud data={this.state.data.insurance_dict.health_list}/></Segment>
+                            {/* <h3>Card</h3><Segment><MyCloud data={this.state.data.insurance_dict.health_list}/></Segment>
                             <h3>Disease</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
-                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.medication_list}/></Segment>
+                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.medication_list}/></Segment> */}
                         </Segment>
                     </Grid.Column>
                     <Grid.Column width={8}>
                       <Segment>
-                        <h3>Customer</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        {/* <h3>Customer</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
                         <h3>Health</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
-                        <h3>Service</h3><Segment><MyCloud data={this.state.data.service_list}/></Segment>
+                        <h3>Service</h3><Segment><MyCloud data={this.state.data.service_list}/></Segment> */}
                       </Segment>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
 
                 <Grid.Column width={8}>
-                <h2>Insurance/Patient</h2>
+                <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox>
+                {/* <h2>Insurance/Patient</h2> */}
                     <Segment>
                         <h3>Insurance</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
                         <h3>Patient</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
@@ -225,7 +253,7 @@ class RenderComp extends Component {
                         <Segment>
                             <h3>Tweets</h3>
                             {/* <DisplayMessage title='Tweets'/> */}
-                            <MyTweets data = {this.state.data}/>
+                            <MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
@@ -233,7 +261,8 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                         <h3>Links</h3>
-                        <DisplayMessage title='Memes'/>
+                        {/* <DisplayMessage title='Memes'/> */}
+                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>

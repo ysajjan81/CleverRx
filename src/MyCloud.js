@@ -18,6 +18,13 @@ const styles = {
 
 class MyCloud extends Component {
 
+  constructor(props){
+    super(props)
+    this.state={
+      data: this.props.data,
+    }
+  }
+
   render() {
 
     let li = [];
