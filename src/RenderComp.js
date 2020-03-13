@@ -215,8 +215,9 @@ class RenderComp extends Component {
                 <div>
                 <HeaderBar></HeaderBar>
                 </div>
-                <Grid celled columns={2} divided='vertically'>
-                    <Grid.Row stretched>
+
+                <Grid celled columns={2}>
+                    <Grid.Row >
                         <Grid.Column width={8}>
                             <Segment>
                             <Form>
@@ -234,63 +235,133 @@ class RenderComp extends Component {
                             <Segment><WordCloud data = {this.state.cloudData}/></Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
-                            <Segment><FacebookAndTwitter data = {this.state.data}/></Segment>
+                            <Segment>
+                              <FacebookAndTwitter data = {this.state.data}/>
+                            </Segment>
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-
-                    <Grid.Column width={8}>
-                    <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
-                    {/* <h2>Card/Customer</h2> */}
-                        <Segment>
-                        { this.state.data.length == 0 ? (
+                      <Grid.Column>
+                      <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
+                      </Grid.Column>
+                      <Grid.Column>
+                      <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox>
+                      </Grid.Column>
+                    </Grid.Row>
+                    <Grid.Row>
+                      <Grid.Column>
+                       <Segment>
+                      {
+                        this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Card</h3><Segment><MyCloud data={this.state.data.card_dict.health_list}/></Segment>
-                            <h3>Disease</h3><Segment><MyCloud data={this.state.data.card_dict.health_list}/></Segment>
-                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.card_dict.medication_list}/></Segment></div>
-                          )}
-                        </Segment>
-                    </Grid.Column>
-                    <Grid.Column width={8}>
-                      <Segment>
-                      { this.state.data.length == 0 ? (
-                           <div></div>
-                         ) : (
-                           <div><h3>Health</h3><Segment><MyCloud data={this.state.data.card_dict.health_list}/></Segment>
-                          <h3>Cost</h3><Segment><MyCloud data={this.state.data.card_dict.cost_list}/></Segment>
-                          <h3>Service</h3><Segment><MyCloud data={this.state.data.card_dict.service_list}/></Segment></div>
-                        )}
+                             <div><h3>Card</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                          )
+                        }
                       </Segment>
-                    </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-
-                <Grid.Column width={8}>
-                <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox>
-                {/* <h2>Insurance/Patient</h2> */}
-                    <Segment>
-                    { this.state.data.length == 0 ? (
-                         <div></div>
-                       ) : (
-                         <div><h3>Cost</h3><Segment><MyCloud data={this.state.data.insurance_dict.cost_list}/></Segment>
-                        <h3>Segment</h3><Segment><MyCloud data={this.state.data.insurance_dict.segment_list}/></Segment>
-                        <h3>Medication</h3><Segment><MyCloud data={this.state.data.insurance_dict.medication_list}/></Segment></div>
-                      )}
-                    </Segment>
-                </Grid.Column>
-                <Grid.Column width={8}>
-                  <Segment>
-                  { this.state.data.length == 0 ? (
-                       <div></div>
-                     ) : (
-                       <div><h3>Patients</h3><Segment><MyCloud data={this.state.data.insurance_dict.patients_list}/></Segment>
-                      <h3>Disease</h3><Segment><MyCloud data={this.state.data.insurance_dict.health_list}/></Segment>
-                      <h3>Service</h3><Segment><MyCloud data={this.state.data.insurance_dict.service_list}/></Segment></div>
-                    )}
-                  </Segment>
-                </Grid.Column>
-                </Grid.Row>
+                       <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                             <div><h3>Disease</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                            <div><h3>Medication</h3><MyCloud data={this.state.data.card_dict.medication_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                             <div><h3>Health</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                             <div><h3>Cost</h3><MyCloud data={this.state.data.card_dict.cost_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                            <div><h3>Service</h3><MyCloud data={this.state.data.card_dict.service_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      </Grid.Column>
+                      <Grid.Column>
+                       <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                             <div><h3>Cost</h3><MyCloud data={this.state.data.insurance_dict.cost_list}/></div>
+                          )
+                        }
+                      </Segment>
+                       <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                             <div><h3>Segment</h3><MyCloud data={this.state.data.insurance_dict.segment_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                            <div><h3>Medication</h3><MyCloud data={this.state.data.insurance_dict.medication_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.card_dict == null ? (
+                             <div></div>
+                           ) : (
+                             <div><h3>Health</h3><MyCloud data={this.state.data.insurance_dict.patients_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.card_dict == null ? (
+                             <div></div>
+                           ) : (
+                             <div><h3>Cost</h3><MyCloud data={this.state.data.insurance_dict.health_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      <Segment>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                            <div><h3>Service</h3><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
+                          )
+                        }
+                      </Segment>
+                      </Grid.Column>
+                    </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
