@@ -22,6 +22,7 @@ import Mylinks from './Mylinks';
 // const { Header, Footer, Content } = Layout;
 import WordCloud from './WordCloud';
 import phrase from './phrase_frequency.json';
+import MultipleSelect from './MultipleSelect';
 
 const topicOptions = [
     {
@@ -240,7 +241,8 @@ class RenderComp extends Component {
                              </Form>
                             </Segment>
                             {/* <Segment><MyCloud data={this.state.data}/></Segment> */}
-                            <Segment><WordCloud data = {this.state.cloudData}/></Segment>
+                            {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
+                            <Segment><MultipleSelect /></Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
                             <Segment>
