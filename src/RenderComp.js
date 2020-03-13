@@ -159,59 +159,49 @@ class RenderComp extends Component {
           }
         }
         this.setState({cloudData: myData});
-        // console.log("cloudData =");
-        // console.log(this.state.cloudData);
-        // // console.log(phrase);
-        // // console.log(phrase.length);
     }
 
     getData = () =>
     {
-
-  if(this.state.myTopic != '')
-  {
-    //   alert("here");
-    console.log("Selected Topic = " + this.state.myTopic);
-    // var url = "/topic?context_phrase="+this.state.myTopic;
-    var url = "/topic?topic_name="+this.state.myTopic;
-      fetch(url, {
-        method: 'GET',
-  			headers: {
-  				'Accept': 'application/json',
-  				'Content-Type': 'application/json',
-                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        },
-      }).then((response) => {
-        if(response.status == 200)
-          {
-            console.log("hitApi");
-            return response.json();
-          }
-  			else {
-  				alert('Uh Oh! Something went wrong');
-  				return -1;
-  			}
-      }).then((data) => {
-  			if(data == -1)
-          return;
-          this.setState({data: data});
-          this.createWordCloudData();
-          console.log("data = " );
-          console.log(data);
-        //   console.log("data = " + JSON.stringify(this.state.data));
-        //   console.log( );
-        // gif = str(open(img_file, 'rb').write())
-        // var base64Flag = 'data:image/jpeg;base64,';
-        // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-        // // this.setState({img: imageStr});
-        // this.setState({
-        //     img: imageStr + base64Flag
-        // });
-        // console.log("Image = ");
-        // console.log(this.state.img);
-  		}
-  		)
-    }
+      if(this.state.myTopic != ''){
+        console.log("Selected Topic = " + this.state.myTopic);
+        var url = "/topic?topic_name="+this.state.myTopic;
+          fetch(url, {
+            method: 'GET',
+      			headers: {
+      				'Accept': 'application/json',
+      				'Content-Type': 'application/json',
+                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            },
+          }).then((response) => {
+            if(response.status == 200)
+              {
+                console.log("hitApi");
+                return response.json();
+              }
+      			else {
+      				alert('Uh Oh! Something went wrong');
+      				return -1;
+      			}
+          }).then((data) => {
+      			if(data == -1)
+              return;
+              this.setState({data: data});
+              this.createWordCloudData();
+              console.log("data = " );
+              console.log(data);
+            //   console.log("data = " + JSON.stringify(this.state.data));
+            //   console.log( );
+              //gif = str(open(img_file, 'rb').write())
+              var base64Flag = 'data:image/jpeg;base64,';
+              var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+              // this.setState({img: imageStr});
+              this.setState({
+                  img: imageStr + base64Flag
+              });
+      		}
+      		)
+      }
 }
     render() {
         const checkBoxStyle = {
@@ -219,13 +209,14 @@ class RenderComp extends Component {
         }
         // const { myTopic } = this.state
         const {img} = this.state
+        console.log("Img", img)
         return (
             <div>
                 <div>
                 <HeaderBar></HeaderBar>
                 </div>
                 <Grid celled columns={2} divided='vertically'>
-                    <Grid.Row >
+                    <Grid.Row stretched>
                         <Grid.Column width={8}>
                             <Segment>
                             <Form>
@@ -252,7 +243,7 @@ class RenderComp extends Component {
                     <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
                     {/* <h2>Card/Customer</h2> */}
                         <Segment>
-                        { this.state.data.card_dict == null ? (
+                        { this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
                              <div><h3>Card</h3><Segment><MyCloud data={this.state.data.card_dict.health_list}/></Segment>
