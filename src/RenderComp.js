@@ -100,7 +100,7 @@ class RenderComp extends Component {
     constructor(props)
      {
         super(props);
-        this.state = { 
+        this.state = {
             myTopic:'',
             allInformation:[],
             data: [],
@@ -148,10 +148,7 @@ class RenderComp extends Component {
   			if(data == -1)
           return;
           this.setState({data: data})
-          console.log("data = " + this.state.data);
-        //   var base64Flag = 'data:image/jpeg;base64,';
-        //   var imageStr = this.arrayBufferToBase64(data.img.data.data);
-
+          console.log("data = " + JSON.stringify(this.state.data));
         //   console.log( );
         // gif = str(open(img_file, 'rb').write())
   		}
@@ -159,9 +156,10 @@ class RenderComp extends Component {
     }
 }
     render() {
+
         // const { myTopic } = this.state
-        return ( 
-            <div> 
+        return (
+            <div>
                 <div>
                 <HeaderBar></HeaderBar>
                 </div>
@@ -187,22 +185,40 @@ class RenderComp extends Component {
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
-                    <Grid.Column width={16}>
-                        {/* <Segment><CardTable/></Segment> */}
+
+                    <Grid.Column width={8}>
+                    <h2>Card/Customer</h2>
                         <Segment>
-                            {/* <SimpleTable title="Card/Customer"/> */}
-                            </Segment>
-                        {/* <Segment><TableExampleError/></Segment> */}
+                            <h3>Card</h3><Segment><MyCloud data={this.state.data.insurance_dict.health_list}/></Segment>
+                            <h3>Disease</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.medication_list}/></Segment>
+                        </Segment>
+                    </Grid.Column>
+                    <Grid.Column width={8}>
+                      <Segment>
+                        <h3>Customer</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Health</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Service</h3><Segment><MyCloud data={this.state.data.service_list}/></Segment>
+                      </Segment>
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={16}>
-                        {/* <Segment><CardTable/></Segment> */}
-                        <Segment>
-                            {/* <SimpleTable title="Insurance/Patient"/> */}
-                            </Segment>
-                        {/* <Segment><TableExampleError/></Segment> */}
-                    </Grid.Column>
+
+                <Grid.Column width={8}>
+                <h2>Insurance/Patient</h2>
+                    <Segment>
+                        <h3>Insurance</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Patient</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Medication</h3><Segment><MyCloud data={this.state.data.medication_list}/></Segment>
+                    </Segment>
+                </Grid.Column>
+                <Grid.Column width={8}>
+                  <Segment>
+                    <h3>Customer</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                    <h3>Health</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                    <h3>Service</h3><Segment><MyCloud data={this.state.data.service_list}/></Segment>
+                  </Segment>
+                </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={16}>
@@ -216,12 +232,12 @@ class RenderComp extends Component {
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
-                        <h3>Memes</h3>
-                        <DisplayMessage title='Memes' />
+                        <h3>Links</h3>
+                        <DisplayMessage title='Memes'/>
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row> 
+                <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
                             <h3>Gifs</h3>
@@ -234,5 +250,5 @@ class RenderComp extends Component {
          );
     }
 }
- 
+
 export default RenderComp;
