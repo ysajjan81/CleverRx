@@ -147,7 +147,7 @@ class RenderComp extends Component {
   			if(data == -1)
           return;
           this.setState({data: data})
-          console.log("data = " + this.state.data);
+          console.log("data = " + JSON.stringify(this.state.data));
         //   console.log( );
   		}
   		)
@@ -187,16 +187,16 @@ class RenderComp extends Component {
                     <Grid.Column width={8}>
                     <h2>Card/Customer</h2>
                         <Segment>
-                            <h3>Card</h3><Segment><MyCloud/></Segment>
-                            <h3>Disease</h3><Segment><MyCloud/></Segment>
-                            <h3>Medication</h3><Segment><MyCloud/></Segment>
+                            <h3>Card</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                            <h3>Disease</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.medication_list}/></Segment>
                         </Segment>
                     </Grid.Column>
                     <Grid.Column width={8}>
                       <Segment>
-                        <h3>Customer</h3><Segment><MyCloud/></Segment>
-                        <h3>Health</h3><Segment><MyCloud/></Segment>
-                        <h3>Inhaler</h3><Segment><MyCloud/></Segment>
+                        <h3>Customer</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Health</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Service</h3><Segment><MyCloud data={this.state.data.service_list}/></Segment>
                       </Segment>
                     </Grid.Column>
                 </Grid.Row>
@@ -205,16 +205,16 @@ class RenderComp extends Component {
                 <Grid.Column width={8}>
                 <h2>Insurance/Patient</h2>
                     <Segment>
-                        <h3>Insurance</h3><Segment><MyCloud/></Segment>
-                        <h3>Patient</h3><Segment><MyCloud/></Segment>
-                        <h3>Medication</h3><Segment><MyCloud/></Segment>
+                        <h3>Insurance</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Patient</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                        <h3>Medication</h3><Segment><MyCloud data={this.state.data.medication_list}/></Segment>
                     </Segment>
                 </Grid.Column>
                 <Grid.Column width={8}>
                   <Segment>
-                    <h3>Customer</h3><Segment><MyCloud/></Segment>
-                    <h3>Health</h3><Segment><MyCloud/></Segment>
-                    <h3>Inhaler</h3><Segment><MyCloud/></Segment>
+                    <h3>Customer</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                    <h3>Health</h3><Segment><MyCloud data={this.state.data.health_list}/></Segment>
+                    <h3>Service</h3><Segment><MyCloud data={this.state.data.service_list}/></Segment>
                   </Segment>
                 </Grid.Column>
                 </Grid.Row>
