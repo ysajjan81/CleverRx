@@ -160,59 +160,49 @@ class RenderComp extends Component {
           }
         }
         this.setState({cloudData: myData});
-        // console.log("cloudData =");
-        // console.log(this.state.cloudData);
-        // // console.log(phrase);
-        // // console.log(phrase.length);
     }
 
     getData = () =>
     {
-
-  if(this.state.myTopic != '')
-  {
-    //   alert("here");
-    console.log("Selected Topic = " + this.state.myTopic);
-    // var url = "/topic?context_phrase="+this.state.myTopic;
-    var url = "/topic?topic_name="+this.state.myTopic;
-      fetch(url, {
-        method: 'GET',
-  			headers: {
-  				'Accept': 'application/json',
-  				'Content-Type': 'application/json',
-                "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        },
-      }).then((response) => {
-        if(response.status == 200)
-          {
-            console.log("hitApi");
-            return response.json();
-          }
-  			else {
-  				alert('Uh Oh! Something went wrong');
-  				return -1;
-  			}
-      }).then((data) => {
-  			if(data == -1)
-          return;
-          this.setState({data: data});
-          this.createWordCloudData();
-          console.log("data = " );
-          console.log(data);
-        //   console.log("data = " + JSON.stringify(this.state.data));
-        //   console.log( );
-        // gif = str(open(img_file, 'rb').write())
-        // var base64Flag = 'data:image/jpeg;base64,';
-        // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-        // // this.setState({img: imageStr});
-        // this.setState({
-        //     img: imageStr + base64Flag
-        // });
-        // console.log("Image = ");
-        // console.log(this.state.img);
-  		}
-  		)
-    }
+      if(this.state.myTopic != ''){
+        console.log("Selected Topic = " + this.state.myTopic);
+        var url = "/topic?topic_name="+this.state.myTopic;
+          fetch(url, {
+            method: 'GET',
+      			headers: {
+      				'Accept': 'application/json',
+      				'Content-Type': 'application/json',
+                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            },
+          }).then((response) => {
+            if(response.status == 200)
+              {
+                console.log("hitApi");
+                return response.json();
+              }
+      			else {
+      				alert('Uh Oh! Something went wrong');
+      				return -1;
+      			}
+          }).then((data) => {
+      			if(data == -1)
+              return;
+              this.setState({data: data});
+              this.createWordCloudData();
+              console.log("data = " );
+              console.log(data);
+            //   console.log("data = " + JSON.stringify(this.state.data));
+            //   console.log( );
+              //gif = str(open(img_file, 'rb').write())
+              var base64Flag = 'data:image/jpeg;base64,';
+              var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+              // this.setState({img: imageStr});
+              this.setState({
+                  img: imageStr + base64Flag
+              });
+      		}
+      		)
+      }
 }
     render() {
         const checkBoxStyle = {
@@ -220,11 +210,13 @@ class RenderComp extends Component {
         }
         // const { myTopic } = this.state
         const {img} = this.state
+        console.log("Img", img)
         return (
             <div>
                 <div>
                 <HeaderBar></HeaderBar>
                 </div>
+
                 <Grid celled columns={2}>
                     <Grid.Row >
                         <Grid.Column width={8}>
@@ -253,7 +245,7 @@ class RenderComp extends Component {
                     <Grid.Row>
                       <Grid.Column>
                       <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
-                      </Grid.Column>                      
+                      </Grid.Column>
                       <Grid.Column>
                       <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox>
                       </Grid.Column>
@@ -261,7 +253,7 @@ class RenderComp extends Component {
                     <Grid.Row>
                       <Grid.Column>
                        <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -270,7 +262,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -279,7 +271,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -288,7 +280,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -297,7 +289,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -306,18 +298,18 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
                             <div><h3>Service</h3><MyCloud data={this.state.data.card_dict.service_list}/></div>
                           )
                         }
-                      </Segment> 
+                      </Segment>
                       </Grid.Column>
                       <Grid.Column>
                        <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -326,7 +318,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -335,7 +327,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
@@ -344,16 +336,16 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
-                             <div><h3>Health</h3><MyCloud data={this.state.data.insurance_dict.patients}/></div>
+                             <div><h3>Health</h3><MyCloud data={this.state.data.insurance_dict.patients_list}/></div>
                           )
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
@@ -362,70 +354,16 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      { 
+                      {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
                             <div><h3>Service</h3><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
                           )
                         }
-                      </Segment> 
+                      </Segment>
                       </Grid.Column>
                     </Grid.Row>
-                    {/* <Grid.Row> */}
-                    {/* <Grid.Column width={8}> */}
-                    {/* <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox> */}
-                    {/* <h2>Card/Customer</h2> */}
-                        {/* <Segment>
-                        { 
-                        this.state.data.length == null ? (
-                             <div></div>
-                           ) : (
-                             <div><h3>Card</h3><Segment><MyCloud data={this.state.data.card_dict.health_list}/></Segment>
-                            <h3>Disease</h3><Segment><MyCloud data={this.state.data.card_dict.health_list}/></Segment>
-                            <h3>Medication</h3><Segment><MyCloud data={this.state.data.card_dict.medication_list}/></Segment></div>
-                          )
-                        }
-                        </Segment> */}
-                    {/* </Grid.Column> */}
-                    {/* <Grid.Column width={8}>
-                      <Segment>
-                      { this.state.data.length == 0 ? (
-                           <div></div>
-                         ) : (
-                           <div><h3>Health</h3><Segment><MyCloud data={this.state.data.card_dict.health_list}/></Segment>
-                          <h3>Cost</h3><Segment><MyCloud data={this.state.data.card_dict.cost_list}/></Segment>
-                          <h3>Service</h3><Segment><MyCloud data={this.state.data.card_dict.service_list}/></Segment></div>
-                        )}
-                      </Segment>
-                    </Grid.Column>
-                </Grid.Row> */}
-                {/* <Grid.Row>
-                <Grid.Column width={8}>
-                <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox>
-                <h2>Insurance/Patient</h2>
-                    <Segment>
-                    { this.state.data.length == 0 ? (
-                         <div></div>
-                       ) : (
-                         <div><h3>Cost</h3><Segment><MyCloud data={this.state.data.insurance_dict.cost_list}/></Segment>
-                        <h3>Segment</h3><Segment><MyCloud data={this.state.data.insurance_dict.segment_list}/></Segment>
-                        <h3>Medication</h3><Segment><MyCloud data={this.state.data.insurance_dict.medication_list}/></Segment></div>
-                      )}
-                    </Segment>
-                </Grid.Column>
-                <Grid.Column width={8}>
-                  <Segment>
-                  { this.state.data.length == 0 ? (
-                       <div></div>
-                     ) : (
-                       <div><h3>Patients</h3><Segment><MyCloud data={this.state.data.insurance_dict.patients_list}/></Segment>
-                      <h3>Disease</h3><Segment><MyCloud data={this.state.data.insurance_dict.health_list}/></Segment>
-                      <h3>Service</h3><Segment><MyCloud data={this.state.data.insurance_dict.service_list}/></Segment></div>
-                    )}
-                  </Segment>
-                </Grid.Column>
-                </Grid.Row> */}
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>

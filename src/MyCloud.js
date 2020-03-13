@@ -24,10 +24,9 @@ class MyCloud extends Component {
       li: [],
     }
   }
-  componentDidMount(prevProps){
-     if(this.props.data != null){
+  componentDidUpdate(prevProps){
+     if(this.props != prevProps){
       let temp = []
-
       if(Object.keys(this.props.data).length != 0){
 
         var total_size = 1;
@@ -35,8 +34,6 @@ class MyCloud extends Component {
         for (var i in this.props.data){
           total_size+=this.props.data[i][0]
         }
-
-
 
         for (var i in this.props.data){
           size = (this.props.data[i][0]/total_size)*100;
