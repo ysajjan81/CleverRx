@@ -140,6 +140,7 @@ getData = () =>
   {
     console.log("Selected Topic = " + this.state.myTopic);
     var url = "/topic?context_phrase="+this.state.myTopic;
+    // var url = "/topic?to"
       fetch(url, {
         method: 'GET',
   			headers: {

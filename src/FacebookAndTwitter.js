@@ -14,8 +14,6 @@ import MyTweets from './MyTweets';
 // import React from 'react'
 // import { Tab } from 'semantic-ui-react'
 
-
-
 const panes = [
   {
     menuItem: 'Facebook',
@@ -23,8 +21,8 @@ const panes = [
   },
   {
     menuItem: 'Twitter',
-    render: () => <Tab.Pane attached={false}>{<MyTweets />}</Tab.Pane>,
-    // render: () => <Tab.Pane attached={false}>Twitter Content ... </Tab.Pane>,
+    // render: () => <Tab.Pane attached={false}>{<MyTweets />}</Tab.Pane>,
+    render: () => <Tab.Pane attached={false}>Twitter Content ... </Tab.Pane>,
   },
 ]
 

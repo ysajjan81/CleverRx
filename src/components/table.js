@@ -6,12 +6,13 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import data from'../tempData.json';
+// import data from'../tempData.json';
 import Checkbox from '@material-ui/core/Checkbox';
 
 
 function SimpleTable(props) {
-
+  var data = [];
+  data = props.data;
   var title = "";
 
   var l = []

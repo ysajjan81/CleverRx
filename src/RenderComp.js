@@ -122,8 +122,9 @@ class RenderComp extends Component {
   if(this.state.myTopic != '')
   {
     //   alert("here");
-    // console.log("Selected Topic = " + this.state.myTopic);
-    var url = "/topic?context_phrase="+this.state.myTopic;
+    console.log("Selected Topic = " + this.state.myTopic);
+    // var url = "/topic?context_phrase="+this.state.myTopic;
+    var url = "/topic?topic_name="+this.state.myTopic;
       fetch(url, {
         method: 'GET',
   			headers: {
@@ -148,7 +149,11 @@ class RenderComp extends Component {
           return;
           this.setState({data: data})
           console.log("data = " + this.state.data);
+        //   var base64Flag = 'data:image/jpeg;base64,';
+        //   var imageStr = this.arrayBufferToBase64(data.img.data.data);
+
         //   console.log( );
+        // gif = str(open(img_file, 'rb').write())
   		}
   		)
     }
@@ -185,7 +190,8 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         {/* <Segment><CardTable/></Segment> */}
                         <Segment>
-                            <SimpleTable title="Card/Customer"/></Segment>
+                            {/* <SimpleTable title="Card/Customer"/> */}
+                            </Segment>
                         {/* <Segment><TableExampleError/></Segment> */}
                     </Grid.Column>
                 </Grid.Row>
@@ -193,7 +199,8 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         {/* <Segment><CardTable/></Segment> */}
                         <Segment>
-                            <SimpleTable title="Insurance/Patient"/></Segment>
+                            {/* <SimpleTable title="Insurance/Patient"/> */}
+                            </Segment>
                         {/* <Segment><TableExampleError/></Segment> */}
                     </Grid.Column>
                 </Grid.Row>
@@ -206,12 +213,11 @@ class RenderComp extends Component {
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
-
                 <Grid.Row>
                     <Grid.Column width={16}>
                         <Segment>
                         <h3>Memes</h3>
-                        <DisplayMessage title='Memes'/>
+                        <DisplayMessage title='Memes' />
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>

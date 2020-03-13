@@ -28,17 +28,17 @@ function MyTweets(props) {
   var l = [];
   var data = [];
   data = props.data;
-//   console.log(data);
-  console.log("Tweets", data.tweets);
+  console.log(data);
+//   console.log("Tweets", data.tweets);
   var clr = 'green';
-  if(data.length != 0)
+  if(data.length != 0 )
   {
-  for(let i = 0 ; i<data.tweets.length; i++)
+  for(let i = 0 ; i<data.insurance_dict.tweets.length; i++)
   {
       l.push(<TableRow>
           <TableCell>{i+1}</TableCell>
           <TableCell>
-              {data.tweets[i][0]}
+              {data.insurance_dict.tweets[i][0]}
           </TableCell>
       </TableRow>)
   }
