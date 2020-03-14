@@ -44,6 +44,9 @@ class MyCloud extends Component {
         }
         this.setState({li:temp});
       }
+      else{
+        this.setState({li:[]});
+      }
     }
   }
   render() {
