@@ -106,7 +106,7 @@ function Mylinks(props) {
 }
   }
     return (
-      <div className="center-col">
+      <div>
       <Paper>
         <Table>
           <TableHead>

@@ -111,59 +111,21 @@ class RenderComp extends Component {
             insur:false,
             data: [],
             img:"",
-            cloudData:[]
+            cloudData:[],
+            phraseSelected:[],
+            multiplePhraseSelected:[],
+            getApiResultForMultiplePhrase:[],
+            phraseString:"",
          }
         //  this.changejsonData = this.changejsonData.bind(this);
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
          this.cardSelected = this.cardSelected.bind(this);
          this.insuranceSelected = this.insuranceSelected.bind(this);
+         this.handlePhraseSelected = this.handlePhraseSelected.bind(this);
+         this.sendPhrases = this.sendPhrases.bind(this);
     }
-
-    handleTopicSelect(event, {value})
-    {
-      this.setState({myTopic: value});
-    }
-    cardSelected(event)
-{
-    var temp = !(this.state.card);
-    this.setState({card: temp});
-    console.log(" card checked = " + this.state.card);
-}
-    insuranceSelected(event)
-    {
-        var temp = !(this.state.insur);
-        this.setState({insur: temp});
-        console.log("Insurance checked =" + this.state.insur);
-    }
-
-    arrayBufferToBase64(buffer) {
-        var binary = '';
-        var bytes = [].slice.call(new Uint8Array(buffer));
-        bytes.forEach((b) => binary += String.fromCharCode(b));
-        return window.btoa(binary);
-    };
-    createWordCloudData = () =>
-    {
-        var myData = [];
-        for(let i = 0 ; i<phrase.length ; i++)
-        {
-          var temp = [];
-          // console.log(phrase[i].Topic);
-          if(phrase[i].Topic == this.state.myTopic)
-          {
-            // console.log("Here =  " + phrase[i].Phrase);
-
-            temp.push(phrase[i].Phrase);
-            temp.push(phrase[i].Frequency);
-            myData.push(temp);
-          }
-        }
-        this.setState({cloudData: myData});
-    }
-
-    getData = () =>
-    {
+    componentDidUpdate(){
       if(this.state.myTopic != ''){
         console.log("Selected Topic = " + this.state.myTopic);
         var url = "/topic?topic_name="+this.state.myTopic;
@@ -189,7 +151,237 @@ class RenderComp extends Component {
               return;
               this.setState({data: data});
               this.createWordCloudData();
-              console.log("data = " );
+              // console.log("data = ");
+              // console.log(data);
+            //   console.log("data = " + JSON.stringify(this.state.data));
+            //   console.log( );
+              //gif = str(open(img_file, 'rb').write())
+              // var base64Flag = 'data:image/jpeg;base64,';
+              // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+              // // this.setState({img: imageStr});
+              // this.setState({
+              //     img: imageStr + base64Flag
+              // });
+      		}
+      		)
+      }
+    }
+    // componentDidMount(){
+    //   if(this.state.myTopic != ''){
+    //     console.log("Selected Topic = " + this.state.myTopic);
+    //     var url = "/topic?topic_name="+this.state.myTopic;
+    //       fetch(url, {
+    //         method: 'GET',
+    //   			headers: {
+    //   				'Accept': 'application/json',
+    //   				'Content-Type': 'application/json',
+    //                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    //         },
+    //       }).then((response) => {
+    //         if(response.status == 200)
+    //           {
+    //             console.log("hitApi");
+    //             return response.json();
+    //           }
+    //   			else {
+    //   				alert('Uh Oh! Something went wrong');
+    //   				return -1;
+    //   			}
+    //       }).then((data) => {
+    //   			if(data == -1)
+    //           return;
+    //           this.setState({data: data});
+    //           this.createWordCloudData();
+    //           console.log("data = ");
+    //           console.log(data);
+    //         //   console.log("data = " + JSON.stringify(this.state.data));
+    //         //   console.log( );
+    //           //gif = str(open(img_file, 'rb').write())
+    //           var base64Flag = 'data:image/jpeg;base64,';
+    //           var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+    //           // this.setState({img: imageStr});
+    //           this.setState({
+    //               img: imageStr + base64Flag
+    //           });
+    //   		}
+    //   		)
+    //   }
+    // }
+    handleTopicSelect(event, {value})
+    {
+      this.setState({myTopic: value});
+
+      // if(this.state.myTopic != ''){
+      //   console.log("Selected Topic = " + this.state.myTopic);
+      //   var url = "/topic?topic_name="+this.state.myTopic;
+      //     fetch(url, {
+      //       method: 'GET',
+      // 			headers: {
+      // 				'Accept': 'application/json',
+      // 				'Content-Type': 'application/json',
+      //               "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+      //       },
+      //     }).then((response) => {
+      //       if(response.status == 200)
+      //         {
+      //           console.log("hitApi");
+      //           return response.json();
+      //         }
+      // 			else {
+      // 				alert('Uh Oh! Something went wrong');
+      // 				return -1;
+      // 			}
+      //     }).then((data) => {
+      // 			if(data == -1)
+      //         return;
+      //         this.setState({data: data});
+      //         this.createWordCloudData();
+      //       //   console.log("data = ");
+      //       //   console.log(data);
+      //       // //   console.log("data = " + JSON.stringify(this.state.data));
+      //       // //   console.log( );
+      //       //   //gif = str(open(img_file, 'rb').write())
+      //       //   var base64Flag = 'data:image/jpeg;base64,';
+      //       //   var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+      //       //   // this.setState({img: imageStr});
+      //       //   this.setState({
+      //       //       img: imageStr + base64Flag
+      //       //   });
+      // 		}
+      // 		)
+      // }
+    }
+
+    cardSelected(event)
+    {
+    var temp = !(this.state.card);
+    this.setState({card: temp});
+    console.log(" card checked = " + this.state.card);
+}
+    insuranceSelected(event)
+    {
+        var temp = !(this.state.insur);
+        this.setState({insur: temp});
+        console.log("Insurance checked =" + this.state.insur);
+    }
+    handlePhraseSelected(event, {value}){
+      // this.setState({})
+      // let mytemp = this.state.multiplePhraseSelected;
+      // mytemp = mytemp +  value + ",";
+      // mytemp.push(event.value + ",");
+      this.setState({multiplePhraseSelected: value});
+      // console.log("myTemp = ");
+      // console.log(this.state.multiplePhraseSelected);
+    }
+    sendPhrases(){
+      // console.log("in sendPhrase myTemp = ");
+      // console.log(this.state.multiplePhraseSelected);
+      var temp = "";
+      for(let i = 0 ; i<this.state.multiplePhraseSelected; i++)
+      {
+        temp += this.state.multiplePhraseSelected[i] + ',';
+      }
+      this.setState({phraseString: temp});
+      console.log("phraseString = ");
+      console.log(this.state.phraseString);
+      var url ="/topic?topic_name="+this.state.phraseString;
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+        },
+      }).then((response) => {
+        if(response.status == 200)
+          {
+            console.log("hitApi");
+            return response.json();
+          }
+        else {
+          alert('Uh Oh! Something went wrong');
+          return -1;
+        }
+      }).then((data) => {
+        if(data == -1)
+          return;
+          // this.setState({data: data});
+          this.setState({getApiResultForMultiplePhrase: data});
+          this.createWordCloudData();
+          // console.log("API result = ");
+          // console.log(this.state.getApiResultForMultiplePhrase);
+          // console.log("data = ");
+          // console.log(data);
+        //   console.log("data = " + JSON.stringify(this.state.data));
+        //   console.log( );
+          //gif = str(open(img_file, 'rb').write())
+          // var base64Flag = 'data:image/jpeg;base64,';
+          // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+          // // this.setState({img: imageStr});
+          // this.setState({
+          //     img: imageStr + base64Flag
+          // });
+      }
+      )
+    }
+
+    arrayBufferToBase64(buffer) {
+        var binary = '';
+        var bytes = [].slice.call(new Uint8Array(buffer));
+        bytes.forEach((b) => binary += String.fromCharCode(b));
+        return window.btoa(binary);
+    };
+    createWordCloudData = () =>
+    {
+        var myData = [];
+        let myoptions = [];
+        for(let i = 0 ; i<phrase.length ; i++)
+        {
+          var temp = [];
+          // console.log(phrase[i].Topic);
+          if(phrase[i].Topic === this.state.myTopic)
+          {
+            // console.log("Here =  " + phrase[i].Phrase);
+
+            temp.push(phrase[i].Phrase);
+            temp.push(phrase[i].Frequency);
+            myData.push(temp);
+            myoptions.push({key: phrase[i].Phrase, text: phrase[i].Phrase, value: phrase[i].Phrase});
+          }
+        }
+        this.setState({cloudData: myData});
+        this.setState({phraseSelected: myoptions})
+    }
+
+    getData = () =>
+    {
+
+      if(this.state.myTopic != ''){
+        console.log("Selected Topic = " + this.state.myTopic);
+        var url = "/topic?topic_name="+this.state.myTopic;
+          fetch(url, {
+            method: 'GET',
+      			headers: {
+      				'Accept': 'application/json',
+      				'Content-Type': 'application/json',
+                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            },
+          }).then((response) => {
+            if(response.status == 200)
+              {
+                console.log("hitApi");
+                return response.json();
+              }
+      			else {
+      				alert('Uh Oh! Something went wrong');
+      				return -1;
+      			}
+          }).then((data) => {
+      			if(data == -1)
+              return;
+              this.setState({data: data});
+              this.createWordCloudData();
+              console.log("data = ");
               console.log(data);
             //   console.log("data = " + JSON.stringify(this.state.data));
             //   console.log( );
@@ -205,6 +397,8 @@ class RenderComp extends Component {
       }
 }
     render() {
+      // console.log("prs = ");
+      // console.log(this.state.phraseString);
         const checkBoxStyle = {
             fontSize: '20px',
         }
@@ -221,20 +415,30 @@ class RenderComp extends Component {
                     <Grid.Row >
                         <Grid.Column width={8}>
                             <Segment>
+                            {/* <Form>
+                            <Form.Group>
+                            <Form.Field width ={14}> */}
+                             <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
+                            {/* </Form.Field>
+                             <Form.Field> */}
+                             {/* <Button onClick={this.getData}>Submit</Button> */}
+                            {/* </Form.Field>
+                            </Form.Group>
+                             </Form> */}
+                            </Segment>
+                            {/* <Segment><MyCloud data={this.state.data}/></Segment> */}
+                            <Segment><WordCloud data = {this.state.cloudData}/></Segment>
                             <Form>
                             <Form.Group>
                             <Form.Field width ={14}>
-                             <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
+                            {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
+                            <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected}/>
                             </Form.Field>
-                             <Form.Field>
-                             <Button onClick={this.getData}>Submit</Button>
+                            <Form.Field>
+                             <Button onClick={this.sendPhrases}>Submit</Button>
                             </Form.Field>
                             </Form.Group>
-                             </Form>
-                            </Segment>
-                            {/* <Segment><MyCloud data={this.state.data}/></Segment> */}
-                            {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
-                            <Segment><MultipleSelect /></Segment>
+                            </Form>
                         </Grid.Column>
                         <Grid.Column width={8}>
                             <Segment>
@@ -275,7 +479,7 @@ class RenderComp extends Component {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                            <div><h3>Medication</h3><MyCloud data={this.state.data.card_dict.medication_list}/></div>
+                            <div><h3>Medication</h3><MyCloud data={this.state.data.card_dict.medication_list} /></div>
                           )
                         }
                       </Segment>

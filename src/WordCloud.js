@@ -3,7 +3,7 @@ import randomColor from "randomcolor";
 import TagCloud from "react-tag-cloud";
 import CloudItem from "./CloudItem";
 import './assets/css/App.css'
-
+import MultipleSelect from './MultipleSelect';
 const styles = {
   large: {
     fontSize: 60,
@@ -68,23 +68,30 @@ export default WordCloud;
 
 // import { TagCloud } from 'react-tagcloud'
 // import React, { Component } from 'react';
+// import MultipleSelect from './MultipleSelect';
  
-// var mat = [
-//   { value: 'JavaScript', count: 38 },
-// //   { value: 'React', count: 30 },
-// //   { value: 'Nodejs', count: 28 },
-// //   { value: 'Express.js', count: 25 },
-// //   { value: 'HTML5', count: 33 },
-// //   { value: 'MongoDB', count: 18 },
-// //   { value: 'CSS3', count: 20 },
-// //     { value: 'CSS3', count: 20 },
-// //     { value: 'CSS3', count: 20 },
-// //     { value: 'CSS3', count: 20 },
-// //     { value: 'CSS3', count: 20 },
+// let mat = [
+  // { value: 'JavaScript', count: 38 },
+//   { value: 'React', count: 30 },
+//   { value: 'Nodejs', count: 28 },
+//   { value: 'Express.js', count: 25 },
+//   { value: 'HTML5', count: 33 },
+//   { value: 'MongoDB', count: 18 },
+//   { value: 'CSS3', count: 20 },
+//     { value: 'CSS3', count: 20 },
+//     { value: 'CSS3', count: 20 },
+//     { value: 'CSS3', count: 20 },
+//     { value: 'CSS3', count: 20 },
 // ]
 
-// // const data = []
+// const data = []
+// insertInSelected = (tag) =>
+// {
+//   alert("You selected " + tag.value);
+//   <MultipleSelect data={tag} />
+// }
 // const WordCloud = (props) => {
+//   mat = [];
 //     console.log("insideWordCloud = ");
 //     console.log(props.data);
 
@@ -100,16 +107,48 @@ export default WordCloud;
 //     minSize={12}
 //     maxSize={35}
 //     tags={mat}
-//     onClick={tag => alert(`'${tag.value}' was selected!`)}
+//     onClick= {insertInSelected(tag)}//{tag => alert(`'${tag.value}' was selected!`)}
 //   />)
 // }
 
 // export default WordCloud;
 
-
-
-
 // class WordCloud extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { 
+      
+//      }
+//   }
+//   // insertInSelected = (tag) =>
+//   // {
+//   //     alert("You selected " + tag);
+//   //     <MultipleSelect data={tag} />
+//   // }
+//   render() { 
+      
+// let mat = [];
+//     for(let i = 0 ; i<this.props.data.length ; i++)
+//     {
+//         mat.push({value: this.props.data[i][0], count: this.props.data[i][1]});
+//     }
+//     return ( 
+//       <TagCloud
+//     minSize={12}
+//     maxSize={35}
+//     tags={mat}
+//     // onClick={alert(`'${tag.value}' was selected!`)}
+//     />
+//       );
+//   }
+// }
+ 
+// export default WordCloud;
+
+
+
+// class WordCloud 
+// extends Component {
 //     constructor(props) {
 //         super(props);
 //         this.state = { 
