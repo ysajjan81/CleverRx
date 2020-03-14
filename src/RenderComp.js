@@ -125,47 +125,47 @@ class RenderComp extends Component {
          this.handlePhraseSelected = this.handlePhraseSelected.bind(this);
          this.sendPhrases = this.sendPhrases.bind(this);
     }
-    componentDidUpdate(){
-      if(this.state.myTopic != ''){
-        console.log("Selected Topic = " + this.state.myTopic);
-        var url = "/topic?topic_name="+this.state.myTopic;
-          fetch(url, {
-            method: 'GET',
-      			headers: {
-      				'Accept': 'application/json',
-      				'Content-Type': 'application/json',
-                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-            },
-          }).then((response) => {
-            if(response.status == 200)
-              {
-                console.log("hitApi");
-                return response.json();
-              }
-      			else {
-      				alert('Uh Oh! Something went wrong');
-      				return -1;
-      			}
-          }).then((data) => {
-      			if(data == -1)
-              return;
-              this.setState({data: data});
-              this.createWordCloudData();
-              // console.log("data = ");
-              // console.log(data);
-            //   console.log("data = " + JSON.stringify(this.state.data));
-            //   console.log( );
-              //gif = str(open(img_file, 'rb').write())
-              // var base64Flag = 'data:image/jpeg;base64,';
-              // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-              // // this.setState({img: imageStr});
-              // this.setState({
-              //     img: imageStr + base64Flag
-              // });
-      		}
-      		)
-      }
-    }
+    // componentDidUpdate(){
+    //   if(this.state.myTopic != ''){
+    //     console.log("Selected Topic = " + this.state.myTopic);
+    //     var url = "/topic?topic_name="+this.state.myTopic;
+    //       fetch(url, {
+    //         method: 'GET',
+    //   			headers: {
+    //   				'Accept': 'application/json',
+    //   				'Content-Type': 'application/json',
+    //                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+    //         },
+    //       }).then((response) => {
+    //         if(response.status == 200)
+    //           {
+    //             console.log("hitApi");
+    //             return response.json();
+    //           }
+    //   			else {
+    //   				alert('Uh Oh! Something went wrong');
+    //   				return -1;
+    //   			}
+    //       }).then((data) => {
+    //   			if(data == -1)
+    //           return;
+    //           this.setState({data: data});
+    //           this.createWordCloudData();
+    //           // console.log("data = ");
+    //           // console.log(data);
+    //         //   console.log("data = " + JSON.stringify(this.state.data));
+    //         //   console.log( );
+    //           //gif = str(open(img_file, 'rb').write())
+    //           // var base64Flag = 'data:image/jpeg;base64,';
+    //           // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
+    //           // // this.setState({img: imageStr});
+    //           // this.setState({
+    //           //     img: imageStr + base64Flag
+    //           // });
+    //   		}
+    //   		)
+    //   }
+    // }
     // componentDidMount(){
     //   if(this.state.myTopic != ''){
     //     console.log("Selected Topic = " + this.state.myTopic);
@@ -415,16 +415,16 @@ class RenderComp extends Component {
                     <Grid.Row >
                         <Grid.Column width={8}>
                             <Segment>
-                            {/* <Form>
+                            <Form>
                             <Form.Group>
-                            <Form.Field width ={14}> */}
+                            <Form.Field width ={14}>
                              <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
-                            {/* </Form.Field>
-                             <Form.Field> */}
-                             {/* <Button onClick={this.getData}>Submit</Button> */}
-                            {/* </Form.Field>
+                            </Form.Field>
+                             <Form.Field> 
+                             <Button onClick={this.getData}>Submit</Button>
+                            </Form.Field>
                             </Form.Group>
-                             </Form> */}
+                             </Form>
                             </Segment>
                             {/* <Segment><MyCloud data={this.state.data}/></Segment> */}
                             <Segment><WordCloud data = {this.state.cloudData}/></Segment>
