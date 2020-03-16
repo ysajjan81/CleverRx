@@ -128,10 +128,10 @@
 }
 
 .MuiTableCell-body-37 {
-  font-size: 1.5rem !important;
+  font-size: 15px !important ;
 }
 .MuiTableCell-head-36 {
-  font-size: 1.6rem !important;
+  font-size: 1.6rem ;
 }
 
 
@@ -577,7 +577,7 @@ ul.twPc-Arrange {
 }
 
 .MuiTableCell-root-35{
-  padding: 4px 10px 4px 24px !important;
+  padding:5px 5px 5px 10px !important
 }
 
 .search{
@@ -616,4 +616,7 @@ position: sticky;
   width: 100%;
   text-align: left;
   padding: 15px;
+}
+.phrase-Style{
+  font-size: 5px;
 }

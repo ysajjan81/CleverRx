@@ -45,13 +45,13 @@ if(props.card == true && data.card_dict.tweets){
 }
   }
     return (
-      <div>
+      <div className="center-col">
       <Paper>
         <Table>
           <TableHead>
             <TableRow >
-            <TableCell className='headingTable'>Tweet Count</TableCell >
-            <TableCell className='headingTable'>Tweets</TableCell >  
+            <TableCell className='headingTable'>No</TableCell >
+            <TableCell className='headingTable'>Tweets</TableCell >
             </TableRow>
           </TableHead>
           <TableBody>{l}</TableBody>

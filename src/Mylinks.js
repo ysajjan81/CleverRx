@@ -44,12 +44,12 @@ function Mylinks(props) {
 }
   }
     return (
-      <div>
+      <div className="center-col">
       <Paper>
         <Table>
           <TableHead>
             <TableRow >
-            <TableCell className='headingTable'>Links Count</TableCell >
+            <TableCell className='headingTable'>No</TableCell >
             <TableCell className='headingTable'>Links</TableCell >
             </TableRow>
           </TableHead>

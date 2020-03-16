@@ -23,7 +23,15 @@ import Mylinks from './Mylinks';
 import WordCloud from './WordCloud';
 import phrase from './phrase_frequency.json';
 import MultipleSelect from './MultipleSelect';
-import SortedTable from './SortedTable';
+// import SortedTable from './SortedTable';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+// import data from'./tempData.json';
+// import Checkbox from '@material-ui/core/Checkbox';
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
@@ -121,6 +129,7 @@ class RenderComp extends Component {
             getApiResultForMultiplePhrase:[],
             phraseString:"",
             loading:false,
+            selectedCheckBox:[],
          }
         //  this.changejsonData = this.changejsonData.bind(this);
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
@@ -130,8 +139,8 @@ class RenderComp extends Component {
          this.handlePhraseSelected = this.handlePhraseSelected.bind(this);
          this.sendPhrases = this.sendPhrases.bind(this);
     }
-    componentDidUpdate(prevProps, prevState, snapshot){
 
+    componentDidUpdate(prevProps, prevState, snapshot){
       if(this.state.myTopic != '' && current != prev){
         prev = current;
         console.log("Selected Topic = " + this.state.myTopic);
@@ -157,116 +166,17 @@ class RenderComp extends Component {
               return;
               this.setState({data: data, loading:false});
               this.createWordCloudData();
-              // console.log("data = ");
                console.log(data);
-            //   console.log("data = " + JSON.stringify(this.state.data));
-            //   console.log( );
-              //gif = str(open(img_file, 'rb').write())
-              // var base64Flag = 'data:image/jpeg;base64,';
-              // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-              // // this.setState({img: imageStr});
-              // this.setState({
-              //     img: imageStr + base64Flag
-              // });
       		}
       		)
       }
     }
-    // componentDidMount(){
-    //   if(this.state.myTopic != ''){
-    //     console.log("Selected Topic = " + this.state.myTopic);
-    //     var url = "/topic?topic_name="+this.state.myTopic;
-    //       fetch(url, {
-    //         method: 'GET',
-    //   			headers: {
-    //   				'Accept': 'application/json',
-    //   				'Content-Type': 'application/json',
-    //                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-    //         },
-    //       }).then((response) => {
-    //         if(response.status == 200)
-    //           {
-    //             console.log("hitApi");
-    //             return response.json();
-    //           }
-    //   			else {
-    //   				alert('Uh Oh! Something went wrong');
-    //   				return -1;
-    //   			}
-    //       }).then((data) => {
-    //   			if(data == -1)
-    //           return;
-    //           this.setState({data: data});
-    //           this.createWordCloudData();
-    //           console.log("data = ");
-    //           console.log(data);
-    //         //   console.log("data = " + JSON.stringify(this.state.data));
-    //         //   console.log( );
-    //           //gif = str(open(img_file, 'rb').write())
-    //           var base64Flag = 'data:image/jpeg;base64,';
-    //           var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-    //           // this.setState({img: imageStr});
-    //           this.setState({
-    //               img: imageStr + base64Flag
-    //           });
-    //   		}
-    //   		)
-    //   }
-    // }
+
     handleTopicSelect(event, {value})
     {
       this.setState({myTopic: value, loading:true});
       current = value;
-      // alert("inside hadnleTopicSelect");
-      // alert(value);
-      // this.getData(value);
-
-
-      // if(this.state.myTopic != ''){
-      //   console.log("Selected Topic = " + this.state.myTopic);
-      //   var url = "/topic?topic_name="+this.state.myTopic;
-      //     fetch(url, {
-      //       method: 'GET',
-      // 			headers: {
-      // 				'Accept': 'application/json',
-      // 				'Content-Type': 'application/json',
-      //               "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-      //       },
-      //     }).then((response) => {
-      //       if(response.status == 200)
-      //         {
-      //           console.log("hitApi");
-      //           return response.json();
-      //         }
-      // 			else {
-      // 				alert('Uh Oh! Something went wrong');
-      // 				return -1;
-      // 			}
-      //     }).then((data) => {
-      // 			if(data == -1)
-      //         return;
-      //         this.setState({data: data});
-      //         this.createWordCloudData();
-      //       //   console.log("data = ");
-      //       //   console.log(data);
-      //       // //   console.log("data = " + JSON.stringify(this.state.data));
-      //       // //   console.log( );
-      //       //   //gif = str(open(img_file, 'rb').write())
-      //       //   var base64Flag = 'data:image/jpeg;base64,';
-      //       //   var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-      //       //   // this.setState({img: imageStr});
-      //       //   this.setState({
-      //       //       img: imageStr + base64Flag
-      //       //   });
-      // 		}
-      // 		)
-      // }
     }
-    // getSnapshotBeforeUpdate(prevProps, prevState){
-    //   if(prevState !== this.state.topic)
-    //   return true;
-    //   return false;
-    // }
     cardSelected(event)
     {
     var temp = !(this.state.card);
@@ -277,30 +187,68 @@ class RenderComp extends Component {
     {
         var temp = !(this.state.insur);
         this.setState({insur: temp});
-        console.log("Insurance checked =" + this.state.insur);
+        // console.log("Insurance checked =" + this.state.insur);
     }
+
+    checkBoxSelected = (event, {value}) =>
+    {
+        var temp = [] ;
+        var isPresent = false;
+        for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
+        {
+          if(value == this.state.selectedCheckBox[i])
+           {
+            isPresent = true;
+            break;
+           }
+        }
+        if(isPresent == false)
+        {
+          temp = this.state.selectedCheckBox;
+          temp.push(value);
+          this.setState({selectedCheckBox: temp});
+        }
+        else
+        {
+          for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
+          {
+            if(this.state.selectedCheckBox[i] == value)
+            {
+              continue;
+            }
+            temp.push(this.state.selectedCheckBox[i]);
+          }
+          this.setState({selectedCheckBox: temp});
+        }
+        console.log(" this.state.selectedCheckBox = ");
+        console.log(this.state.selectedCheckBox);
+    }
+
     handlePhraseSelected(event, {value}){
-      // this.setState({})
-      // let mytemp = this.state.multiplePhraseSelected;
-      // mytemp = mytemp +  value + ",";
-      // mytemp.push(event.value + ",");
       this.setState({multiplePhraseSelected: value});
-      // console.log("myTemp = ");
-      // console.log(this.state.multiplePhraseSelected);
     }
+
     sendPhrases(){
-      // console.log("in sendPhrase myTemp = ");
-      // console.log(this.state.multiplePhraseSelected);
+
+      console.log("in sendPhrase selectedCheckboxArray = ");
+      console.log(this.state.selectedCheckBox);
       var temp = "";
       this.setState({loading: true});
-      for(let i = 0 ; i<this.state.multiplePhraseSelected; i++)
+      for(let i = 0 ; i<this.state.selectedCheckBox.length; i++)
       {
-        temp += this.state.multiplePhraseSelected[i] + ',';
+        temp += this.state.selectedCheckBox[i] + ',';
+        console.log("here = " + temp);
       }
       this.setState({phraseString: temp});
       console.log("phraseString = ");
-      console.log(this.state.phraseString);
-      var url ="/topic?topic_name="+this.state.phraseString;
+      console.log(temp);
+      // var url ="/topic?topic_name="+this.state.phraseString;
+      var temp1 = "";
+      for(let i = 0 ; i<temp.length-1;i++)
+      temp1 += temp[i];
+      console.log(" temp 1" + temp1) ;
+
+      var url  = "/phrases?topic_name=" + this.state.myTopic + "&topic_phrases=" + temp1;
       fetch(url, {
         method: 'GET',
         headers: {
@@ -311,7 +259,6 @@ class RenderComp extends Component {
       }).then((response) => {
         if(response.status == 200)
           {
-            console.log("hitApi");
             return response.json();
           }
         else {
@@ -321,32 +268,19 @@ class RenderComp extends Component {
       }).then((data) => {
         if(data == -1)
           return;
-          // this.setState({data: data});
-          this.setState({getApiResultForMultiplePhrase: data, loading:false});
-          this.createWordCloudData();
-          // console.log("API result = ");
-          // console.log(this.state.getApiResultForMultiplePhrase);
-          // console.log("data = ");
-          // console.log(data);
-        //   console.log("data = " + JSON.stringify(this.state.data));
-        //   console.log( );
-          //gif = str(open(img_file, 'rb').write())
-          // var base64Flag = 'data:image/jpeg;base64,';
-          // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-          // // this.setState({img: imageStr});
-          // this.setState({
-          //     img: imageStr + base64Flag
-          // });
+          this.setState({data: data, loading:false});
+          console.log("phrase api = ");
+          console.log(data);
       }
       )
     }
 
-    arrayBufferToBase64(buffer) {
-        var binary = '';
-        var bytes = [].slice.call(new Uint8Array(buffer));
-        bytes.forEach((b) => binary += String.fromCharCode(b));
-        return window.btoa(binary);
-    };
+    // arrayBufferToBase64(buffer) {
+    //     var binary = '';
+    //     var bytes = [].slice.call(new Uint8Array(buffer));
+    //     bytes.forEach((b) => binary += String.fromCharCode(b));
+    //     return window.btoa(binary);
+    // };
     createWordCloudData = () =>
     {
         var myData = [];
@@ -419,6 +353,53 @@ class RenderComp extends Component {
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
+
+        if(this.state.cloudData.length !== 0) {
+        var l = [];
+        var data = [];
+        data = this.state.cloudData;
+        console.log(data);
+        if(this.state.cloudData.length != 0 )
+        {
+            let i = 0 ;
+          while(i < data.length)
+        {
+            // l.push(<TableRow>
+            //     {/* <TableCell>{data[i][1]}</TableCell> */}
+            //     <TableCell><Checkbox  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            //     <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            //     <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            // </TableRow>)
+            if( data.length - i == 1)
+            {
+              l.push(<TableRow>
+                <TableCell>
+                <div class="ui checkbox">
+                <input type="checkbox" class="hidden" readonly="" tabindex="0" />
+                <label>{data[i++][0]}</label>
+              </div>
+                {/*<Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}*/}</TableCell>
+            </TableRow>)
+            }
+            else if( data.length - i == 2)
+            {
+              l.push(<TableRow>
+                <TableCell><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]} />{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            </TableRow>)
+            }
+            else if(data.length - i >= 3)
+              {
+                  l.push(<TableRow>
+                <TableCell><Checkbox style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            </TableRow>)
+              }
+
+        }
+      }
+    }
         // const { myTopic } = this.state
         const {img} = this.state
         console.log("Img", img)
@@ -428,14 +409,39 @@ class RenderComp extends Component {
                 <HeaderBar></HeaderBar>
                 </div>
                 <Grid textAlign='center' style={{padding:'20px'}} columns={2}>
-                    <Grid.Row >
+                    <Grid.Row>
                         <Grid.Column width={8}>
                             <Segment>
 
                              <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment>
-                            <SortedTable data = {this.state.cloudData}/>
+
+                            {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
+                            {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
+                            {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
+                            {/* <sortedTable />
+
+                            </Form.Field>
+                            <Form.Field> */}
+                            {/* <sortedTable /> */}
+                            {/* <SortedTable data = {this.state.cloudData}/> */}
+
+                          <div >
+                                <Paper>
+                                  <Table>
+                                    <TableHead>
+                                      <TableRow >
+                                      <TableCell className='headingTable'>Phrase</TableCell>
+                                      <TableCell className='headingTable'></TableCell>
+                                      <TableCell className='headingTable'></TableCell>
+                                      </TableRow>
+                                    </TableHead>
+                                    <TableBody>{l}</TableBody>
+                                  </Table>
+                                </Paper>
+                                </div>
+                                <Button style={{marginTop:'15px'}} onClick={this.sendPhrases}>Get Data</Button>
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
@@ -453,7 +459,6 @@ class RenderComp extends Component {
                         </div>
                       ) : (<div/>)
                       }
-
                       <Grid.Column>
                       <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
                       </Grid.Column>
@@ -464,7 +469,7 @@ class RenderComp extends Component {
                     <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
                     <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                        <Segment>
-                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Card</div>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Card</div>
                       {
                         this.state.data.length == 0 ? (
                              <div style={{'width':'5px'}}></div>
@@ -474,7 +479,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                         <Segment>
-                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Disease</div>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -484,7 +489,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Medication</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -494,7 +499,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Health</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Health</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -504,7 +509,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                      <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Cost</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -514,7 +519,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                      <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Service</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -526,7 +531,7 @@ class RenderComp extends Component {
                       </Grid.Column>
                       <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                      <Segment>
-                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Cost</div>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -536,7 +541,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Disease</div>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -546,7 +551,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Medication</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -556,7 +561,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Health</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Health</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
@@ -566,7 +571,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                      <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Segment</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Segment</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
@@ -576,7 +581,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Service</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -591,8 +596,12 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                             <h3>Tweets</h3>
-                            {/* <DisplayMessage title='Tweets'/> */}
-                            <MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
+
+                            {/* <MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/> */}
+                            {
+                              !this.state.insur && !this.state.card ? (<div></div>):
+                            (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>)
+                            }
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
@@ -600,8 +609,9 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                         <h3>Links</h3>
-                        {/* <DisplayMessage title='Memes'/> */}
+                        { !this.state.insur && !this.state.card?(<div></div>):
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
+                        }
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
