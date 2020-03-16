@@ -146,7 +146,6 @@ class RenderComp extends Component {
           }).then((response) => {
             if(response.status == 200)
               {
-                console.log("hitApi");
                 return response.json();
               }
       			else {
@@ -159,7 +158,7 @@ class RenderComp extends Component {
               this.setState({data: data, loading:false});
               this.createWordCloudData();
               // console.log("data = ");
-              // console.log(data);
+               console.log(data);
             //   console.log("data = " + JSON.stringify(this.state.data));
             //   console.log( );
               //gif = str(open(img_file, 'rb').write())
@@ -417,10 +416,6 @@ class RenderComp extends Component {
       }
 }
     render() {
-      // if(this.state.myTopic != '')
-      //   this.getData(this.state.myTopic);
-      // console.log("prs = ");
-      // console.log(this.state.phraseString);
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
@@ -440,22 +435,7 @@ class RenderComp extends Component {
                              <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment>
-                            {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
-                            {/* <Form>
-                            <Form.Group>
-                            <Form.Field width ={14}> */}
-                            {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
-                            {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
-                            {/* <sortedTable />
-
-                            </Form.Field>
-                            <Form.Field> */}
-                            {/* <sortedTable /> */}
                             <SortedTable data = {this.state.cloudData}/>
-                             {/* <Button onClick={this.sendPhrases}>Get Data</Button> */}
-                            {/* </Form.Field>
-                            </Form.Group>
-                            </Form> */}
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
@@ -482,109 +462,121 @@ class RenderComp extends Component {
                       </Grid.Column>
                     </Grid.Row>
                     <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
-                      <Grid.Column>
+                    <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                        <Segment>
+                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Card</div>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div style={{'width':'5px'}}></div>
+                           ) : (
+                             <div ><MyCloud data={this.state.data.card_dict.card_list}/></div>
+                          )
+                        }
+                      </Segment>
+                        <Segment>
+                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Disease</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Card</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                             <div ><MyCloud data={this.state.data.card_dict.disease_list}/></div>
                           )
                         }
                       </Segment>
                        <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Medication</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Disease</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                            <div ><MyCloud data={this.state.data.card_dict.medication_list} /></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Health</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                            <div><h3>Medication</h3><MyCloud data={this.state.data.card_dict.medication_list} /></div>
+                             <div ><MyCloud data={this.state.data.card_dict.health_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                     <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Cost</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Health</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                             <div><MyCloud data={this.state.data.card_dict.cost_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                     <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Service</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Cost</h3><MyCloud data={this.state.data.card_dict.cost_list}/></div>
-                          )
-                        }
-                      </Segment>
-                      <Segment>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                            <div><h3>Service</h3><MyCloud data={this.state.data.card_dict.service_list}/></div>
+                            <div><MyCloud data={this.state.data.card_dict.service_list}/></div>
                           )
                         }
                       </Segment>
                       </Grid.Column>
-                      <Grid.Column>
-                       <Segment>
+                      <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
+                     <Segment>
+                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Cost</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Cost</h3><MyCloud data={this.state.data.insurance_dict.cost_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.cost_list}/></div>
                           )
                         }
                       </Segment>
                        <Segment>
+                       <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Disease</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Segment</h3><MyCloud data={this.state.data.insurance_dict.segment_list}/></div>
+                             <div ><MyCloud data={this.state.data.insurance_dict.disease_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Medication</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                            <div><h3>Medication</h3><MyCloud data={this.state.data.insurance_dict.medication_list}/></div>
+                            <div><MyCloud data={this.state.data.insurance_dict.medication_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Health</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
-                             <div><h3>Health</h3><MyCloud data={this.state.data.insurance_dict.patients_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.patients_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                     <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Segment</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
-                             <div><h3>Cost</h3><MyCloud data={this.state.data.insurance_dict.health_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.segment_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10', fontSize:'22px'}}>Service</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
