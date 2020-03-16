@@ -23,7 +23,7 @@ function Mylinks(props) {
   for(let i = 0 ; i<data.insurance_dict.links.length; i++)
   {
       l.push(<TableRow>
-          <TableCell>{i+1}</TableCell>
+
           <TableCell><a href={data.insurance_dict.links[i]} target="_blank">
               {data.insurance_dict.links[i]}</a>
           </TableCell>
@@ -35,7 +35,7 @@ function Mylinks(props) {
   for(let i = 0 ; i<data.card_dict.links.length; i++)
   {
       l.push(<TableRow>
-          <TableCell>{i+1}</TableCell>
+
           <TableCell>
               {data.card_dict.links[i]}
           </TableCell>
@@ -47,12 +47,6 @@ function Mylinks(props) {
       <div className="center-col">
       <Paper>
         <Table>
-          <TableHead>
-            <TableRow >
-            <TableCell className='headingTable'>No</TableCell >
-            <TableCell className='headingTable'>Links</TableCell >
-            </TableRow>
-          </TableHead>
           <TableBody>{l}</TableBody>
         </Table>
       </Paper>
