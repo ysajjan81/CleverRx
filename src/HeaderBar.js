@@ -9,12 +9,7 @@ class HeaderBar extends Component {
         super(props);
         this.state = {  }
     }
-    //  styleObj = {
-    //     fontSize: '50px',
-    //     color: 'orange',
-    //     textAlign: "center",
-    //     backgroundColor: 'black'
-    // }
+
     render() {
         return (
             <div>
@@ -26,8 +21,9 @@ class HeaderBar extends Component {
           style={{
             width: '100%',
             textAlign: 'center',
+            backgroundColor:'black'
           }}
-        ><h1 style={{color:"#FFFFFF", fontSize:50}}><b>CleverRx</b></h1></Header>
+        ><h1 style={{color:"white", fontSize:50}}><b>CleverRx</b></h1></Header>
        </Layout>
         </div>
          );

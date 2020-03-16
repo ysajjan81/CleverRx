@@ -291,13 +291,22 @@ body {
     overflow: scroll;
     height: 200px;
 }*/
+
+a.hover {
+    text-decoration: none;
+}
+
+a.hover:hover {
+    text-decoration: underline;
+}
 h1 {
   font-size: 3rem;
   letter-spacing: 1px;
   margin: 0;
   padding: 0;
   text-align: center;
-  opacity: 0.5;
+  opacity: 0.9;
+  color: #ffffff;
 }
 
 .app-outer {
@@ -585,8 +594,8 @@ ul.twPc-Arrange {
   position: sticky;
 }
 .word-cloud {
-  height : 250px;
-  width: auto;
+  height : 150px;
+  width: 200px;
   background-color: white;
 }
 .sticky{

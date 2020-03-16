@@ -25,7 +25,7 @@ function SortedTable(props) {
   {
       l.push(<TableRow>
           {/* <TableCell>{data[i][1]}</TableCell> */}
-          <TableCell style={orderStyle}><Checkbox />{data[i++][0]}</TableCell>
+          <TableCell style={orderStyle}><Checkbox  />{data[i++][0]}</TableCell>
           <TableCell style={orderStyle}><Checkbox />{data[i++][0]}</TableCell>
           <TableCell style={orderStyle}><Checkbox />{data[i++][0]}</TableCell>
       </TableRow>)

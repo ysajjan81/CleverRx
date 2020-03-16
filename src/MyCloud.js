@@ -64,6 +64,7 @@ class MyCloud extends Component {
               style={{
                 fontFamily: "sans-serif",
                 padding: 2,
+                backgroundColor:"white",
                 whitespace:"no-wrap off"
               }}
             >
