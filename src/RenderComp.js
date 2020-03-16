@@ -208,8 +208,8 @@ class RenderComp extends Component {
 
     sendPhrases(){
 
-      console.log("in sendPhrase selectedCheckboxArray = ");
-      console.log(this.state.selectedCheckBox);
+      // console.log("in sendPhrase selectedCheckboxArray = ");
+      // console.log(this.state.selectedCheckBox);
       var temp = "";
       this.setState({loading: true});
       for(let i = 0 ; i<this.state.selectedCheckBox.length; i++)
@@ -354,7 +354,7 @@ class RenderComp extends Component {
       }
     }
         const {img} = this.state
-        console.log("Img", img)
+        //console.log("Img", img)
         return (
             <div>
                 <div>
@@ -375,7 +375,7 @@ class RenderComp extends Component {
                                   <Table>
                                     <TableHead>
                                       <TableRow>
-                                      <TableCell >Phrase</TableCell>
+                                      <TableCell style={{fontWeight:'bold', fontSize:'16px', color:'black'}}>Phrases</TableCell>
                                       <TableCell ></TableCell>
                                       <TableCell ></TableCell>
                                       </TableRow>
