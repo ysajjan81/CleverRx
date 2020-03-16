@@ -25,7 +25,7 @@ import phrase from './phrase_frequency.json';
 import MultipleSelect from './MultipleSelect';
 import SortedTable from './SortedTable';
 
-const loadingIcon = <Icon loading style={{ fontSize: 150, color:"blue" }} name='spinner' />;
+const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
 let prev = '';
 const topicOptions = [
@@ -422,7 +422,7 @@ class RenderComp extends Component {
       // console.log("prs = ");
       // console.log(this.state.phraseString);
         const checkBoxStyle = {
-            fontSize: '20px',
+            fontSize: '30px', paddingBottom:'18px'
         }
         // const { myTopic } = this.state
         const {img} = this.state
@@ -432,7 +432,7 @@ class RenderComp extends Component {
                 <div>
                 <HeaderBar></HeaderBar>
                 </div>
-                <Grid celled columns={2}>
+                <Grid textAlign='center' style={{padding:'20px'}} columns={2}>
                     <Grid.Row >
                         <Grid.Column width={8}>
                             <Segment>
@@ -464,11 +464,11 @@ class RenderComp extends Component {
                             </Segment>
                         </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row>
+                    <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
 
 
                       { this.state.loading == true ? (
-                        <div style={{ textAlign: 'center',width:'200px', height:'200px', zIndex:'10', position:'absolute', marginLeft:'720px' }}>
+                        <div style={{ textAlign: 'center',width:'200px', height:'200px', zIndex:'10', position:'absolute' }}>
                           { loadingIcon }
                         </div>
                       ) : (<div/>)
@@ -481,7 +481,7 @@ class RenderComp extends Component {
                       <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox>
                       </Grid.Column>
                     </Grid.Row>
-                    <Grid.Row>
+                    <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
                       <Grid.Column>
                        <Segment>
                       {
