@@ -29,7 +29,7 @@ class WordCloud extends Component {
     let li = [];
     if(this.props.data != null){
       for(var i = 0; i<this.props.data.length; i++){
-    li.push(<div style={{fontSize: this.props.data[i][1]*8}}>{this.props.data[i][0]}</div>);
+        li.push(<div style={{fontSize: this.props.data[i][1]*8}}>{this.props.data[i][0]}</div>);
       }
     }
     return (
@@ -41,10 +41,7 @@ class WordCloud extends Component {
             style={{
               fontFamily: "sans-serif",
               fontSize: 30,
-              color: () =>
-                randomColor({
-                  hue: "blue"
-                }),
+              color: "blue",
               padding: 5
             }}
           >
@@ -69,7 +66,7 @@ export default WordCloud;
 // import { TagCloud } from 'react-tagcloud'
 // import React, { Component } from 'react';
 // import MultipleSelect from './MultipleSelect';
- 
+
 // let mat = [
   // { value: 'JavaScript', count: 38 },
 //   { value: 'React', count: 30 },
@@ -116,8 +113,8 @@ export default WordCloud;
 // class WordCloud extends Component {
 //   constructor(props) {
 //     super(props);
-//     this.state = { 
-      
+//     this.state = {
+
 //      }
 //   }
 //   // insertInSelected = (tag) =>
@@ -125,14 +122,14 @@ export default WordCloud;
 //   //     alert("You selected " + tag);
 //   //     <MultipleSelect data={tag} />
 //   // }
-//   render() { 
-      
+//   render() {
+
 // let mat = [];
 //     for(let i = 0 ; i<this.props.data.length ; i++)
 //     {
 //         mat.push({value: this.props.data[i][0], count: this.props.data[i][1]});
 //     }
-//     return ( 
+//     return (
 //       <TagCloud
 //     minSize={12}
 //     maxSize={35}
@@ -142,32 +139,32 @@ export default WordCloud;
 //       );
 //   }
 // }
- 
+
 // export default WordCloud;
 
 
 
-// class WordCloud 
+// class WordCloud
 // extends Component {
 //     constructor(props) {
 //         super(props);
-//         this.state = { 
+//         this.state = {
 //             topicData: this.props.data,
 //          }
 //     }
 //     render() {
 //         console.log("topicData =" );
-//         console.log(this.state.topicData); 
+//         console.log(this.state.topicData);
 //         // const { data } = this.state
-//         return ( 
+//         return (
 //             <TagCloud
 //             minSize={12}
 //             maxSize={35}
 //             tags={data}
 //             onClick={tag => alert(`'${tag.value}' was selected!`)}
 //           />);
-        
+
 //     }
 // }
- 
+
 // export default WordCloud;
