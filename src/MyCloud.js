@@ -31,12 +31,18 @@ class MyCloud extends Component {
 
         var total_size = 1;
         var size = 0
+        var count = 0
         for (var i in this.props.data){
           total_size+=this.props.data[i][0]
+          count+=1
         }
 
         for (var i in this.props.data){
-          size = (this.props.data[i][0]/total_size)*100;
+          size = (this.props.data[i][0]/total_size)*(100);
+          if(size > 60)
+            size = 60
+          if(size < 15)
+            size = 15
           if(this.props.data[i][1] == '-')
             temp.push(<div style={{fontSize: size, color:"red"}}>{i}</div>);
           else

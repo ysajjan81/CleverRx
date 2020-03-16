@@ -577,7 +577,7 @@ class RenderComp extends Component {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                            <div><h3>Service</h3><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
+                            <div><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
                           )
                         }
                       </Segment>
