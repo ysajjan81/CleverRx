@@ -155,7 +155,6 @@ class RenderComp extends Component {
           }).then((response) => {
             if(response.status == 200)
               {
-                console.log("hitApi");
                 return response.json();
               }
       			else {
@@ -167,6 +166,7 @@ class RenderComp extends Component {
               return;
               this.setState({data: data, loading:false});
               this.createWordCloudData();
+               console.log(data);
       		}
       		)
       }
@@ -192,7 +192,7 @@ class RenderComp extends Component {
 
     checkBoxSelected = (event, {value}) =>
     {
-        var temp = [] ; 
+        var temp = [] ;
         var isPresent = false;
         for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
         {
@@ -208,7 +208,7 @@ class RenderComp extends Component {
           temp.push(value);
           this.setState({selectedCheckBox: temp});
         }
-        else 
+        else
         {
           for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
           {
@@ -361,31 +361,36 @@ class RenderComp extends Component {
         console.log(data);
         if(this.state.cloudData.length != 0 )
         {
-            let i = 0 ; 
+            let i = 0 ;
           while(i < data.length)
         {
             if( data.length - i == 1)
             {
               l.push(<TableRow>
-                <TableCell><Checkbox  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell>
+                <div class="ui checkbox">
+                <input type="checkbox" class="hidden" readonly="" tabindex="0" />
+                <label>{data[i++][0]}</label>
+              </div>
+                {/*<Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}*/}</TableCell>
             </TableRow>)
             }
             else if( data.length - i == 2)
             {
               l.push(<TableRow>
-                <TableCell><Checkbox  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]} />{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
             </TableRow>)
             }
             else if(data.length - i >= 3)
               {
                   l.push(<TableRow>
-                <TableCell><Checkbox  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell><Checkbox style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
             </TableRow>)
               }
-        
+
         }
       }
     }
@@ -398,16 +403,18 @@ class RenderComp extends Component {
                 <HeaderBar></HeaderBar>
                 </div>
                 <Grid textAlign='center' style={{padding:'20px'}} columns={2}>
-                    <Grid.Row style={{backgroundColor:"rgb(125, 100, 238)"}}>
+                    <Grid.Row>
                         <Grid.Column width={8}>
                             <Segment>
 
                              <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment>
+
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
                             {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
+<<<<<<< HEAD
                             
 <div >
       <Paper>
@@ -424,6 +431,30 @@ class RenderComp extends Component {
       </Paper>
       </div>
       <Button onClick={this.sendPhrases}>Get Data</Button>
+=======
+                            {/* <sortedTable />
+
+                            </Form.Field>
+                            <Form.Field> */}
+                            {/* <sortedTable /> */}
+                            {/* <SortedTable data = {this.state.cloudData}/> */}
+
+                          <div >
+                                <Paper>
+                                  <Table>
+                                    <TableHead>
+                                      <TableRow >
+                                      <TableCell className='headingTable'>Phrase</TableCell>
+                                      <TableCell className='headingTable'></TableCell>
+                                      <TableCell className='headingTable'></TableCell>
+                                      </TableRow>
+                                    </TableHead>
+                                    <TableBody>{l}</TableBody>
+                                  </Table>
+                                </Paper>
+                                </div>
+                                <Button style={{marginTop:'15px'}} onClick={this.sendPhrases}>Get Data</Button>
+>>>>>>> 4471f403146f058600775dd1eec9e08c2f56ef40
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
@@ -447,109 +478,121 @@ class RenderComp extends Component {
                       </Grid.Column>
                     </Grid.Row>
                     <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
-                      <Grid.Column>
+                    <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                        <Segment>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Card</div>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div style={{'width':'5px'}}></div>
+                           ) : (
+                             <div ><MyCloud data={this.state.data.card_dict.card_list}/></div>
+                          )
+                        }
+                      </Segment>
+                        <Segment>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Card</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                             <div ><MyCloud data={this.state.data.card_dict.disease_list}/></div>
                           )
                         }
                       </Segment>
                        <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Disease</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                            <div ><MyCloud data={this.state.data.card_dict.medication_list} /></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Health</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                            <div><h3>Medication</h3><MyCloud data={this.state.data.card_dict.medication_list} /></div>
+                             <div ><MyCloud data={this.state.data.card_dict.health_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                     <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Health</h3><MyCloud data={this.state.data.card_dict.health_list}/></div>
+                             <div><MyCloud data={this.state.data.card_dict.cost_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                     <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Cost</h3><MyCloud data={this.state.data.card_dict.cost_list}/></div>
-                          )
-                        }
-                      </Segment>
-                      <Segment>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                            <div><h3>Service</h3><MyCloud data={this.state.data.card_dict.service_list}/></div>
+                            <div><MyCloud data={this.state.data.card_dict.service_list}/></div>
                           )
                         }
                       </Segment>
                       </Grid.Column>
-                      <Grid.Column>
-                       <Segment>
+                      <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
+                     <Segment>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Cost</h3><MyCloud data={this.state.data.insurance_dict.cost_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.cost_list}/></div>
                           )
                         }
                       </Segment>
                        <Segment>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><h3>Segment</h3><MyCloud data={this.state.data.insurance_dict.segment_list}/></div>
+                             <div ><MyCloud data={this.state.data.insurance_dict.disease_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                            <div><h3>Medication</h3><MyCloud data={this.state.data.insurance_dict.medication_list}/></div>
+                            <div><MyCloud data={this.state.data.insurance_dict.medication_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Health</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
-                             <div><h3>Health</h3><MyCloud data={this.state.data.insurance_dict.patients_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.patients_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                     <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Segment</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
-                             <div><h3>Cost</h3><MyCloud data={this.state.data.insurance_dict.health_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.segment_list}/></div>
                           )
                         }
                       </Segment>
-                      <Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>

@@ -50,8 +50,8 @@ if(props.card == true && data.card_dict.tweets){
         <Table>
           <TableHead>
             <TableRow >
-            <TableCell className='headingTable'>Tweet Count</TableCell >
-            <TableCell className='headingTable'>Tweets</TableCell >  
+            <TableCell className='headingTable'>No</TableCell >
+            <TableCell className='headingTable'>Tweets</TableCell >
             </TableRow>
           </TableHead>
           <TableBody>{l}</TableBody>

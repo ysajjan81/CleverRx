@@ -10,9 +10,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import DisplayMessage from './DisplayMessage'
 import RenderComp from './RenderComp';
-// import Student from './components/Student';
 
-// ReactDOM.render(<Student />, document.getElementById("root"));
 const store = createStore(
   rootReducer,
   compose(

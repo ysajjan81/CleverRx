@@ -128,10 +128,10 @@
 }
 
 .MuiTableCell-body-37 {
-  font-size: 1.5rem !important;
+  font-size: 15px !important ;
 }
 .MuiTableCell-head-36 {
-  font-size: 1.6rem !important;
+  font-size: 1.6rem ;
 }
 
 
@@ -317,8 +317,8 @@ h1 {
   justify-content: center;
   left: 0;
   padding: 20px 0;
+  right:0;
   position: absolute;
-  right: 0;
   top: 0;
 }
 
@@ -577,7 +577,7 @@ ul.twPc-Arrange {
 }
 
 .MuiTableCell-root-35{
-  padding: 4px 10px 4px 24px !important;
+  padding:5px 5px 5px 10px !important
 }
 
 .search{
@@ -594,8 +594,7 @@ ul.twPc-Arrange {
   position: sticky;
 }
 .word-cloud {
-  height : 150px;
-  width: 200px;
+  height : 120px;
   background-color: white;
 }
 .sticky{
