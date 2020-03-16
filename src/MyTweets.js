@@ -20,45 +20,68 @@ function MyTweets(props) {
   {
       if(props.insurance == true && data.insurance_dict.tweets)
       {
-  for(let i = 0 ; i<data.insurance_dict.tweets.length; i++)
-  {
-      l.push(<TableRow>
-          <TableCell>{i+1}</TableCell>
-          <TableCell>
-              {data.insurance_dict.tweets[i][0]}
-              {}
-          </TableCell>
-      </TableRow>)
+        for(let i = 0 ; i<data.insurance_dict.tweets.length; i++)
+        {
+            if(data.insurance_dict.tweets[i][1] == '+'){
+              l.push(<TableRow>
+                  <TableCell>{i+1}</TableCell>
+                  <TableCell style={{backgroundColor:'lightgreen'}}>
+                      {data.insurance_dict.tweets[i][0]}
+                      {}
+                  </TableCell>
+              </TableRow>)
+          }
+          else{
+            l.push(<TableRow>
+                  <TableCell>{i+1}</TableCell>
+                  <TableCell style={{backgroundColor:'#E34234'}}>
+                      {data.insurance_dict.tweets[i][0]}
+                      {}
+                  </TableCell>
+              </TableRow>)
+
+          }
+        }
+      }
+      if(props.card == true && data.card_dict.tweets){
+        for(let i = 0 ; i<data.card_dict.tweets.length ; i++)
+        {
+          if(data.card_dict.tweets[i][1] == '+'){
+            l.push(<TableRow>
+                <TableCell>{i+1}</TableCell>
+                  <TableCell style={{backgroundColor:'lightgreen'}}>
+                    {data.card_dict.tweets[i][0]}
+                    {}
+                </TableCell>
+            </TableRow>)
+          }
+          else{
+            l.push(<TableRow>
+                <TableCell>{i+1}</TableCell>
+                  <TableCell style={{backgroundColor:'#E34234'}}>`  `
+                    {data.card_dict.tweets[i][0]}
+                    {}
+                </TableCell>
+            </TableRow>)
+          }
+        }
+      }
   }
-}
-if(props.card == true && data.card_dict.tweets){
-  for(let i = 0 ; i<data.card_dict.tweets.length ; i++)
-  {
-    l.push(<TableRow>
-        <TableCell>{i+1}</TableCell>
-        <TableCell>
-            {data.card_dict.tweets[i][0]}
-            {}
-        </TableCell>
-    </TableRow>)
-  }
-}
-  }
-    return (
-      <div className="center-col">
-      <Paper>
-        <Table>
-          <TableHead>
-            <TableRow >
-            <TableCell className='headingTable'>No</TableCell >
-            <TableCell className='headingTable'>Tweets</TableCell >
-            </TableRow>
-          </TableHead>
-          <TableBody>{l}</TableBody>
-        </Table>
-      </Paper>
-      </div>
-      )
+  return (
+    <div className="center-col">
+    <Paper>
+      <Table>
+        <TableHead>
+          <TableRow >
+          <TableCell className='headingTable'>No</TableCell >
+          <TableCell className='headingTable'>Tweets</TableCell >
+          </TableRow>
+        </TableHead>
+        <TableBody>{l}</TableBody>
+      </Table>
+    </Paper>
+    </div>
+    )
 }
 
 export default MyTweets;
