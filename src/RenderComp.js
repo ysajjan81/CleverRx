@@ -364,12 +364,6 @@ class RenderComp extends Component {
             let i = 0 ; 
           while(i < data.length)
         {
-            // l.push(<TableRow>
-            //     {/* <TableCell>{data[i][1]}</TableCell> */}
-            //     <TableCell><Checkbox  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-            //     <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-            //     <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-            // </TableRow>)
             if( data.length - i == 1)
             {
               l.push(<TableRow>
@@ -414,13 +408,7 @@ class RenderComp extends Component {
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
                             {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
-                            {/* <sortedTable />
-
-                            </Form.Field>
-                            <Form.Field> */}
-                            {/* <sortedTable /> */}
-                            {/* <SortedTable data = {this.state.cloudData}/> */}
-                             
+                            
 <div >
       <Paper>
         <Table>
@@ -445,8 +433,6 @@ class RenderComp extends Component {
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
-
-
                       { this.state.loading == true ? (
                         <div style={{ textAlign: 'center',width:'200px', height:'200px', zIndex:'10', position:'absolute' }}>
                           { loadingIcon }
@@ -578,10 +564,8 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                             <h3>Tweets</h3>
-
-                            {/* <MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/> */}
                             {
-                              !this.state.insur && !this.state.card ? (<div></div>):
+                              this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>)
                             }
                         </Segment>
@@ -591,7 +575,7 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                         <h3>Links</h3>
-                        { !this.state.insur && !this.state.card?(<div></div>):
+                        { this.state.data.length === 0 ? (<div></div>):
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
                         }
                         </Segment>
@@ -599,15 +583,6 @@ class RenderComp extends Component {
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={16}>
-                      {/*  <Segment>
-                            <h3>Gifs</h3>
-                            <img
-                            src={img}
-                            alt='Helpful alt text'/>
-                             <DisplayMessage title='Gifs'/>
-
-                             </Segment>
-                        */}
                     </Grid.Column>
                 </Grid.Row>
                 </Grid>

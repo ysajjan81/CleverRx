@@ -17,7 +17,7 @@ function SortedTable(props) {
   data = props.data;
   console.log(data);
 //   console.log("Tweets", data.tweets);
-  var clr = 'green';
+//   var clr = 'green';
   if(data.length != 0 )
   {
       let i = 0 ; 

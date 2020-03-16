@@ -1,81 +1,143 @@
-import React from "react";
-import { Icon, Table, Checkbox, Tab } from "semantic-ui-react";
-import DisplayMessage from './DisplayMessage';
-import MyTweets from './MyTweets';
+import React, { Component } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+class FacebookAndTwitter extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+        data: this.props.data,
+     }
+  }
+  render() { 
+    console.log("infacebookTwitter = ");
 
-const panes = [
-  {
-    menuItem: 'Facebook',
-    render: () => <Tab.Pane attached={false}>Facebook Content</Tab.Pane>,
-  },
-  {
-    menuItem: 'Twitter',
-    // render: () => <Tab.Pane attached={false}>{<MyTweets />}</Tab.Pane>,
-    render: () => <Tab.Pane attached={false}>Twitter Content ... </Tab.Pane>,
-  },
-]
-
-const FacebookAndTwitter = (props) => <Tab menu={{ pointing: true }} panes={panes} />
-
-export default FacebookAndTwitter
-
-// const FacebookAndTwitter = () => (
-//     <div className="center-col">
-//   <Table celled >
-//     <Table.Header className="sticky">
-//       <Table.Row >
-//         <Table.HeaderCell textAlign='center'>Facebook</Table.HeaderCell>
-//         <Table.HeaderCell textAlign='center'>Twitter</Table.HeaderCell>
-//       </Table.Row>
-//     </Table.Header>
-
-//     <Table.Body >
-//       <Table.Row >
-//         <Table.Cell ><Checkbox label='Cancer' /></Table.Cell>
-//         <Table.Cell ><Checkbox label='took long time' />
-//         <br />
-//         <Checkbox label='Asthama' />
-//         </Table.Cell>
-//       </Table.Row>
-//       <Table.Row >
-//         <Table.Cell><Checkbox label='Diabetes' /></Table.Cell>
-//         <Table.Cell></Table.Cell>
-//       </Table.Row>
-//       <Table.Row >
-//         <Table.Cell><Checkbox label='Diabetes' /></Table.Cell>
-//         <Table.Cell></Table.Cell>
-//       </Table.Row>
-//       <Table.Row >
-//         <Table.Cell><Checkbox label='Diabetes' /></Table.Cell>
-//         <Table.Cell></Table.Cell>
-//       </Table.Row>
-//       <Table.Row >
-//         <Table.Cell><Checkbox label='Diabetes' /></Table.Cell>
-//         <Table.Cell></Table.Cell>
-//       </Table.Row>
-//       <Table.Row>
-//         <Table.Cell><Checkbox label='Allergy' /></Table.Cell>
-//         <Table.Cell></Table.Cell>
-//       </Table.Row>
-//       <Table.Row>
-//         <Table.Cell>
-//             <div>
-//             <Checkbox label='TB' />
-//             <br />
-//             <Checkbox label='HapetitisB' />
-//             <br/>
-//             <Checkbox label='Diabetes' />
-//             <br/>
-//             <Checkbox label='lupus' />
-//             </div>
-//             </Table.Cell>
-           
-//         <Table.Cell></Table.Cell>
-
-//       </Table.Row>
-//     </Table.Body>
-//   </Table>
-//   </div>
-// );
-
-// export default FacebookAndTwitter;
+      let facebookData = [];
+      let twitterData = [] ;
+      if(this.state.data.length !== 0 )
+      {
+        console.log("facebook =")
+        console.log(this.state.data.facebook);
+        console.log("twitter =");
+        console.log(this.state.data.twitter);
+        for(let i = 0 ; i<this.state.data.facebook.length ; i++)
+        {
+          facebookData.push(<TableRow>
+            <TableCell>
+              {this.state.data.facebook[i].count}
+            </TableCell>
+            <TableCell>
+              {this.state.data.facebook[i].link}
+            </TableCell>
+            <TableCell>
+              {this.state.data.facebook[i].phrase}
+            </TableCell>
+          </TableRow>)
+        }
+        for(let i = 0 ; i<this.state.data.twitter.length ; i++)
+        {
+          twitterData.push(
+            <TableRow>
+            <TableCell>
+              {this.state.data.twitter[i].count}
+            </TableCell>
+            <TableCell>
+              {this.state.data.twitter[i].link}
+            </TableCell>
+            <TableCell>
+              {this.state.data.twitter[i].phrase}
+            </TableCell>
+          </TableRow>
+          )
+        }
+    }
+    // const displayPost = (
+      // <Tabs>
+      //   <TabList>
+      //     <Tab>Facebook</Tab>
+      //     <Tab>Twitter</Tab>
+      //   </TabList>
+      //   <TabPanel>
+      //   <div >
+      // <Paper>
+      //   <Table>
+      //     <TableHead>
+      //       <TableRow >
+      //       <TableCell className='headingTable'>Count</TableCell>  
+      //       <TableCell className='headingTable'>Links</TableCell>
+      //       <TableCell className='headingTable'>Phrase</TableCell>
+      //       </TableRow>
+      //     </TableHead>
+      //     <TableBody>{facebookData}</TableBody>
+      //   </Table>
+      // </Paper>
+      // </div>
+      //   </TabPanel>
+      //   <TabPanel>
+      //   <div >
+      // <Paper>
+      //   <Table>
+      //     <TableHead>
+      //       <TableRow >
+      //       <TableCell className='headingTable'>Count</TableCell>  
+      //       <TableCell className='headingTable'>Links</TableCell>
+      //       <TableCell className='headingTable'>Phrase</TableCell>
+      //       </TableRow>
+      //     </TableHead>
+      //     <TableBody>{twitterData}</TableBody>
+      //   </Table>
+      // </Paper>
+      // </div>
+      //   </TabPanel>
+      // </Tabs>
+    // );
+    return ( 
+      <div>
+        {/* {displayPost} */}
+        <Tabs>
+        <TabList>
+          <Tab>Facebook</Tab>
+          <Tab>Twitter</Tab>
+        </TabList>
+        <TabPanel>
+        <div >
+      <Paper>
+        <Table>
+          <TableHead>
+            <TableRow >
+            <TableCell >FBCount</TableCell>  
+            <TableCell >FbLinks</TableCell>
+            <TableCell >FbPhrase</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>{facebookData}</TableBody>
+        </Table>
+      </Paper>
+      </div>
+        </TabPanel>
+        <TabPanel>
+        <div >
+      <Paper>
+        <Table>
+          <TableHead>
+            <TableRow >
+            <TableCell className='headingTable'>Count</TableCell>  
+            <TableCell className='headingTable'>Links</TableCell>
+            <TableCell className='headingTable'>Phrase</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>{twitterData}</TableBody>
+        </Table>
+      </Paper>
+      </div>
+        </TabPanel>
+      </Tabs>
+      </div>
+     );
+  }
+}
+export default FacebookAndTwitter;
