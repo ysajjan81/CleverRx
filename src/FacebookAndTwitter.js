@@ -20,7 +20,7 @@ export default class FacebookAndTwitter extends React.Component {
       };
   }
   render(){
-    
+
       let facebookData = [];
       let twitterData = [] ;
       if(this.props.data != null && this.props.data.length !=0)
@@ -34,9 +34,9 @@ export default class FacebookAndTwitter extends React.Component {
               {this.props.data.facebook[i].count}
             </TableCell>
             <TableCell>
-              {this.props.data.facebook[i].link}
+              <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].link}</a>
             </TableCell>
-            <TableCell>
+            <TableCell style={{minWidth:'150px'}}>
               {this.props.data.facebook[i].phrase}
             </TableCell>
           </TableRow>)
@@ -49,9 +49,9 @@ export default class FacebookAndTwitter extends React.Component {
               {this.props.data.twitter[i].count}
             </TableCell>
             <TableCell>
-              {this.props.data.twitter[i].link}
+              <a href={this.props.data.twitter[i].link} target="_blank">{this.props.data.twitter[i].link}</a>
             </TableCell>
-            <TableCell>
+            <TableCell style={{minWidth:'100px'}}>
               {this.props.data.twitter[i].phrase}
             </TableCell>
           </TableRow>
@@ -62,12 +62,12 @@ export default class FacebookAndTwitter extends React.Component {
       //   facebookData.push(<div></div>);
       //   twitterData.push(<div></div>);
       // }
-    
+
     const panes = [
-      { 
+      {
         menuItem: 'Facebook', render: () => <Tab.Pane>
-        <Table celled fixed>
-        <Table.Header >
+        <Table sortable celled >
+        <Table.Header>
           <Table.Row>
             <Table.HeaderCell >Count</Table.HeaderCell>
             <Table.HeaderCell >Link</Table.HeaderCell>
@@ -78,12 +78,12 @@ export default class FacebookAndTwitter extends React.Component {
           {facebookData}
           </Table.Body>
         </Table>
-        </Tab.Pane> 
+        </Tab.Pane>
         },
-      { 
+      {
         menuItem: 'Twitter', render: () => <Tab.Pane>
-      <Table sortable celled fixed>
-      <Table.Header >
+      <Table sortable celled >
+      <Table.Header>
         <Table.Row>
         <Table.HeaderCell >Count</Table.HeaderCell>
         <Table.HeaderCell >Link</Table.HeaderCell>
@@ -104,4 +104,3 @@ export default class FacebookAndTwitter extends React.Component {
         );
   }
 }
-

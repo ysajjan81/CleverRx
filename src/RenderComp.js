@@ -362,7 +362,7 @@ class RenderComp extends Component {
                 </div>
                 <Grid textAlign='center' style={{padding:'20px'}} columns={2}>
                     <Grid.Row>
-                        <Grid.Column width={8} style={{maxHeight:'1200px', overflowY:'auto'}}>
+                        <Grid.Column width={8}>
                             <Segment>
                              <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
@@ -374,8 +374,8 @@ class RenderComp extends Component {
                                 <Paper>
                                   <Table>
                                     <TableHead>
-                                      <TableRow >
-                                      <TableCell style>Phrase</TableCell>
+                                      <TableRow>
+                                      <TableCell >Phrase</TableCell>
                                       <TableCell ></TableCell>
                                       <TableCell ></TableCell>
                                       </TableRow>
@@ -502,7 +502,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Health</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Patients</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
@@ -527,7 +527,7 @@ class RenderComp extends Component {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                            <div><h3>Service</h3><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
+                            <div><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
                           )
                         }
                       </Segment>
