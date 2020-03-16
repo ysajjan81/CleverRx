@@ -28,68 +28,155 @@ import Paper from '@material-ui/core/Paper';
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
 let prev = '';
-const topicOptions = [
-    {
-      key: 'Heart Hypertension',
-      text: 'Heart Hypertension',
-      value: 'heart hypertension',
-    },
-    {
-      key: 'Diabetes',
-      text: 'Diabetes',
-      value: 'diabetes',
-    },
-    {
-      key: 'Cancer',
-      text: 'Cancer',
-      value: 'cancer',
-    },
-    {
-      key: 'STD/Infection',
-      text: 'STD/Infection',
-      value: 'STD/Infection',
-    },
-    {
-      key: 'Allergy',
-      text: 'Allergy',
-      value: 'allergy',
-    },
-    {
-      key: 'Liver',
-      text: 'Liver',
-      value: 'liver',
-    },
-    {
-      key: 'Adiction',
-      text: 'Adiction',
-      value: 'adiction',
-    },
-    {
-      key: 'Alzheimer',
-      text: 'Alzheimer',
-      value: 'alzheimer',
-    },
-    {
-      key: 'Pain',
-      text: 'Pain',
-      value: 'pain',
-    },
-    {
-      key: 'Asthma',
-      text: 'Asthma',
-      value: 'asthma',
-    },
-    {
-      key: 'Pregnancy',
-      text: 'Pregnancy',
-      value: 'pregnancy',
-    },
-    {
-      key: 'heart',
-      text: 'Heart',
-      value: 'heart',
-    },
-  ];
+var topicOptions = [
+  {
+    key: 'Heart Hypertension',
+    text: 'Heart Hypertension',
+    value: 'heart hypertension',
+    // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
+  },
+  {
+    key: 'Diabetes',
+    text: 'Diabetes',
+    value: 'diabetes',
+    // image: { avatar: true, src: '/images/avatar/small/elliot.jpg' },
+  },
+  {
+    key: 'Cancer',
+    text: 'Cancer',
+    value: 'cancer',
+    // image: { avatar: true, src: '/images/avatar/small/stevie.jpg' },
+  },
+  {
+    key: 'STD/Infection',
+    text: 'STD/Infection',
+    value: 'STD/Infection',
+    // image: { avatar: true, src: '/images/avatar/small/christian.jpg' },
+  },
+  {
+    key: 'Allergy',
+    text: 'Allergy',
+    value: 'allergy',
+    // image: { avatar: true, src: '/images/avatar/small/matt.jpg' },
+  },
+  {
+    key: 'Liver',
+    text: 'Liver',
+    value: 'liver',
+    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  },
+  {
+    key: 'Adiction',
+    text: 'Adiction',
+    value: 'adiction',
+    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  },
+  {
+    key: 'Alzheimer',
+    text: 'Alzheimer',
+    value: 'alzheimer',
+    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  },
+  {
+    key: 'Pain',
+    text: 'Pain',
+    value: 'pain',
+    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  },
+  {
+    key: 'Asthma',
+    text: 'Asthma',
+    value: 'asthma',
+    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  },
+  {
+    key: 'Pregnancy',
+    text: 'Pregnancy',
+    value: 'pregnancy',
+    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  },
+  {
+    key: 'heart',
+    text: 'Heart',
+    value: 'heart',
+    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  },
+  {
+    key:'Weight Loss',
+    text: 'Weight Loss',
+    value: 'weight loss',
+  },
+  {
+    key:'Thyroid',
+    text: 'Thyroid',
+    value: 'thyroid',
+  },
+  {
+    key:'Std',
+    text: 'std',
+    value: 'std',
+  },
+  {
+    key:'side effects',
+    text: 'Side Effects',
+    value: 'side effects',
+  },
+  {
+    key:'paralysis',
+    text: 'Paralysis',
+    value: 'paralysis',
+  },
+  {
+    key:'obesity',
+    text: 'Obesity',
+    value: 'obesity',
+  },
+  {
+    key:'nerve autoimune',
+    text: 'Nerve Autoimune',
+    value: 'nerve autoimune',
+  },
+  {
+    key:'migrain',
+    text: 'Migrain',
+    value: 'migrain',
+  },
+  {
+    key:'mental health',
+    text: 'Mental Health',
+    value: 'mental health',
+  },
+  {
+    key:'lung',
+    text: 'Lung',
+    value: 'lung',
+  },
+  {
+    key:'Inflammation\xa0',
+    text: 'Inflammation\xa0',
+    value: 'Inflammation\xa0',
+  },
+  {
+    key:'infection',
+    text: 'Infection',
+    value: 'infection',
+  },
+  {
+    key:'hiv',
+    text: 'Hiv',
+    value: 'hiv',
+  },
+  {
+    key:'erectile dysfunction',
+    text: 'Erectile Dysfunction',
+    value: 'erectile dysfunction',
+  },
+  {
+    key:'ear',
+    text: 'Ear',
+    value: 'ear',
+  },
+];
 
 class RenderComp extends Component {
 
@@ -372,8 +459,8 @@ class RenderComp extends Component {
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
                           <div className = "phrase-style">
                                 <Paper>
-                                  <Table>
-                                    <TableHead>
+                                  <Table stickyHeader aria-label="sticky table">
+                                    <TableHead >
                                       <TableRow>
                                       <TableCell style={{fontWeight:'bold', fontSize:'16px', color:'black'}}>Phrases</TableCell>
                                       <TableCell ></TableCell>
