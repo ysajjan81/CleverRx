@@ -12,15 +12,15 @@ class FacebookAndTwitter extends Component {
     super(props);
   }
   render() {
-    console.log("infacebookTwitter = ");
 
       let facebookData = [];
       let twitterData = [] ;
-      if(this.props.data.length != 0 )
+      if(this.props.data != null && this.props.data.length !=0)
       {
 
         for(let i = 0 ; i<this.props.data.facebook.length ; i++)
         {
+
           facebookData.push(<TableRow>
             <TableCell>
               {this.props.data.facebook[i].count}
@@ -81,9 +81,9 @@ class FacebookAndTwitter extends Component {
         <Table>
           <TableHead>
             <TableRow >
-            <TableCell className='headingTable'>Count</TableCell>
-            <TableCell className='headingTable'>Links</TableCell>
-            <TableCell className='headingTable'>Phrase</TableCell>
+            <TableCell>Count</TableCell>
+            <TableCell >Links</TableCell>
+            <TableCell >Phrase</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{twitterData}</TableBody>

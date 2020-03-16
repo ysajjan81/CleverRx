@@ -420,7 +420,6 @@ class RenderComp extends Component {
                             <Form.Field> */}
                             {/* <sortedTable /> */}
                             {/* <SortedTable data = {this.state.cloudData}/> */}
-
                           <div >
                                 <Paper>
                                   <Table>
@@ -436,7 +435,6 @@ class RenderComp extends Component {
                                 </Paper>
                                 </div>
                                 <Button style={{marginTop:'15px'}} onClick={this.sendPhrases}>Get Data</Button>
-
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
