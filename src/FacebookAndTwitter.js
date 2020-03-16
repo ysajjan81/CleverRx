@@ -6,96 +6,52 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+
 class FacebookAndTwitter extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-        data: this.props.data,
-     }
   }
-  render() { 
+  render() {
     console.log("infacebookTwitter = ");
 
       let facebookData = [];
       let twitterData = [] ;
-      if(this.state.data.length !== 0 )
+      if(this.props.data.length != 0 )
       {
-        console.log("facebook =")
-        console.log(this.state.data.facebook);
-        console.log("twitter =");
-        console.log(this.state.data.twitter);
-        for(let i = 0 ; i<this.state.data.facebook.length ; i++)
+
+        for(let i = 0 ; i<this.props.data.facebook.length ; i++)
         {
           facebookData.push(<TableRow>
             <TableCell>
-              {this.state.data.facebook[i].count}
+              {this.props.data.facebook[i].count}
             </TableCell>
             <TableCell>
-              {this.state.data.facebook[i].link}
+              {this.props.data.facebook[i].link}
             </TableCell>
             <TableCell>
-              {this.state.data.facebook[i].phrase}
+              {this.props.data.facebook[i].phrase}
             </TableCell>
           </TableRow>)
         }
-        for(let i = 0 ; i<this.state.data.twitter.length ; i++)
+        for(let i = 0 ; i<this.props.data.twitter.length ; i++)
         {
           twitterData.push(
             <TableRow>
             <TableCell>
-              {this.state.data.twitter[i].count}
+              {this.props.data.twitter[i].count}
             </TableCell>
             <TableCell>
-              {this.state.data.twitter[i].link}
+              {this.props.data.twitter[i].link}
             </TableCell>
             <TableCell>
-              {this.state.data.twitter[i].phrase}
+              {this.props.data.twitter[i].phrase}
             </TableCell>
           </TableRow>
           )
         }
     }
-    // const displayPost = (
-      // <Tabs>
-      //   <TabList>
-      //     <Tab>Facebook</Tab>
-      //     <Tab>Twitter</Tab>
-      //   </TabList>
-      //   <TabPanel>
-      //   <div >
-      // <Paper>
-      //   <Table>
-      //     <TableHead>
-      //       <TableRow >
-      //       <TableCell className='headingTable'>Count</TableCell>  
-      //       <TableCell className='headingTable'>Links</TableCell>
-      //       <TableCell className='headingTable'>Phrase</TableCell>
-      //       </TableRow>
-      //     </TableHead>
-      //     <TableBody>{facebookData}</TableBody>
-      //   </Table>
-      // </Paper>
-      // </div>
-      //   </TabPanel>
-      //   <TabPanel>
-      //   <div >
-      // <Paper>
-      //   <Table>
-      //     <TableHead>
-      //       <TableRow >
-      //       <TableCell className='headingTable'>Count</TableCell>  
-      //       <TableCell className='headingTable'>Links</TableCell>
-      //       <TableCell className='headingTable'>Phrase</TableCell>
-      //       </TableRow>
-      //     </TableHead>
-      //     <TableBody>{twitterData}</TableBody>
-      //   </Table>
-      // </Paper>
-      // </div>
-      //   </TabPanel>
-      // </Tabs>
-    // );
-    return ( 
+
+    return (
       <div>
         {/* {displayPost} */}
         <Tabs>
@@ -109,7 +65,7 @@ class FacebookAndTwitter extends Component {
         <Table>
           <TableHead>
             <TableRow >
-            <TableCell >FBCount</TableCell>  
+            <TableCell >FBCount</TableCell>
             <TableCell >FbLinks</TableCell>
             <TableCell >FbPhrase</TableCell>
             </TableRow>
@@ -125,7 +81,7 @@ class FacebookAndTwitter extends Component {
         <Table>
           <TableHead>
             <TableRow >
-            <TableCell className='headingTable'>Count</TableCell>  
+            <TableCell className='headingTable'>Count</TableCell>
             <TableCell className='headingTable'>Links</TableCell>
             <TableCell className='headingTable'>Phrase</TableCell>
             </TableRow>
