@@ -587,7 +587,7 @@ ul.twPc-Arrange {
 .center-col {
   flex: 1;
   /* background: rgb(12, 0, 0); */
-  height: 500px;
+  height: 400px;
   overflow-y: scroll;
   color: #364d79;
   table-layout: fixed;
