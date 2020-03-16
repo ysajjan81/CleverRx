@@ -1,37 +1,29 @@
 import React, { Component } from 'react';
 import DisplayMessage from './DisplayMessage';
 import TextContent from './TextContent';
-// // import Mytable from './MyTable';
 import TableExampleError from './TableExampleError';
 import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
 import Experience from './Experience'
 import App from './App';
-// import { Layout, Icon, Button } from 'antd';
 import Topics from './Topics';
 import FacebookAndTwitter from './FacebookAndTwitter';
 import './assets/css/App.css';
 import MyCloud from './MyCloud';
 import CardTable from './CardTable';
 import SimpleTable from './components/table';
-// import tweets from './tweets'
-// import myTweets from './myTweets'
 import MyTweets from './MyTweets';
 import Mylinks from './Mylinks';
-// import tableJson from './topicData.json';
-// const { Header, Footer, Content } = Layout;
 import WordCloud from './WordCloud';
 import phrase from './phrase_frequency.json';
 import MultipleSelect from './MultipleSelect';
-// import SortedTable from './SortedTable';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-// import data from'./tempData.json';
-// import Checkbox from '@material-ui/core/Checkbox';
+
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
@@ -41,73 +33,61 @@ const topicOptions = [
       key: 'Heart Hypertension',
       text: 'Heart Hypertension',
       value: 'heart hypertension',
-      // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
     },
     {
       key: 'Diabetes',
       text: 'Diabetes',
       value: 'diabetes',
-      // image: { avatar: true, src: '/images/avatar/small/elliot.jpg' },
     },
     {
       key: 'Cancer',
       text: 'Cancer',
       value: 'cancer',
-      // image: { avatar: true, src: '/images/avatar/small/stevie.jpg' },
     },
     {
       key: 'STD/Infection',
       text: 'STD/Infection',
       value: 'STD/Infection',
-      // image: { avatar: true, src: '/images/avatar/small/christian.jpg' },
     },
     {
       key: 'Allergy',
       text: 'Allergy',
       value: 'allergy',
-      // image: { avatar: true, src: '/images/avatar/small/matt.jpg' },
     },
     {
       key: 'Liver',
       text: 'Liver',
       value: 'liver',
-      // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Adiction',
       text: 'Adiction',
       value: 'adiction',
-      // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Alzheimer',
       text: 'Alzheimer',
       value: 'alzheimer',
-      // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Pain',
       text: 'Pain',
       value: 'pain',
-      // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Asthma',
       text: 'Asthma',
       value: 'asthma',
-      // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'Pregnancy',
       text: 'Pregnancy',
       value: 'pregnancy',
-      // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
     {
       key: 'heart',
       text: 'Heart',
       value: 'heart',
-      // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
     },
   ];
 
@@ -131,7 +111,6 @@ class RenderComp extends Component {
             loading:false,
             selectedCheckBox:[],
          }
-        //  this.changejsonData = this.changejsonData.bind(this);
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
          this.cardSelected = this.cardSelected.bind(this);
@@ -187,7 +166,6 @@ class RenderComp extends Component {
     {
         var temp = !(this.state.insur);
         this.setState({insur: temp});
-        // console.log("Insurance checked =" + this.state.insur);
     }
 
     checkBoxSelected = (event, {value}) =>
@@ -242,7 +220,6 @@ class RenderComp extends Component {
       this.setState({phraseString: temp});
       console.log("phraseString = ");
       console.log(temp);
-      // var url ="/topic?topic_name="+this.state.phraseString;
       var temp1 = "";
       for(let i = 0 ; i<temp.length-1;i++)
       temp1 += temp[i];
@@ -331,18 +308,20 @@ class RenderComp extends Component {
       		)
       }
 }
-    render() {
+    render() 
+    {
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
-        if(this.state.cloudData.length !== 0) {
+        if(this.state.cloudData.length !== 0) 
+        {
         var l = [];
         var data = [];
         data = this.state.cloudData;
         console.log(data);
         if(this.state.cloudData.length != 0 )
         {
-            let i = 0 ;
+          let i = 0 ;
           while(i < data.length)
         {
             if( data.length - i == 1)
@@ -371,16 +350,6 @@ class RenderComp extends Component {
                 <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
             </TableRow>)
               }
-            //   else if(data.length - i >= 4)
-            //   {
-            //       l.push(<TableRow>
-            //     <TableCell><Checkbox style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-            //     <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-            //     <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-            //     <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-            // </TableRow>)
-            //   }
-
         }
       }
     }
@@ -395,23 +364,20 @@ class RenderComp extends Component {
                     <Grid.Row>
                         <Grid.Column width={8}>
                             <Segment>
-
                              <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
-                            <Segment>
-
+                            <Segment >
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
                             {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
-
-                          <div >
+                          <div className = "phrase-style">
                                 <Paper>
                                   <Table>
                                     <TableHead>
-                                      <TableRow >
-                                      <TableCell className='headingTable'>Phrase</TableCell>
-                                      <TableCell className='headingTable'></TableCell>
-                                      <TableCell className='headingTable'></TableCell>
+                                      <TableRow>
+                                      <TableCell >Phrase</TableCell>
+                                      <TableCell ></TableCell>
+                                      <TableCell ></TableCell>
                                       </TableRow>
                                     </TableHead>
                                     <TableBody>{l}</TableBody>
@@ -434,7 +400,7 @@ class RenderComp extends Component {
                         </div>
                       ) : (<div/>)
                       }
-                      <Grid.Column>
+                      <Grid.Column >
                       <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
                       </Grid.Column>
                       <Grid.Column>
@@ -491,7 +457,7 @@ class RenderComp extends Component {
                            ) : (
                              <div><MyCloud data={this.state.data.card_dict.cost_list}/></div>
                           )
-                        }
+                      }
                       </Segment>
                      <Segment>
                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>

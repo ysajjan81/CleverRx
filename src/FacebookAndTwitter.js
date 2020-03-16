@@ -12,10 +12,6 @@ import ReactPlayer from 'react-player'
 import { FacebookProvider, EmbeddedPost, Page, Group, Comments} from 'react-facebook';
 // import { Row, Layout, Col, Card,  Menu, Breadcrumb, Carousel } from 'antd';
 
-
-
-
-
 export default class FacebookAndTwitter extends React.Component {
   constructor(props) {
       super(props);
@@ -23,7 +19,6 @@ export default class FacebookAndTwitter extends React.Component {
         data: this.props.data,
       };
   }
-
   render(){
 
       let facebookData = [];
@@ -103,7 +98,7 @@ export default class FacebookAndTwitter extends React.Component {
     },
     ]
         return (
-        <div className="center-col">
+        <div className = "facebook-Twitter">
         <Tab panes={panes} />
         </div>
         );
