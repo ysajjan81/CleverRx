@@ -234,7 +234,7 @@ class RenderComp extends Component {
       console.log(this.state.selectedCheckBox);
       var temp = "";
       this.setState({loading: true});
-      for(let i = 0 ; i<this.state.selectedCheckBox; i++)
+      for(let i = 0 ; i<this.state.selectedCheckBox.length; i++)
       {
         temp += this.state.selectedCheckBox[i] + ',';
         console.log("here = " + temp);
@@ -243,7 +243,7 @@ class RenderComp extends Component {
       console.log("phraseString = ");
       console.log(temp);
       // var url ="/topic?topic_name="+this.state.phraseString;
-      var temp1 = ""
+      var temp1 = "";
       for(let i = 0 ; i<temp.length-1;i++)
       temp1 += temp[i];
       console.log(" temp 1" + temp1) ;
@@ -259,7 +259,6 @@ class RenderComp extends Component {
       }).then((response) => {
         if(response.status == 200)
           {
-
             return response.json();
           }
         else {
@@ -269,7 +268,9 @@ class RenderComp extends Component {
       }).then((data) => {
         if(data == -1)
           return;
-          this.setState({getApiResultForMultiplePhrase: data, loading:false});
+          this.setState({data: data, loading:false});
+          console.log("phrase api = ");
+          console.log(data);
       }
       )
     }
