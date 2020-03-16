@@ -593,6 +593,22 @@ ul.twPc-Arrange {
   table-layout: fixed;
   position: sticky;
 }
+.phrase-style{
+  flex: 1;
+  height: 300px;
+  overflow-y: scroll;
+  color: #364d79;
+  table-layout: fixed;
+  position: sticky;
+}
+.facebook-Twitter {
+  flex: 1;
+  height: 440px;
+  overflow-y: scroll;
+  color: #364d79;
+  table-layout: fixed;
+  position: sticky;
+}
 .word-cloud {
   height : 120px;
   background-color: white;
