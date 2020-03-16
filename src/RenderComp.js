@@ -229,19 +229,26 @@ class RenderComp extends Component {
     }
 
     sendPhrases(){
-      console.log("in sendPhrase myTemp = ");
-      console.log(this.state.multiplePhraseSelected);
+
+      console.log("in sendPhrase selectedCheckboxArray = ");
+      console.log(this.state.selectedCheckBox);
       var temp = "";
       this.setState({loading: true});
       for(let i = 0 ; i<this.state.selectedCheckBox; i++)
       {
         temp += this.state.selectedCheckBox[i] + ',';
+        console.log("here = " + temp);
       }
       this.setState({phraseString: temp});
       console.log("phraseString = ");
-      console.log(this.state.phraseString);
+      console.log(temp);
       // var url ="/topic?topic_name="+this.state.phraseString;
-      var url  = "/phrases?topic_name=" + this.state.myTopic + "&topic_phrases=" + temp;
+      var temp1 = ""
+      for(let i = 0 ; i<temp.length-1;i++)
+      temp1 += temp[i];
+      console.log(" temp 1" + temp1) ;
+
+      var url  = "/phrases?topic_name=" + this.state.myTopic + "&topic_phrases=" + temp1;
       fetch(url, {
         method: 'GET',
         headers: {
