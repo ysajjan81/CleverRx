@@ -2,7 +2,7 @@
   "name": "CleverRx_Frontendgit",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://cips2.engineering.asu.edu:3000",
+  "proxy": "http://localhost:3000",
   "dependencies": {
     "@material-ui/core": "^3.9.4",
     "@nivo/chord": "^0.51.2",
@@ -13,6 +13,7 @@
     "emotion": "^10.0.6",
     "firebase": "^7.7.0",
     "google-map-react": "^1.1.5",
+    "http-proxy-middleware": "^1.0.2",
     "jquery": "^3.4.1",
     "material-ui": "^0.20.2",
     "randomcolor": "^0.5.3",
@@ -49,7 +50,7 @@
     "semantic-ui-react": "^0.88.1"
   },
   "scripts": {
-    "start": "PORT=3001 react-scripts start",
+    "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true PORT=3001  react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
