@@ -23,6 +23,7 @@ import Mylinks from './Mylinks';
 import WordCloud from './WordCloud';
 import phrase from './phrase_frequency.json';
 import MultipleSelect from './MultipleSelect';
+import SortedTable from './SortedTable';
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"blue" }} name='spinner' />;
 let current = '';
@@ -431,25 +432,31 @@ class RenderComp extends Component {
                 <div>
                 <HeaderBar></HeaderBar>
                 </div>
-
                 <Grid celled columns={2}>
                     <Grid.Row >
                         <Grid.Column width={8}>
                             <Segment>
-                             <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>{}
+
+                             <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment>
-                              <WordCloud data = {this.state.cloudData}/></Segment>
-                            <Form>
+                            {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
+                            {/* <Form>
                             <Form.Group>
-                            <Form.Field width ={14}>
-                            <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected}/>
+                            <Form.Field width ={14}> */}
+                            {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
+                            {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
+                            {/* <sortedTable />
+
                             </Form.Field>
-                            <Form.Field>
-                             <Button onClick={this.sendPhrases}>Get Data</Button>
-                            </Form.Field>
+                            <Form.Field> */}
+                            {/* <sortedTable /> */}
+                            <SortedTable data = {this.state.cloudData}/>
+                             {/* <Button onClick={this.sendPhrases}>Get Data</Button> */}
+                            {/* </Form.Field>
                             </Form.Group>
-                            </Form>
+                            </Form> */}
+                            </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
                             <Segment>
