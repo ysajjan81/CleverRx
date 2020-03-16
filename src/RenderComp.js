@@ -3,7 +3,7 @@ import DisplayMessage from './DisplayMessage';
 import TextContent from './TextContent';
 // // import Mytable from './MyTable';
 import TableExampleError from './TableExampleError';
-import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox } from 'semantic-ui-react';
+import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
 import Experience from './Experience'
 import App from './App';
@@ -33,7 +33,7 @@ import Paper from '@material-ui/core/Paper';
 // import data from'./tempData.json';
 // import Checkbox from '@material-ui/core/Checkbox';
 
-
+const loadingIcon = <Icon loading style={{ fontSize: 150, color:"blue" }} name='spinner' />;
 let current = '';
 let prev = '';
 const topicOptions = [
@@ -128,6 +128,7 @@ class RenderComp extends Component {
             multiplePhraseSelected:[],
             getApiResultForMultiplePhrase:[],
             phraseString:"",
+            loading:false,
             selectedCheckBox:[],
          }
         //  this.changejsonData = this.changejsonData.bind(this);
@@ -164,7 +165,7 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
-              this.setState({data: data});
+              this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
       		)
@@ -173,7 +174,7 @@ class RenderComp extends Component {
 
     handleTopicSelect(event, {value})
     {
-      this.setState({myTopic: value});
+      this.setState({myTopic: value, loading:true});
       current = value;
     }
     cardSelected(event)
@@ -235,14 +236,16 @@ class RenderComp extends Component {
       // console.log("in sendPhrase myTemp = ");
       // console.log(this.state.multiplePhraseSelected);
       var temp = "";
-      for(let i = 0 ; i<this.state.multiplePhraseSelected; i++)
+      this.setState({loading: true});
+      for(let i = 0 ; i<this.state.selectedCheckBox; i++)
       {
-        temp += this.state.multiplePhraseSelected[i] + ',';
+        temp += this.state.selectedCheckBox[i] + ',';
       }
       this.setState({phraseString: temp});
-      console.log("phraseString = ");
-      console.log(this.state.phraseString);
-      var url ="/topic?topic_name="+this.state.phraseString;
+      // console.log("phraseString = ");
+      // console.log(this.state.phraseString);
+      // var url ="/topic?topic_name="+this.state.phraseString;
+      var url  = "/phrases?topic_name=" + this.state.myTopic + "&topic_phrases=" + this.state.phraseString;
       fetch(url, {
         method: 'GET',
         headers: {
@@ -253,7 +256,7 @@ class RenderComp extends Component {
       }).then((response) => {
         if(response.status == 200)
           {
-            console.log("hitApi");
+            console.log("Inside SendPhrase");
             return response.json();
           }
         else {
@@ -264,7 +267,7 @@ class RenderComp extends Component {
         if(data == -1)
           return;
           // this.setState({data: data});
-          this.setState({getApiResultForMultiplePhrase: data});
+          this.setState({getApiResultForMultiplePhrase: data, loading:false});
           this.createWordCloudData();
           // console.log("API result = ");
           // console.log(this.state.getApiResultForMultiplePhrase);
@@ -314,6 +317,7 @@ class RenderComp extends Component {
     getData = (value) =>
     {
       console.log("inside getData ");
+      this.setState({loading: true});
       console.log("myTopic =");
       console.log(this.state.myTopic);
       if(this.state.myTopic != ''){
@@ -339,7 +343,7 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
-              this.setState({data: data});
+              this.setState({data: data, loading:false});
               this.createWordCloudData();
               console.log("data = ");
               console.log(data);
@@ -357,10 +361,6 @@ class RenderComp extends Component {
       }
 }
     render() {
-      // if(this.state.myTopic != '')
-      //   this.getData(this.state.myTopic);
-      // console.log("prs = ");
-      // console.log(this.state.phraseString);
         const checkBoxStyle = {
             fontSize: '20px',
         }
@@ -383,12 +383,7 @@ class RenderComp extends Component {
             </TableRow>)
         }
       }
-
     }
-
-
-
-
         // const { myTopic } = this.state
         const {img} = this.state
         console.log("Img", img)
@@ -401,15 +396,20 @@ class RenderComp extends Component {
                     <Grid.Row >
                         <Grid.Column width={8}>
                             <Segment>
+
                              <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment>
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
                             {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
+                            {/* <sortedTable />
+
+                            </Form.Field>
+                            <Form.Field> */}
                             {/* <sortedTable /> */}
                             {/* <SortedTable data = {this.state.cloudData}/> */}
-                             {/* <Button onClick={this.sendPhrases}>Get Data</Button> */}
+                             
 <div >
       <Paper>
         <Table>
@@ -424,6 +424,7 @@ class RenderComp extends Component {
         </Table>
       </Paper>
       </div>
+      <Button onClick={this.sendPhrases}>Get Data</Button>
 
                             </Segment>
                         </Grid.Column>
@@ -434,6 +435,12 @@ class RenderComp extends Component {
                         </Grid.Column>
                     </Grid.Row>
                     <Grid.Row>
+                      { this.state.loading == true ? (
+                        <div style={{ textAlign: 'center',width:'200px', height:'200px', zIndex:'10', position:'absolute', marginLeft:'720px' }}>
+                          { loadingIcon }
+                        </div>
+                      ) : (<div/>)
+                      }
                       <Grid.Column>
                       <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
                       </Grid.Column>
@@ -574,13 +581,15 @@ class RenderComp extends Component {
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={16}>
-                        <Segment>
+                      {/*  <Segment>
                             <h3>Gifs</h3>
                             <img
                             src={img}
                             alt='Helpful alt text'/>
-                            {/* <DisplayMessage title='Gifs'/> */}
-                        </Segment>
+                             <DisplayMessage title='Gifs'/>
+
+                             </Segment>
+                        */}
                     </Grid.Column>
                 </Grid.Row>
                 </Grid>
