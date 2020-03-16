@@ -1,18 +1,31 @@
-import React, { Component } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Table from '@material-ui/core/Table';
+
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import React from 'react'
+import { Tab, Form, Comment, Table} from 'semantic-ui-react'
+// import Cards from './Card.js';
+import TweetEmbed from 'react-tweet-embed'
+import ReactPlayer from 'react-player'
+import { FacebookProvider, EmbeddedPost, Page, Group, Comments} from 'react-facebook';
+// import { Row, Layout, Col, Card,  Menu, Breadcrumb, Carousel } from 'antd';
 
-class FacebookAndTwitter extends Component {
+
+
+
+
+export default class FacebookAndTwitter extends React.Component {
   constructor(props) {
-    super(props);
+      super(props);
+      this.state ={
+        data: this.props.data,
+      };
   }
-  render() {
 
+  render(){
+    
       let facebookData = [];
       let twitterData = [] ;
       if(this.props.data != null && this.props.data.length !=0)
@@ -49,51 +62,51 @@ class FacebookAndTwitter extends Component {
           </TableRow>
           )
         }
-    }
-
-    return (
-      <div className="center-col">
-        {/* {displayPost} */}
-        <Tabs>
-        <TabList>
-          <Tab>Facebook</Tab>
-          <Tab>Twitter</Tab>
-        </TabList>
-        <TabPanel>
-        <div >
-      <Paper>
-        <Table>
-          <TableHead>
-            <TableRow >
-            <TableCell >FBCount</TableCell>
-            <TableCell >FbLinks</TableCell>
-            <TableCell >FbPhrase</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>{facebookData}</TableBody>
+      }
+      // else{
+      //   facebookData.push(<div></div>);
+      //   twitterData.push(<div></div>);
+      // }
+    
+    const panes = [
+      { 
+        menuItem: 'Facebook', render: () => <Tab.Pane>
+        <Table celled fixed>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell >Count</Table.HeaderCell>
+            <Table.HeaderCell >Link</Table.HeaderCell>
+            <Table.HeaderCell >Phrase</Table.HeaderCell>
+          </Table.Row>
+          </Table.Header>
+          <Table.Body>
+          {facebookData}
+          </Table.Body>
         </Table>
-      </Paper>
-      </div>
-        </TabPanel>
-        <TabPanel>
-        <div >
-      <Paper>
-        <Table>
-          <TableHead>
-            <TableRow >
-            <TableCell>Count</TableCell>
-            <TableCell >Links</TableCell>
-            <TableCell >Phrase</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>{twitterData}</TableBody>
-        </Table>
-      </Paper>
-      </div>
-        </TabPanel>
-      </Tabs>
-      </div>
-     );
+        </Tab.Pane> 
+        },
+      { 
+        menuItem: 'Twitter', render: () => <Tab.Pane>
+      <Table sortable celled fixed>
+      <Table.Header>
+        <Table.Row>
+        <Table.HeaderCell >Count</Table.HeaderCell>
+        <Table.HeaderCell >Link</Table.HeaderCell>
+        <Table.HeaderCell >Phrase</Table.HeaderCell>
+        </Table.Row>
+      </Table.Header>
+      <Table.Body>
+      {twitterData}
+      </Table.Body>
+      </Table>
+      </Tab.Pane>
+    },
+    ]
+        return (
+        <div className="center-col">
+        <Tab panes={panes} />
+        </div>
+        );
   }
 }
-export default FacebookAndTwitter;
+
