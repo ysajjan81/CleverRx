@@ -4,7 +4,7 @@
   "private": true,
   "proxy": "http://cips2.engineering.asu.edu:3000",
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
+    "@material-ui/core": "^3.9.4",
     "@nivo/chord": "^0.51.2",
     "@nivo/line": "^0.51.0",
     "antd": "^3.10.8",
