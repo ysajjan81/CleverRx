@@ -52,7 +52,7 @@ class FacebookAndTwitter extends Component {
     }
 
     return (
-      <div>
+      <div className="center-col">
         {/* {displayPost} */}
         <Tabs>
         <TabList>
