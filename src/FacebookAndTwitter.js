@@ -24,7 +24,6 @@ class FacebookAndTwitter extends Component {
         console.log(this.state.data.facebook);
         console.log("twitter =");
         console.log(this.state.data.twitter);
-        console.lgo()
         for(let i = 0 ; i<this.state.data.facebook.length ; i++)
         {
           console.log("insidefor loop count");
