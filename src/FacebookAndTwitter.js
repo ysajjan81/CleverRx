@@ -18,14 +18,17 @@ class FacebookAndTwitter extends Component {
 
       let facebookData = [];
       let twitterData = [] ;
-      if(this.state.data.length !== 0 )
+      if(this.state.data.length != 0 )
       {
         console.log("facebook =")
         console.log(this.state.data.facebook);
         console.log("twitter =");
         console.log(this.state.data.twitter);
+        console.lgo()
         for(let i = 0 ; i<this.state.data.facebook.length ; i++)
         {
+          console.log("insidefor loop count");
+          console.log(this.state.data.facebook[i].count)
           facebookData.push(<TableRow>
             <TableCell>
               {this.state.data.facebook[i].count}
@@ -125,9 +128,9 @@ class FacebookAndTwitter extends Component {
         <Table>
           <TableHead>
             <TableRow >
-            <TableCell className='headingTable'>Count</TableCell>  
-            <TableCell className='headingTable'>Links</TableCell>
-            <TableCell className='headingTable'>Phrase</TableCell>
+            <TableCell>Count</TableCell>  
+            <TableCell >Links</TableCell>
+            <TableCell >Phrase</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{twitterData}</TableBody>

@@ -414,31 +414,12 @@ class RenderComp extends Component {
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
                             {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
-<<<<<<< HEAD
-                            
-<div >
-      <Paper>
-        <Table>
-          <TableHead>
-            <TableRow >
-            <TableCell className='headingTable'>Phrase</TableCell>  
-            <TableCell className='headingTable'></TableCell>
-            <TableCell className='headingTable'></TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>{l}</TableBody>
-        </Table>
-      </Paper>
-      </div>
-      <Button onClick={this.sendPhrases}>Get Data</Button>
-=======
                             {/* <sortedTable />
 
                             </Form.Field>
                             <Form.Field> */}
                             {/* <sortedTable /> */}
                             {/* <SortedTable data = {this.state.cloudData}/> */}
-
                           <div >
                                 <Paper>
                                   <Table>
@@ -454,7 +435,6 @@ class RenderComp extends Component {
                                 </Paper>
                                 </div>
                                 <Button style={{marginTop:'15px'}} onClick={this.sendPhrases}>Get Data</Button>
->>>>>>> 4471f403146f058600775dd1eec9e08c2f56ef40
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
