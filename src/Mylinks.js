@@ -44,7 +44,7 @@ function Mylinks(props) {
 }
   }
     return (
-      <div>
+      <div className="center-col">
       <Paper>
         <Table>
           <TableHead>

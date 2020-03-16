@@ -404,7 +404,7 @@ class RenderComp extends Component {
                 <HeaderBar></HeaderBar>
                 </div>
                 <Grid textAlign='center' style={{padding:'20px'}} columns={2}>
-                    <Grid.Row >
+                    <Grid.Row style={{backgroundColor:"rgb(125, 100, 238)"}}>
                         <Grid.Column width={8}>
                             <Segment>
 
@@ -580,7 +580,10 @@ class RenderComp extends Component {
                             <h3>Tweets</h3>
 
                             {/* <MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/> */}
-                            <MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
+                            {
+                              !this.state.insur && !this.state.card ? (<div></div>):
+                            (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>)
+                            }
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
@@ -588,7 +591,9 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                         <h3>Links</h3>
+                        { !this.state.insur && !this.state.card?(<div></div>):
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
+                        }
                         </Segment>
                     </Grid.Column>
                 </Grid.Row>
