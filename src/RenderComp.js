@@ -536,7 +536,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Health</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Patients</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
