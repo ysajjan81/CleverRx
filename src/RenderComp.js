@@ -24,6 +24,14 @@ import WordCloud from './WordCloud';
 import phrase from './phrase_frequency.json';
 import MultipleSelect from './MultipleSelect';
 import SortedTable from './SortedTable';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
+// import data from'./tempData.json';
+// import Checkbox from '@material-ui/core/Checkbox';
 
 
 let current = '';
@@ -120,6 +128,7 @@ class RenderComp extends Component {
             multiplePhraseSelected:[],
             getApiResultForMultiplePhrase:[],
             phraseString:"",
+            selectedCheckBox:[],
          }
         //  this.changejsonData = this.changejsonData.bind(this);
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
@@ -157,116 +166,16 @@ class RenderComp extends Component {
               return;
               this.setState({data: data});
               this.createWordCloudData();
-              // console.log("data = ");
-              // console.log(data);
-            //   console.log("data = " + JSON.stringify(this.state.data));
-            //   console.log( );
-              //gif = str(open(img_file, 'rb').write())
-              // var base64Flag = 'data:image/jpeg;base64,';
-              // var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-              // // this.setState({img: imageStr});
-              // this.setState({
-              //     img: imageStr + base64Flag
-              // });
       		}
       		)
       }
     }
-    // componentDidMount(){
-    //   if(this.state.myTopic != ''){
-    //     console.log("Selected Topic = " + this.state.myTopic);
-    //     var url = "/topic?topic_name="+this.state.myTopic;
-    //       fetch(url, {
-    //         method: 'GET',
-    //   			headers: {
-    //   				'Accept': 'application/json',
-    //   				'Content-Type': 'application/json',
-    //                 "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-    //         },
-    //       }).then((response) => {
-    //         if(response.status == 200)
-    //           {
-    //             console.log("hitApi");
-    //             return response.json();
-    //           }
-    //   			else {
-    //   				alert('Uh Oh! Something went wrong');
-    //   				return -1;
-    //   			}
-    //       }).then((data) => {
-    //   			if(data == -1)
-    //           return;
-    //           this.setState({data: data});
-    //           this.createWordCloudData();
-    //           console.log("data = ");
-    //           console.log(data);
-    //         //   console.log("data = " + JSON.stringify(this.state.data));
-    //         //   console.log( );
-    //           //gif = str(open(img_file, 'rb').write())
-    //           var base64Flag = 'data:image/jpeg;base64,';
-    //           var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-    //           // this.setState({img: imageStr});
-    //           this.setState({
-    //               img: imageStr + base64Flag
-    //           });
-    //   		}
-    //   		)
-    //   }
-    // }
+
     handleTopicSelect(event, {value})
     {
       this.setState({myTopic: value});
       current = value;
-      // alert("inside hadnleTopicSelect");
-      // alert(value);
-      // this.getData(value);
-
-
-      // if(this.state.myTopic != ''){
-      //   console.log("Selected Topic = " + this.state.myTopic);
-      //   var url = "/topic?topic_name="+this.state.myTopic;
-      //     fetch(url, {
-      //       method: 'GET',
-      // 			headers: {
-      // 				'Accept': 'application/json',
-      // 				'Content-Type': 'application/json',
-      //               "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-      //       },
-      //     }).then((response) => {
-      //       if(response.status == 200)
-      //         {
-      //           console.log("hitApi");
-      //           return response.json();
-      //         }
-      // 			else {
-      // 				alert('Uh Oh! Something went wrong');
-      // 				return -1;
-      // 			}
-      //     }).then((data) => {
-      // 			if(data == -1)
-      //         return;
-      //         this.setState({data: data});
-      //         this.createWordCloudData();
-      //       //   console.log("data = ");
-      //       //   console.log(data);
-      //       // //   console.log("data = " + JSON.stringify(this.state.data));
-      //       // //   console.log( );
-      //       //   //gif = str(open(img_file, 'rb').write())
-      //       //   var base64Flag = 'data:image/jpeg;base64,';
-      //       //   var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-      //       //   // this.setState({img: imageStr});
-      //       //   this.setState({
-      //       //       img: imageStr + base64Flag
-      //       //   });
-      // 		}
-      // 		)
-      // }
     }
-    // getSnapshotBeforeUpdate(prevProps, prevState){
-    //   if(prevState !== this.state.topic)
-    //   return true;
-    //   return false;
-    // }
     cardSelected(event)
     {
     var temp = !(this.state.card);
@@ -278,6 +187,40 @@ class RenderComp extends Component {
         var temp = !(this.state.insur);
         this.setState({insur: temp});
         console.log("Insurance checked =" + this.state.insur);
+    }
+
+    checkBoxSelected = (evetn, {value}) =>
+    {
+        var temp = [] ; 
+        var isPresent = false;
+        for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
+        {
+          if(value == this.state.selectedCheckBox[i])
+           {
+            isPresent = true;
+            break;
+           }
+        }
+        if(isPresent == false)
+        {
+          temp = this.state.selectedCheckBox;
+          temp.push(value);
+          this.setState({selectedCheckBox: temp});
+        }
+        else 
+        {
+          for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
+          {
+            if(this.state.selectedCheckBox[i] == value)
+            {
+              continue;
+            }
+            temp.push(this.state.selectedCheckBox[i]);
+          }
+          this.setState({selectedCheckBox: temp});
+        }
+        console.log(" this.state.selectedCheckBox = ");
+        console.log(this.state.selectedCheckBox);
     }
     handlePhraseSelected(event, {value}){
       // this.setState({})
@@ -421,6 +364,31 @@ class RenderComp extends Component {
         const checkBoxStyle = {
             fontSize: '20px',
         }
+
+        if(this.state.cloudData.length !== 0) {
+        var l = [];
+        var data = [];
+        data = this.state.cloudData;
+        console.log(data);
+        if(this.state.cloudData.length != 0 )
+        {
+            let i = 0 ; 
+          while(i < data.length)
+        {
+            l.push(<TableRow>
+                {/* <TableCell>{data[i][1]}</TableCell> */}
+                <TableCell><Checkbox  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            </TableRow>)
+        }
+      }
+
+    }
+
+
+
+
         // const { myTopic } = this.state
         const {img} = this.state
         console.log("Img", img)
@@ -437,20 +405,26 @@ class RenderComp extends Component {
                             </Segment>
                             <Segment>
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
-                            {/* <Form>
-                            <Form.Group>
-                            <Form.Field width ={14}> */}
                             {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
-                            {/* <sortedTable />
-                            </Form.Field>
-                            <Form.Field> */}
                             {/* <sortedTable /> */}
-                            <SortedTable data = {this.state.cloudData}/>
+                            {/* <SortedTable data = {this.state.cloudData}/> */}
                              {/* <Button onClick={this.sendPhrases}>Get Data</Button> */}
-                            {/* </Form.Field>
-                            </Form.Group>
-                            </Form> */}
+<div >
+      <Paper>
+        <Table>
+          <TableHead>
+            <TableRow >
+            <TableCell className='headingTable'>Phrase</TableCell>  
+            <TableCell className='headingTable'></TableCell>
+            <TableCell className='headingTable'></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>{l}</TableBody>
+        </Table>
+      </Paper>
+      </div>
+
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
@@ -585,7 +559,7 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                             <h3>Tweets</h3>
-                            {/* <DisplayMessage title='Tweets'/> */}
+
                             <MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
                         </Segment>
                     </Grid.Column>
@@ -594,7 +568,6 @@ class RenderComp extends Component {
                     <Grid.Column width={16}>
                         <Segment>
                         <h3>Links</h3>
-                        {/* <DisplayMessage title='Memes'/> */}
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
                         </Segment>
                     </Grid.Column>

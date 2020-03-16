@@ -8,6 +8,9 @@ import Paper from '@material-ui/core/Paper';
 // import data from'./tempData.json';
 import Checkbox from '@material-ui/core/Checkbox';
 
+const orderStyle ={
+    size: 5,
+}
 function SortedTable(props) {
   var l = [];
   var data = [];
@@ -22,18 +25,11 @@ function SortedTable(props) {
   {
       l.push(<TableRow>
           {/* <TableCell>{data[i][1]}</TableCell> */}
-          <TableCell><Checkbox />
-              {data[i++][0]}
-          </TableCell>
-          <TableCell><Checkbox />
-              {data[i++][0]}
-          </TableCell>
-          <TableCell><Checkbox />
-              {data[i++][0]}
-          </TableCell>
+          <TableCell style={orderStyle}><Checkbox />{data[i++][0]}</TableCell>
+          <TableCell style={orderStyle}><Checkbox />{data[i++][0]}</TableCell>
+          <TableCell style={orderStyle}><Checkbox />{data[i++][0]}</TableCell>
       </TableRow>)
   }
-
   }
     return (
       <div >
