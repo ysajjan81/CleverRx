@@ -15,10 +15,10 @@ class FacebookAndTwitter extends Component {
   }
   render() { 
     console.log("infacebookTwitter = ");
-
+    console.log(this.state.data);
       let facebookData = [];
       let twitterData = [] ;
-      if(this.state.data.length != 0 )
+      if(this.state.data.length != 0)
       {
         console.log("facebook =")
         console.log(this.state.data.facebook);

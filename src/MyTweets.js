@@ -45,7 +45,7 @@ if(props.card == true && data.card_dict.tweets){
 }
   }
     return (
-      <div>
+      <div className="center-col">
       <Paper>
         <Table>
           <TableHead>
