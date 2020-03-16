@@ -274,13 +274,6 @@ class RenderComp extends Component {
       }
       )
     }
-
-    // arrayBufferToBase64(buffer) {
-    //     var binary = '';
-    //     var bytes = [].slice.call(new Uint8Array(buffer));
-    //     bytes.forEach((b) => binary += String.fromCharCode(b));
-    //     return window.btoa(binary);
-    // };
     createWordCloudData = () =>
     {
         var myData = [];
@@ -288,11 +281,9 @@ class RenderComp extends Component {
         for(let i = 0 ; i<phrase.length ; i++)
         {
           var temp = [];
-          // console.log(phrase[i].Topic);
+
           if(phrase[i].Topic === this.state.myTopic)
           {
-            // console.log("Here =  " + phrase[i].Phrase);
-
             temp.push(phrase[i].Phrase);
             temp.push(phrase[i].Frequency);
             myData.push(temp);
@@ -336,15 +327,6 @@ class RenderComp extends Component {
               this.createWordCloudData();
               console.log("data = ");
               console.log(data);
-            //   console.log("data = " + JSON.stringify(this.state.data));
-            //   console.log( );
-              //gif = str(open(img_file, 'rb').write())
-              var base64Flag = 'data:image/jpeg;base64,';
-              var imageStr = this.arrayBufferToBase64(this.state.data.card_dict.gifs[0]);
-              // this.setState({img: imageStr});
-              this.setState({
-                  img: imageStr + base64Flag
-              });
       		}
       		)
       }
@@ -353,7 +335,6 @@ class RenderComp extends Component {
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
-
         if(this.state.cloudData.length !== 0) {
         var l = [];
         var data = [];
@@ -390,11 +371,19 @@ class RenderComp extends Component {
                 <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
             </TableRow>)
               }
+            //   else if(data.length - i >= 4)
+            //   {
+            //       l.push(<TableRow>
+            //     <TableCell><Checkbox style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            //     <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            //     <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            //     <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+            // </TableRow>)
+            //   }
 
         }
       }
     }
-        // const { myTopic } = this.state
         const {img} = this.state
         console.log("Img", img)
         return (
@@ -414,12 +403,7 @@ class RenderComp extends Component {
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
                             {/* <Segment><MultipleSelect data ={this.state.cloudData}/></Segment> */}
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
-                            {/* <sortedTable />
 
-                            </Form.Field>
-                            <Form.Field> */}
-                            {/* <sortedTable /> */}
-                            {/* <SortedTable data = {this.state.cloudData}/> */}
                           <div >
                                 <Paper>
                                   <Table>
