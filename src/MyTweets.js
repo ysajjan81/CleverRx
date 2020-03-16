@@ -47,7 +47,7 @@ if(props.card == true && data.card_dict.tweets){
     return (
       <div className="center-col">
       <Paper>
-        <Table>
+        <Table stickyHeader aria-label="sticky table">
           <TableHead>
             <TableRow >
             <TableCell className='headingTable'>No</TableCell >

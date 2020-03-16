@@ -66,7 +66,7 @@ export default class FacebookAndTwitter extends React.Component {
     const panes = [
       {
         menuItem: 'Facebook', render: () => <Tab.Pane>
-        <Table sortable celled >
+        <Table sortable celled stickyHeader aria-label="sticky table">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell >Count</Table.HeaderCell>
