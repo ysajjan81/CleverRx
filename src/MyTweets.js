@@ -30,7 +30,7 @@ function MyTweets(props) {
     else if(data.insurance_dict.tweets[i][1] == '-' && props.insuranceNegativeSentiment == true) {
       l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'#ffcccb'}}>
+        <TableCell style={{backgroundColor:'#E34234', color:'white'}}>
             {data.insurance_dict.tweets[i][0]}
         </TableCell>
     </TableRow>)
@@ -53,7 +53,7 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
     {
       l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'#ffcccb'}}>
+        <TableCell style={{backgroundColor:'E34234', color:'white'}}>
             {data.card_dict.tweets[i][0]}
         </TableCell>
     </TableRow>)
@@ -72,11 +72,11 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
         </TableCell>
     </TableRow>)
     }
-    else  if(data.without_insurance_dict.tweets[i][1] == '-' && props.cardSentimentNegative == true)
+    else
     {
       l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'#ffcccb'}}>
+        <TableCell style={{backgroundColor:'#E34234' , color:'white'}}>
             {data.without_insurance_dict.tweets[i][0]}
         </TableCell>
     </TableRow>)
