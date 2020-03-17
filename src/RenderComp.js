@@ -39,7 +39,7 @@ var topicOptions = [
     key: 'Diabetes',
     text: 'Diabetes',
     value: 'diabetes',
- 
+
   },
   {
     key: 'Cancer',
@@ -56,7 +56,7 @@ var topicOptions = [
     key: 'Allergy',
     text: 'Allergy',
     value: 'allergy',
- 
+
   },
   {
     key: 'Liver',
@@ -68,37 +68,37 @@ var topicOptions = [
     key: 'Adiction',
     text: 'Adiction',
     value: 'adiction',
-  
+
   },
   {
     key: 'Alzheimer',
     text: 'Alzheimer',
     value: 'alzheimer',
-    
+
   },
   {
     key: 'Pain',
     text: 'Pain',
     value: 'pain',
-    
+
   },
   {
     key: 'Asthma',
     text: 'Asthma',
     value: 'asthma',
-   
+
   },
   {
     key: 'Pregnancy',
     text: 'Pregnancy',
     value: 'pregnancy',
- 
+
   },
   {
     key: 'heart',
     text: 'Heart',
     value: 'heart',
-  
+
   },
   {
     key:'Weight Loss',
@@ -403,12 +403,12 @@ class RenderComp extends Component {
       		)
       }
 }
-    render() 
+    render()
     {
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
-        if(this.state.cloudData.length !== 0) 
+        if(this.state.cloudData.length !== 0)
         {
         var l = [];
         var data = [];
@@ -498,85 +498,135 @@ class RenderComp extends Component {
                       </Grid.Column>
                       <Grid.Column>
                       {/* <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox> */}
-                      <div><h1>Insurance/Patient</h1></div>
+                      <div><h1 style={{color:'black'}}>Insurance/Patient</h1></div>
                       </Grid.Column>
                     </Grid.Row>
                     <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
-                    <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
+                    { this.state.card == true ? (
+                      <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
+                         <Segment>
+                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Card</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div style={{'width':'5px'}}></div>
+                             ) : (
+                               <div ><MyCloud data={this.state.data.card_dict.card_list}/></div>
+                            )
+                          }
+                        </Segment>
+                        {/*
+                          <Segment>
+                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                               <div ><MyCloud data={this.state.data.card_dict.disease_list}/></div>
+                            )
+                          }
+                        </Segment>
+                         <Segment>
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                              <div ><MyCloud data={this.state.data.card_dict.medication_list} /></div>
+                            )
+                          }
+                        </Segment>
+                        */}
+                         <Segment>
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                               <div ><MyCloud data={this.state.data.card_dict.cost_list}/></div>
+                            )
+                          }
+                        </Segment>
                        <Segment>
-                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Card</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div style={{'width':'5px'}}></div>
-                           ) : (
-                             <div ><MyCloud data={this.state.data.card_dict.card_list}/></div>
-                          )
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                               <div><MyCloud data={this.state.data.card_dict.service_list}/></div>
+                            )
                         }
-                      </Segment>
-                        <Segment>
-                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                             <div ><MyCloud data={this.state.data.card_dict.disease_list}/></div>
-                          )
-                        }
-                      </Segment>
+                        </Segment>
+                        </Grid.Column>
+                    ) : (
+                      <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
+                         <Segment>
+                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Card</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div style={{'width':'5px'}}></div>
+                             ) : (
+                               <div ><MyCloud data={this.state.data.without_insurance_dict.card_list}/></div>
+                            )
+                          }
+                        </Segment>
+                          <Segment>
+                        {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                               <div ><MyCloud data={this.state.data.without_insurance_dict.disease_list}/></div>
+                            )
+                          }
+                        </Segment>
+                         <Segment>
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                              <div ><MyCloud data={this.state.data.without_insurance_dict.medication_list} /></div>
+                            )
+                          }
+                        </Segment>
+                         <Segment>
+                        */}
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                               <div ><MyCloud data={this.state.data.without_insurance_dict.cost_list}/></div>
+                            )
+                          }
+                        </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                            <div ><MyCloud data={this.state.data.card_dict.medication_list} /></div>
-                          )
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div></div>
+                             ) : (
+                               <div><MyCloud data={this.state.data.without_insurance_dict.service_list}/></div>
+                            )
                         }
-                      </Segment>
-                       <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Health</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                             <div ><MyCloud data={this.state.data.card_dict.health_list}/></div>
-                          )
-                        }
-                      </Segment>
-                     <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                             <div><MyCloud data={this.state.data.card_dict.cost_list}/></div>
-                          )
-                      }
-                      </Segment>
-                     <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                            <div><MyCloud data={this.state.data.card_dict.service_list}/></div>
-                          )
-                        }
-                      </Segment>
-                      </Grid.Column>
+                        </Segment>
+                        </Grid.Column>
+                    )}
+
+
                       <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                      <Segment>
-                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
+                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Insurance</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
                            ) : (
-                             <div><MyCloud data={this.state.data.insurance_dict.cost_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.insurance_list}/></div>
                           )
                         }
                       </Segment>
                        <Segment>
-                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
+                      {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -596,32 +646,23 @@ class RenderComp extends Component {
                         }
                       </Segment>
                        <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Patients</div>
+                      */}
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
-                             <div><MyCloud data={this.state.data.insurance_dict.patients_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.cost_list}/></div>
                           )
                         }
                       </Segment>
                      <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Segment</div>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
                            ) : (
-                             <div><MyCloud data={this.state.data.insurance_dict.segment_list}/></div>
-                          )
-                      }
-                      </Segment>
-                       <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                            <div><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
+                             <div><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
                           )
                       }
                       </Segment>
@@ -629,14 +670,14 @@ class RenderComp extends Component {
                     </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                            <h3>Card/Customer Tweets</h3>
+                            <h3>Messages</h3>
                             {
                               this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left"/>)
                             }
                     </Grid.Column>
                     <Grid.Column>
-                          <h3>Insurance Tweets</h3>
+                          <h3>Messages</h3>
                             {
                               this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right"/>)
@@ -645,15 +686,15 @@ class RenderComp extends Component {
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                        <h3>Card/Customer Links</h3>
-                        { 
+                        <h3>Links</h3>
+                        {
                         this.state.data.length === 0 ? (<div></div>):
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left"/>
                         }
                     </Grid.Column>
                     <Grid.Column>
-                        <h3>Insurance Links</h3>
-                        { 
+                        <h3>Links</h3>
+                        {
                         this.state.data.length === 0 ? (<div></div>):
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right"/>
                         }
