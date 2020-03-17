@@ -2,7 +2,7 @@
   "name": "CleverRx_Frontendgit",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://cips.engineering.adu.edu:3000",
+  "proxy": "http://cips2.engineering.asu.edu:3000",
   "dependencies": {
     "@material-ui/core": "^3.9.4",
     "@nivo/chord": "^0.51.2",
