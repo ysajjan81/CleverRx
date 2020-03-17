@@ -11,14 +11,13 @@ import React, { Component } from 'react';
 
 function Mylinks(props) {
 
-
   var l = [];
   var data = [];
+  var loc = props.col;
   data = props.data;
-  var clr = 'green';
   if(data.length != 0 )
   {
-    if(props.insurance == true)
+    if(data.insurance_dict.links && loc == "right")
     {
   for(let i = 0 ; i<data.insurance_dict.links.length; i++)
   {
@@ -30,7 +29,7 @@ function Mylinks(props) {
       </TableRow>)
   }
 }
-    if(props.card == true)
+    if(props.card == true && data.card_dict.links && loc == "left")
     {
   for(let i = 0 ; i<data.card_dict.links.length; i++)
   {
@@ -40,6 +39,20 @@ function Mylinks(props) {
               {data.card_dict.links[i]}
           </TableCell>
       </TableRow>)
+  }
+}
+else if(props.card == false && data.without_insurance_dict.links && loc == "left")
+{
+  for(let i = 0 ; i<data.without_insurance_dict.links.length; i++)
+  {
+      l.push(
+          <TableRow>
+          <TableCell>{i+1}</TableCell>
+          <TableCell>
+              {data.without_insurance_dict.links[i]}
+          </TableCell>
+      </TableRow>
+      )
   }
 }
   }
@@ -59,5 +72,4 @@ function Mylinks(props) {
       </div>
       )
 }
-
 export default Mylinks;

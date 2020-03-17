@@ -33,73 +33,72 @@ var topicOptions = [
     key: 'Heart Hypertension',
     text: 'Heart Hypertension',
     value: 'heart hypertension',
-    // image: { avatar: true, src: '/images/avatar/small/jenny.jpg' },
+
   },
   {
     key: 'Diabetes',
     text: 'Diabetes',
     value: 'diabetes',
-    // image: { avatar: true, src: '/images/avatar/small/elliot.jpg' },
+ 
   },
   {
     key: 'Cancer',
     text: 'Cancer',
     value: 'cancer',
-    // image: { avatar: true, src: '/images/avatar/small/stevie.jpg' },
+
   },
   {
     key: 'STD/Infection',
     text: 'STD/Infection',
     value: 'STD/Infection',
-    // image: { avatar: true, src: '/images/avatar/small/christian.jpg' },
   },
   {
     key: 'Allergy',
     text: 'Allergy',
     value: 'allergy',
-    // image: { avatar: true, src: '/images/avatar/small/matt.jpg' },
+ 
   },
   {
     key: 'Liver',
     text: 'Liver',
     value: 'liver',
-    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+
   },
   {
     key: 'Adiction',
     text: 'Adiction',
     value: 'adiction',
-    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  
   },
   {
     key: 'Alzheimer',
     text: 'Alzheimer',
     value: 'alzheimer',
-    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+    
   },
   {
     key: 'Pain',
     text: 'Pain',
     value: 'pain',
-    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+    
   },
   {
     key: 'Asthma',
     text: 'Asthma',
     value: 'asthma',
-    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+   
   },
   {
     key: 'Pregnancy',
     text: 'Pregnancy',
     value: 'pregnancy',
-    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+ 
   },
   {
     key: 'heart',
     text: 'Heart',
     value: 'heart',
-    // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
+  
   },
   {
     key:'Weight Loss',
@@ -176,6 +175,31 @@ var topicOptions = [
     text: 'Ear',
     value: 'ear',
   },
+  {
+    key:'depression',
+    text: 'depression',
+    value: 'depression',
+  },
+  {
+    key:'common diseases',
+    text: 'Common Diseases',
+    value: 'common diseases',
+  },
+  {
+    key:'cholesterol',
+    text: 'Cholesterol',
+    value: 'cholesterol',
+  },
+  {
+    key:'blindness',
+    text: 'Blindness',
+    value: 'blindness',
+  },
+  {
+    key:'arthritis',
+    text: 'Arthritis',
+    value: 'arthritis',
+  },
 ];
 
 class RenderComp extends Component {
@@ -209,7 +233,6 @@ class RenderComp extends Component {
     componentDidUpdate(prevProps, prevState, snapshot){
       if(this.state.myTopic != '' && current != prev){
         prev = current;
-        console.log("Selected Topic = " + this.state.myTopic);
         var url = "/topic?topic_name="+this.state.myTopic;
           fetch(url, {
             method: 'GET',
@@ -247,7 +270,6 @@ class RenderComp extends Component {
     {
     var temp = !(this.state.card);
     this.setState({card: temp});
-    console.log(" card checked = " + this.state.card);
 }
     insuranceSelected(event)
     {
@@ -285,8 +307,6 @@ class RenderComp extends Component {
           }
           this.setState({selectedCheckBox: temp});
         }
-        console.log(" this.state.selectedCheckBox = ");
-        console.log(this.state.selectedCheckBox);
     }
 
     handlePhraseSelected(event, {value}){
@@ -294,9 +314,6 @@ class RenderComp extends Component {
     }
 
     sendPhrases(){
-
-      // console.log("in sendPhrase selectedCheckboxArray = ");
-      // console.log(this.state.selectedCheckBox);
       var temp = "";
       this.setState({loading: true});
       for(let i = 0 ; i<this.state.selectedCheckBox.length; i++)
@@ -305,13 +322,9 @@ class RenderComp extends Component {
         console.log("here = " + temp);
       }
       this.setState({phraseString: temp});
-      console.log("phraseString = ");
-      console.log(temp);
       var temp1 = "";
       for(let i = 0 ; i<temp.length-1;i++)
       temp1 += temp[i];
-      console.log(" temp 1" + temp1) ;
-
       var url  = "/phrases?topic_name=" + this.state.myTopic + "&topic_phrases=" + temp1;
       fetch(url, {
         method: 'GET',
@@ -333,8 +346,6 @@ class RenderComp extends Component {
         if(data == -1)
           return;
           this.setState({data: data, loading:false});
-          console.log("phrase api = ");
-          console.log(data);
       }
       )
     }
@@ -360,12 +371,9 @@ class RenderComp extends Component {
 
     getData = (value) =>
     {
-      console.log("inside getData ");
+
       this.setState({loading: true});
-      console.log("myTopic =");
-      console.log(this.state.myTopic);
       if(this.state.myTopic != ''){
-        console.log("Selected Topic = " + this.state.myTopic);
         var url = "/topic?topic_name="+value;
           fetch(url, {
             method: 'GET',
@@ -387,10 +395,10 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
-              this.setState({data: data, loading:false});
-              this.createWordCloudData();
               console.log("data = ");
               console.log(data);
+              this.setState({data: data, loading:false});
+              this.createWordCloudData();
       		}
       		)
       }
@@ -405,7 +413,6 @@ class RenderComp extends Component {
         var l = [];
         var data = [];
         data = this.state.cloudData;
-        console.log(data);
         if(this.state.cloudData.length != 0 )
         {
           let i = 0 ;
@@ -419,7 +426,7 @@ class RenderComp extends Component {
                 <input type="checkbox" class="hidden" readonly="" tabindex="0" />
                 <label>{data[i++][0]}</label>
               </div>
-                {/*<Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}*/}</TableCell>
+              </TableCell>
             </TableRow>)
             }
             else if( data.length - i == 2)
@@ -441,7 +448,6 @@ class RenderComp extends Component {
       }
     }
         const {img} = this.state
-        //console.log("Img", img)
         return (
             <div>
                 <div>
@@ -491,7 +497,8 @@ class RenderComp extends Component {
                       <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
                       </Grid.Column>
                       <Grid.Column>
-                      <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox>
+                      {/* <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox> */}
+                      <div><h1>Insurance/Patient</h1></div>
                       </Grid.Column>
                     </Grid.Row>
                     <Grid.Row style={{backgroundColor:"rgb(125, 171, 238)"}}>
@@ -606,7 +613,7 @@ class RenderComp extends Component {
                            ) : (
                              <div><MyCloud data={this.state.data.insurance_dict.segment_list}/></div>
                           )
-                        }
+                      }
                       </Segment>
                        <Segment>
                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
@@ -616,29 +623,40 @@ class RenderComp extends Component {
                            ) : (
                             <div><MyCloud data={this.state.data.insurance_dict.service_list}/></div>
                           )
-                        }
+                      }
                       </Segment>
                       </Grid.Column>
                     </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={16}>
-                        <Segment>
-                            <h3>Tweets</h3>
+                    <Grid.Column width={8}>
+                            <h3>Card/Customer Tweets</h3>
                             {
                               this.state.data.length === 0 ? (<div></div>):
-                            (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>)
+                            (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left"/>)
                             }
-                        </Segment>
+                    </Grid.Column>
+                    <Grid.Column>
+                          <h3>Insurance Tweets</h3>
+                            {
+                              this.state.data.length === 0 ? (<div></div>):
+                            (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right"/>)
+                            }
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
-                    <Grid.Column width={16}>
-                        <Segment>
-                        <h3>Links</h3>
-                        { this.state.data.length === 0 ? (<div></div>):
-                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card}/>
+                    <Grid.Column width={8}>
+                        <h3>Card/Customer Links</h3>
+                        { 
+                        this.state.data.length === 0 ? (<div></div>):
+                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left"/>
                         }
-                        </Segment>
+                    </Grid.Column>
+                    <Grid.Column>
+                        <h3>Insurance Links</h3>
+                        { 
+                        this.state.data.length === 0 ? (<div></div>):
+                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right"/>
+                        }
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>

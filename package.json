@@ -2,7 +2,7 @@
   "name": "CleverRx_Frontendgit",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  "proxy": "http://cips.engineering.adu.edu:3000",
   "dependencies": {
     "@material-ui/core": "^3.9.4",
     "@nivo/chord": "^0.51.2",
@@ -50,7 +50,7 @@
     "semantic-ui-react": "^0.88.1"
   },
   "scripts": {
-    "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true PORT=3001  react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -58,10 +58,6 @@ export default class FacebookAndTwitter extends React.Component {
           )
         }
       }
-      // else{
-      //   facebookData.push(<div></div>);
-      //   twitterData.push(<div></div>);
-      // }
 
     const panes = [
       {
