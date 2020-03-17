@@ -49,7 +49,7 @@ export default class FacebookAndTwitter extends React.Component {
               {this.props.data.twitter[i].count}
             </TableCell>
             <TableCell>
-              <a href={this.props.data.twitter[i].link} target="_blank">{this.props.data.twitter[i].link}</a>
+              <a href={"https://" + this.props.data.twitter[i].link} target="_blank">{"https://" + this.props.data.twitter[i].link}</a>
             </TableCell>
             <TableCell style={{minWidth:'100px'}}>
               {this.props.data.twitter[i].phrase}

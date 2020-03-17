@@ -84,20 +84,14 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
   }
 }
   }
-    return (
-      <div className="center-col">
-      <Paper>
-        <Table stickyHeader aria-label="sticky table">
-          <TableHead>
-            <TableRow >
-            <TableCell className='headingTable'>No</TableCell >
-            <TableCell className='headingTable'>Tweets</TableCell >
-            </TableRow>
-          </TableHead>
-          <TableBody>{l}</TableBody>
-        </Table>
-      </Paper>
-      </div>
-      )
+  return (
+    <div className="center-col">
+    <Paper>
+      <Table>
+        <TableBody>{l}</TableBody>
+      </Table>
+    </Paper>
+    </div>
+    )
 }
 export default MyTweets;
