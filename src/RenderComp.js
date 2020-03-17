@@ -221,6 +221,10 @@ class RenderComp extends Component {
             phraseString:"",
             loading:false,
             selectedCheckBox:[],
+            insuranceSentimentPositive:true,
+            insuranceSentimentNegative:true,
+            cardSentimentPositive:true,
+            cardSentimentNegative:true,
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -228,6 +232,34 @@ class RenderComp extends Component {
          this.insuranceSelected = this.insuranceSelected.bind(this);
          this.handlePhraseSelected = this.handlePhraseSelected.bind(this);
          this.sendPhrases = this.sendPhrases.bind(this);
+         this.handleInsuranceSentimentPositive = this.handleInsuranceSentimentPositive.bind(this);
+         this.handleInsuranceSentimentNegative = this.handleInsuranceSentimentNegative.bind(this);
+         this.handleCardSentimentPositive = this.handleCardSentimentPositive.bind(this);
+         this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
+    }
+    handleCardSentimentPositive(){
+      if(this.state.cardSentimentPositive == true)
+      this.setState({cardSentimentPositive: false});
+      else 
+      this.setState({cardSentimentPositive: true});
+    }
+    handleCardSentimentNegative(){
+      if(this.state.cardSentimentNegative == true)
+      this.setState({cardSentimentNegative: false});
+      else 
+      this.setState({cardSentimentNegative: true});
+    }
+    handleInsuranceSentimentPositive(){
+      if(this.state.insuranceSentimentPositive == true)
+      this.setState({insuranceSentimentPositive: false});
+      else 
+      this.setState({insuranceSentimentPositive: true});
+    }
+    handleInsuranceSentimentNegative(){
+      if(this.state.insuranceSentimentNegative == true)
+      this.setState({insuranceSentimentNegative: false})
+      else 
+      this.setState({insuranceSentimentNegative: true})
     }
 
     componentDidUpdate(prevProps, prevState, snapshot){
@@ -629,17 +661,21 @@ class RenderComp extends Component {
                     </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                            <h3>Card/Customer Tweets</h3>
-                            {
-                              this.state.data.length === 0 ? (<div></div>):
-                            (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left"/>)
-                            }
+                      <h3>Card/Customer Tweets</h3>
+                      <Checkbox label="Remove Positive Sentiments"  onChange={this.handleCardSentimentPositive}></Checkbox>
+                      <Checkbox label="Remove Negative Sentiments"  onChange={this.handleCardSentimentNegative}></Checkbox>
+                        {
+                        this.state.data.length === 0 ? (<div></div>):
+                            (<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left"/>)
+                        }
                     </Grid.Column>
                     <Grid.Column>
                           <h3>Insurance Tweets</h3>
+                          <Checkbox label="Remove Positive Sentiments" onChange={this.handleInsuranceSentimentPositive}></Checkbox>
+                          <Checkbox label="Remove Negative Sentiments" onChange={this.handleInsuranceSentimentNegative}></Checkbox>
                             {
                               this.state.data.length === 0 ? (<div></div>):
-                            (<MyTweets data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right"/>)
+                            (<MyTweets data = {this.state.data} insurancePositiveSentiment = {this.state.insuranceSentimentPositive} insuranceNegativeSentiment = {this.state.insuranceSentimentNegative} insurance={this.state.insur} card={this.state.card} col = "right"/>)
                             }
                     </Grid.Column>
                 </Grid.Row>

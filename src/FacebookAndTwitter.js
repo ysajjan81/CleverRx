@@ -19,6 +19,33 @@ export default class FacebookAndTwitter extends React.Component {
         data: this.props.data,
       };
   }
+
+  // convertNumbertoCommaSeparatedString = (number) =>{
+  //   var temp = "";
+  //   var a = '';
+  //   var cnt = 0 ; 
+  //   while(number > 0)
+  //   {
+  //     cnt += 1; 
+  //     a = number%10;
+  //     number = number /10;
+  //     temp = temp + a ;
+  //     if(cnt == 3 && number > 0)
+  //     {
+  //     temp += ',';
+  //     cnt = 0
+  //     }
+  
+  //   }
+  //   var ans = "";
+  //   for(let i = temp.length-1 ; i>=0 ; i++)
+  //   {
+  //     ans += temp[i];
+  //   }
+  //   return ans;
+  //   console.log(ans);
+  // }
+
   render(){
 
       let facebookData = [];
@@ -28,16 +55,18 @@ export default class FacebookAndTwitter extends React.Component {
 
         for(let i = 0 ; i<this.props.data.facebook.length ; i++)
         {
-
+          // var strWithCommas = this.convertNumbertoCommaSeparatedString(this.props.data.facebook[i].count);
+          
           facebookData.push(<TableRow>
+            <TableCell style={{minWidth:'150px'}}>
+              {this.props.data.facebook[i].phrase}
+            </TableCell>
             <TableCell>
               {this.props.data.facebook[i].count}
+              {/* {strWithCommas} */}
             </TableCell>
             <TableCell>
               <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].link}</a>
-            </TableCell>
-            <TableCell style={{minWidth:'150px'}}>
-              {this.props.data.facebook[i].phrase}
             </TableCell>
           </TableRow>)
         }
@@ -58,16 +87,15 @@ export default class FacebookAndTwitter extends React.Component {
           )
         }
       }
-
     const panes = [
       {
         menuItem: 'Facebook', render: () => <Tab.Pane>
         <Table sortable celled stickyHeader aria-label="sticky table">
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell >Count</Table.HeaderCell>
-            <Table.HeaderCell >Link</Table.HeaderCell>
             <Table.HeaderCell >Phrase</Table.HeaderCell>
+            <Table.HeaderCell >Likes</Table.HeaderCell>
+            <Table.HeaderCell >User ID</Table.HeaderCell>
           </Table.Row>
           </Table.Header>
           <Table.Body>
@@ -81,9 +109,9 @@ export default class FacebookAndTwitter extends React.Component {
       <Table sortable celled >
       <Table.Header>
         <Table.Row>
-        <Table.HeaderCell >Count</Table.HeaderCell>
-        <Table.HeaderCell >Link</Table.HeaderCell>
         <Table.HeaderCell >Phrase</Table.HeaderCell>
+        <Table.HeaderCell >Followers</Table.HeaderCell>
+        <Table.HeaderCell >User ID</Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
