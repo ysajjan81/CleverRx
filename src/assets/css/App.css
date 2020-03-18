@@ -604,7 +604,6 @@ ul.twPc-Arrange {
 .facebook-Twitter {
   flex: 1;
   height: 440px;
-  overflow-y: scroll;
   color: #364d79;
   table-layout: fixed;
   position: sticky;

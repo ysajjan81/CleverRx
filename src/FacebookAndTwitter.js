@@ -98,7 +98,7 @@ export default class FacebookAndTwitter extends React.Component {
                   <label>{this.props.data.facebook[i].phrase}</label>
                 </div>
                 </TableCell>
-                <TableCell style={{minWidth:'100px'}}>
+                <TableCell >
                   {this.props.data.facebook[i].count.toLocaleString()}
                   {/* {strWithCommas} */}
                 </TableCell>
@@ -123,7 +123,7 @@ export default class FacebookAndTwitter extends React.Component {
                   <label>{this.props.data.twitter[i].phrase}</label>
                 </div>
                 </TableCell>
-                <TableCell style={{minWidth:'100px'}}>
+                <TableCell>
                   {this.props.data.twitter[i].count.toLocaleString()}
                 </TableCell>
                 <TableCell>
@@ -141,7 +141,8 @@ export default class FacebookAndTwitter extends React.Component {
     const panes = [
       {
         menuItem: 'Facebook: ' + this.state.fbSum.toLocaleString(), render: () => <Tab.Pane>
-        <Table sortable celled stickyHeader aria-label="sticky table">
+        <div style={{  overflowY: 'scroll', height: '370px'}}>
+        <Table aria-label="simple table">
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell >Phrase</Table.HeaderCell>
@@ -153,11 +154,13 @@ export default class FacebookAndTwitter extends React.Component {
           {this.state.fbData}
           </Table.Body>
         </Table>
+        </div>
         </Tab.Pane>
         },
       {
-        menuItem: 'Twitter: ' + this.state.twitterSum.toLocaleString(), render: () => <Tab.Pane>
-      <Table sortable celled >
+      menuItem: 'Twitter: ' + this.state.twitterSum.toLocaleString(), render: () => <Tab.Pane>
+      <div style={{  overflowY: 'scroll', height: '370px'}}>
+      <Table aria-label="simple table">
       <Table.Header>
         <Table.Row>
         <Table.HeaderCell >Phrase</Table.HeaderCell>
@@ -169,6 +172,7 @@ export default class FacebookAndTwitter extends React.Component {
       {this.state.twData}
       </Table.Body>
       </Table>
+      </div>
       </Tab.Pane>
     },
     ]
