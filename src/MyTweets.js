@@ -72,7 +72,7 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
         </TableCell>
     </TableRow>)
     }
-    else
+    else if(data.without_insurance_dict.tweets[i][1] == '-' && props.cardSentimentNegative == true)
     {
       l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
