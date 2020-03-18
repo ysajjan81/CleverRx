@@ -29,6 +29,7 @@ import PositiveNegative from './PositiveNegative';
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
 let prev = '';
+let numberofCheckBoxSelected = 0;
 var topicOptions = [
   {
     key: 'Heart Hypertension',
@@ -204,7 +205,6 @@ var topicOptions = [
 ];
 
 class RenderComp extends Component {
-  
     constructor(props)
      {
         super(props);
@@ -312,6 +312,7 @@ class RenderComp extends Component {
 
     checkBoxSelected = (event, {value}) =>
     {
+
         var temp = [] ;
         var isPresent = false;
         for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
@@ -319,11 +320,13 @@ class RenderComp extends Component {
           if(value == this.state.selectedCheckBox[i])
            {
             isPresent = true;
+            numberofCheckBoxSelected -= 1;
             break;
            }
         }
         if(isPresent == false)
         {
+          numberofCheckBoxSelected += 1;
           temp = this.state.selectedCheckBox;
           temp.push(value);
           this.setState({selectedCheckBox: temp});
@@ -346,7 +349,14 @@ class RenderComp extends Component {
       this.setState({multiplePhraseSelected: value});
     }
 
-    sendPhrases(){
+    sendPhrases()
+    {
+      if(numberofCheckBoxSelected === 0)
+      {
+        this.getData(this.state.myTopic);
+      }
+      else
+      {
       var temp = "";
       this.setState({loading: true});
       for(let i = 0 ; i<this.state.selectedCheckBox.length; i++)
@@ -382,6 +392,7 @@ class RenderComp extends Component {
       }
       )
     }
+    }
     createWordCloudData = () =>
     {
         var myData = [];
@@ -400,6 +411,7 @@ class RenderComp extends Component {
         }
         this.setState({cloudData: myData});
         this.setState({phraseSelected: myoptions})
+        
     }
 
     getData = (value) =>
