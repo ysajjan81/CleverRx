@@ -413,7 +413,7 @@ class RenderComp extends Component {
         }
         this.setState({cloudData: myData});
         this.setState({phraseSelected: myoptions})
-        
+
     }
 
     getData = (value) =>
@@ -637,7 +637,6 @@ class RenderComp extends Component {
                           }
                         </Segment>
                         <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
                         {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
@@ -701,7 +700,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                      
                         {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>

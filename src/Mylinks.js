@@ -20,7 +20,7 @@ function Mylinks(props) {
     if(data.insurance_dict.links && loc == "right")
     {
   for(let i = 0 ; i<data.insurance_dict.links.length; i++)
-  {
+  { 
       l.push(<TableRow>
 
           <TableCell><a href={data.insurance_dict.links[i]} target="_blank">
