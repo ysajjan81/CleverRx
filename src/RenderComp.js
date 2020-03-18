@@ -23,6 +23,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import PositiveNegative from './PositiveNegative';
 
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
@@ -203,7 +204,7 @@ var topicOptions = [
 ];
 
 class RenderComp extends Component {
-
+  
     constructor(props)
      {
         super(props);
@@ -308,6 +309,7 @@ class RenderComp extends Component {
         var temp = !(this.state.insur);
         this.setState({insur: temp});
     }
+
     checkBoxSelected = (event, {value}) =>
     {
         var temp = [] ;
@@ -498,8 +500,8 @@ class RenderComp extends Component {
                             {/* <Dropdown placeholder='Select Phrases' fluid multiple selection options={this.state.phraseSelected} onChange={this.handlePhraseSelected} placeholder ="Select Phrases"/> */}
                           <div className = "phrase-style">
                                 <Paper>
-                                  <Table stickyHeader aria-label="sticky table">
-                                    <TableHead >
+                                  <Table>
+                                    <TableHead>
                                       <TableRow>
                                       <TableCell style={{fontWeight:'bold', fontSize:'16px', color:'black'}}>Phrases</TableCell>
                                       <TableCell ></TableCell>
@@ -509,7 +511,7 @@ class RenderComp extends Component {
                                     <TableBody>{l}</TableBody>
                                   </Table>
                                 </Paper>
-                                </div>
+                          </div>
                                 <Button style={{marginTop:'15px'}} onClick={this.sendPhrases}>Get Data</Button>
                             </Segment>
                         </Grid.Column>
@@ -706,15 +708,24 @@ class RenderComp extends Component {
                       <h3>Customer Related Messages</h3>
                       <Checkbox label="Neg" style={{marginRight:"10px"}} onChange={this.handleCardSentimentPositive}></Checkbox>
                       <Checkbox label="Pos"  onChange={this.handleCardSentimentNegative}></Checkbox>
+                        {/* <input key = {this.state.myTopic} type="checkbox" onChange={this.handleCardSentimentPositive}/>
+                       <label> Neg</label>
+                       <input key = {this.state.myTopic} type="checkbox" onChange={this.handleCardSentimentNegative}/>
+                       <label> Pos</label> */}
                         {
                         this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left"/>)
                         }
                     </Grid.Column>
                     <Grid.Column>
-                          <h3>Customer Related Messages</h3>  
+                          <h3>Customer Related Messages</h3>
                           <Checkbox label="Neg" style={{marginRight:"10px"}} onChange={this.handleInsuranceSentimentPositive}></Checkbox>
                           <Checkbox label="Pos" onChange={this.handleInsuranceSentimentNegative}></Checkbox>
+                      {/* <input key = {this.state.myTopic} type="checkbox" onChange={this.handleInsuranceSentimentPositive}/>
+                       <label> Neg</label>
+                       <input key = {this.state.myTopic} type="checkbox" onChange={this.handleInsuranceSentimentNegative}/>
+                       <label> Pos</label> */}
+                       {/* <PositiveNegative data={this.state.data} topic = {this.state.myTopic}/> */}
                             {
                               this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets data = {this.state.data} insurancePositiveSentiment = {this.state.insuranceSentimentPositive} insuranceNegativeSentiment = {this.state.insuranceSentimentNegative} insurance={this.state.insur} card={this.state.card} col = "right"/>)
