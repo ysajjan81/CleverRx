@@ -13,7 +13,7 @@ import ReactPlayer from 'react-player'
 import { FacebookProvider, EmbeddedPost, Page, Group, Comments} from 'react-facebook';
 // import { Row, Layout, Col, Card,  Menu, Breadcrumb, Carousel } from 'antd';
 
-export default class FacebookAndTwitter extends React.Component {
+export default class    Twitter extends React.Component {
   constructor(props) {
       super(props);
       this.state ={

@@ -24,6 +24,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import PositiveNegative from './PositiveNegative';
+import Medication from './Medication';
 
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
@@ -238,7 +239,8 @@ class RenderComp extends Component {
          this.handleCardSentimentPositive = this.handleCardSentimentPositive.bind(this);
          this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
     }
-    handleCardSentimentPositive(){
+    handleCardSentimentPositive()
+    {
       if(this.state.cardSentimentPositive == true)
       this.setState({cardSentimentPositive: false});
       else
@@ -561,6 +563,24 @@ class RenderComp extends Component {
                             )
                           }
                         </Segment>
+                        <Segment>
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div style={{'width':'5px'}}></div>
+                             ) : (
+                               <div ><Medication data = {this.state.data.card_dict.medication_list}/></div>
+                            )
+                          }
+                        {/* <MyTweets data = {this.state.data}/> */}
+                        {/* {
+                          this.state.data.length == 0 ? (
+                               <div style={{'width':'5px'}}></div>
+                             ) : (
+                               <div ><MyCloud data={this.state.data}/></div>
+                            )
+                          } */}
+                        </Segment>
                         {/*
                           <Segment>
                          <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
@@ -616,6 +636,16 @@ class RenderComp extends Component {
                             )
                           }
                         </Segment>
+                        <Segment>
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div style={{'width':'5px'}}></div>
+                             ) : (
+                               <div ><Medication data = {this.state.data.without_insurance_dict.medication_list}/></div>
+                            )
+                        }
+                        </Segment>
                           <Segment>
                         {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
                         {
@@ -659,8 +689,6 @@ class RenderComp extends Component {
                         </Segment>
                         </Grid.Column>
                     )}
-
-
                       <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                      <Segment>
                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Insurance</div>
@@ -672,6 +700,16 @@ class RenderComp extends Component {
                           )
                         }
                       </Segment>
+                      <Segment>
+                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                        {
+                          this.state.data.length == 0 ? (
+                               <div style={{'width':'5px'}}></div>
+                             ) : (
+                               <div><Medication data = {this.state.data.insurance_dict.medication_list}/></div>
+                            )
+                        }
+                        </Segment>
                        <Segment>
                       {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
                       {
