@@ -302,13 +302,12 @@ class RenderComp extends Component {
     {
     var temp = !(this.state.card);
     this.setState({card: temp});
-}
+    }
     insuranceSelected(event)
     {
         var temp = !(this.state.insur);
         this.setState({insur: temp});
     }
-
     checkBoxSelected = (event, {value}) =>
     {
         var temp = [] ;
@@ -440,6 +439,7 @@ class RenderComp extends Component {
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
+
         if(this.state.cloudData.length !== 0)
         {
         var l = [];
@@ -454,26 +454,27 @@ class RenderComp extends Component {
             {
               l.push(<TableRow>
                 <TableCell>
-                <div class="ui checkbox">
-                <input type="checkbox" class="hidden" readonly="" tabindex="0" />
+                {/* <div class="ui checkbox">
+                <input type="checkbox" class="hidden" readonly="" tabindex="0" /><h3>"I am here"</h3>
                 <label>{data[i++][0]}</label>
-              </div>
+              </div> */}
+              <Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}
               </TableCell>
             </TableRow>)
             }
             else if( data.length - i == 2)
             {
               l.push(<TableRow>
-                <TableCell><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]} />{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]} />{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
             </TableRow>)
             }
             else if(data.length - i >= 3)
               {
                   l.push(<TableRow>
-                <TableCell><Checkbox style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell><Checkbox key={data[i][0]} style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
             </TableRow>)
               }
         }
@@ -711,7 +712,7 @@ class RenderComp extends Component {
                         }
                     </Grid.Column>
                     <Grid.Column>
-                          <h3>Customer Related Messages</h3>
+                          <h3>Customer Related Messages</h3>  
                           <Checkbox label="Neg" style={{marginRight:"10px"}} onChange={this.handleInsuranceSentimentPositive}></Checkbox>
                           <Checkbox label="Pos" onChange={this.handleInsuranceSentimentNegative}></Checkbox>
                             {
