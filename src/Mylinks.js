@@ -48,8 +48,8 @@ else if(props.card == false && data.without_insurance_dict.links && loc == "left
       l.push(
           <TableRow>
           <TableCell>{i+1}</TableCell>
-          <TableCell>
-              {data.without_insurance_dict.links[i]}
+          <TableCell><a href={data.without_insurance_dict.links[i]} target="_blank">
+              {data.without_insurance_dict.links[i]}</a>
           </TableCell>
       </TableRow>
       )
