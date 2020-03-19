@@ -517,7 +517,7 @@ class RenderComp extends Component {
                                   <Table>
                                     <TableHead>
                                       <TableRow>
-                                      <TableCell style={{fontWeight:'bold', fontSize:'16px', color:'black'}}>Phrases</TableCell>
+                                      <TableCell style={{fontWeight:'bold', fontSize:'16px', color:'black'}}>Topical Phrases</TableCell>
                                       <TableCell ></TableCell>
                                       <TableCell ></TableCell>
                                       </TableRow>
@@ -572,37 +572,7 @@ class RenderComp extends Component {
                                <div ><Medication data = {this.state.data.card_dict.medication_list}/></div>
                             )
                           }
-                        {/* <MyTweets data = {this.state.data}/> */}
-                        {/* {
-                          this.state.data.length == 0 ? (
-                               <div style={{'width':'5px'}}></div>
-                             ) : (
-                               <div ><MyCloud data={this.state.data}/></div>
-                            )
-                          } */}
                         </Segment>
-                        {/*
-                          <Segment>
-                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
-                        {
-                          this.state.data.length == 0 ? (
-                               <div></div>
-                             ) : (
-                               <div ><MyCloud data={this.state.data.card_dict.disease_list}/></div>
-                            )
-                          }
-                        </Segment>
-                         <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
-                        {
-                          this.state.data.length == 0 ? (
-                               <div></div>
-                             ) : (
-                              <div ><MyCloud data={this.state.data.card_dict.medication_list} /></div>
-                            )
-                          }
-                        </Segment>
-                        */}
                          <Segment>
                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                         {
@@ -646,27 +616,6 @@ class RenderComp extends Component {
                         }
                         </Segment>
                           <Segment>
-                        {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
-                        {
-                          this.state.data.length == 0 ? (
-                               <div></div>
-                             ) : (
-                               <div ><MyCloud data={this.state.data.without_insurance_dict.disease_list}/></div>
-                            )
-                          }
-                        </Segment>
-                         <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
-                        {
-                          this.state.data.length == 0 ? (
-                               <div></div>
-                             ) : (
-                              <div ><MyCloud data={this.state.data.without_insurance_dict.medication_list} /></div>
-                            )
-                          }
-                        </Segment>
-                         <Segment>
-                        */}
                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                         {
                           this.state.data.length == 0 ? (
@@ -700,7 +649,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                       <Segment>
-                      
+
                         {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>

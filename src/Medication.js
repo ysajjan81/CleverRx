@@ -22,10 +22,10 @@ function Medication(props)
               <label style={{fontSize:'13px'}}>{i}</label>
             </div></Table.Cell>
           <Table.Cell >
-              {props.data[i][0]}
+              {props.data[i][2]}
           </Table.Cell>
           <Table.Cell >
-              {props.data[i][2]}
+              {props.data[i][0]}
           </Table.Cell>
       </Table.Row>)
     }
@@ -37,8 +37,8 @@ function Medication(props)
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Medication</Table.HeaderCell>
-            <Table.HeaderCell>Frequency</Table.HeaderCell>
             <Table.HeaderCell>Disease</Table.HeaderCell>
+            <Table.HeaderCell>Frequency</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>{l}</Table.Body>
