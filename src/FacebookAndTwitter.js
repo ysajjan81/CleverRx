@@ -100,7 +100,7 @@ export default class    Twitter extends React.Component {
                   <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].pagename}</a>
                 </Table.Cell>
                 <Table.Cell>
-                <img src={img} alt="logo" width="20" height="20" />
+                <img src={require(img)} alt="logo" width="20" height="20" />
                 </Table.Cell>
                 <Table.Cell>
                   {this.props.data.facebook[i].page_category}
