@@ -25,6 +25,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import PositiveNegative from './PositiveNegative';
 import Medication from './Medication';
+import 'react-responsive-carousel';
+import {Carousel} from 'react-responsive-carousel';
 
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;

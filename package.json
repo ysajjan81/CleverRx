@@ -29,6 +29,7 @@
     "react-native-paper": "^3.1.1",
     "react-player": "^1.9.3",
     "react-redux": "^5.1.1",
+    "react-responsive-carousel": "^3.1.51",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.5",
     "react-search-field": "^1.0.0",
