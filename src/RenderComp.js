@@ -32,12 +32,12 @@ let current = '';
 let prev = '';
 let numberofCheckBoxSelected = 0;
 var topicOptions = [
-  {
-    key: 'Heart Hypertension',
-    text: 'Heart Hypertension',
-    value: 'heart hypertension',
+  // {
+  //   key: 'Heart Hypertension',
+  //   text: 'Heart Hypertension',
+  //   value: 'heart hypertension',
 
-  },
+  // },
   {
     key: 'Diabetes',
     text: 'Diabetes',
@@ -50,11 +50,11 @@ var topicOptions = [
     value: 'cancer',
 
   },
-  {
-    key: 'STD/Infection',
-    text: 'STD/Infection',
-    value: 'STD/Infection',
-  },
+  // {
+  //   key: 'STD/Infection',
+  //   text: 'STD/Infection',
+  //   value: 'STD/Infection',
+  // },
   {
     key: 'Allergy',
     text: 'Allergy',
