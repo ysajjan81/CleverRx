@@ -25,6 +25,8 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import PositiveNegative from './PositiveNegative';
 import Medication from './Medication';
+import 'react-responsive-carousel';
+import {Carousel} from 'react-responsive-carousel';
 
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
@@ -32,12 +34,12 @@ let current = '';
 let prev = '';
 let numberofCheckBoxSelected = 0;
 var topicOptions = [
-  {
-    key: 'Heart Hypertension',
-    text: 'Heart Hypertension',
-    value: 'heart hypertension',
+  // {
+  //   key: 'Heart Hypertension',
+  //   text: 'Heart Hypertension',
+  //   value: 'heart hypertension',
 
-  },
+  // },
   {
     key: 'Diabetes',
     text: 'Diabetes',
@@ -50,11 +52,11 @@ var topicOptions = [
     value: 'cancer',
 
   },
-  {
-    key: 'STD/Infection',
-    text: 'STD/Infection',
-    value: 'STD/Infection',
-  },
+  // {
+  //   key: 'STD/Infection',
+  //   text: 'STD/Infection',
+  //   value: 'STD/Infection',
+  // },
   {
     key: 'Allergy',
     text: 'Allergy',
