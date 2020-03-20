@@ -1,8 +1,4 @@
 
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import React from 'react'
 
@@ -77,6 +73,7 @@ export default class    Twitter extends React.Component {
 
   componentDidUpdate(prevProps){
     if(this.props != prevProps && this.props.data != null && this.props.data != prevProps.data){
+          console.log('fbt', this.props.data);
           let facebookData = [];
           let twitterData = [] ;
           var fbSum, twSum;
@@ -86,8 +83,8 @@ export default class    Twitter extends React.Component {
 
             for(let i = 0 ; i<this.props.data.facebook.length ; i++)
             {
-              facebookData.push(<TableRow>
-                <TableCell style={{minWidth:'150px'}}>
+              facebookData.push(<Table.Row>
+                <Table.Cell style={{minWidth:'170px'}}>
                 <div>
                   <input
                     type="checkbox"
@@ -97,22 +94,25 @@ export default class    Twitter extends React.Component {
                   />
                   <label style={{fontSize:'13px'}}>{this.props.data.facebook[i].phrase}</label>
                 </div>
-                </TableCell>
-                <TableCell >
+                </Table.Cell>
+                <Table.Cell>
+                  {this.props.data.facebook[i].page_category}
+                </Table.Cell>
+                <Table.Cell >
                   {this.props.data.facebook[i].count.toLocaleString()}
                   {/* {strWithCommas} */}
-                </TableCell>
-                <TableCell>
-                  <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].link}</a>
-                </TableCell>
-              </TableRow>)
+                </Table.Cell>
+                <Table.Cell>
+                  <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].pagename}</a>
+                </Table.Cell>
+              </Table.Row>)
               fbSum+=this.props.data.facebook[i].count
             }
             for(let i = 0 ; i<this.props.data.twitter.length ; i++)
             {
               twitterData.push(
-                <TableRow>
-                <TableCell>
+                <Table.Row>
+                <Table.Cell>
                 <div>
                   <input
                     type="checkbox"
@@ -122,14 +122,15 @@ export default class    Twitter extends React.Component {
                   />
                   <label>{this.props.data.twitter[i].phrase}</label>
                 </div>
-                </TableCell>
-                <TableCell>
+                </Table.Cell>
+
+                <Table.Cell>
                   {this.props.data.twitter[i].count.toLocaleString()}
-                </TableCell>
-                <TableCell>
+                </Table.Cell>
+                <Table.Cell>
                   <a href={"https://" + this.props.data.twitter[i].link} target="_blank">{"https://" + this.props.data.twitter[i].link}</a>
-                </TableCell>
-              </TableRow>
+                </Table.Cell>
+              </Table.Row>
               )
               twSum+=this.props.data.twitter[i].count
             }
@@ -142,10 +143,11 @@ export default class    Twitter extends React.Component {
       {
         menuItem: 'Facebook: ' + this.state.fbSum.toLocaleString(), render: () => <Tab.Pane>
         <div style={{  overflowY: 'scroll', height: '370px'}}>
-        <Table aria-label="simple table">
+        <Table celled>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell >Phrase</Table.HeaderCell>
+            <Table.HeaderCell >Category</Table.HeaderCell>
             <Table.HeaderCell >Likes</Table.HeaderCell>
             <Table.HeaderCell >Page ID</Table.HeaderCell>
           </Table.Row>
@@ -160,7 +162,7 @@ export default class    Twitter extends React.Component {
       {
       menuItem: 'Twitter: ' + this.state.twitterSum.toLocaleString(), render: () => <Tab.Pane>
       <div style={{  overflowY: 'scroll', height: '370px'}}>
-      <Table aria-label="simple table">
+      <Table celled>
       <Table.Header>
         <Table.Row>
         <Table.HeaderCell >Phrase</Table.HeaderCell>

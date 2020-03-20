@@ -9,27 +9,27 @@ function Medication(props)
   var l = [];
       if(props.data && props.data.length != 0)
       {
-  for(var i in props.data)
-  {
-      l.push(<Table.Row>
-          <Table.Cell>  <div>
-              <input
-                type="checkbox"
-                name="Meds"
-                value={i}
-                style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
-              />
-              <label style={{fontSize:'13px'}}>{i}</label>
-            </div></Table.Cell>
-          <Table.Cell >
-              {props.data[i][2]}
-          </Table.Cell>
-          <Table.Cell >
-              {props.data[i][0]}
-          </Table.Cell>
-      </Table.Row>)
-    }
-  }
+        for(var i in props.data)
+        {
+            l.push(<Table.Row>
+                <Table.Cell>  <div>
+                    <input
+                      type="checkbox"
+                      name="Meds"
+                      value={props.data[i][0]}
+                      style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                    />
+                    <label style={{fontSize:'13px'}}>{props.data[i][0]}</label>
+                  </div></Table.Cell>
+                <Table.Cell >
+                    {props.data[i][1][2]}
+                </Table.Cell>
+                <Table.Cell >
+                    {props.data[i][1][0]}
+                </Table.Cell>
+            </Table.Row>)
+          }
+        }
   return (
     <div className="center-col">
     <Paper>
