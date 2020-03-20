@@ -82,8 +82,8 @@ export default class    Twitter extends React.Component {
 
             for(let i = 0 ; i<this.props.data.facebook.length ; i++)
             {
-              var img = "home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
-              //var img = "http://localhost/Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
+              //var img = "home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
+              var img = "Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
               facebookData.push(<Table.Row>
                 <Table.Cell style={{minWidth:'150px'}}>
                 <div>
@@ -100,7 +100,7 @@ export default class    Twitter extends React.Component {
                   <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].pagename}</a>
                 </Table.Cell>
                 <Table.Cell>
-                <img src={require(img)} alt="logo" width="20" height="20" />
+                <img src={img} alt="logo" width="20" height="20" />
                 </Table.Cell>
                 <Table.Cell>
                   {this.props.data.facebook[i].page_category}
