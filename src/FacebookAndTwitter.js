@@ -73,7 +73,6 @@ export default class    Twitter extends React.Component {
 
   componentDidUpdate(prevProps){
     if(this.props != prevProps && this.props.data != null && this.props.data != prevProps.data){
-          console.log('fbt', this.props.data);
           let facebookData = [];
           let twitterData = [] ;
           var fbSum, twSum;
@@ -83,7 +82,8 @@ export default class    Twitter extends React.Component {
 
             for(let i = 0 ; i<this.props.data.facebook.length ; i++)
             {
-              var img = "/home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
+              var img = "home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
+              //var img = "http://localhost/Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
               facebookData.push(<Table.Row>
                 <Table.Cell style={{minWidth:'150px'}}>
                 <div>
