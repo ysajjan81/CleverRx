@@ -83,8 +83,9 @@ export default class    Twitter extends React.Component {
 
             for(let i = 0 ; i<this.props.data.facebook.length ; i++)
             {
+              var img = "/home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
               facebookData.push(<Table.Row>
-                <Table.Cell style={{minWidth:'170px'}}>
+                <Table.Cell style={{minWidth:'150px'}}>
                 <div>
                   <input
                     type="checkbox"
@@ -96,14 +97,17 @@ export default class    Twitter extends React.Component {
                 </div>
                 </Table.Cell>
                 <Table.Cell>
+                  <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].pagename}</a>
+                </Table.Cell>
+                <Table.Cell>
+                <img src={img} alt="logo" width="20" height="20" />
+                </Table.Cell>
+                <Table.Cell>
                   {this.props.data.facebook[i].page_category}
                 </Table.Cell>
                 <Table.Cell >
                   {this.props.data.facebook[i].count.toLocaleString()}
                   {/* {strWithCommas} */}
-                </Table.Cell>
-                <Table.Cell>
-                  <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].pagename}</a>
                 </Table.Cell>
               </Table.Row>)
               fbSum+=this.props.data.facebook[i].count
@@ -147,9 +151,10 @@ export default class    Twitter extends React.Component {
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell >Phrase</Table.HeaderCell>
+            <Table.HeaderCell >Page ID</Table.HeaderCell>
+            <Table.HeaderCell>Logo</Table.HeaderCell>
             <Table.HeaderCell >Category</Table.HeaderCell>
             <Table.HeaderCell >Likes</Table.HeaderCell>
-            <Table.HeaderCell >Page ID</Table.HeaderCell>
           </Table.Row>
           </Table.Header>
           <Table.Body>
