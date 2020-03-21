@@ -81,7 +81,7 @@ export default class    Twitter extends React.Component {
           {
             for(let i = 0 ; i<this.props.data.facebook.length ; i++)
             {
-              var img = "/home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
+              var img = "/avatar_pages/" + this.props.data.facebook[i].id + ".png"
               // var img = "/Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
               // var img = "https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg";
               // var img = "http://cips2.engineering.asu.edu:3000/hasancips/cleverRX/avatar_pages/"  + this.props.data.facebook[i].id + ".jpg";
@@ -101,7 +101,7 @@ export default class    Twitter extends React.Component {
                   <a href={this.props.data.facebook[i].link} target="_blank">{this.props.data.facebook[i].pagename}</a>
                 </Table.Cell>
                 <Table.Cell>
-                <img src={img} alt="logo" width="20" height="20" />
+                <img src={img} alt="logo" width="40" height="50" />
                 </Table.Cell>
                 <Table.Cell>
                   {this.props.data.facebook[i].page_category}
