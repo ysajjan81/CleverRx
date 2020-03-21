@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Carousel} from 'react-bootstrap';
+import {Carousel, CarouselItem} from 'react-bootstrap';
 // import './assets/css/App.css';
 
 class MyCarousel extends Component {
@@ -12,6 +12,7 @@ class MyCarousel extends Component {
     renderCarousel(imgList){
       if(imgList !== null && imgList.length > 0){
         return imgList.map(function(image, index){
+
           return(
             <Carousel.Item >
               {

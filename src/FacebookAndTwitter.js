@@ -74,16 +74,17 @@ export default class    Twitter extends React.Component {
   componentDidUpdate(prevProps){
     if(this.props != prevProps && this.props.data != null && this.props.data != prevProps.data){
           let facebookData = [];
-          let twitterData = [] ;
+          let twitterData = [];
           var fbSum, twSum;
           fbSum = twSum = 0;
           if(this.props.data != null && this.props.data.length !=0)
           {
-
             for(let i = 0 ; i<this.props.data.facebook.length ; i++)
             {
-              //var img = "home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
-              var img = "Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
+              var img = "/home/hasancips/cleverRX/avatar_pages/" + this.props.data.facebook[i].id + ".png"
+              // var img = "/Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
+              // var img = "https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg";
+              // var img = "http://cips2.engineering.asu.edu:3000/hasancips/cleverRX/avatar_pages/"  + this.props.data.facebook[i].id + ".jpg";
               facebookData.push(<Table.Row>
                 <Table.Cell style={{minWidth:'150px'}}>
                 <div>
