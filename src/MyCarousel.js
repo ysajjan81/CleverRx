@@ -11,18 +11,18 @@ class MyCarousel extends Component {
 
     renderCarousel(imgList){
       if(imgList !== null && imgList.length > 0){
-        return imgList.map(function(image, index){
+        return imgList.map( (image, index) =>{
 
           return(
             <Carousel.Item >
               {
-                image.imgArray.map((item)=>{
+                image.imgArray != null && image.imgArray.length > 0 ? image.imgArray.map((item)=>{
                   return(<img
                     src={item.imgUrl}
                     alt={image.imgTitle}
-                    style={{width:'30%', height:'370px', display:'inline-block'}}
+                    style={{width:'33.3%', height:'370px', display:'inline-block'}}
                   />);
-                })
+                }) : null
               }
               <Carousel.Caption>
                 <h3>{image.imgTitle}</h3>
