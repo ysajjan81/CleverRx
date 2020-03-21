@@ -53,10 +53,10 @@ class MyCarousel extends Component {
       src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg"
       alt="First slide"
     />
-    
+
     <Carousel.Caption>
-      <h3>First slide label</h3>
-      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      {/* <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
