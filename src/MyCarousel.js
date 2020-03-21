@@ -14,11 +14,15 @@ class MyCarousel extends Component {
         return imgList.map(function(image, index){
           return(
             <Carousel.Item >
-              <img
-                src={image.imgUrl}
-                alt={image.imgTitle}
-                style={{width:'100%', height:'370px'}}
-              />
+              {
+                image.imgArray.map((item)=>{
+                  return(<img
+                    src={item.imgUrl}
+                    alt={image.imgTitle}
+                    style={{width:'30%', height:'370px', display:'inline-block'}}
+                  />);
+                })
+              }
               <Carousel.Caption>
                 <h3>{image.imgTitle}</h3>
                 <p>{image.imgDesc}</p>
@@ -30,18 +34,39 @@ class MyCarousel extends Component {
     }
     render(){
       let imgList = [{
-        imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
         imgTitle:"First",
-        imgDesc:"First Img Desc"
+        imgDesc:"First Img Desc",
+        imgArray:[{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },
+        {
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        }]
       },{
-        imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
         imgTitle:"Second",
-        imgDesc:"Second Img Desc"
+        imgDesc:"Second Img Desc",
+        imgArray:[{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },
+        {
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        }]
       },
       {
-        imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
         imgTitle:"Third",
-        imgDesc:"Third Img Desc"
+        imgDesc:"Third Img Desc",
+        imgArray:[{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },
+        {
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        }]
       }
     ];
 
