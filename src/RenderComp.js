@@ -25,9 +25,9 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import PositiveNegative from './PositiveNegative';
 import Medication from './Medication';
-import 'react-responsive-carousel';
-import {Carousel} from 'react-responsive-carousel';
-
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import {Carousel} from 'react-responsive-carousel';
+import MyCarousel from './MyCarousel';
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
@@ -751,6 +751,13 @@ class RenderComp extends Component {
                 <Grid.Row>
                     <Grid.Column width={16}>
                     </Grid.Column>
+                </Grid.Row>
+                <Grid.Row>
+                  <Grid.Column width={16}>
+                    <Segment style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
+                    <MyCarousel />
+                    </Segment>
+                  </Grid.Column>
                 </Grid.Row>
                 </Grid>
             </div>

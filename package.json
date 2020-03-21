@@ -19,6 +19,7 @@
     "randomcolor": "^0.5.3",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
+    "react-bootstrap-carousel": "^4.0.3",
     "react-chartjs": "^1.2.0",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.7.0",
