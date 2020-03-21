@@ -48,7 +48,7 @@ class MyCarousel extends Component {
         <div>
             <Carousel >
             <Carousel.Item >
-    <img
+    <img style={{ height: '370px'}}
     //   className="d-block w-100"
       src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg"
       alt="First slide"
@@ -60,7 +60,7 @@ class MyCarousel extends Component {
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+    <img style={{ height: '370px'}}
     // className="d-block w-100"
       src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg"
       alt="Third slide"
@@ -72,7 +72,7 @@ class MyCarousel extends Component {
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+    <img style={{ height: '370px'}}
         // className="d-block w-100"
       src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg"
       alt="Third slide"
