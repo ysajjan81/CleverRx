@@ -7,34 +7,66 @@ class MyCarousel extends Component {
     super(props);
     this.state = {  }
   }
-  render() { 
-    
-    return ( 
-      <div>
-        <Carousel>
-          <CarouselItem>
-            <img  style ={{height:'40%', width:'40%', position: "absolute"}} src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg" />
-            <img  style ={{height:'40%', width:'40%'}} src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg" />
-          </CarouselItem>
-          <CarouselItem>
-          <img  style ={{height:'40%', width:'40%'}} src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg" />
-            <img  style ={{height:'40%', width:'40%'}} src="https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg" />
-          </CarouselItem>
-        </Carousel>
-      </div>
-     );
-  }
-}
- 
-export default MyCarousel;
-
-
-// class MyCarousel extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = { 
-//          }
-//     }
+    renderCarousel(imgList){
+      if(imgList !== null && imgList.length > 0){
+        return imgList.map( (image, index) =>{
+          return(
+            <Carousel.Item >
+              {
+                image.imgArray != null && image.imgArray.length > 0 ? image.imgArray.map((item)=>{
+                  return(<img
+                    src={item.imgUrl}
+                    alt={image.imgTitle}
+                    style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                  />);
+                }) : null
+              }
+              <Carousel.Caption>
+                <h3>{image.imgTitle}</h3>
+                <p>{image.imgDesc}</p>
+              </Carousel.Caption>
+            </Carousel.Item>
+          );
+        })
+      }
+    }
+    render(){
+      let imgList = [{
+        imgTitle:"First",
+        imgDesc:"First Img Desc",
+        imgArray:[{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },
+        {
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        }]
+      },{
+        imgTitle:"Second",
+        imgDesc:"Second Img Desc",
+        imgArray:[{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },
+        {
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        }]
+      },
+      {
+        imgTitle:"Third",
+        imgDesc:"Third Img Desc",
+        imgArray:[{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },{
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        },
+        {
+          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+        }]
+      }
+    ];
 
 //     renderCarousel(imgList){
 //       if(imgList !== null && imgList.length > 0){
@@ -107,16 +139,16 @@ export default MyCarousel;
 //       //   }
 //       // }
 
-//       return(
-//         <div>
-//             <Carousel>
-//               {
-//                 this.renderCarousel(imgList)
-//               }
-//           </Carousel>
-//         </div> 
-//       );
-//   }
-// }
+      return(
+        <div>
+            <Carousel>
+              {
+                this.renderCarousel(imgList)
+              }
+          </Carousel>
+        </div> 
+      );
+  }
+}
 
-// export default MyCarousel;
+export default MyCarousel;
