@@ -21,10 +21,33 @@ function Mylinks(props) {
     {
   for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
   {
+    var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.external_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+    var html;
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then((response) => {
+      if(response.status == 200)
+        {
+          return response.json();
+        }
+      else {
+        alert('Uh Oh! Something went wrong');
+        return -1;
+      }
+    }).then((data) => {
+      if(data == -1)
+        return;
+        html = data["html"]
+    })
+    console.log('html', html)
       l.push(<TableRow>
 
-          <TableCell><a href={data.insurance_dict.external_links[i]} target="_blank">
-              {data.insurance_dict.external_links[i]}</a>
+          <TableCell>
+          {html}
           </TableCell>
       </TableRow>)
   }
@@ -33,10 +56,31 @@ if(data.insurance_dict.facebook_links && loc == "right")
 {
 for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
 {
+  var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.facebook_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+  var html;
+  fetch(url, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => {
+    if(response.status == 200)
+      {
+        return response.json();
+      }
+    else {
+      alert('Uh Oh! Something went wrong');
+      return -1;
+    }
+  }).then((data) => {
+    if(data == -1)
+      return;
+      html = data["html"]
+  })
   l.push(<TableRow>
-
-      <TableCell><a href={data.insurance_dict.facebook_links[i]} target="_blank">
-          {data.insurance_dict.facebook_links[i]}</a>
+      <TableCell>
+      {html}
       </TableCell>
   </TableRow>)
 }
@@ -45,10 +89,33 @@ if(data.insurance_dict.twitter_links && loc == "right")
 {
 for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
 {
+  var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.twitter_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+  var html;
+  fetch(url, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => {
+    if(response.status == 200)
+      {
+        return response.json();
+      }
+    else {
+      alert('Uh Oh! Something went wrong');
+      return -1;
+    }
+  }).then((data) => {
+    if(data == -1)
+      return;
+      html = data["html"]
+  })
+  console.log(html);
   l.push(<TableRow>
 
-      <TableCell><a href={data.insurance_dict.twitter_links[i]} target="_blank">
-          {data.insurance_dict.twitter_links[i]}</a>
+      <TableCell>
+      {html}
       </TableCell>
   </TableRow>)
 }
@@ -57,10 +124,32 @@ for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
     {
   for(let i = 0 ; i<data.card_dict.external_links.length; i++)
   {
+    var url = "http://iframe.ly/api/oembed?url=" + data.card_dict.external_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+    var html;
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then((response) => {
+      if(response.status == 200)
+        {
+          return response.json();
+        }
+      else {
+        alert('Uh Oh! Something went wrong');
+        return -1;
+      }
+    }).then((data) => {
+      if(data == -1)
+        return;
+        html = data["html"]
+    })
       l.push(<TableRow>
 
           <TableCell>
-              {data.card_dict.external_links[i]}
+              {html}
           </TableCell>
       </TableRow>)
   }
@@ -69,10 +158,32 @@ if(props.card == true && data.card_dict.facebook_links && loc == "left")
 {
 for(let i = 0 ; i<data.card_dict.facebook_links.length; i++)
 {
+  var url = "http://iframe.ly/api/oembed?url=" + data.card_dict.facebook_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+  var html;
+  fetch(url, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => {
+    if(response.status == 200)
+      {
+        return response.json();
+      }
+    else {
+      alert('Uh Oh! Something went wrong');
+      return -1;
+    }
+  }).then((data) => {
+    if(data == -1)
+      return;
+      html = data["html"]
+  })
   l.push(<TableRow>
 
       <TableCell>
-          {data.card_dict.facebook_links[i]}
+          {html}
       </TableCell>
   </TableRow>)
 }
@@ -81,10 +192,32 @@ if(props.card == true && data.card_dict.twitter_links && loc == "left")
 {
 for(let i = 0 ; i<data.card_dict.twitter_links.length; i++)
 {
+  var url = "http://iframe.ly/api/oembed?url=" + data.card_dict.twitter_links[i]+ "&api_key=13f02bbf1e0968b1e51a45"
+  var html;
+  fetch(url, {
+    method: 'GET',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  }).then((response) => {
+    if(response.status == 200)
+      {
+        return response.json();
+      }
+    else {
+      alert('Uh Oh! Something went wrong');
+      return -1;
+    }
+  }).then((data) => {
+    if(data == -1)
+      return;
+      html = data["html"]
+  })
   l.push(<TableRow>
 
       <TableCell>
-          {data.card_dict.twitter_links[i]}
+          {html}
       </TableCell>
   </TableRow>)
 }
@@ -93,11 +226,33 @@ if(props.card == false && data.without_insurance_dict.external_links && loc == "
 {
   for(let i = 0 ; i<data.without_insurance_dict.external_links.length; i++)
   {
+    var url = "http://iframe.ly/api/oembed?url=" + data.without_insurance_dict.external_links[i]+ "&api_key=13f02bbf1e0968b1e51a45"
+    var html;
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then((response) => {
+      if(response.status == 200)
+        {
+          return response.json();
+        }
+      else {
+        alert('Uh Oh! Something went wrong');
+        return -1;
+      }
+    }).then((data) => {
+      if(data == -1)
+        return;
+        html = data["html"]
+    })
       l.push(
           <TableRow>
           <TableCell>{i+1}</TableCell>
-          <TableCell><a href={data.without_insurance_dict.external_links[i]} target="_blank">
-              {data.without_insurance_dict.external_links[i]}</a>
+          <TableCell>
+          {html}
           </TableCell>
       </TableRow>
       )
@@ -107,11 +262,33 @@ if(props.card == false && data.without_insurance_dict.facebook_links && loc == "
 {
   for(let i = 0 ; i<data.without_insurance_dict.facebook_links.length; i++)
   {
+    var url = "http://iframe.ly/api/oembed?url=" + data.without_insurance_dict.facebook_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+    var html;
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then((response) => {
+      if(response.status == 200)
+        {
+          return response.json();
+        }
+      else {
+        alert('Uh Oh! Something went wrong');
+        return -1;
+      }
+    }).then((data) => {
+      if(data == -1)
+        return;
+        html = data["html"]
+    })
       l.push(
           <TableRow>
           <TableCell>{i+1}</TableCell>
-          <TableCell><a href={data.without_insurance_dict.facebook_links[i]} target="_blank">
-              {data.without_insurance_dict.facebook_links[i]}</a>
+          <TableCell>
+          {html}
           </TableCell>
       </TableRow>
       )
@@ -121,11 +298,33 @@ if(props.card == false && data.without_insurance_dict.twitter_links && loc == "l
 {
   for(let i = 0 ; i<data.without_insurance_dict.twitter_links.length; i++)
   {
+    var url = "http://iframe.ly/api/oembed?url=" + data.without_insurance_dict.twitter_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+    var html;
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then((response) => {
+      if(response.status == 200)
+        {
+          return response.json();
+        }
+      else {
+        alert('Uh Oh! Something went wrong');
+        return -1;
+      }
+    }).then((data) => {
+      if(data == -1)
+        return;
+        html = data["html"]
+    })
       l.push(
           <TableRow>
           <TableCell>{i+1}</TableCell>
-          <TableCell><a href={data.without_insurance_dict.twitter_links[i]} target="_blank">
-              {data.without_insurance_dict.twitter_links[i]}</a>
+          <TableCell>
+          {html}
           </TableCell>
       </TableRow>
       )
