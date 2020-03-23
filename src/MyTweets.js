@@ -6,6 +6,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
+import { TableHeader } from 'material-ui';
 
 function MyTweets(props) {
   var l = [];
@@ -25,6 +26,9 @@ function MyTweets(props) {
           <TableCell style={{backgroundColor:'lightgreen'}}>
               {data.insurance_dict.tweets[i][0]}
           </TableCell>
+          <TableCell >
+              {data.insurance_dict.tweets[i][1]}
+          </TableCell>
       </TableRow>)
     }
     else if(data.insurance_dict.tweets[i][2] == '-' && props.insuranceNegativeSentiment == true) {
@@ -32,6 +36,9 @@ function MyTweets(props) {
         <TableCell>{i+1}</TableCell>
         <TableCell style={{backgroundColor:'#E34234', color:'white'}}>
             {data.insurance_dict.tweets[i][0]}
+        </TableCell>
+        <TableCell >
+            {data.insurance_dict.tweets[i][1]}
         </TableCell>
     </TableRow>)
     }
@@ -44,8 +51,11 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
     if(data.card_dict.tweets[i][2] == '+' && props.cardSentimentPositive == true){
     l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'lightgreen'}}>
+        <TableCell >
             {data.card_dict.tweets[i][0]}
+        </TableCell>
+        <TableCell >
+            {data.card_dict.tweets[i][1]}
         </TableCell>
     </TableRow>)
     }
@@ -55,6 +65,9 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
         <TableCell>{i+1}</TableCell>
         <TableCell style={{backgroundColor:'E34234', color:'white'}}>
             {data.card_dict.tweets[i][0]}
+        </TableCell>
+        <TableCell >
+            {data.card_dict.tweets[i][1]}
         </TableCell>
     </TableRow>)
     }
@@ -70,6 +83,9 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
         <TableCell style={{backgroundColor:'lightgreen'}}>
             {data.without_insurance_dict.tweets[i][0]}
         </TableCell>
+        <TableCell >
+            {data.without_insurance_dict.tweets[i][1]}
+        </TableCell>
     </TableRow>)
     }
     else if(data.without_insurance_dict.tweets[i][2] == '-' && props.cardSentimentNegative == true)
@@ -78,6 +94,9 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
         <TableCell>{i+1}</TableCell>
         <TableCell style={{backgroundColor:'#E34234' , color:'white'}}>
             {data.without_insurance_dict.tweets[i][0]}
+        </TableCell>
+        <TableCell >
+            {data.without_insurance_dict.tweets[i][1]}
         </TableCell>
     </TableRow>)
     }
@@ -88,6 +107,19 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
     <div className="center-col">
     <Paper>
       <Table>
+        <TableHead>
+          <TableRow>
+          <TableCell>
+              <h4>Count</h4>
+            </TableCell>
+            <TableCell>
+              <h4>Messages</h4>
+            </TableCell>
+            <TableCell>
+              <h4>Likes</h4>
+            </TableCell>
+          </TableRow>
+        </TableHead>
         <TableBody>{l}</TableBody>
       </Table>
     </Paper>
