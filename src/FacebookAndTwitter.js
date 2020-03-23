@@ -26,7 +26,6 @@ export default class    Twitter extends React.Component {
       this.fbSelected = this.fbSelected.bind(this);
       this.twitterSelected = this.twitterSelected.bind(this);
   }
-
   fbSelected = (event) =>{
     var val = event.target.value;
     if(event.target.checked == true){

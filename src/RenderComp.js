@@ -753,11 +753,13 @@ class RenderComp extends Component {
                     </Grid.Column>
                 </Grid.Row> */}
                 <Grid.Row style={{maxHeight:'5'}}>
+                  
                   <Grid.Column width = {16} style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
-                    <h3>Card Images</h3>
                     {
                       this.state.data.length == 0?<div></div>:<MyCarousel data = {this.state.data}/>
                     }
+                  </Grid.Column>
+                  <Grid.Column>
                   </Grid.Column>
                 </Grid.Row>
                 {/* <Grid.Row>
@@ -770,6 +772,7 @@ class RenderComp extends Component {
                     </Segment>
                   </Grid.Column>
                 </Grid.Row> */}
+
                 </Grid>
             </div>
          );
