@@ -18,7 +18,7 @@ class MyCarousel extends Component {
     }
     let data=[];
     if(imgList !== null && imgList.length > 0){
-              for(let i = 0 ; i<this.props.data.facebook.length; i+3){
+              for(let i = 0 ; i<this.props.data.facebook.length; i++){
                 /* We can change between gif and imaged based on path name or list based on how it's coming */
                 var img1 = "/avatar_pages/" + this.props.data.facebook[i].id + extension
                 var img2 = "/avatar_pages/" + this.props.data.facebook[i+1].id + extension
