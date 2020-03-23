@@ -17,87 +17,129 @@ class MyCarousel extends Component {
       extension = '.gif'
     }
     let data=[];
-    if(imgList !== null && imgList.length > 0){
-<<<<<<< HEAD
+    if(this.props.data  && this.props.data.facebook.length > 0 )
+    {
               for(let i = 0 ; i<this.props.data.facebook.length; i++){
+                if(this.props.data.facebook.length - i >= 3)
+                {
+                var img1 = "http:cips2.engineering.asu.edu:3001/avatar_pages/" + this.props.data.facebook[i++].id + ".png"
+                var img2 = "http:cips2.engineering.asu.edu:3001/avatar_pages/" + this.props.data.facebook[i++].id + ".png"
+                var img3 = "http:cips2.engineering.asu.edu:3001/avatar_pages/" + this.props.data.facebook[i++].id + ".png"
+                  data.push(
+                    <Carousel.Item>
+                      <img
+                        src={img1}
+                        alt="logo"
+                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                      />
+                      <img
+                        src={img2}
+                        alt="logo"
+                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                      />
+                      <img
+                        src={img3}
+                        alt="logo"
+                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                      />
+                    </Carousel.Item>
+                  );
+                }
+                else if(this.props.length - i  == 2)
+                {
+                  var img1 = "http:cips2.engineering.asu.edu:3001/avatar_pages/" + this.props.data.facebook[i++].id + ".png"
+                  var img2 = "http:cips2.engineering.asu.edu:3001/avatar_pages/" + this.props.data.facebook[i++].id + ".png"
+                  data.push(
+                    <Carousel.Item>
+                      <img
+                        src={img1}
+                        alt="logo"
+                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                      />
+                      <img
+                        src={img2}
+                        alt="logo"
+                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                      />
+                    </Carousel.Item>
+                  );
+                }
+                else {
+                  var img1 = "http:cips2.engineering.asu.edu:3001/avatar_pages/" + this.props.data.facebook[i++].id + ".png"
+                  data.push(
+                    <Carousel.Item>
+                      <img
+                        src={img1}
+                        alt="logo"
+                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                      />
+                    </Carousel.Item>
+                  );
+                }
                 /* We can change between gif and imaged based on path name or list based on how it's coming */
-                var img1 = "/avatar_pages/" + this.props.data.facebook[i].id + extension
-                var img2 = "/avatar_pages/" + this.props.data.facebook[i+1].id + extension
-                var img3 = "/avatar_pages/" + this.props.data.facebook[i+2].id + extension
-                data.push(
-                  <Carousel.Item>
-                    <img
-                      src={img1}
-                      alt="logo"
-                      style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                    />
-                    <img
-                      src={img2}
-                      alt="logo"
-                      style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                    />
-                    <img
-                      src={img3}
-                      alt="logo"
-                      style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                    />
-                  </Carousel.Item>
-                );
-=======
-              for(let i = 0 ; i<this.props.data.facebook.length; i+3){
-                data.push("<Carousel.Item>")
-                for(let j=i; j<i+3 && j<this.props.data.facebook.length ;j ++){
-                  /* We can change between gif and imaged based on path name or list based on how it's coming */
-                  var img = "/avatar_pages/" + this.props.data.facebook[j].id + extension
-                  data.push(<img
-                    src={img}
-                    alt="logo"
-                    style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                  />)
-                } 
-                data.push("</Carousel.Item>")
->>>>>>> a5869ee5f847307bcf238befb8e81f336f6c47cd
+                // var img1 = "/avatar_pages/" + this.props.data.facebook[i].id + ".png"
+                // var img2 = "/avatar_pages/" + this.props.data.facebook[i+1].id + ".png"
+                // var img3 = "/avatar_pages/" + this.props.data.facebook[i+2].id + ".png"
+                // data.push(
+                //   <Carousel.Item>
+                //     <img
+                //       src={img1}
+                //       alt="logo"
+                //       style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                //     />
+                //     <img
+                //       src={img2}
+                //       alt="logo"
+                //       style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                //     />
+                //     <img
+                //       src={img3}
+                //       alt="logo"
+                //       style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                //     />
+                //   </Carousel.Item>
+                // );
               }
             }
         return data;
   }
     render(){
-      let imgList = [{
-        imgTitle:"First",
-        imgDesc:"First Img Desc",
-        imgArray:[{
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        },{
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        },
-        {
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        }]
-      },{
-        imgTitle:"Second",
-        imgDesc:"Second Img Desc",
-        imgArray:[{
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        },{
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        },
-        {
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        }]
-      },
-      {
-        imgTitle:"Third",
-        imgDesc:"Third Img Desc",
-        imgArray:[{
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        },{
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        },
-        {
-          imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
-        }]
-      }
-    ];
+    //   let imgList = [{
+    //     imgTitle:"First",
+    //     imgDesc:"First Img Desc",
+    //     imgArray:[{
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     },{
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     },
+    //     {
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     }]
+    //   },{
+    //     imgTitle:"Second",
+    //     imgDesc:"Second Img Desc",
+    //     imgArray:[{
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     },{
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     },
+    //     {
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     }]
+    //   },
+    //   {
+    //     imgTitle:"Third",
+    //     imgDesc:"Third Img Desc",
+    //     imgArray:[{
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     },{
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     },
+    //     {
+    //       imgUrl:"https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg",
+    //     }]
+    //   }
+    // ];
 
 //     renderCarousel(imgList){
 //       if(imgList !== null && imgList.length > 0){
@@ -179,13 +221,14 @@ class MyCarousel extends Component {
               <Card.Content>
                 <h3>Images</h3>
               </Card.Content>
-              { this.props.data != null ? <Carousel>
+              {this.props.data != null ?
+               <Carousel>
                 {this.renderCarousel(this.props.data, "img")}
               </Carousel> : null}
               <Card.Content>
                 <h3>GIF's</h3>
               </Card.Content>
-              { this.props.data != null ? <Carousel>
+              {this.props.data != null ? <Carousel>
                 {this.renderCarousel(this.props.data, "img")}
               </Carousel> : null}
             </Card>
