@@ -21,44 +21,60 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
       {
-        l.push(<TableRow>
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.external_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        l.push(
+            <TableRow>
+            <TableCell>{i+1}</TableCell>
             <TableCell>
-            {}
+              <IframeApp data={iframe} />
             </TableCell>
-        </TableRow>)
+        </TableRow>
+        )
       }
     }
     if(data.insurance_dict.facebook_links && loc == "right")
     {
       for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
       {
-        l.push(<TableRow>
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.facebook_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        l.push(
+            <TableRow>
+            <TableCell>{i+1}</TableCell>
             <TableCell>
-            {data.insurance_dict.facebook_links[i]}
+              <IframeApp data={iframe} />
             </TableCell>
-        </TableRow>)
+        </TableRow>
+        )
       }
     }
     if(data.insurance_dict.twitter_links && loc == "right")
     {
     for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
     {
-      l.push(<TableRow>
+      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.twitter_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+      l.push(
+          <TableRow>
+          <TableCell>{i+1}</TableCell>
           <TableCell>
-          {data.insurance_dict.twitter_links[i]}
+            <IframeApp data={iframe} />
           </TableCell>
-      </TableRow>)
+      </TableRow>
+      )
     }
     }
     if(props.card == true && data.card_dict.external_links && loc == "left")
     {
       for(let i = 0 ; i<data.card_dict.external_links.length; i++)
       {
-        l.push(<TableRow>
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.external_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        l.push(
+            <TableRow>
+            <TableCell>{i+1}</TableCell>
             <TableCell>
-            {data.card_dict.external_links[i]}
+              <IframeApp data={iframe} />
             </TableCell>
-        </TableRow>)
+        </TableRow>
+        )
 
       }
     }
@@ -66,30 +82,38 @@ function Mylinks(props) {
   {
     for(let i = 0 ; i<data.card_dict.facebook_links.length; i++)
     {
-      l.push(<TableRow>
+      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.facebook_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+      l.push(
+          <TableRow>
+          <TableCell>{i+1}</TableCell>
           <TableCell>
-              {data.card_dict.facebook_links[i]}
+            <IframeApp data={iframe} />
           </TableCell>
-      </TableRow>)
+      </TableRow>
+      )
     }
     }
     if(props.card == true && data.card_dict.twitter_links && loc == "left")
     {
     for(let i = 0 ; i<data.card_dict.twitter_links.length; i++)
     {
-      l.push(<TableRow>
+      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.twitter_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+      l.push(
+          <TableRow>
+          <TableCell>{i+1}</TableCell>
           <TableCell>
-              {data.card_dict.twitter_links[i]}
+            <IframeApp data={iframe} />
           </TableCell>
-      </TableRow>)
+      </TableRow>
+      )
     }
     }
     if(props.card == false && data.without_insurance_dict.external_links && loc == "left")
     {
       for(let i = 0 ; i<data.without_insurance_dict.external_links.length; i++)
       {
-        var iframe = '<iframe src="http://cdn.iframe.ly/api/iframe?url='+ data.without_insurance_dict.external_links[i] + '&api_key="13f02bbf1e0968b1e51a45"></iframe><script async src="//cdn.iframe.ly/embed.js"></script>'
 
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.external_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <TableRow>
             <TableCell>{i+1}</TableCell>
@@ -104,11 +128,12 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.without_insurance_dict.facebook_links.length; i++)
       {
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.facebook_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <TableRow>
             <TableCell>{i+1}</TableCell>
             <TableCell>
-            {data.without_insurance_dict.facebook_links[i]}
+              <IframeApp data={iframe} />
             </TableCell>
         </TableRow>
         )
@@ -118,13 +143,14 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.without_insurance_dict.twitter_links.length; i++)
       {
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.twitter_links[i] + '&api_key=13f02bbf1e0968b1e51a45"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <TableRow>
             <TableCell>{i+1}</TableCell>
             <TableCell>
-            {data.without_insurance_dict.twitter_links[i]}
+              <IframeApp data={iframe} />
             </TableCell>
-            </TableRow>
+        </TableRow>
         )
       }
     }
