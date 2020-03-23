@@ -7,6 +7,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 import React, { Component } from 'react';
+import EmbedContainer from 'react-oembed-container';
 
 
 function Mylinks(props) {
@@ -21,8 +22,9 @@ function Mylinks(props) {
     {
   for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
   {
-    var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.external_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-    var html;
+    // var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.external_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
+    var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.external_links[i] + "&api_key=9c5fcb4b5845b1fe3369a0"
+    var html = [];
     fetch(url, {
       method: 'GET',
       headers: {
@@ -41,15 +43,17 @@ function Mylinks(props) {
     }).then((data) => {
       if(data == -1)
         return;
-        html = data["html"]
+        console.log("Iframely Data =");
+        console.log(data);
+        html = data.html;
     })
-    console.log('html', html)
+    // console.log('html', html)
       l.push(<TableRow>
-
           <TableCell>
           {html}
           </TableCell>
-      </TableRow>)
+      </TableRow>
+      )
   }
 }
 if(data.insurance_dict.facebook_links && loc == "right")
@@ -76,7 +80,9 @@ for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
   }).then((data) => {
     if(data == -1)
       return;
-      html = data["html"]
+      console.log("Iframely data = ")
+      console.log(data);
+      html = data.html;
   })
   l.push(<TableRow>
       <TableCell>
@@ -109,7 +115,8 @@ for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
   }).then((data) => {
     if(data == -1)
       return;
-      html = data["html"]
+      // html = data["html"]
+      html = data.html;
   })
   console.log(html);
   l.push(<TableRow>
@@ -144,7 +151,8 @@ for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
     }).then((data) => {
       if(data == -1)
         return;
-        html = data["html"]
+        // html = data["html"]
+        html = data.html
     })
       l.push(<TableRow>
 

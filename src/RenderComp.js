@@ -500,6 +500,7 @@ class RenderComp extends Component {
     }
         const {img} = this.state
         return (
+          
             <div>
                 <div>
                 <HeaderBar></HeaderBar>

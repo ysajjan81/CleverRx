@@ -37,7 +37,8 @@ class MyCarousel extends Component {
       }</Carousel></Card.Content>)
       }
     }
-    render(){
+    render()
+    {
       let imgList = [{
         imgTitle:"First",
         imgDesc:"First Img Desc",

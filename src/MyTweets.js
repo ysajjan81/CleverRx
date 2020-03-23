@@ -15,7 +15,7 @@ function MyTweets(props) {
   var loc = props.col;
   if(data.length != 0)
   {
-      if( data.insurance_dict.tweets && loc == "right")
+  if( data.insurance_dict.tweets && loc == "right")
       {
   for(let i = 0 ; i<data.insurance_dict.tweets.length; i++)
   {
