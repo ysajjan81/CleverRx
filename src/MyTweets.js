@@ -18,7 +18,7 @@ function MyTweets(props) {
       {
   for(let i = 0 ; i<data.insurance_dict.tweets.length; i++)
   {
-    if(data.insurance_dict.tweets[i][1] == '+' && props.insurancePositiveSentiment == true)
+    if(data.insurance_dict.tweets[i][2] == '+' && props.insurancePositiveSentiment == true)
     {
       l.push(<TableRow>
           <TableCell>{i+1}</TableCell>
@@ -27,7 +27,7 @@ function MyTweets(props) {
           </TableCell>
       </TableRow>)
     }
-    else if(data.insurance_dict.tweets[i][1] == '-' && props.insuranceNegativeSentiment == true) {
+    else if(data.insurance_dict.tweets[i][2] == '-' && props.insuranceNegativeSentiment == true) {
       l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
         <TableCell style={{backgroundColor:'#E34234', color:'white'}}>
@@ -41,7 +41,7 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
 {
   for(let i = 0 ; i<data.card_dict.tweets.length ; i++)
   {
-    if(data.card_dict.tweets[i][1] == '+' && props.cardSentimentPositive == true){
+    if(data.card_dict.tweets[i][2] == '+' && props.cardSentimentPositive == true){
     l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
         <TableCell style={{backgroundColor:'lightgreen'}}>
@@ -49,7 +49,7 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
         </TableCell>
     </TableRow>)
     }
-    else if (data.card_dict.tweets[i][1] == '-' && props.cardSentimentNegative == true)
+    else if (data.card_dict.tweets[i][2] == '-' && props.cardSentimentNegative == true)
     {
       l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
@@ -64,7 +64,7 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
 {
   for(let i = 0 ; i<data.without_insurance_dict.tweets.length ; i++)
   {
-    if(data.without_insurance_dict.tweets[i][1] == '+' && props.cardSentimentPositive == true){
+    if(data.without_insurance_dict.tweets[i][2] == '+' && props.cardSentimentPositive == true){
     l.push(<TableRow>
         <TableCell>{i+1}</TableCell>
         <TableCell style={{backgroundColor:'lightgreen'}}>
@@ -72,7 +72,7 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
         </TableCell>
     </TableRow>)
     }
-    else if(data.without_insurance_dict.tweets[i][1] == '-' && props.cardSentimentNegative == true)
+    else if(data.without_insurance_dict.tweets[i][2] == '-' && props.cardSentimentNegative == true)
     {
       l.push(<TableRow>
         <TableCell>{i+1}</TableCell>

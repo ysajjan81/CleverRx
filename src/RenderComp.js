@@ -748,17 +748,28 @@ class RenderComp extends Component {
                         }
                     </Grid.Column>
                 </Grid.Row>
-                <Grid.Row>
+                {/* <Grid.Row>
                     <Grid.Column width={16}>
                     </Grid.Column>
-                </Grid.Row>
-                <Grid.Row>
-                  <Grid.Column width={16}>
-                    <Segment style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
-                    <MyCarousel />
-                    </Segment>
+                </Grid.Row> */}
+                <Grid.Row style={{maxHeight:'5'}}>
+                  <Grid.Column width = {16} style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
+                    <h3>Card Images</h3>
+                    {
+                      this.state.data.length == 0?<div></div>:<MyCarousel data = {this.state.data}/>
+                    }
                   </Grid.Column>
                 </Grid.Row>
+                {/* <Grid.Row>
+                  <Grid.Column style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
+                    <Segment>
+                    <h3>Insurance Images</h3>
+                    {
+                      this.state.data.length == 0?<div></div>:<MyCarousel data = {this.state.data}/>
+                    }
+                    </Segment>
+                  </Grid.Column>
+                </Grid.Row> */}
                 </Grid>
             </div>
          );
