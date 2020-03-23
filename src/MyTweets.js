@@ -1,12 +1,12 @@
 import React from 'react';
-import Table from '@material-ui/core/Table';
-import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
-import TableHead from '@material-ui/core/TableHead';
-import TableRow from '@material-ui/core/TableRow';
+// import Table from '@material-ui/core/Table';
+// import TableBody from '@material-ui/core/TableBody';
+// import Table.Cell from '@material-ui/core/Table.Cell';
+// import Table.Head from '@material-ui/core/Table.Head';
+// import Table.Row from '@material-ui/core/Table.Row';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
-import { TableHeader } from 'material-ui';
+import {Table} from 'semantic-ui-react'
 
 function MyTweets(props) {
   var l = [];
@@ -21,26 +21,26 @@ function MyTweets(props) {
   {
     if(data.insurance_dict.tweets[i][2] == '+' && props.insurancePositiveSentiment == true)
     {
-      l.push(<TableRow>
-          <TableCell>{i+1}</TableCell>
-          <TableCell style={{backgroundColor:'lightgreen'}}>
+      l.push(<Table.Row>
+
+          <Table.Cell style={{backgroundColor:'lightgreen'}}>
               {data.insurance_dict.tweets[i][0]}
-          </TableCell>
-          <TableCell >
+          </Table.Cell>
+          <Table.Cell >
               {data.insurance_dict.tweets[i][1]}
-          </TableCell>
-      </TableRow>)
+          </Table.Cell>
+      </Table.Row>)
     }
     else if(data.insurance_dict.tweets[i][2] == '-' && props.insuranceNegativeSentiment == true) {
-      l.push(<TableRow>
-        <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'#E34234', color:'white'}}>
+      l.push(<Table.Row>
+
+        <Table.Cell style={{backgroundColor:'#E34234', color:'white'}}>
             {data.insurance_dict.tweets[i][0]}
-        </TableCell>
-        <TableCell >
+        </Table.Cell>
+        <Table.Cell >
             {data.insurance_dict.tweets[i][1]}
-        </TableCell>
-    </TableRow>)
+        </Table.Cell>
+    </Table.Row>)
     }
   }
 }
@@ -49,27 +49,27 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
   for(let i = 0 ; i<data.card_dict.tweets.length ; i++)
   {
     if(data.card_dict.tweets[i][2] == '+' && props.cardSentimentPositive == true){
-    l.push(<TableRow>
-        <TableCell>{i+1}</TableCell>
-        <TableCell >
+    l.push(<Table.Row>
+
+        <Table.Cell >
             {data.card_dict.tweets[i][0]}
-        </TableCell>
-        <TableCell >
+        </Table.Cell>
+        <Table.Cell >
             {data.card_dict.tweets[i][1]}
-        </TableCell>
-    </TableRow>)
+        </Table.Cell>
+    </Table.Row>)
     }
     else if (data.card_dict.tweets[i][2] == '-' && props.cardSentimentNegative == true)
     {
-      l.push(<TableRow>
-        <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'E34234', color:'white'}}>
+      l.push(<Table.Row>
+
+        <Table.Cell style={{backgroundColor:'E34234', color:'white'}}>
             {data.card_dict.tweets[i][0]}
-        </TableCell>
-        <TableCell >
+        </Table.Cell>
+        <Table.Cell >
             {data.card_dict.tweets[i][1]}
-        </TableCell>
-    </TableRow>)
+        </Table.Cell>
+    </Table.Row>)
     }
   }
 }
@@ -78,27 +78,27 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
   for(let i = 0 ; i<data.without_insurance_dict.tweets.length ; i++)
   {
     if(data.without_insurance_dict.tweets[i][2] == '+' && props.cardSentimentPositive == true){
-    l.push(<TableRow>
-        <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'lightgreen'}}>
+    l.push(<Table.Row>
+
+        <Table.Cell style={{backgroundColor:'lightgreen'}}>
             {data.without_insurance_dict.tweets[i][0]}
-        </TableCell>
-        <TableCell >
+        </Table.Cell>
+        <Table.Cell >
             {data.without_insurance_dict.tweets[i][1]}
-        </TableCell>
-    </TableRow>)
+        </Table.Cell>
+    </Table.Row>)
     }
     else if(data.without_insurance_dict.tweets[i][2] == '-' && props.cardSentimentNegative == true)
     {
-      l.push(<TableRow>
-        <TableCell>{i+1}</TableCell>
-        <TableCell style={{backgroundColor:'#E34234' , color:'white'}}>
+      l.push(<Table.Row>
+
+        <Table.Cell style={{backgroundColor:'#E34234' , color:'white'}}>
             {data.without_insurance_dict.tweets[i][0]}
-        </TableCell>
-        <TableCell >
+        </Table.Cell>
+        <Table.Cell >
             {data.without_insurance_dict.tweets[i][1]}
-        </TableCell>
-    </TableRow>)
+        </Table.Cell>
+    </Table.Row>)
     }
   }
 }
@@ -107,20 +107,17 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
     <div className="center-col">
     <Paper>
       <Table>
-        <TableHead>
-          <TableRow>
-          <TableCell>
-              <h4>Count</h4>
-            </TableCell>
-            <TableCell>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>
               <h4>Messages</h4>
-            </TableCell>
-            <TableCell>
+            </Table.HeaderCell>
+            <Table.HeaderCell>
               <h4>Likes</h4>
-            </TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>{l}</TableBody>
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
+        <Table.Body>{l}</Table.Body>
       </Table>
     </Paper>
     </div>
