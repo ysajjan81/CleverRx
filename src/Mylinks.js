@@ -17,39 +17,115 @@ function Mylinks(props) {
   data = props.data;
   if(data.length != 0 )
   {
-    if(data.insurance_dict.links && loc == "right")
+    if(data.insurance_dict.external_links && loc == "right")
     {
-  for(let i = 0 ; i<data.insurance_dict.links.length; i++)
+  for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
   {
       l.push(<TableRow>
 
-          <TableCell><a href={data.insurance_dict.links[i]} target="_blank">
-              {data.insurance_dict.links[i]}</a>
+          <TableCell><a href={data.insurance_dict.external_links[i]} target="_blank">
+              {data.insurance_dict.external_links[i]}</a>
           </TableCell>
       </TableRow>)
   }
 }
-    if(props.card == true && data.card_dict.links && loc == "left")
+if(data.insurance_dict.facebook_links && loc == "right")
+{
+for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
+{
+  l.push(<TableRow>
+
+      <TableCell><a href={data.insurance_dict.facebook_links[i]} target="_blank">
+          {data.insurance_dict.facebook_links[i]}</a>
+      </TableCell>
+  </TableRow>)
+}
+}
+if(data.insurance_dict.twitter_links && loc == "right")
+{
+for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
+{
+  l.push(<TableRow>
+
+      <TableCell><a href={data.insurance_dict.twitter_links[i]} target="_blank">
+          {data.insurance_dict.twitter_links[i]}</a>
+      </TableCell>
+  </TableRow>)
+}
+}
+    if(props.card == true && data.card_dict.external_links && loc == "left")
     {
-  for(let i = 0 ; i<data.card_dict.links.length; i++)
+  for(let i = 0 ; i<data.card_dict.external_links.length; i++)
   {
       l.push(<TableRow>
 
           <TableCell>
-              {data.card_dict.links[i]}
+              {data.card_dict.external_links[i]}
           </TableCell>
       </TableRow>)
   }
 }
-else if(props.card == false && data.without_insurance_dict.links && loc == "left")
+if(props.card == true && data.card_dict.facebook_links && loc == "left")
 {
-  for(let i = 0 ; i<data.without_insurance_dict.links.length; i++)
+for(let i = 0 ; i<data.card_dict.facebook_links.length; i++)
+{
+  l.push(<TableRow>
+
+      <TableCell>
+          {data.card_dict.facebook_links[i]}
+      </TableCell>
+  </TableRow>)
+}
+}
+if(props.card == true && data.card_dict.twitter_links && loc == "left")
+{
+for(let i = 0 ; i<data.card_dict.twitter_links.length; i++)
+{
+  l.push(<TableRow>
+
+      <TableCell>
+          {data.card_dict.twitter_links[i]}
+      </TableCell>
+  </TableRow>)
+}
+}
+if(props.card == false && data.without_insurance_dict.external_links && loc == "left")
+{
+  for(let i = 0 ; i<data.without_insurance_dict.external_links.length; i++)
   {
       l.push(
           <TableRow>
           <TableCell>{i+1}</TableCell>
-          <TableCell><a href={data.without_insurance_dict.links[i]} target="_blank">
-              {data.without_insurance_dict.links[i]}</a>
+          <TableCell><a href={data.without_insurance_dict.external_links[i]} target="_blank">
+              {data.without_insurance_dict.external_links[i]}</a>
+          </TableCell>
+      </TableRow>
+      )
+  }
+}
+if(props.card == false && data.without_insurance_dict.facebook_links && loc == "left")
+{
+  for(let i = 0 ; i<data.without_insurance_dict.facebook_links.length; i++)
+  {
+      l.push(
+          <TableRow>
+          <TableCell>{i+1}</TableCell>
+          <TableCell><a href={data.without_insurance_dict.facebook_links[i]} target="_blank">
+              {data.without_insurance_dict.facebook_links[i]}</a>
+          </TableCell>
+      </TableRow>
+      )
+  }
+}
+if(props.card == false && data.without_insurance_dict.twitter_links && loc == "left")
+{
+  for(let i = 0 ; i<data.without_insurance_dict.twitter_links.length; i++)
+  {
+      l.push(
+          <TableRow>
+          <TableCell>{i+1}</TableCell>
+          <TableCell><a href={data.without_insurance_dict.twitter_links[i]} target="_blank">
+              {data.without_insurance_dict.twitter_links[i]}</a>
           </TableCell>
       </TableRow>
       )
