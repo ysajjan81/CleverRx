@@ -9,31 +9,34 @@ class MyCarousel extends Component {
     super(props);
     this.state = {  }
   }
-  renderCarousel(imgList, subType){
-    let extension;
-    if(subType === 'img'){
-      extension = '.png'
-    }else{
-      extension = '.gif'
+    renderCarousel(imgList, subType){
+      if(imgList !== null && imgList.length > 0){
+        return(
+          <Card.Content>
+            <h3>{subType}</h3>
+            <Carousel>{
+        imgList.map( (image, index) =>{
+          return(
+              <Carousel.Item>
+                {
+                  image.imgArray != null && image.imgArray.length > 0 ? image.imgArray.map((item)=>{
+                    return(<img
+                      src={item.imgUrl}
+                      alt={image.imgTitle}
+                      style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                    />);
+                  }) : null
+                }
+                <Carousel.Caption>
+                  <h3>{image.imgTitle}</h3>
+                  <p>{image.imgDesc}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+          );
+        })
+      }</Carousel></Card.Content>)
+      }
     }
-    let data=[];
-    if(imgList !== null && imgList.length > 0){
-              for(let i = 0 ; i<this.props.data.facebook.length; i+3){
-                data.push("<Carousel.Item>")
-                for(let j=i; j<i+3 && j<this.props.data.facebook.length ;j ++){
-                  /* We can change between gif and imaged based on path name or list based on how it's coming */
-                  var img = "/avatar_pages/" + this.props.data.facebook[j].id + extension
-                  data.push(<img
-                    src={img}
-                    alt="logo"
-                    style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                  />)
-                } 
-                data.push("</Carousel.Item>")
-              }
-            }
-        return data;
-  }
     render(){
       let imgList = [{
         imgTitle:"First",
@@ -149,35 +152,15 @@ class MyCarousel extends Component {
               <Card.Content>
                 <Card.Header>Card/Customer</Card.Header>
               </Card.Content>
-              <Card.Content>
-                <h3>Images</h3>
-              </Card.Content>
-              { this.props.data != null ? <Carousel>
-                {this.renderCarousel(this.props.data, "img")}
-              </Carousel> : null}
-              <Card.Content>
-                <h3>GIF's</h3>
-              </Card.Content>
-              { this.props.data != null ? <Carousel>
-                {this.renderCarousel(this.props.data, "img")}
-              </Carousel> : null}
+                {this.renderCarousel(imgList, "Images")}
+                {this.renderCarousel(imgList, "GIF's")}
             </Card>
             <Card style={{width:'unset'}}>
               <Card.Content>
                 <Card.Header>Insurance</Card.Header>
               </Card.Content>
-              <Card.Content>
-                <h3>Images</h3>
-              </Card.Content>
-              { this.props.data != null ? <Carousel>
-                {this.renderCarousel(this.props.data, "img")}
-              </Carousel> : null}
-              <Card.Content>
-                <h3>GIF's</h3>
-              </Card.Content>
-              { this.props.data != null ? <Carousel>
-                {this.renderCarousel(this.props.data, "img")}
-              </Carousel> : null}
+                {this.renderCarousel(imgList, "Images")}
+                {this.renderCarousel(imgList, "GIF's")}
             </Card>
         </div> 
       );
