@@ -18,6 +18,7 @@ class MyCarousel extends Component {
     }
     let data=[];
     if(imgList !== null && imgList.length > 0){
+<<<<<<< HEAD
               for(let i = 0 ; i<this.props.data.facebook.length; i++){
                 /* We can change between gif and imaged based on path name or list based on how it's coming */
                 var img1 = "/avatar_pages/" + this.props.data.facebook[i].id + extension
@@ -42,6 +43,20 @@ class MyCarousel extends Component {
                     />
                   </Carousel.Item>
                 );
+=======
+              for(let i = 0 ; i<this.props.data.facebook.length; i+3){
+                data.push("<Carousel.Item>")
+                for(let j=i; j<i+3 && j<this.props.data.facebook.length ;j ++){
+                  /* We can change between gif and imaged based on path name or list based on how it's coming */
+                  var img = "/avatar_pages/" + this.props.data.facebook[j].id + extension
+                  data.push(<img
+                    src={img}
+                    alt="logo"
+                    style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                  />)
+                } 
+                data.push("</Carousel.Item>")
+>>>>>>> a5869ee5f847307bcf238befb8e81f336f6c47cd
               }
             }
         return data;
