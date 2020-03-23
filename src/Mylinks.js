@@ -1,4 +1,3 @@
-// import React from 'react';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -7,6 +6,7 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 import React, { Component } from 'react';
+import IframeApp from './iframely.js'
 
 
 function Mylinks(props) {
@@ -19,326 +19,124 @@ function Mylinks(props) {
   {
     if(data.insurance_dict.external_links && loc == "right")
     {
-  for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
-  {
-    var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.external_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-    var html;
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then((response) => {
-      if(response.status == 200)
-        {
-          return response.json();
-        }
-      else {
-        alert('Uh Oh! Something went wrong');
-        return -1;
+      for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
+      {
+        l.push(<TableRow>
+            <TableCell>
+            {}
+            </TableCell>
+        </TableRow>)
       }
-    }).then((data) => {
-      if(data == -1)
-        return;
-        html = data["html"]
-    })
-    console.log('html', html)
+    }
+    if(data.insurance_dict.facebook_links && loc == "right")
+    {
+      for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
+      {
+        l.push(<TableRow>
+            <TableCell>
+            {data.insurance_dict.facebook_links[i]}
+            </TableCell>
+        </TableRow>)
+      }
+    }
+    if(data.insurance_dict.twitter_links && loc == "right")
+    {
+    for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
+    {
       l.push(<TableRow>
-
           <TableCell>
-          {html}
+          {data.insurance_dict.twitter_links[i]}
           </TableCell>
       </TableRow>)
-  }
-}
-if(data.insurance_dict.facebook_links && loc == "right")
-{
-for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
-{
-  var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.facebook_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-  var html;
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-  }).then((response) => {
-    if(response.status == 200)
-      {
-        return response.json();
-      }
-    else {
-      alert('Uh Oh! Something went wrong');
-      return -1;
     }
-  }).then((data) => {
-    if(data == -1)
-      return;
-      html = data["html"]
-  })
-  l.push(<TableRow>
-      <TableCell>
-      {html}
-      </TableCell>
-  </TableRow>)
-}
-}
-if(data.insurance_dict.twitter_links && loc == "right")
-{
-for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
-{
-  var url = "http://iframe.ly/api/oembed?url=" + data.insurance_dict.twitter_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-  var html;
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-  }).then((response) => {
-    if(response.status == 200)
-      {
-        return response.json();
-      }
-    else {
-      alert('Uh Oh! Something went wrong');
-      return -1;
     }
-  }).then((data) => {
-    if(data == -1)
-      return;
-      html = data["html"]
-  })
-  console.log(html);
-  l.push(<TableRow>
-
-      <TableCell>
-      {html}
-      </TableCell>
-  </TableRow>)
-}
-}
     if(props.card == true && data.card_dict.external_links && loc == "left")
     {
-  for(let i = 0 ; i<data.card_dict.external_links.length; i++)
-  {
-    var url = "http://iframe.ly/api/oembed?url=" + data.card_dict.external_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-    var html;
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then((response) => {
-      if(response.status == 200)
-        {
-          return response.json();
-        }
-      else {
-        alert('Uh Oh! Something went wrong');
-        return -1;
-      }
-    }).then((data) => {
-      if(data == -1)
-        return;
-        html = data["html"]
-    })
-      l.push(<TableRow>
+      for(let i = 0 ; i<data.card_dict.external_links.length; i++)
+      {
+        l.push(<TableRow>
+            <TableCell>
+            {data.card_dict.external_links[i]}
+            </TableCell>
+        </TableRow>)
 
+      }
+    }
+  if(props.card == true && data.card_dict.facebook_links && loc == "left")
+  {
+    for(let i = 0 ; i<data.card_dict.facebook_links.length; i++)
+    {
+      l.push(<TableRow>
           <TableCell>
-              {html}
+              {data.card_dict.facebook_links[i]}
           </TableCell>
       </TableRow>)
-  }
-}
-if(props.card == true && data.card_dict.facebook_links && loc == "left")
-{
-for(let i = 0 ; i<data.card_dict.facebook_links.length; i++)
-{
-  var url = "http://iframe.ly/api/oembed?url=" + data.card_dict.facebook_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-  var html;
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-  }).then((response) => {
-    if(response.status == 200)
-      {
-        return response.json();
-      }
-    else {
-      alert('Uh Oh! Something went wrong');
-      return -1;
     }
-  }).then((data) => {
-    if(data == -1)
-      return;
-      html = data["html"]
-  })
-  l.push(<TableRow>
-
-      <TableCell>
-          {html}
-      </TableCell>
-  </TableRow>)
-}
-}
-if(props.card == true && data.card_dict.twitter_links && loc == "left")
-{
-for(let i = 0 ; i<data.card_dict.twitter_links.length; i++)
-{
-  var url = "http://iframe.ly/api/oembed?url=" + data.card_dict.twitter_links[i]+ "&api_key=13f02bbf1e0968b1e51a45"
-  var html;
-  fetch(url, {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-  }).then((response) => {
-    if(response.status == 200)
-      {
-        return response.json();
-      }
-    else {
-      alert('Uh Oh! Something went wrong');
-      return -1;
     }
-  }).then((data) => {
-    if(data == -1)
-      return;
-      html = data["html"]
-  })
-  l.push(<TableRow>
+    if(props.card == true && data.card_dict.twitter_links && loc == "left")
+    {
+    for(let i = 0 ; i<data.card_dict.twitter_links.length; i++)
+    {
+      l.push(<TableRow>
+          <TableCell>
+              {data.card_dict.twitter_links[i]}
+          </TableCell>
+      </TableRow>)
+    }
+    }
+    if(props.card == false && data.without_insurance_dict.external_links && loc == "left")
+    {
+      for(let i = 0 ; i<data.without_insurance_dict.external_links.length; i++)
+      {
+        var iframe = '<iframe src="http://cdn.iframe.ly/api/iframe?url='+ data.without_insurance_dict.external_links[i] + '&api_key="13f02bbf1e0968b1e51a45"></iframe><script async src="//cdn.iframe.ly/embed.js"></script>'
 
-      <TableCell>
-          {html}
-      </TableCell>
-  </TableRow>)
-}
-}
-if(props.card == false && data.without_insurance_dict.external_links && loc == "left")
-{
-  for(let i = 0 ; i<data.without_insurance_dict.external_links.length; i++)
-  {
-    var url = "http://iframe.ly/api/oembed?url=" + data.without_insurance_dict.external_links[i]+ "&api_key=13f02bbf1e0968b1e51a45"
-    var html;
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then((response) => {
-      if(response.status == 200)
-        {
-          return response.json();
-        }
-      else {
-        alert('Uh Oh! Something went wrong');
-        return -1;
+        l.push(
+            <TableRow>
+            <TableCell>{i+1}</TableCell>
+            <TableCell>
+              <IframeApp data={iframe} />
+            </TableCell>
+        </TableRow>
+        )
       }
-    }).then((data) => {
-      if(data == -1)
-        return;
-        html = data["html"]
-    })
-      l.push(
-          <TableRow>
-          <TableCell>{i+1}</TableCell>
-          <TableCell>
-          {html}
-          </TableCell>
-      </TableRow>
-      )
-  }
-}
-if(props.card == false && data.without_insurance_dict.facebook_links && loc == "left")
-{
-  for(let i = 0 ; i<data.without_insurance_dict.facebook_links.length; i++)
-  {
-    var url = "http://iframe.ly/api/oembed?url=" + data.without_insurance_dict.facebook_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-    var html;
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then((response) => {
-      if(response.status == 200)
-        {
-          return response.json();
-        }
-      else {
-        alert('Uh Oh! Something went wrong');
-        return -1;
+    }
+    if(props.card == false && data.without_insurance_dict.facebook_links && loc == "left")
+    {
+      for(let i = 0 ; i<data.without_insurance_dict.facebook_links.length; i++)
+      {
+        l.push(
+            <TableRow>
+            <TableCell>{i+1}</TableCell>
+            <TableCell>
+            {data.without_insurance_dict.facebook_links[i]}
+            </TableCell>
+        </TableRow>
+        )
       }
-    }).then((data) => {
-      if(data == -1)
-        return;
-        html = data["html"]
-    })
-      l.push(
-          <TableRow>
-          <TableCell>{i+1}</TableCell>
-          <TableCell>
-          {html}
-          </TableCell>
-      </TableRow>
-      )
-  }
-}
-if(props.card == false && data.without_insurance_dict.twitter_links && loc == "left")
-{
-  for(let i = 0 ; i<data.without_insurance_dict.twitter_links.length; i++)
-  {
-    var url = "http://iframe.ly/api/oembed?url=" + data.without_insurance_dict.twitter_links[i] + "&api_key=13f02bbf1e0968b1e51a45"
-    var html;
-    fetch(url, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-    }).then((response) => {
-      if(response.status == 200)
-        {
-          return response.json();
-        }
-      else {
-        alert('Uh Oh! Something went wrong');
-        return -1;
+    }
+    if(props.card == false && data.without_insurance_dict.twitter_links && loc == "left")
+    {
+      for(let i = 0 ; i<data.without_insurance_dict.twitter_links.length; i++)
+      {
+        l.push(
+            <TableRow>
+            <TableCell>{i+1}</TableCell>
+            <TableCell>
+            {data.without_insurance_dict.twitter_links[i]}
+            </TableCell>
+            </TableRow>
+        )
       }
-    }).then((data) => {
-      if(data == -1)
-        return;
-        html = data["html"]
-    })
-      l.push(
-          <TableRow>
-          <TableCell>{i+1}</TableCell>
-          <TableCell>
-          {html}
-          </TableCell>
-      </TableRow>
-      )
-  }
-}
-  }
-    return (
-      <div className="center-col">
-      <Paper>
-        <Table>
-          <TableBody>{l}</TableBody>
-        </Table>
-      </Paper>
-      </div>
-      )
-}
+    }
+      }
+        return (
+          <div className="center-col">
+          <Paper>
+            <Table>
+              <TableBody>{l}</TableBody>
+            </Table>
+          </Paper>
+          </div>
+          )
+    }
 export default Mylinks;
