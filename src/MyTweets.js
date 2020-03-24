@@ -63,7 +63,7 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
     {
       l.push(<Table.Row>
 
-        <Table.Cell style={{backgroundColor:'E34234', color:'white'}}>
+        <Table.Cell style={{backgroundColor:'#E34234', color:'white'}}>
             {data.card_dict.tweets[i][0]}
         </Table.Cell>
         <Table.Cell >
