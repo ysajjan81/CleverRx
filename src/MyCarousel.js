@@ -17,15 +17,17 @@ class MyCarousel extends Component
 
     if(this.props.data!=null && value == "insurance" && this.props.data.insurance_dict.tid != null && this.props.data.insurance_dict.tid.length > 0)
     {
+              var count = 0;
+              var imageTid= [];
               for(let j = 0 ; j<this.props.data.insurance_dict.tid.length; j++)
               {
-                var imageTid = images[this.props.data.insurance_dict.tid[j]];
+                var img = images[this.props.data.insurance_dict.tid[j]];
+                imageTid.push.apply(imageTid, img);
+                if(img != null && imageTid.length>0)
+                   count+= = images[this.props.data.insurance_dict.tid[j]].length;
 
-                if(imageTid != null && imageTid.length>0)
-                  var count = images[this.props.data.insurance_dict.tid[j]].length;
-                else
-                  var count = 0;
-                for(let i = 0 ; i<count ; i++)
+               }
+              for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
                 {
@@ -86,20 +88,23 @@ class MyCarousel extends Component
                     </Carousel.Item>
                   );
                 }
-            }
+
           }
       }
             if(this.props.card == true && value == "card" && this.props.data.card_dict.tid != null && this.props.data && this.props.data.card_dict.tid.length > 0  )
             {
-
+              var count = 0;
+              var imageTid= [];
               for(let j = 0 ; j<this.props.data.card_dict.tid.length; j++)
               {
 
-                var imageTid = images[this.props.data.card_dict.tid[j]];
-                if(imageTid != null && imageTid.length > 0)
-                  var count = images[this.props.data.card_dict.tid[j]].length;
-                else
-                  var count = 0;
+                var img = images[this.props.data.card_dict.tid[j]];
+                imageTid.push.apply(imageTid, img);
+                if(img != null && imageTid.length>0)
+                   count+= = images[this.props.data.card_dict.tid[j]].length;
+
+               }
+
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
@@ -159,22 +164,23 @@ class MyCarousel extends Component
                       />
                     </Carousel.Item>
                   );
-                }
+
               }
             }
             }
             else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid != null && this.props.data.without_insurance_dict.tid.length > 0 )
             {
+              var count = 0;
+              var imageTid= [];
               for(let j = 0 ; j<this.props.data.without_insurance_dict.tid.length; j++)
               {
 
-                var imageTid = images[this.props.data.without_insurance_dict.tid[j]];
+                var img = images[this.props.data.without_insurance_dict.tid[j]];
+                imageTid.push.apply(imageTid, img);
+                if(img != null && imageTid.length>0)
+                   count+= = images[this.props.data.without_insurance_dict.tid[j]].length;
 
-
-                  if(imageTid != null && imageTid.length > 0)
-                    var count = images[this.props.data.without_insurance_dict.tid[j]].length;
-                  else var count = 0
-
+               }
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
@@ -237,7 +243,6 @@ class MyCarousel extends Component
                       />
                     </Carousel.Item>
                   );
-                }
               }
             }
             }
