@@ -11,22 +11,20 @@ class MyCarousel extends Component
     this.state = {  }
   }
 
-importAll = (r) => {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-}
   getJpgs = (value) =>
   {
-    //console.log(js);
     let data=[];
 
-    if(this.props.data && value == "insurance" && this.props.data.insurance_dict.tid.length > 0)
+    if(this.props.data!=null && value == "insurance" && this.props.data.insurance_dict.tid != null && this.props.data.insurance_dict.tid.length > 0)
     {
               for(let j = 0 ; j<this.props.data.insurance_dict.tid.length; j++)
               {
                 var imageTid = images[this.props.data.insurance_dict.tid[j]];
-                var count = images[this.props.data.insurance_dict.tid[j]].length;
+
+                if(imageTid != null && imageTid.length>0)
+                  var count = images[this.props.data.insurance_dict.tid[j]].length;
+                else
+                  var count = 0;
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
@@ -91,14 +89,17 @@ importAll = (r) => {
             }
           }
       }
-            if(this.props.card == true && value == "card" && this.props.data && this.props.data.card_dict.tid.length > 0  )
+            if(this.props.card == true && value == "card" && this.props.data.card_dict.tid != null && this.props.data && this.props.data.card_dict.tid.length > 0  )
             {
 
               for(let j = 0 ; j<this.props.data.card_dict.tid.length; j++)
               {
 
                 var imageTid = images[this.props.data.card_dict.tid[j]];
-                var count = images[this.props.data.card_dict.tid[j]].length;
+                if(imageTid != null && imageTid.length > 0)
+                  var count = images[this.props.data.card_dict.tid[j]].length;
+                else
+                  var count = 0;
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
@@ -162,13 +163,18 @@ importAll = (r) => {
               }
             }
             }
-            else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid.length > 0 )
+            else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid != null && this.props.data.without_insurance_dict.tid.length > 0 )
             {
               for(let j = 0 ; j<this.props.data.without_insurance_dict.tid.length; j++)
               {
 
                 var imageTid = images[this.props.data.without_insurance_dict.tid[j]];
-                var count = images[this.props.data.without_insurance_dict.tid[j]].length;
+
+
+                  if(imageTid != null && imageTid.length > 0)
+                    var count = images[this.props.data.without_insurance_dict.tid[j]].length;
+                  else var count = 0
+
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
@@ -250,12 +256,6 @@ importAll = (r) => {
           { this.props.data != null ? <Carousel>
             {this.getJpgs("card")}
           </Carousel> : null}
-          {/* <Card.Content>
-            <h3>GIF's</h3>
-          </Card.Content>
-          { this.props.data != null ? <Carousel>
-            {this.renderCarousel(this.props.data, "img")}
-          </Carousel> : null} */}
         </Card>
         <Card style={{width:'unset'}}>
           <Card.Content>
@@ -267,12 +267,6 @@ importAll = (r) => {
           { this.props.data != null ? <Carousel>
             {this.getJpgs("insurance")}
           </Carousel> : null}
-          {/* <Card.Content>
-            <h3>GIF's</h3>
-          </Card.Content>
-          { this.props.data != null ? <Carousel>
-            {this.renderCarousel(this.props.data, "img")}
-          </Carousel> : null} */}
         </Card>
     </div>
       );
