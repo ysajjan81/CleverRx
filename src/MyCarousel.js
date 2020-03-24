@@ -25,7 +25,6 @@ importAll = (r) => {
     {
               for(let j = 0 ; j<this.props.data.insurance_dict.tid.length; j++)
               {
-
                 var imageTid = images[this.props.data.insurance_dict.tid[j]];
                 var count = images[this.props.data.insurance_dict.tid[j]].length;
                 for(let i = 0 ; i<count ; i++)
