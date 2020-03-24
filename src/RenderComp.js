@@ -754,10 +754,9 @@ class RenderComp extends Component {
                     </Grid.Column>
                 </Grid.Row> */}
                 <Grid.Row style={{maxHeight:'5'}}>
-                  
                   <Grid.Column width = {16} style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
                     {
-                      this.state.data.length == 0?<div></div>:<MyCarousel data = {this.state.data}/>
+                      this.state.data.length == 0?<div></div>:<MyCarousel data = {this.state.data} card = {this.state.card} />
                     }
                   </Grid.Column>
                   <Grid.Column>
