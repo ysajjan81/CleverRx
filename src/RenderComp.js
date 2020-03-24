@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import DisplayMessage from './DisplayMessage';
-import TextContent from './TextContent';
-import TableExampleError from './TableExampleError';
+// import DisplayMessage from './DisplayMessage';
+// import TextContent from './TextContent';
+// import TableExampleError from './TableExampleError';
 import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
-import Experience from './Experience'
+// import Experience from './Experience'
 import App from './App';
-import Topics from './Topics';
+// import Topics from './Topics';
 import FacebookAndTwitter from './FacebookAndTwitter';
 import './assets/css/App.css';
 import MyCloud from './MyCloud';
@@ -14,7 +14,7 @@ import CardTable from './CardTable';
 import SimpleTable from './components/table';
 import MyTweets from './MyTweets';
 import Mylinks from './Mylinks';
-import WordCloud from './WordCloud';
+// import WordCloud from './WordCloud';
 import phrase from './phrase_frequency.json';
 import MultipleSelect from './MultipleSelect';
 import Table from '@material-ui/core/Table';
@@ -138,7 +138,7 @@ var topicOptions = [
   {
     key:'nerve autoimune',
     text: 'Nerve Autoimune',
-    value: 'nerve autoimune',
+    value: 'nerve autoimmune',
   },
   {
     key:'migrain',
