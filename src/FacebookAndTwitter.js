@@ -26,7 +26,6 @@ export default class    Twitter extends React.Component {
       this.fbSelected = this.fbSelected.bind(this);
       this.twitterSelected = this.twitterSelected.bind(this);
   }
-
   fbSelected = (event) =>{
     var val = event.target.value;
     if(event.target.checked == true){
@@ -84,7 +83,7 @@ export default class    Twitter extends React.Component {
               var img = "/avatar_pages/" + this.props.data.facebook[i].id + ".png"
               // var img = "/Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
               // var img = "https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg";
-              // var img = "http://cips2.engineering.asu.edu:3000/hasancips/cleverRX/avatar_pages/"  + this.props.data.facebook[i].id + ".jpg";
+              // var img = "http://cips2.engineering.asu.edu:3001/avatar_pages/"  + this.props.data.facebook[i].id + ".png";
               facebookData.push(<Table.Row>
                 <Table.Cell style={{minWidth:'150px'}}>
                 <div>
@@ -120,6 +119,7 @@ export default class    Twitter extends React.Component {
                 <Table.Cell>
                 <div>
                   <input
+
                     type="checkbox"
                     name="Twitter"
                     value={this.props.data.twitter[i].count}
