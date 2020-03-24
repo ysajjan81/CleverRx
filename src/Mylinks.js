@@ -17,12 +17,13 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
       {
-        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.external_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.external_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         e.push(
             <Table.Row>
             <Table.Cell>
               <IframeApp data={iframe} />
             </Table.Cell>
+            <Table.Cell>{data.without_insurance_dict.external_links[i][1]}</Table.Cell>
         </Table.Row>
         )
       }
@@ -31,13 +32,14 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
       {
-        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.facebook_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.facebook_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <Table.Row>
 
             <Table.Cell>
               <IframeApp data={iframe} />
             </Table.Cell>
+            <Table.Cell>{data.without_insurance_dict.facebook_links[i][1]}</Table.Cell>
         </Table.Row>
         )
       }
@@ -46,13 +48,14 @@ function Mylinks(props) {
     {
     for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
     {
-      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.twitter_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.twitter_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
       l.push(
           <Table.Row>
 
           <Table.Cell>
             <IframeApp data={iframe} />
           </Table.Cell>
+          <Table.Cell>{data.without_insurance_dict.twitter_links[i][1]}</Table.Cell>
       </Table.Row>
       )
     }
@@ -61,13 +64,14 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.card_dict.external_links.length; i++)
       {
-        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.external_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.external_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         e.push(
             <Table.Row>
 
             <Table.Cell>
               <IframeApp data={iframe} />
             </Table.Cell>
+            <Table.Cell>{data.card_dict.external_links[i][1]}</Table.Cell>
         </Table.Row>
         )
 
@@ -77,12 +81,13 @@ function Mylinks(props) {
   {
     for(let i = 0 ; i<data.card_dict.facebook_links.length; i++)
     {
-      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.facebook_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.facebook_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
       l.push(
           <Table.Row>
           <Table.Cell>
             <IframeApp data={iframe} />
           </Table.Cell>
+          <Table.Cell>{data.card_dict.facebook_links[i][1]}</Table.Cell>
       </Table.Row>
       )
     }
@@ -91,13 +96,14 @@ function Mylinks(props) {
     {
     for(let i = 0 ; i<data.card_dict.twitter_links.length; i++)
     {
-      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.twitter_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+      var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.twitter_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
       l.push(
           <Table.Row>
 
           <Table.Cell>
             <IframeApp data={iframe} />
           </Table.Cell>
+          <Table.Cell>{data.card_dict.twitter_links[i][1]}</Table.Cell>
       </Table.Row>
       )
     }
@@ -107,13 +113,14 @@ function Mylinks(props) {
       for(let i = 0 ; i<data.without_insurance_dict.external_links.length; i++)
       {
 
-        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.external_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.external_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         e.push(
             <Table.Row>
 
             <Table.Cell>
               <IframeApp data={iframe} />
             </Table.Cell>
+            <Table.Cell>{data.without_insurance_dict.external_links[i][1]}</Table.Cell>
         </Table.Row>
         )
       }
@@ -122,12 +129,15 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.without_insurance_dict.facebook_links.length; i++)
       {
-        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.facebook_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.facebook_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <Table.Row>
 
             <Table.Cell>
               <IframeApp data={iframe} />
+            </Table.Cell>
+
+            <Table.Cell>{data.without_insurance_dict.facebook_links[i][1]}
             </Table.Cell>
         </Table.Row>
         )
@@ -137,13 +147,14 @@ function Mylinks(props) {
     {
       for(let i = 0 ; i<data.without_insurance_dict.twitter_links.length; i++)
       {
-        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.twitter_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
+        var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.twitter_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <Table.Row>
 
             <Table.Cell>
               <IframeApp data={iframe} />
             </Table.Cell>
+            <Table.Cell>{data.without_insurance_dict.twitter_links[i][1]}</Table.Cell>
         </Table.Row>
         )
       }
@@ -154,6 +165,16 @@ function Mylinks(props) {
           menuItem: 'External', render: () => <Tab.Pane>
           <div style={{  overflowY: 'scroll', height: '370px'}}>
           <Table celled>
+          <Table.Header>
+            <Table.Row>
+              <Table.HeaderCell>
+                <h4>Links</h4>
+              </Table.HeaderCell>
+              <Table.HeaderCell>
+                <h4>Likes</h4>
+              </Table.HeaderCell>
+            </Table.Row>
+          </Table.Header>
             <Table.Body>
               {e}
             </Table.Body>
@@ -165,6 +186,16 @@ function Mylinks(props) {
         menuItem: 'Twitter', render: () => <Tab.Pane>
         <div style={{  overflowY: 'scroll', height: '370px'}}>
         <Table celled>
+        <Table.Header>
+          <Table.Row>
+            <Table.HeaderCell>
+              <h4>Links</h4>
+            </Table.HeaderCell>
+            <Table.HeaderCell>
+              <h4>Likes</h4>
+            </Table.HeaderCell>
+          </Table.Row>
+        </Table.Header>
           <Table.Body>
             {l}
           </Table.Body>
