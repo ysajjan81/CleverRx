@@ -19,7 +19,6 @@ importAll = (r) => {
 }
   getJpgs = (value) =>
   {
-
     let data=[];
     if(this.props.data && value == "insurance" && this.props.data.insurance_dict.tid.length > 0)
     {
@@ -46,6 +45,10 @@ importAll = (r) => {
                 // var img1 = images[imageNames[i++]];
                 // var img2 = images[imageNames[i++]];
                 // var img3 = images[imageNames[i++]];
+                var img1 ="";
+                var img2 ="";
+                var img3 ="";
+                
                    data.push(
                     <Carousel.Item>
                       <img
