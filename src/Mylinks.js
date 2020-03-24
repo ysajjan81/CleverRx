@@ -6,7 +6,6 @@ import {Table, Tab} from 'semantic-ui-react'
 
 
 function Mylinks(props) {
-  // console.log(props.data);
   var l = [];
   var e = [];
   var data = [];
@@ -81,7 +80,6 @@ function Mylinks(props) {
       var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.facebook_links[i] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
       l.push(
           <Table.Row>
-
           <Table.Cell>
             <IframeApp data={iframe} />
           </Table.Cell>

@@ -253,18 +253,18 @@ class MyCarousel extends Component
         <div style={{marginBottom:'30px'}}>
         <Card style={{width:'unset'}}>
           <Card.Content>
-            <Card.Header>Card/Customer</Card.Header>
+            <Card.Header>Card Memes</Card.Header>
           </Card.Content>
-          
+
           { this.props.data != null ? <Carousel interval={null}>
             {this.getJpgs("card")}
           </Carousel> : null}
         </Card>
         <Card style={{width:'unset'}}>
           <Card.Content>
-            <Card.Header>Insurance/Patient</Card.Header>
+            <Card.Header>Insurance Memes</Card.Header>
           </Card.Content>
-         
+
           { this.props.data != null ? <Carousel interval={null}>
             {this.getJpgs("insurance")}
           </Carousel> : null}

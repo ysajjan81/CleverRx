@@ -292,7 +292,6 @@ class RenderComp extends Component {
               return;
               this.setState({data: data, loading:false});
               this.createWordCloudData();
-               console.log(data);
       		}
       		)
       }
@@ -366,7 +365,6 @@ class RenderComp extends Component {
       for(let i = 0 ; i<this.state.selectedCheckBox.length; i++)
       {
         temp += this.state.selectedCheckBox[i] + ',';
-        console.log("here = " + temp);
       }
       this.setState({phraseString: temp});
       var temp1 = "";
@@ -434,7 +432,6 @@ class RenderComp extends Component {
           }).then((response) => {
             if(response.status == 200)
               {
-                console.log("hitApi");
                 return response.json();
               }
       			else {
@@ -444,8 +441,6 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
-              console.log("data = ");
-              console.log(data);
               this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
@@ -706,27 +701,19 @@ class RenderComp extends Component {
                     </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                      <h3>Customer Related Messages</h3>
+                      <h3>Card Related Messages</h3>
                       <Checkbox label="Neg" style={{marginRight:"10px"}} onChange={this.handleCardSentimentPositive}></Checkbox>
                       <Checkbox label="Pos"  onChange={this.handleCardSentimentNegative}></Checkbox>
-                        {/* <input key = {this.state.myTopic} type="checkbox" onChange={this.handleCardSentimentPositive}/>
-                       <label> Neg</label>
-                       <input key = {this.state.myTopic} type="checkbox" onChange={this.handleCardSentimentNegative}/>
-                       <label> Pos</label> */}
+
                         {
                         this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left"/>)
                         }
                     </Grid.Column>
                     <Grid.Column>
-                          <h3>Customer Related Messages</h3>
+                          <h3>Insurance Related Messages</h3>
                           <Checkbox label="Neg" style={{marginRight:"10px"}} onChange={this.handleInsuranceSentimentPositive}></Checkbox>
                           <Checkbox label="Pos" onChange={this.handleInsuranceSentimentNegative}></Checkbox>
-                      {/* <input key = {this.state.myTopic} type="checkbox" onChange={this.handleInsuranceSentimentPositive}/>
-                       <label> Neg</label>
-                       <input key = {this.state.myTopic} type="checkbox" onChange={this.handleInsuranceSentimentNegative}/>
-                       <label> Pos</label> */}
-                       {/* <PositiveNegative data={this.state.data} topic = {this.state.myTopic}/> */}
                             {
                               this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets data = {this.state.data} insurancePositiveSentiment = {this.state.insuranceSentimentPositive} insuranceNegativeSentiment = {this.state.insuranceSentimentNegative} insurance={this.state.insur} card={this.state.card} col = "right"/>)
@@ -735,14 +722,14 @@ class RenderComp extends Component {
                 </Grid.Row>
                 <Grid.Row>
                     <Grid.Column width={8}>
-                        <h3>Landing Pages</h3>
+                        <h3>Card Related Landing Pages</h3>
                         {
                         this.state.data.length === 0 ? (<div></div>):
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left"/>
                         }
                     </Grid.Column>
                     <Grid.Column>
-                        <h3>Landing Pages</h3>
+                        <h3>Insurance Related Landing Pages</h3>
                         {
                         this.state.data.length === 0 ? (<div></div>):
                         <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right"/>
