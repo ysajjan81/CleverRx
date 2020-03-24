@@ -10,20 +10,20 @@ class MyCarousel extends Component {
     this.state = {  }
   }
 
-importAll = (r) => {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-}
+// importAll = (r) => {
+//     let images = {};
+//     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+//     return images;
+// }
   getJpgs = (value) =>
   {
     let data=[];
     if(this.props.data && value == "insurance" && this.props.data.insurance_dict.tid.length > 0)
     {
-      const images = this.importAll(require.context('../public/memes/jpgs/123456789', false, /.*\.jpg$/));
-      console.log("images")
-      console.log(images);
-      
+      //const images = this.importAll(require.context('../public/memes/jpgs/123456789', false, /.*\.jpg$/));
+      //console.log("images")
+      //console.log(images);
+
               for(let i = 0 ; i<this.props.data.insurance_dict.tid.length; i++)
               {
                 if(this.props.data.insurance_dict.tid.length - i >= 3)
@@ -51,7 +51,7 @@ importAll = (r) => {
                     </Carousel.Item>
                   );
                 }
-              
+
                 else if(this.props.length - i  == 2)
                 {
                   var img1 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i++] + ".jpg";
@@ -250,7 +250,7 @@ importAll = (r) => {
             {this.renderCarousel(this.props.data, "img")}
           </Carousel> : null} */}
         </Card>
-    </div> 
+    </div>
       );
   }
 }
