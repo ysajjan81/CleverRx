@@ -18,20 +18,27 @@ class MyCarousel extends Component {
   getJpgs = (value) =>
   {
     let data=[];
+    let images = [];
+    images = this.importAll(require.context('../public/memes/jpgs/123456789', false, /\.jpg/));
+    console.log("images")
+    // var count= Object.keys(images).length;
+    console.log(images);
+    const propOwn = Object.getOwnPropertyNames(images);
+    console.log(propOwn.length); // 1
     if(this.props.data && value == "insurance" && this.props.data.insurance_dict.tid.length > 0)
     {
-      //const images = this.importAll(require.context('../public/memes/jpgs/123456789', false, /.*\.jpg$/));
-      //console.log("images")
-      //console.log(images);
 
               for(let i = 0 ; i<this.props.data.insurance_dict.tid.length; i++)
               {
                 if(this.props.data.insurance_dict.tid.length - i >= 3)
                 {
-                var img1 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i++] + ".jpg";
-                var img2 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i++] + ".jpg";
-                var img3 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i++] + ".jpg";
-                  data.push(
+                // var img1 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i++] + ".jpg";
+                // var img2 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i++] + ".jpg";
+                // var img3 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i++] + ".jpg";
+                var img1 = images['0.jpg'];
+                var img2 = images['1.jpg'];
+                var img3 = images['2.jpg'];
+                   data.push(
                     <Carousel.Item>
                       <img
                         src={img1}
@@ -90,9 +97,13 @@ class MyCarousel extends Component {
               for(let i = 0 ; i<this.props.data.card_dict.tid.length; i++){
                 if(this.props.data.card_dict.tid.length - i >= 3)
                 {
-                var img1 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
-                var img2 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
-                var img3 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+                // var img1 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+                // var img2 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+                // var img3 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+                var img1 = images['0.jpg']
+                var img2 = images['1.jpg'];
+                var img3 = images['2.jpg']
+
                   data.push(
                     <Carousel.Item>
                       <img
@@ -154,9 +165,9 @@ class MyCarousel extends Component {
                 // var img1  = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
                 // var img2 = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
                 // var img3 = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
-                var img1 = "/memes/jpgs/2.jpg";
-                var img2 = "/memes/jpgs/3.jpg";
-                var img3 = "/memes/jpgs/4.jpg";
+                var img1 = images['0.jpg']
+                var img2 = images['1.jpg'];
+                var img3 = images['2.jpg']
 
                   data.push(
                     <Carousel.Item>
