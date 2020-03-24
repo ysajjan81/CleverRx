@@ -10,7 +10,7 @@ function Iframe(props) {
 }
 
 function IframeApp(props) {
-  console.log('iframe', props.data);
+  //console.log('iframe', props.data);
   return (
     <div className="App">
       <h1>I frame Demo</h1>
