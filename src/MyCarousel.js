@@ -122,7 +122,7 @@ importAll = (r) => {
 
                 var temp = "../public/memes/jpgs/123456789" //+ this.props.data.card_dict.tid[j];
                 let images = [];
-                images = this.importAll(require.context("../public/memes/jpgs/123456789", false, /\.jpg/));
+                images = this.importAll(require.context(temp, false, /\.jpg/));
                 var propOwn = Object.getOwnPropertyNames(images);
                 var count = propOwn.length;
                 let imageNames = [] ; 
