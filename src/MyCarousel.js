@@ -9,6 +9,7 @@ class MyCarousel extends Component {
     super(props);
     this.state = {  }
   }
+<<<<<<< HEAD
   getJpgs(){
     // let extension;
     // if(subType === 'img'){
@@ -206,6 +207,36 @@ class MyCarousel extends Component {
             }
         return data;
   }
+=======
+    renderCarousel(imgList, subType){
+      if(imgList !== null && imgList.length > 0){
+        return(
+          <Card.Content>
+            <h3>{subType}</h3>
+            <Carousel>{
+        imgList.map( (image, index) =>{
+          return(
+              <Carousel.Item>
+                {
+                  image.imgArray != null && image.imgArray.length > 0 ? image.imgArray.map((item)=>{
+                    return(<img
+                      src={item.imgUrl}
+                      alt={image.imgTitle}
+                      style={{width:'33.3%', height:'370px', display:'inline-block'}}
+                    />);
+                  }) : null
+                }
+                <Carousel.Caption>
+                  <h3>{image.imgTitle}</h3>
+                  <p>{image.imgDesc}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+          );
+        })
+      }</Carousel></Card.Content>)
+      }
+    }
+>>>>>>> f0865a03eb3a46c9d454ffdfec348338982b30d8
     render(){
       return(
         <div>
@@ -213,6 +244,7 @@ class MyCarousel extends Component {
               <Card.Content>
                 <Card.Header>Card/Customer</Card.Header>
               </Card.Content>
+<<<<<<< HEAD
               <Card.Content>
                 <h3>Images</h3>
               </Card.Content>
@@ -226,11 +258,16 @@ class MyCarousel extends Component {
               {this.props.data != null ? <Carousel>
                 {this.renderCarousel(this.props.data, "img")}
               </Carousel> : null}
+=======
+                {this.renderCarousel(imgList, "Images")}
+                {this.renderCarousel(imgList, "GIF's")}
+>>>>>>> f0865a03eb3a46c9d454ffdfec348338982b30d8
             </Card>
             <Card style={{width:'unset'}}>
               <Card.Content>
                 <Card.Header>Insurance</Card.Header>
               </Card.Content>
+<<<<<<< HEAD
               <Card.Content>
                 <h3>Images</h3>
               </Card.Content>
@@ -255,6 +292,11 @@ class MyCarousel extends Component {
                 {this.getJpgs()}
               </Carousel>
               </Card>
+=======
+                {this.renderCarousel(imgList, "Images")}
+                {this.renderCarousel(imgList, "GIF's")}
+            </Card>
+>>>>>>> f0865a03eb3a46c9d454ffdfec348338982b30d8
         </div> 
       );
   }
