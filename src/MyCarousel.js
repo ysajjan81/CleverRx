@@ -24,7 +24,7 @@ class MyCarousel extends Component
                 var img = images[this.props.data.insurance_dict.tid[j]];
                 imageTid.push.apply(imageTid, img);
                 if(img != null && imageTid.length>0)
-                   count+= = images[this.props.data.insurance_dict.tid[j]].length;
+                   count+= images[this.props.data.insurance_dict.tid[j]].length;
 
                }
               for(let i = 0 ; i<count ; i++)
@@ -101,7 +101,7 @@ class MyCarousel extends Component
                 var img = images[this.props.data.card_dict.tid[j]];
                 imageTid.push.apply(imageTid, img);
                 if(img != null && imageTid.length>0)
-                   count+= = images[this.props.data.card_dict.tid[j]].length;
+                   count+= images[this.props.data.card_dict.tid[j]].length;
 
                }
 
@@ -178,7 +178,7 @@ class MyCarousel extends Component
                 var img = images[this.props.data.without_insurance_dict.tid[j]];
                 imageTid.push.apply(imageTid, img);
                 if(img != null && imageTid.length>0)
-                   count+= = images[this.props.data.without_insurance_dict.tid[j]].length;
+                   count+= images[this.props.data.without_insurance_dict.tid[j]].length;
 
                }
                 for(let i = 0 ; i<count ; i++)
