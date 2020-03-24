@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import DisplayMessage from './DisplayMessage';
 import TextContent from './TextContent';
 import TableExampleError from './TableExampleError';
 import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon } from 'semantic-ui-react';
