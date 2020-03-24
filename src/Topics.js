@@ -41,9 +41,9 @@ const topicOptions = [
     // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
   },
   {
-    key: 'Adiction',
-    text: 'Adiction',
-    value: 'Adiction',
+    key: 'Addiction',
+    text: 'Addiction',
+    value: 'Addiction',
     // image: { avatar: true, src: '/images/avatar/small/justen.jpg' },
   },
   {
@@ -81,7 +81,7 @@ export default class Topics extends Component {
   constructor(props)
    {
     super(props);
-    this.state = {  
+    this.state = {
         myTopic:'',
         data: [],
     }
@@ -171,9 +171,9 @@ getData = () =>
   		)
     }
 }
-  render() { 
+  render() {
     const { myTopic } = this.state
-    return ( 
+    return (
     <div>
       <Form>
       <Form.Group>
