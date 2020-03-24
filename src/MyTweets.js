@@ -51,7 +51,7 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
     if(data.card_dict.tweets[i][2] == '+' && props.cardSentimentPositive == true){
     l.push(<Table.Row>
 
-        <Table.Cell >
+        <Table.Cell style={{backgroundColor:'lightgreen'}}>
             {data.card_dict.tweets[i][0]}
         </Table.Cell>
         <Table.Cell >
