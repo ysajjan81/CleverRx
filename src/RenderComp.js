@@ -70,9 +70,9 @@ var topicOptions = [
 
   },
   {
-    key: 'Adiction',
-    text: 'Adiction',
-    value: 'adiction',
+    key: 'Addiction',
+    text: 'Addiction',
+    value: 'addiction',
 
   },
   {
