@@ -150,9 +150,9 @@ var topicOptions = [
     value: 'lung',
   },
   {
-    key:'Inflammation\xa0',
-    text: 'Inflammation\xa0',
-    value: 'Inflammation\xa0',
+    key:'inflammation',
+    text: 'Inflammation',
+    value: 'inflammation',
   },
   {
     key:'infection',
