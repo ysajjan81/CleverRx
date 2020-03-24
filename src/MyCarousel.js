@@ -12,11 +12,11 @@ class MyCarousel extends Component
     this.state = {  }
   }
 
-importAll = (r) => {
-    let images = {};
-    r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
-    return images;
-}
+// importAll = (r) => {
+//     let images = {};
+//     r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+//     return images;
+// }
   getJpgs = (value) =>
   {
 
@@ -35,7 +35,12 @@ importAll = (r) => {
     // console.log(imageNames[0]);
     if(this.props.data && value == "insurance" && this.props.data.insurance_dict.tid.length > 0)
     {
+<<<<<<< HEAD
               for(let j = 0 ; j<this.props.data.insurance_dict.tid.length; j++)
+=======
+
+              for(let i = 0 ; i<this.props.data.insurance_dict.tid.length; i++)
+>>>>>>> 32419b75d7e595961be52ef5979d14c0874fa8d8
               {
                 var temp = "../public/memes/jpgs/123456789"; //+ this.props.data.insurance_dict.tid[j];
                 let images = [];
@@ -78,7 +83,7 @@ importAll = (r) => {
                     </Carousel.Item>
                   );
                 }
-              
+
                 else if(this.props.length - i  == 2)
                 {
                   // var img1 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i] + '/' + imageNames[i++];
@@ -143,10 +148,17 @@ importAll = (r) => {
                 // var img1 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
                 // var img2 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
                 // var img3 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+<<<<<<< HEAD
                 // var img1 = images['0.jpg']
                 // var img2 = images['1.jpg'];
                 // var img3 = images['2.jpg']
                 
+=======
+                var img1 = images['0.jpg']
+                var img2 = images['1.jpg'];
+                var img3 = images['2.jpg']
+
+>>>>>>> 32419b75d7e595961be52ef5979d14c0874fa8d8
                   data.push(
                     <Carousel.Item>
                       <img
@@ -330,7 +342,7 @@ importAll = (r) => {
             {this.renderCarousel(this.props.data, "img")}
           </Carousel> : null} */}
         </Card>
-    </div> 
+    </div>
       );
   }
 }
