@@ -8,7 +8,6 @@ import rootReducer from './reducers';
 import './assets/css/index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import DisplayMessage from './DisplayMessage'
 import RenderComp from './RenderComp';
 
 const store = createStore(

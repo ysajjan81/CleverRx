@@ -1,22 +1,15 @@
 // import React from 'react'
 import { Form, TextArea } from 'semantic-ui-react'
 
-// const TextContent = () => (
-//   <Form>
-//     <TextArea disabled placeholder='Data will be displayed here !!!'  />
-//   </Form>
-// )
-
-// export default TextContent
 import React, { Component } from 'react';
 class TextContent extends Component {
     constructor(props) {
         super(props);
-        this.state = { 
+        this.state = {
 
          }
     }
-    render() { 
+    render() {
         return (
             <Form>
                 <TextArea disabled rows={this.props.rows} cols={this.props.cols} placeholder="Data will be desplayed here "/>
@@ -24,5 +17,5 @@ class TextContent extends Component {
           );
     }
 }
- 
+
 export default TextContent;
