@@ -255,20 +255,16 @@ class MyCarousel extends Component
           <Card.Content>
             <Card.Header>Card/Customer</Card.Header>
           </Card.Content>
-          <Card.Content>
-            <h3>Images</h3>
-          </Card.Content>
+          
           { this.props.data != null ? <Carousel>
             {this.getJpgs("card")}
           </Carousel> : null}
         </Card>
         <Card style={{width:'unset'}}>
           <Card.Content>
-            <Card.Header>Insurance</Card.Header>
+            <Card.Header>Insurance/Patient</Card.Header>
           </Card.Content>
-          <Card.Content>
-            <h3>Images</h3>
-          </Card.Content>
+         
           { this.props.data != null ? <Carousel>
             {this.getJpgs("insurance")}
           </Carousel> : null}
