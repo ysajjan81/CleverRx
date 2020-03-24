@@ -21,31 +21,21 @@ importAll = (r) => {
   {
 
     let data=[];
-    // images = this.importAll(require.context('../public/memes/jpgs/123456789', false, /\.jpg/));
-    // console.log("images")
-    // var count= Object.keys(images).length;
-    // console.log(images[0]);
-    // var propOwn = Object.getOwnPropertyNames(images);
-    // console.log(propOwn.length); // 1
-    // var count = propOwn.length;
-    // let imageNames = [] ; 
-    // imageNames = Object.keys(images);
-    // console.log("ImageName = ");
-    // console.log(imageNames[0]);
     if(this.props.data && value == "insurance" && this.props.data.insurance_dict.tid.length > 0)
     {
-              for(let j = 0 ; j<this.props.data.insurance_dict.tid.length; j++)
+              for(let i = 0 ; i<this.props.data.insurance_dict.tid.length; i++)
               {
-                var temp = "../public/memes/jpgs/123456789"; //+ this.props.data.insurance_dict.tid[j];
-                let images = [];
-                images = this.importAll(require.context("../public/memes/jpgs/123456789", false, /\.jpg/));
-                var propOwn = Object.getOwnPropertyNames(images);
-                var count = propOwn.length;
-                let imageNames = []; 
-                imageNames = Object.keys(images);
-                for(let i = 0 ; i<count ; i++)
-                {
-                if(count - i >= 3)
+                // var temp = "../public/memes/jpgs/123456789"; //+ this.props.data.insurance_dict.tid[j];
+                // temp = "123456789"
+                // let images = [];
+                // images = this.importAll(require.context("../public/memes/jpgs/123456789", false, /\.jpg/));
+                // var propOwn = Object.getOwnPropertyNames(images);
+                // var count = propOwn.length;
+                // let imageNames = []; 
+                // imageNames = Object.keys(images);
+                // for(let i = 0 ; i<namelist.length ; i++)
+                // {
+                if(this.props.insurance_dict.length - i >= 3)
                 {
                 // var img1 = "../public/memes/jpgs/123456789" + this.props.data.insurance_dict.tid[i] + '/' + imageNames[i++];
                 // var img2 = "../public/memes/jpgs/123456789" + this.props.data.insurance_dict.tid[i] + '/' + imageNames[i++];
@@ -53,9 +43,9 @@ importAll = (r) => {
                 // var img1 = images['0.jpg'];
                 // var img2 = images['1.jpg'];
                 // var img3 = images['2.jpg'];
-                var img1 = images[imageNames[i++]];
-                var img2 = images[imageNames[i++]];
-                var img3 = images[imageNames[i++]];
+                // var img1 = images[imageNames[i++]];
+                // var img2 = images[imageNames[i++]];
+                // var img3 = images[imageNames[i++]];
                    data.push(
                     <Carousel.Item>
                       <img
@@ -77,12 +67,12 @@ importAll = (r) => {
                   );
                 }
 
-                else if(count - i  == 2)
+                else if(this.props.insurance_dict.length - i  == 2)
                 {
                   // var img1 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i] + '/' + imageNames[i++];
                   // var img2 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i]+ '/' + imageNames[i++];
-                  var img1 = images[imageNames[i++]];
-                  var img2 = images[imageNames[i++]];
+                  // var img1 = images[imageNames[i++]];
+                  // var img2 = images[imageNames[i++]];
                   data.push(
                     <Carousel.Item>
                       <img
@@ -100,7 +90,15 @@ importAll = (r) => {
                 }
                 else {
                   // var img2 = "/memes/jpgs/" + this.props.data.insurance_dict.tid[i]+ "/" + imageNames[i++];
-                  var img1 = images[imageNames[i++]];
+                  // var img1 = images[imageNames[i++]];
+                  var img1 = "";
+                  try {
+                    img1 = "../public/memes/jpgs/123456789_0";// + this.props.data.insurance_dict.tid_0
+                  }
+                  catch(err) {
+                    break;
+                    // document.getElementById("demo").innerHTML = err.message;
+                  }
                   data.push(
                     <Carousel.Item>
                       <img
@@ -110,185 +108,186 @@ importAll = (r) => {
                       />
                     </Carousel.Item>
                   );
-                }
+                // }
             }
           }
       }
-            if(this.props.card == true && value == "card" && this.props.data && this.props.data.card_dict.tid.length > 0  )
-            {
+            // if(this.props.card == true && value == "card" && this.props.data && this.props.data.card_dict.tid.length > 0  )
+            // {
               
-              for(let j = 0 ; j<this.props.data.card_dict.tid.length; j++)
-              {
+            //   for(let j = 0 ; j<this.props.data.card_dict.tid.length; j++)
+            //   {
 
-                var temp = "../public/memes/jpgs/123456789" //+ this.props.data.card_dict.tid[j];
-                let images = [];
-                images = this.importAll(require.context(temp, false, /\.jpg/));
-                var propOwn = Object.getOwnPropertyNames(images);
-                var count = propOwn.length;
-                let imageNames = [] ; 
-                imageNames = Object.keys(images);
+            //     var temp = "../public/memes/jpgs/123456789" //+ this.props.data.card_dict.tid[j];
+            //     temp = "123456789";
+            //     let images = [];
+            //     images = this.importAll(require.context("../public/memes/jpgs/" + temp , false, /\.jpg/));
+            //     var propOwn = Object.getOwnPropertyNames(images);
+            //     var count = propOwn.length;
+            //     let imageNames = [] ; 
+            //     imageNames = Object.keys(images);
 
-                for(let i = 0 ; i<count ; i++)
-                {
-                if(count - i >= 3)
-                {
-                  var img1 = images[imageNames[i++]];
-                  var img2 = images[imageNames[i++]];
-                  var img3 = images[imageNames[i++]];
-                  // var img1 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
-                  // var img2 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
-                  // var img3 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
-                // var img1 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
-                // var img2 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
-                // var img3 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
-                // var img1 = images['0.jpg']
-                // var img2 = images['1.jpg'];
-                // var img3 = images['2.jpg']
+            //     for(let i = 0 ; i<count ; i++)
+            //     {
+            //     if(count - i >= 3)
+            //     {
+            //       var img1 = images[imageNames[i++]];
+            //       var img2 = images[imageNames[i++]];
+            //       var img3 = images[imageNames[i++]];
+            //       // var img1 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
+            //       // var img2 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
+            //       // var img3 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
+            //     // var img1 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+            //     // var img2 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+            //     // var img3 = "/memes/jpgs/" + this.props.data.card_dict.tid[i++] + ".jpg";
+            //     // var img1 = images['0.jpg']
+            //     // var img2 = images['1.jpg'];
+            //     // var img3 = images['2.jpg']
                 
-                  data.push(
-                    <Carousel.Item>
-                      <img
-                        src={img1}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                      <img
-                        src={img2}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                      <img
-                        src={img3}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                    </Carousel.Item>
-                  );
-                }
-                else if(count - i  == 2)
-                {
-                  // var img2 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
-                  // var img3 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
-                  var img2 = images[imageNames[i++]];
-                  var img3 = images[imageNames[i++]];
-                  data.push(
-                    <Carousel.Item>
-                      <img
-                        src={img1}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                      <img
-                        src={img2}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                    </Carousel.Item>
-                  );
-                }
-                else {
-                  // var img2 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
-                  var img2 = images[imageNames[i++]];
-                  data.push(
-                    <Carousel.Item>
-                      <img
-                        src={img1}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                    </Carousel.Item>
-                  );
-                }
-              }
-            }
-            }
-            else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid.length > 0 )
-            {
-              for(let j = 0 ; j<this.props.data.without_insurance_dict.tid.length; j++)
-              {
+            //       data.push(
+            //         <Carousel.Item>
+            //           <img
+            //             src={img1}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //           <img
+            //             src={img2}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //           <img
+            //             src={img3}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //         </Carousel.Item>
+            //       );
+            //     }
+            //     else if(count - i  == 2)
+            //     {
+            //       // var img2 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
+            //       // var img3 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
+            //       var img2 = images[imageNames[i++]];
+            //       var img3 = images[imageNames[i++]];
+            //       data.push(
+            //         <Carousel.Item>
+            //           <img
+            //             src={img1}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //           <img
+            //             src={img2}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //         </Carousel.Item>
+            //       );
+            //     }
+            //     else {
+            //       // var img2 = "../public/memes/jpgs/" + this.props.data.card_dict.tid[i] + '/' + imageNames[i++];
+            //       var img2 = images[imageNames[i++]];
+            //       data.push(
+            //         <Carousel.Item>
+            //           <img
+            //             src={img1}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //         </Carousel.Item>
+            //       );
+            //     }
+            //   }
+            // }
+            // }
+            // else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid.length > 0 )
+            // {
+            //   for(let j = 0 ; j<this.props.data.without_insurance_dict.tid.length; j++)
+            //   {
 
-                var temp = "../public/memes/jpgs/123456789" //+ this.props.data.without_insurance_dict.tid[j];
-                let images = [];
-                images = this.importAll(require.context("../public/memes/jpgs/123456789", false, /\.jpg/));
-                var propOwn = Object.getOwnPropertyNames(images);
-                var count = propOwn.length;
-                let imageNames = [] ; 
-                imageNames = Object.keys(images);
+            //     var temp = "../public/memes/jpgs/123456789" //+ this.props.data.without_insurance_dict.tid[j];
+            //     let images = [];
+            //     images = this.importAll(require.context("../public/memes/jpgs/123456789", false, /\.jpg/));
+            //     var propOwn = Object.getOwnPropertyNames(images);
+            //     var count = propOwn.length;
+            //     let imageNames = [] ; 
+            //     imageNames = Object.keys(images);
 
-                for(let i = 0 ; i<count ; i++)
-                {
-                if(count - i >= 3)
-                {
-                  var img1 =  images[imageNames[i++]];
-                  var img2 =  images[imageNames[i++]];
-                  var img3 =  images[imageNames[i++]];
-                  // var img1 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
-                  // var img2 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
-                  // var img3 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
-                // var img1  = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
-                // var img2 = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
-                // var img3 = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
-                // var img1 = images['0.jpg'];
-                // var img2 = images['1.jpg'];
-                // var img3 = images['2.jpg'];
-                  data.push(
-                    <Carousel.Item>
-                      <img
-                        src={img1}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                      <img
-                        src={img2}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                      <img
-                        src={img3}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                    </Carousel.Item>
-                  );
-                }
-                else if(count - i  == 2)
-                {
-                  var img1 = images[imageNames[i++]];
-                  var img2 = images[imageNames[i++]];
-                  // var img1 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
-                  // var img2 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
+            //     for(let i = 0 ; i<count ; i++)
+            //     {
+            //     if(count - i >= 3)
+            //     {
+            //       var img1 =  images[imageNames[i++]];
+            //       var img2 =  images[imageNames[i++]];
+            //       var img3 =  images[imageNames[i++]];
+            //       // var img1 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
+            //       // var img2 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
+            //       // var img3 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
+            //     // var img1  = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
+            //     // var img2 = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
+            //     // var img3 = "/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i++] + ".jpg";
+            //     // var img1 = images['0.jpg'];
+            //     // var img2 = images['1.jpg'];
+            //     // var img3 = images['2.jpg'];
+            //       data.push(
+            //         <Carousel.Item>
+            //           <img
+            //             src={img1}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //           <img
+            //             src={img2}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //           <img
+            //             src={img3}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //         </Carousel.Item>
+            //       );
+            //     }
+            //     else if(count - i  == 2)
+            //     {
+            //       var img1 = images[imageNames[i++]];
+            //       var img2 = images[imageNames[i++]];
+            //       // var img1 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
+            //       // var img2 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
 
-                  data.push(
-                    <Carousel.Item>
-                      <img
-                        src={img1}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                      <img
-                        src={img2}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                    </Carousel.Item>
-                  );
-                }
-                else {
-                  var img1 = images[imageNames[i++]];
-                  // var img1 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
-                  data.push(
-                    <Carousel.Item>
-                      <img
-                        src={img1}
-                        alt="logo"
-                        style={{width:'33.3%', height:'370px', display:'inline-block'}}
-                      />
-                    </Carousel.Item>
-                  );
-                }
-              }
-            }
-            }
+            //       data.push(
+            //         <Carousel.Item>
+            //           <img
+            //             src={img1}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //           <img
+            //             src={img2}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //         </Carousel.Item>
+            //       );
+            //     }
+            //     else {
+            //       var img1 = images[imageNames[i++]];
+            //       // var img1 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
+            //       data.push(
+            //         <Carousel.Item>
+            //           <img
+            //             src={img1}
+            //             alt="logo"
+            //             style={{width:'33.3%', height:'370px', display:'inline-block'}}
+            //           />
+            //         </Carousel.Item>
+            //       );
+            //     }
+            //   }
+            // }
+            // }
         return data;
   }
     render(){
