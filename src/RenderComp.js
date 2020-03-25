@@ -228,7 +228,7 @@ class RenderComp extends Component {
      {
         super(props);
         this.state = {
-            myTopic:"",
+            myTopic:"addiction",
             allInformation:[],
             card:false,
             insur:false,
@@ -245,6 +245,7 @@ class RenderComp extends Component {
             insuranceSentimentNegative:true,
             cardSentimentPositive:true,
             cardSentimentNegative:true,
+            firsLoad:true,
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -282,8 +283,40 @@ class RenderComp extends Component {
       else
       this.setState({insuranceSentimentNegative: true})
     }
+    componentDidMount()
+    {
+      if(this.state.firsLoad == true){
+        this.state.firstLoad = false;
+        var url = "/topic?topic_name=addiction";
+          fetch(url, {
+            method: 'GET',
+      			headers: {
+      				'Accept': 'application/json',
+      				'Content-Type': 'application/json',
+                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            },
+          }).then((response) => {
+            if(response.status == 200)
+              {
+                return response.json();
+              }
+      			else {
+      				alert('Uh Oh! Something went wrong');
+      				return -1;
+      			}
+          }).then((data) => {
+      			if(data == -1)
+              return;
+              this.setState({data: data, loading:false});
+              this.createWordCloudData();
+      		}
+          )
+        }
+      
+    }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
+    componentDidUpdate(prevProps, prevState, snapshot)
+    {
       if(this.state.myTopic != '' && current != prev){
         prev = current;
         var url = "/topic?topic_name="+this.state.myTopic;
@@ -519,7 +552,7 @@ class RenderComp extends Component {
                     <Grid.Row>
                         <Grid.Column width={8}>
                             <Segment>
-                             <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
+                             <Dropdown  placeholder='Addiction' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment >
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
