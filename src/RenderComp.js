@@ -134,11 +134,11 @@ var topicOptions = [
     text: 'Inflammation',
     value: 'inflammation',
   },
-    // {
-  //   key:'insurance',
-  //   text: 'Insurance',
-  //   value: 'insurance',
-  // },
+    {
+    key:'insurance',
+    text: 'Insurance',
+    value: 'insurance',
+  },
   {
     key:'kidney',
     text: 'Kidney',
@@ -502,6 +502,7 @@ class RenderComp extends Component {
 }
     render()
     {
+      console.log(this.state.data);
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
