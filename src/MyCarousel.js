@@ -42,33 +42,33 @@ class MyCarousel extends Component
                         <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                         <div>
                         <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img2}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                         <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img3}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -86,22 +86,22 @@ class MyCarousel extends Component
                       <div>
                       <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img2}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -115,11 +115,11 @@ class MyCarousel extends Component
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -157,33 +157,33 @@ class MyCarousel extends Component
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img2}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img3}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -199,22 +199,22 @@ class MyCarousel extends Component
                       <div>
                       <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div>
                       <div>
                       <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img2}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -228,11 +228,11 @@ class MyCarousel extends Component
                       <div>
                       <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -270,33 +270,33 @@ class MyCarousel extends Component
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img2}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img3}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -313,22 +313,22 @@ class MyCarousel extends Component
                       <div>
                       <input
                         type="checkbox"
-                        style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                        style={{ transform: 'scale(1.5)', }}
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img2}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
                       /></div>
                     </Carousel.Item>
                   );
@@ -342,11 +342,11 @@ class MyCarousel extends Component
                       <div>
                         <input
                           type="checkbox"
-                          style={{marginRight:'10px', transform: 'scale(1.5)', }}
+                          style={{ transform: 'scale(1.5)', }}
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'200px'}}
+                        alt="logo" style={{height:'250px', width:'350px'}}
 
                       /></div>
                     </Carousel.Item>
