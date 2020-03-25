@@ -38,7 +38,7 @@ class MyCarousel extends Component
                    data.push(
                     <Carousel.Item>
 
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                         <div>
                         <input
                           type="checkbox"
@@ -49,7 +49,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                         <div>
                         <input
                         type="checkbox"
@@ -60,7 +60,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                         <div>
                         <input
                           type="checkbox"
@@ -82,7 +82,7 @@ class MyCarousel extends Component
                   var img2 = '/memes/jpgs/' +imageTid[i++];
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
@@ -93,7 +93,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
@@ -111,7 +111,7 @@ class MyCarousel extends Component
                   var img1 = '/memes/jpgs/' + imageTid[i++];
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
@@ -153,7 +153,7 @@ class MyCarousel extends Component
 
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
@@ -164,7 +164,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
@@ -175,7 +175,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
@@ -195,7 +195,7 @@ class MyCarousel extends Component
                   var img2 = '/memes/jpgs/' +imageTid[i++];
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
@@ -224,7 +224,7 @@ class MyCarousel extends Component
                   var img1 = '/memes/jpgs/' + imageTid[i++];
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
@@ -266,7 +266,7 @@ class MyCarousel extends Component
 
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
@@ -277,7 +277,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
@@ -288,7 +288,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
@@ -309,7 +309,7 @@ class MyCarousel extends Component
 
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                       <input
                         type="checkbox"
@@ -320,7 +320,7 @@ class MyCarousel extends Component
                         alt="logo" style={{height:'200px', width:'250px'}}
 
                       /></div>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
@@ -338,7 +338,7 @@ class MyCarousel extends Component
                   // var img1 = "../public/memes/jpgs/" + this.props.data.without_insurance_dict.tid[i] + '/' + imageNames[i++];
                   data.push(
                     <Carousel.Item>
-                      <div style={{width:'33.3%',  display:'inline-block''}}>
+                      <div style={{width:'33.3%',  display:'inline-block'}}>
                       <div>
                         <input
                           type="checkbox"
