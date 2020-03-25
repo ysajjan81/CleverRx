@@ -203,11 +203,11 @@ var topicOptions = [
     text: 'Skin',
     value: 'skin',
   },
-  {
-    key:'insurance',
-    text: 'Insurance',
-    value: 'insurance',
-  },
+  // {
+  //   key:'insurance',
+  //   text: 'Insurance',
+  //   value: 'insurance',
+  // },
   {
     key:'birth control',
     text: 'Birth Control',
