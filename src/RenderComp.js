@@ -129,9 +129,9 @@ var topicOptions = [
     value: 'nerve autoimmune',
   },
   {
-    key:'migrain',
-    text: 'Migrain',
-    value: 'migrain',
+    key:'migraine',
+    text: 'Migraine',
+    value: 'migraine',
   },
   {
     key:'mental health',
