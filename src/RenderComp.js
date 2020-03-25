@@ -552,7 +552,7 @@ class RenderComp extends Component {
                     <Grid.Row>
                         <Grid.Column width={8}>
                             <Segment>
-                             <Dropdown  placeholder='Addiction' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
+                             <Dropdown defaultValue={topicOptions[0].value} fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment >
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
