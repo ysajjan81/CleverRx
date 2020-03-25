@@ -27,7 +27,13 @@ function MyTweets(props) {
               {data.insurance_dict.tweets[i][0]}
           </Table.Cell>
           <Table.Cell >
-              {data.insurance_dict.tweets[i][1]}
+          <div>
+              <input
+                type="checkbox"
+                style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+              />
+              <label style={{fontSize:'13px'}}>{data.insurance_dict.tweets[i][1]}</label>
+            </div>
           </Table.Cell>
       </Table.Row>)
     }
@@ -38,7 +44,13 @@ function MyTweets(props) {
             {data.insurance_dict.tweets[i][0]}
         </Table.Cell>
         <Table.Cell >
-            {data.insurance_dict.tweets[i][1]}
+        <div>
+            <input
+              type="checkbox"
+              style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+            />
+            <label style={{fontSize:'13px'}}>{data.insurance_dict.tweets[i][1]}</label>
+          </div>
         </Table.Cell>
     </Table.Row>)
     }
@@ -55,7 +67,13 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
             {data.card_dict.tweets[i][0]}
         </Table.Cell>
         <Table.Cell >
-            {data.card_dict.tweets[i][1]}
+        <div>
+            <input
+              type="checkbox"
+              style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+            />
+            <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
+          </div>
         </Table.Cell>
     </Table.Row>)
     }
@@ -67,7 +85,13 @@ if(props.card == true && data.card_dict.tweets && loc == "left")
             {data.card_dict.tweets[i][0]}
         </Table.Cell>
         <Table.Cell >
-            {data.card_dict.tweets[i][1]}
+        <div>
+            <input
+              type="checkbox"
+              style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+            />
+            <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
+          </div>
         </Table.Cell>
     </Table.Row>)
     }
@@ -84,7 +108,13 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
             {data.without_insurance_dict.tweets[i][0]}
         </Table.Cell>
         <Table.Cell >
-            {data.without_insurance_dict.tweets[i][1]}
+        <div>
+            <input
+              type="checkbox"
+              style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+            />
+            <label style={{fontSize:'13px'}}>{data.without_insurance_dict.tweets[i][1]}</label>
+          </div>
         </Table.Cell>
     </Table.Row>)
     }
@@ -96,7 +126,13 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
             {data.without_insurance_dict.tweets[i][0]}
         </Table.Cell>
         <Table.Cell >
-            {data.without_insurance_dict.tweets[i][1]}
+        <div>
+            <input
+              type="checkbox"
+              style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+            />
+            <label style={{fontSize:'13px'}}>{data.without_insurance_dict.tweets[i][1]}</label>
+          </div>
         </Table.Cell>
     </Table.Row>)
     }
@@ -105,7 +141,7 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
   }
   return (
     <div className="center-col">
-    <Paper>
+
       <Table>
         <Table.Header>
           <Table.Row>
@@ -119,7 +155,6 @@ else if(props.card == false && data.without_insurance_dict && loc == "left")
         </Table.Header>
         <Table.Body>{l}</Table.Body>
       </Table>
-    </Paper>
     </div>
     )
 }

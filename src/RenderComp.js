@@ -547,7 +547,7 @@ class RenderComp extends Component {
                                   </Table>
                                 </Paper>
                           </div>
-                                <Button style={{marginTop:'15px'}} onClick={this.sendPhrases}>Get Data</Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
