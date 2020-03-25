@@ -35,158 +35,19 @@ var topicOptions = [
 
   // },
   {
-    key: 'Diabetes',
-    text: 'Diabetes',
-    value: 'diabetes',
-
-  },
-  {
-    key: 'Cancer',
-    text: 'Cancer',
-    value: 'cancer',
-
+    key: 'Addiction',
+    text: 'Addiction',
+    value: 'addiction',
   },
   {
     key: 'Allergy',
     text: 'Allergy',
     value: 'allergy',
-
-  },
-  {
-    key: 'Liver',
-    text: 'Liver',
-    value: 'liver',
-  },
-  {
-    key: 'Addiction',
-    text: 'Addiction',
-    value: 'addiction',
-
   },
   {
     key: 'Alzheimer',
     text: 'Alzheimer',
     value: 'alzheimer',
-
-  },
-  {
-    key: 'Pain',
-    text: 'Pain',
-    value: 'pain',
-
-  },
-  {
-    key: 'Asthma',
-    text: 'Asthma',
-    value: 'asthma',
-
-  },
-  {
-    key: 'Pregnancy',
-    text: 'Pregnancy',
-    value: 'pregnancy',
-
-  },
-  {
-    key: 'heart',
-    text: 'Heart',
-    value: 'heart',
-
-  },
-  {
-    key:'Weight Loss',
-    text: 'Weight Loss',
-    value: 'weight loss',
-  },
-  {
-    key:'Thyroid',
-    text: 'Thyroid',
-    value: 'thyroid',
-  },
-  {
-    key:'std',
-    text: 'Std',
-    value: 'std',
-  },
-  {
-    key:'side effects',
-    text: 'Side Effects',
-    value: 'side effects',
-  },
-  {
-    key:'paralysis',
-    text: 'Paralysis',
-    value: 'paralysis',
-  },
-  {
-    key:'obesity',
-    text: 'Obesity',
-    value: 'obesity',
-  },
-  {
-    key:'nerve autoimmune',
-    text: 'Nerve Autoimmune',
-    value: 'nerve autoimmune',
-  },
-  {
-    key:'migraine',
-    text: 'Migraine',
-    value: 'migraine',
-  },
-  {
-    key:'mental health',
-    text: 'Mental Health',
-    value: 'mental health',
-  },
-  {
-    key:'lung',
-    text: 'Lung',
-    value: 'lung',
-  },
-  {
-    key:'inflammation',
-    text: 'Inflammation',
-    value: 'inflammation',
-  },
-  {
-    key:'infection',
-    text: 'Infection',
-    value: 'infection',
-  },
-  {
-    key:'hiv',
-    text: 'Hiv',
-    value: 'hiv',
-  },
-  {
-    key:'erectile dysfunction',
-    text: 'Erectile Dysfunction',
-    value: 'erectile dysfunction',
-  },
-  {
-    key:'ear',
-    text: 'Ear',
-    value: 'ear',
-  },
-  {
-    key:'depression',
-    text: 'depression',
-    value: 'depression',
-  },
-  {
-    key:'common diseases',
-    text: 'Common Diseases',
-    value: 'common diseases',
-  },
-  {
-    key:'cholesterol',
-    text: 'Cholesterol',
-    value: 'cholesterol',
-  },
-  {
-    key:'blindness',
-    text: 'Blindness',
-    value: 'blindness',
   },
   {
     key:'arthritis',
@@ -194,29 +55,19 @@ var topicOptions = [
     value: 'arthritis',
   },
   {
-    key:'pets',
-    text: 'Pets',
-    value: 'pets',
+    key: 'asthma',
+    text: 'Asthma',
+    value: 'asthma',
   },
-  {
-    key:'skin',
-    text: 'Skin',
-    value: 'skin',
-  },
-  // {
-  //   key:'insurance',
-  //   text: 'Insurance',
-  //   value: 'insurance',
-  // },
   {
     key:'birth control',
     text: 'Birth Control',
     value: 'birth control',
   },
   {
-    key:'kidney',
-    text: 'Kidney',
-    value: 'kidney',
+    key:'blindness',
+    text: 'Blindness',
+    value: 'blindness',
   },
   {
     key:'bowel',
@@ -228,6 +79,147 @@ var topicOptions = [
     text: 'Brain',
     value: 'brain',
   },
+  {
+    key: 'cancer',
+    text: 'Cancer',
+    value: 'cancer',
+  },
+  {
+    key:'cholesterol',
+    text: 'Cholesterol',
+    value: 'cholesterol',
+  },
+  {
+    key:'common diseases',
+    text: 'Common Diseases',
+    value: 'common diseases',
+  },
+  {
+    key:'depression',
+    text: 'Depression',
+    value: 'depression',
+  },
+  {
+    key: 'diabetes',
+    text: 'Diabetes',
+    value: 'diabetes',
+  },
+  {
+    key:'ear',
+    text: 'Ear',
+    value: 'ear',
+  },
+  {
+    key:'erectile dysfunction',
+    text: 'Erectile Dysfunction',
+    value: 'erectile dysfunction',
+  },
+  {
+    key: 'heart',
+    text: 'Heart',
+    value: 'heart',
+  },
+  {
+    key:'hiv',
+    text: 'Hiv',
+    value: 'hiv',
+  },
+  {
+    key:'infection',
+    text: 'Infection',
+    value: 'infection',
+  },
+  {
+    key:'inflammation',
+    text: 'Inflammation',
+    value: 'inflammation',
+  },
+    // {
+  //   key:'insurance',
+  //   text: 'Insurance',
+  //   value: 'insurance',
+  // },
+  {
+    key:'kidney',
+    text: 'Kidney',
+    value: 'kidney',
+  },
+  {
+    key: 'liver',
+    text: 'Liver',
+    value: 'liver',
+  },
+  {
+    key:'lung',
+    text: 'Lung',
+    value: 'lung',
+  },
+
+  {
+    key:'mental health',
+    text: 'Mental Health',
+    value: 'mental health',
+  },
+  {
+    key:'migraine',
+    text: 'Migraine',
+    value: 'migraine',
+  },
+  {
+    key:'nerve autoimmune',
+    text: 'Nerve Autoimmune',
+    value: 'nerve autoimmune',
+  },
+  {
+    key:'obesity',
+    text: 'Obesity',
+    value: 'obesity',
+  },
+  {
+    key: 'pain',
+    text: 'Pain',
+    value: 'pain',
+  },
+  {
+    key:'paralysis',
+    text: 'Paralysis',
+    value: 'paralysis',
+  },
+  {
+    key:'pets',
+    text: 'Pets',
+    value: 'pets',
+  },
+  {
+    key: 'Pregnancy',
+    text: 'Pregnancy',
+    value: 'pregnancy',
+  },
+  {
+    key:'side effects',
+    text: 'Side Effects',
+    value: 'side effects',
+  },
+  {
+    key:'skin',
+    text: 'Skin',
+    value: 'skin',
+  },
+  {
+    key:'std',
+    text: 'Std',
+    value: 'std',
+  },
+  {
+    key:'Thyroid',
+    text: 'Thyroid',
+    value: 'thyroid',
+  },
+  {
+    key:'Weight Loss',
+    text: 'Weight Loss',
+    value: 'weight loss',
+  },
 
 ];
 
@@ -236,7 +228,7 @@ class RenderComp extends Component {
      {
         super(props);
         this.state = {
-            myTopic:"",
+            myTopic:"addiction",
             allInformation:[],
             card:false,
             insur:false,
@@ -253,6 +245,7 @@ class RenderComp extends Component {
             insuranceSentimentNegative:true,
             cardSentimentPositive:true,
             cardSentimentNegative:true,
+            firsLoad:true,
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -290,8 +283,40 @@ class RenderComp extends Component {
       else
       this.setState({insuranceSentimentNegative: true})
     }
+    componentDidMount()
+    {
+      if(this.state.firsLoad == true){
+        this.state.firstLoad = false;
+        var url = "/topic?topic_name=addiction";
+          fetch(url, {
+            method: 'GET',
+      			headers: {
+      				'Accept': 'application/json',
+      				'Content-Type': 'application/json',
+                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            },
+          }).then((response) => {
+            if(response.status == 200)
+              {
+                return response.json();
+              }
+      			else {
+      				alert('Uh Oh! Something went wrong');
+      				return -1;
+      			}
+          }).then((data) => {
+      			if(data == -1)
+              return;
+              this.setState({data: data, loading:false});
+              this.createWordCloudData();
+      		}
+          )
+        }
+      
+    }
 
-    componentDidUpdate(prevProps, prevState, snapshot){
+    componentDidUpdate(prevProps, prevState, snapshot)
+    {
       if(this.state.myTopic != '' && current != prev){
         prev = current;
         var url = "/topic?topic_name="+this.state.myTopic;
@@ -527,7 +552,7 @@ class RenderComp extends Component {
                     <Grid.Row>
                         <Grid.Column width={8}>
                             <Segment>
-                             <Dropdown  placeholder='Select Topic' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
+                             <Dropdown  placeholder='Addiction' fluid selection options={topicOptions} onChange={this.handleTopicSelect}/>
                             </Segment>
                             <Segment >
                             {/* <Segment><WordCloud data = {this.state.cloudData}/></Segment> */}
