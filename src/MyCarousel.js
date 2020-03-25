@@ -46,7 +46,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -57,7 +57,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img2}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -68,7 +68,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img3}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -90,7 +90,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -101,7 +101,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img2}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -119,7 +119,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -161,7 +161,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -172,7 +172,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img2}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -183,7 +183,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img3}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -203,7 +203,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div>
@@ -214,7 +214,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img2}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -232,7 +232,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -274,7 +274,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -285,7 +285,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img2}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -296,7 +296,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img3}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
@@ -317,7 +317,7 @@ class MyCarousel extends Component
                       />
                     </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                       <div style={{width:'33.3%',  display:'inline-block', marginRight:'5px'}}>
@@ -328,7 +328,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img2}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
                       /></div>
                     </Carousel.Item>
                   );
@@ -346,7 +346,7 @@ class MyCarousel extends Component
                         />
                       </div><img
                         src={img1}
-                        alt="logo" style={{height:'260px'}}
+                        alt="logo" style={{height:'220px'}}
 
                       /></div>
                     </Carousel.Item>
