@@ -20,7 +20,7 @@ export default class    Twitter extends React.Component {
         fbData:[],
         twData:[],
         fbClicked:0,
-        twClicked:0
+        twClicked:0,
       };
 
       this.fbSelected = this.fbSelected.bind(this);
@@ -84,6 +84,16 @@ export default class    Twitter extends React.Component {
               // var img = "/Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
               // var img = "https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg";
               // var img = "http://cips2.engineering.asu.edu:3001/avatar_pages/"  + this.props.data.facebook[i].id + ".png";
+              var facebookPhrase = "";
+              if(this.props.data.facebook != null && this.props.data.facebook[i].phrase != null)
+              {
+              for(let j = 0 ; j<this.props.data.facebook[i].phrase.length ; j++)
+              {
+                facebookPhrase += this.props.data.facebook[i].phrase[j] + " " ; 
+                if(j >= 3)
+                break;
+              }
+            }
               facebookData.push(<Table.Row>
                 <Table.Cell style={{minWidth:'150px'}}>
                 <div>
@@ -93,7 +103,8 @@ export default class    Twitter extends React.Component {
                     value={this.props.data.facebook[i].count}
                     onChange={this.fbSelected} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   />
-                  <label style={{fontSize:'13px'}}>{this.props.data.facebook[i].phrase}</label>
+                  {/* <label style={{fontSize:'13px'}}>{this.props.data.facebook[i].phrase}</label> */}
+                  <label style={{fontSize:'13px'}}>{facebookPhrase}</label>
                 </div>
                 </Table.Cell>
                 <Table.Cell>

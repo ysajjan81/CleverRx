@@ -310,6 +310,7 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
+              console.log(data);
               this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
