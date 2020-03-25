@@ -400,14 +400,13 @@ class RenderComp extends Component {
           if(phrase[i].Topic === this.state.myTopic)
           {
             temp.push(phrase[i].Phrase);
-            temp.push(phrase[i].Frequency);
+            // temp.push(phrase[i].Frequency);
             myData.push(temp);
             myoptions.push({key: phrase[i].Phrase, text: phrase[i].Phrase, value: phrase[i].Phrase});
           }
         }
         this.setState({cloudData: myData});
         this.setState({phraseSelected: myoptions})
-
     }
 
     getData = (value) =>
