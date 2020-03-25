@@ -316,7 +316,7 @@ class RenderComp extends Component {
       		}
           )
         }
-      
+
     }
 
     componentDidUpdate(prevProps, prevState, snapshot)
@@ -710,27 +710,6 @@ class RenderComp extends Component {
                         }
                         </Segment>
                        <Segment>
-                      {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                             <div ><MyCloud data={this.state.data.insurance_dict.disease_list}/></div>
-                          )
-                        }
-                      </Segment>
-                       <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
-                      {
-                        this.state.data.length == 0 ? (
-                             <div></div>
-                           ) : (
-                            <div><MyCloud data={this.state.data.insurance_dict.medication_list}/></div>
-                          )
-                        }
-                      </Segment>
-                       <Segment>
-                      */}
                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.card_dict == null ? (
