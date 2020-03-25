@@ -46,11 +46,6 @@ var topicOptions = [
     value: 'cancer',
 
   },
-  // {
-  //   key: 'STD/Infection',
-  //   text: 'STD/Infection',
-  //   value: 'STD/Infection',
-  // },
   {
     key: 'Allergy',
     text: 'Allergy',
@@ -61,7 +56,6 @@ var topicOptions = [
     key: 'Liver',
     text: 'Liver',
     value: 'liver',
-
   },
   {
     key: 'Addiction',
@@ -110,8 +104,8 @@ var topicOptions = [
     value: 'thyroid',
   },
   {
-    key:'Std',
-    text: 'std',
+    key:'std',
+    text: 'Std',
     value: 'std',
   },
   {
@@ -199,6 +193,42 @@ var topicOptions = [
     text: 'Arthritis',
     value: 'arthritis',
   },
+  {
+    key:'pets',
+    text: 'Pets',
+    value: 'pets',
+  },
+  {
+    key:'skin',
+    text: 'Skin',
+    value: 'skin',
+  },
+  {
+    key:'insurance',
+    text: 'Insurance',
+    value: 'insurance',
+  },
+  {
+    key:'birth control',
+    text: 'Birth Control',
+    value: 'birth control',
+  },
+  {
+    key:'kidney',
+    text: 'Kidney',
+    value: 'kidney',
+  },
+  {
+    key:'bowel',
+    text: 'Bowel',
+    value: 'bowel',
+  },
+  {
+    key:'brain',
+    text: 'Brain',
+    value: 'brain',
+  },
+
 ];
 
 class RenderComp extends Component {
