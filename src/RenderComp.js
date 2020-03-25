@@ -285,7 +285,6 @@ class RenderComp extends Component {
     }
     componentDidMount()
     {
-
       this.setState({loading: true});
       if(this.state.firsLoad == true)
       {
@@ -316,7 +315,7 @@ class RenderComp extends Component {
       		}
           )
         }
-
+      
     }
 
     componentDidUpdate(prevProps, prevState, snapshot)
@@ -494,6 +493,7 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
+              // console.log(data);
               this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
@@ -710,6 +710,27 @@ class RenderComp extends Component {
                         }
                         </Segment>
                        <Segment>
+                      {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Disease</div>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                             <div ><MyCloud data={this.state.data.insurance_dict.disease_list}/></div>
+                          )
+                        }
+                      </Segment>
+                       <Segment>
+                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                      {
+                        this.state.data.length == 0 ? (
+                             <div></div>
+                           ) : (
+                            <div><MyCloud data={this.state.data.insurance_dict.medication_list}/></div>
+                          )
+                        }
+                      </Segment>
+                       <Segment>
+                      */}
                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.card_dict == null ? (

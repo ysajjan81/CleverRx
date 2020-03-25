@@ -103,7 +103,7 @@ export default class    Twitter extends React.Component {
                     value={this.props.data.facebook[i].count}
                     onChange={this.fbSelected} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   />
-                  <label style={{fontSize:'13px'}}>{this.props.data.facebook[i].phrase[0]}</label>
+                  <label style={{fontSize:'13px'}}>{this.props.data.facebook[i].phrase}</label>
                   {/* <label style={{fontSize:'13px'}}>{facebookPhrase}</label> */}
                 </div>
                 </Table.Cell>
