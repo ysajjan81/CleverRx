@@ -285,9 +285,12 @@ class RenderComp extends Component {
     }
     componentDidMount()
     {
-      if(this.state.firsLoad == true){
+
+      this.setState({loading: true});
+      if(this.state.firsLoad == true)
+      {
         this.state.firstLoad = false;
-        var url = "/topic?topic_name=addiction";
+        var url = "/topic?topic_name="+this.state.myTopic;
           fetch(url, {
             method: 'GET',
       			headers: {
@@ -317,7 +320,8 @@ class RenderComp extends Component {
 
     componentDidUpdate(prevProps, prevState, snapshot)
     {
-      if(this.state.myTopic != '' && current != prev){
+      if(this.state.myTopic != '' && current != prev)
+      {
         prev = current;
         var url = "/topic?topic_name="+this.state.myTopic;
           fetch(url, {
@@ -784,10 +788,6 @@ class RenderComp extends Component {
                         }
                     </Grid.Column>
                 </Grid.Row>
-                {/* <Grid.Row>
-                    <Grid.Column width={16}>
-                    </Grid.Column>
-                </Grid.Row> */}
                 <Grid.Row style={{maxHeight:'5'}}>
                   {/* <h3>Insurance Images</h3> */}
                   <Grid.Column width = {16} style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
