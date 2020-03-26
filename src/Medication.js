@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table} from 'semantic-ui-react'
+import {Table, Image, Header} from 'semantic-ui-react'
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 
@@ -11,7 +11,11 @@ function Medication(props)
       {
         for(var i in props.data)
         {
-          var img = props.data[i][1][1];
+          // var img = props.data[i][1][1];
+          // var img = "/medication_avatar/5.png";
+          // if(props.data[i][1][1] != "")
+          var img = "/medication_avatar/" + i + ".png";
+          // var img = "";
             l.push(<Table.Row>
                 <Table.Cell>  <div>
                     <input
@@ -21,10 +25,20 @@ function Medication(props)
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     />
                     <label style={{fontSize:'13px'}}>{props.data[i][0]}</label>
-                  </div></Table.Cell>
-                  <Table.Cell >
-                    {<img src={img} alt="logo" width="40" height="50" />}
-                </Table.Cell>
+                    {/* { img.length == 0 ?<div></div>:
+                    <Header as='h4' image >
+                    <Image src={img} rounded size='medium' textAlign='right'/>
+                    </Header>
+                    } */}
+                  </div>
+                  </Table.Cell>
+                  <Table.Cell>
+                  { props.data.length == 0 ?<div></div>:
+                    <Header as='h4' image textAlign='right'>
+                    <Image src={props.data[i][1][1]} rounded size='medium' />
+                    </Header>
+                    }
+                  </Table.Cell>
                 <Table.Cell >
                     {props.data[i][1][2]}
                 </Table.Cell>
