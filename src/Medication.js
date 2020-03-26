@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table, Image, Header} from 'semantic-ui-react'
+import {Table, Image, Header, Icon} from 'semantic-ui-react'
 import Paper from '@material-ui/core/Paper';
 import Checkbox from '@material-ui/core/Checkbox';
 
@@ -24,21 +24,22 @@ function Medication(props)
                       value={props.data[i][0]}
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     />
-                    <label style={{fontSize:'13px'}}>{props.data[i][0]}</label>
-                    {/* { img.length == 0 ?<div></div>:
-                    <Header as='h4' image >
-                    <Image src={img} rounded size='medium' textAlign='right'/>
-                    </Header>
-                    } */}
+                    <label style={{fontSize:'13px'}}>{props.data[i][0]}<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></label>
+                    { img.length == 0 ?<div></div>:
+                    <img src = {img} width="40" height="50"/>
+                    // <Header as='h4' image>
+                    // <Image src={img} rounded size='medium' textAlign='right'/>
+                    // </Header>
+                    }
                   </div>
                   </Table.Cell>
-                  <Table.Cell>
-                  { props.data.length == 0 ?<div></div>:
+                  {/* <Table.Cell>
+                  { img.length == 0 ?<div></div>:
                     <Header as='h4' image textAlign='right'>
-                    <Image src={props.data[i][1][1]} rounded size='medium' />
+                    <Image src={img}  width="40" height="50"/>
                     </Header>
                     }
-                  </Table.Cell>
+                  </Table.Cell> */}
                 <Table.Cell >
                     {props.data[i][1][2]}
                 </Table.Cell>
@@ -51,13 +52,13 @@ function Medication(props)
   return (
     <div className="center-col">
     <Paper>
-      <Table celled>
+      <Table celled >
         <Table.Header>
           <Table.Row>
-            <Table.HeaderCell>Medication</Table.HeaderCell>
-            <Table.HeaderCell>Avatar</Table.HeaderCell>
-            <Table.HeaderCell>Disease</Table.HeaderCell>
-            <Table.HeaderCell>Frequency</Table.HeaderCell>
+            <Table.HeaderCell >Medication</Table.HeaderCell>
+            {/* <Table.HeaderCell>Avatar</Table.HeaderCell> */}
+            <Table.HeaderCell >Disease</Table.HeaderCell>
+            <Table.HeaderCell >Frequency</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
         <Table.Body>{l}</Table.Body>
