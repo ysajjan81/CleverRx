@@ -14,18 +14,19 @@ function Medication(props)
           // var img = props.data[i][1][1];
           // var img = "/medication_avatar/5.png";
           // if(props.data[i][1][1] != "")
-          // var img = "/medication_avatar/" + i + ".png";
+          var img = "/medication_avatar/" + i + ".png";
           // var img = "";
             l.push(<Table.Row>
-                <Table.Cell>  <div>
+                <Table.Cell>  
+                  <div>
                     <input
                       type="checkbox"
                       name="Meds"
                       value={props.data[i][0]}
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     />
-                    <label style={{fontSize:'13px'}}>{props.data[i][0]}</label><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                    { props.data[i][1][1].length == 0 ?<div></div>:
+                    <label style={{fontSize:'13px', width:'300px'}}>{props.data[i][0]}<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></label>
+                    {props.data[i][1][1].length == 0 ?<div></div>:
                     <img src = {props.data[i][1][1]} width="40" height="50"/>
                     // <Header as='h4' image>
                     // <Image src={img} rounded size='medium' textAlign='right'/>
