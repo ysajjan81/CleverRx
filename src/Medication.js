@@ -11,6 +11,7 @@ function Medication(props)
       {
         for(var i in props.data)
         {
+          var img = "/avatar_pages/" + props.data[i][1][1];
             l.push(<Table.Row>
                 <Table.Cell>  <div>
                     <input
@@ -21,6 +22,9 @@ function Medication(props)
                     />
                     <label style={{fontSize:'13px'}}>{props.data[i][0]}</label>
                   </div></Table.Cell>
+                  <Table.Cell >
+                    {<img src={img} alt="logo" width="40" height="50" />}
+                </Table.Cell>
                 <Table.Cell >
                     {props.data[i][1][2]}
                 </Table.Cell>
@@ -37,6 +41,7 @@ function Medication(props)
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Medication</Table.HeaderCell>
+            <Table.HeaderCell>Avatar</Table.HeaderCell>
             <Table.HeaderCell>Disease</Table.HeaderCell>
             <Table.HeaderCell>Frequency</Table.HeaderCell>
           </Table.Row>
