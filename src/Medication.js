@@ -11,7 +11,7 @@ function Medication(props)
       {
         for(var i in props.data)
         {
-          var img = "/avatar_pages/" + props.data[i][1][1];
+          var img = props.data[i][1][1];
             l.push(<Table.Row>
                 <Table.Cell>  <div>
                     <input
