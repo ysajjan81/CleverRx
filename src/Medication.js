@@ -26,8 +26,8 @@ function Medication(props)
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     />
                     <label style={{fontSize:'13px', display: 'inline'}}>{props.data[i][0]}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    {img.length == 0 ?<div></div>:
-                    <img src = {img} width="40" height="50"/>
+                    {props.data[i][1][1].length == 0 ?<div></div>:
+                    <img src = {props.data[i][1][1]} width="40" height="50"/>
                     // <Header as='h4' image>
                     // <Image src={img} rounded size='medium' textAlign='right'/>
                     // </Header>
