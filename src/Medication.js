@@ -26,15 +26,11 @@ function Medication(props)
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     />
                     <label style={{fontSize:'13px', display: 'inline'}}>{props.data[i][0]}</label>
-                    {/* // <Header as='h4' image>
-                    // <Image src={img} rounded size='medium' textAlign='right'/>
-                    // </Header>
-                    } */}
                   </div>
                   </Table.Cell>
-                  <Table.Cell>
+                  <Table.Cell width={2}>
                   {props.data[i][1][1].length == 0 ?<div></div>:
-                    <img src = {props.data[i][1][1]} width="40" height="50"/>
+                    <img src = {props.data[i][1][1]} alt="logo" width="40" height="50"/>
                   }
                   </Table.Cell>
                 <Table.Cell >
