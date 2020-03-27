@@ -25,22 +25,18 @@ function Medication(props)
                       value={props.data[i][0]}
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     />
-                    <label style={{fontSize:'13px', display: 'inline'}}>{props.data[i][0]}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                    {props.data[i][1][1].length == 0 ?<div></div>:
-                    <img src = {props.data[i][1][1]} width="40" height="50"/>
-                    // <Header as='h4' image>
+                    <label style={{fontSize:'13px', display: 'inline'}}>{props.data[i][0]}</label>
+                    {/* // <Header as='h4' image>
                     // <Image src={img} rounded size='medium' textAlign='right'/>
                     // </Header>
-                    }
+                    } */}
                   </div>
                   </Table.Cell>
-                  {/* <Table.Cell>
-                  { img.length == 0 ?<div></div>:
-                    <Header as='h4' image textAlign='right'>
-                    <Image src={img}  width="40" height="50"/>
-                    </Header>
-                    }
-                  </Table.Cell> */}
+                  <Table.Cell>
+                  {props.data[i][1][1].length == 0 ?<div></div>:
+                    <img src = {props.data[i][1][1]} width="40" height="50"/>
+                  }
+                  </Table.Cell>
                 <Table.Cell >
                     {props.data[i][1][2]}
                 </Table.Cell>
@@ -57,7 +53,7 @@ function Medication(props)
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell >Medication</Table.HeaderCell>
-            {/* <Table.HeaderCell>Avatar</Table.HeaderCell> */}
+            <Table.HeaderCell>Logo</Table.HeaderCell>
             <Table.HeaderCell >Disease</Table.HeaderCell>
             <Table.HeaderCell >Frequency</Table.HeaderCell>
           </Table.Row>
