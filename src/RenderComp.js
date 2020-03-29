@@ -28,12 +28,6 @@ let current = '';
 let prev = '';
 let numberofCheckBoxSelected = 0;
 var topicOptions = [
-  // {
-  //   key: 'Heart Hypertension',
-  //   text: 'Heart Hypertension',
-  //   value: 'heart hypertension',
-
-  // },
   {
     key: 'Addiction',
     text: 'Addiction',
@@ -246,6 +240,7 @@ class RenderComp extends Component {
             cardSentimentPositive:true,
             cardSentimentNegative:true,
             firsLoad:true,
+            exportData:[],
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -257,6 +252,31 @@ class RenderComp extends Component {
          this.handleInsuranceSentimentNegative = this.handleInsuranceSentimentNegative.bind(this);
          this.handleCardSentimentPositive = this.handleCardSentimentPositive.bind(this);
          this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
+         this.export = this.export.bind(this);
+    }
+    export()
+    {
+      var csvRow  = [];
+      var re = this.state.selectedCheckBox;
+      var A = [["Id", "Phrase", "Topic", "Card",]];
+      for(let item =  0 ; item<re.length ; item++)
+      {
+        A.push([item, re[item], this.state.myTopic, this.state.card]);
+      }
+      console.log("EXport data = ");
+      console.log(A);
+      for(let i = 0 ; i<A.length ; i++)
+      {
+        csvRow.push(A[i].join(","));
+      }
+      var csvString = csvRow.join("%0A");
+      var a = document.createElement("a");
+      a.href='data:attachment/csv,'+csvString;
+      a.target = "_Blank";
+      a.download = "testfile.csv";
+      document.body.appendChild(a);
+      a.click();
+      console.log(csvRow);
     }
     handleCardSentimentPositive()
     {
@@ -265,19 +285,22 @@ class RenderComp extends Component {
       else
       this.setState({cardSentimentPositive: true});
     }
-    handleCardSentimentNegative(){
+    handleCardSentimentNegative()
+    {
       if(this.state.cardSentimentNegative == true)
       this.setState({cardSentimentNegative: false});
       else
       this.setState({cardSentimentNegative: true});
     }
-    handleInsuranceSentimentPositive(){
+    handleInsuranceSentimentPositive()
+    {
       if(this.state.insuranceSentimentPositive == true)
       this.setState({insuranceSentimentPositive: false});
       else
       this.setState({insuranceSentimentPositive: true});
     }
-    handleInsuranceSentimentNegative(){
+    handleInsuranceSentimentNegative()
+    {
       if(this.state.insuranceSentimentNegative == true)
       this.setState({insuranceSentimentNegative: false})
       else
@@ -368,7 +391,6 @@ class RenderComp extends Component {
 
     checkBoxSelected = (event, {value}) =>
     {
-
         var temp = [] ;
         var isPresent = false;
         for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
@@ -399,6 +421,8 @@ class RenderComp extends Component {
           }
           this.setState({selectedCheckBox: temp});
         }
+        console.log("phrase selected");
+        console.log(this.state.selectedCheckBox);
     }
 
     handlePhraseSelected(event, {value}){
@@ -525,7 +549,7 @@ class RenderComp extends Component {
                 <input type="checkbox" class="hidden" readonly="" tabindex="0" /><h3>"I am here"</h3>
                 <label>{data[i++][0]}</label>
               </div> */}
-              <Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}
+              <Checkbox key={data[i][0]} style={{marginRight:'5px', display:'inline'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}
               </TableCell>
             </TableRow>)
             }
@@ -579,6 +603,7 @@ class RenderComp extends Component {
                                 </Paper>
                           </div>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>Export</Button>
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
@@ -800,6 +825,7 @@ class RenderComp extends Component {
                   </Grid.Column>
                   </Grid.Row>
                 </Grid>
+
             </div>
          );
     }
