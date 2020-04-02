@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, ReactPropTypes } from 'react';
 import TextContent from './TextContent';
 import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
@@ -22,11 +22,17 @@ import Medication from './Medication';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import {Carousel} from 'react-responsive-carousel';
 import MyCarousel from './MyCarousel';
+// import json2csv from "json2csv";
+import { CSVDownload, CSVLink } from "react-csv";
 
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
 let prev = '';
 let numberofCheckBoxSelected = 0;
+var obj = {};
+var exportData = [];
+let A = [];
+let isxport = false;
 var topicOptions = [
   {
     key: 'Addiction',
@@ -234,13 +240,15 @@ class RenderComp extends Component {
             getApiResultForMultiplePhrase:[],
             phraseString:"",
             loading:false,
-            selectedCheckBox:[],
+            selectedTopicPhrase:[],
             insuranceSentimentPositive:true,
             insuranceSentimentNegative:true,
             cardSentimentPositive:true,
             cardSentimentNegative:true,
             firsLoad:true,
             exportData:[],
+            selectedTweets:[],
+            dataToDownload: [],
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -252,32 +260,58 @@ class RenderComp extends Component {
          this.handleInsuranceSentimentNegative = this.handleInsuranceSentimentNegative.bind(this);
          this.handleCardSentimentPositive = this.handleCardSentimentPositive.bind(this);
          this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
+         this.myCallbackForTweets = this.myCallbackForTweets.bind(this);
+         this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.export = this.export.bind(this);
     }
-    export()
-    {
-      var csvRow  = [];
-      var re = this.state.selectedCheckBox;
-      var A = [["Id", "Phrase", "Topic", "Card",]];
+    // export()
+    // {
+    //   // console.log("inside export");
+    //   // console.log(this.state.selectedTweets);
+    //   // console.log("end");
+    //   var csvRow  = [];
+    //   var re = this.state.selectedTopicPhrase;
+    //   var A = [["Id", "Phrase", "Topic"]];
+    //   for(let item =  0 ; item<re.length ; item++)
+    //   {
+    //     A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item]]);
+    //   }
+    //   console.log("EXport data = ");
+    //   console.log(A);
+    //   for(let i = 0 ; i<A.length ; i++)
+    //   {
+    //     csvRow.push(A[i].join(","));
+    //   }
+    //   var csvString = csvRow.join("%0A");
+    //   console.log("csvString");
+    //   console.log(csvString);
+    //   var a = document.createElement("a");
+    //   a.href='data:attachment/json,'+ csvString;
+    //   a.target = "_Blank";
+    //   a.download = "testfile.json";
+    //   document.body.appendChild(a);
+    //   a.click();
+    // }
+
+    export(){
+      console.log("insideExport");
+      console.log(this.state.selectedTopicPhrase);
+      A = [];
+      A.push(["Id", "Phrase", "Topic", "Tweets"]);
+      var re = this.state.selectedTopicPhrase;
       for(let item =  0 ; item<re.length ; item++)
       {
-        A.push([item, re[item], this.state.myTopic, this.state.card]);
+        A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item]]);
       }
-      console.log("EXport data = ");
+
       console.log(A);
-      for(let i = 0 ; i<A.length ; i++)
-      {
-        csvRow.push(A[i].join(","));
-      }
-      var csvString = csvRow.join("%0A");
-      var a = document.createElement("a");
-      a.href='data:attachment/csv,'+csvString;
-      a.target = "_Blank";
-      a.download = "testfile.csv";
-      document.body.appendChild(a);
-      a.click();
-      console.log(csvRow);
+
+      this.setState({ dataToDownload: A }, () => {
+        // click the CSVLink component to trigger the CSV download
+        this.csvLink.link.click()
+     })
     }
+
     handleCardSentimentPositive()
     {
       if(this.state.cardSentimentPositive == true)
@@ -389,13 +423,31 @@ class RenderComp extends Component {
         this.setState({insur: temp});
     }
 
+    myCallbackForTweets(tweetsSelectedFromMyTweets)
+    {
+      console.log("inside myCallBack")
+      // console.log(tweetsSelectedFromMyTweets)
+      var temp = [];
+      for(var i  = 0 ; i<this.state.selectedTweets.length;i++)
+      {
+        temp.push(this.state.selectedTweets[i]);
+      }
+      temp.push(tweetsSelectedFromMyTweets);
+      this.setState({selectedTweets:temp});
+      // console.log(this.state.selectedTweets);
+    }
+    myCallbackForMedication(medicationSelectedFromMyMedication)
+    {
+
+    }
+
     checkBoxSelected = (event, {value}) =>
     {
         var temp = [] ;
         var isPresent = false;
-        for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
+        for(let i = 0 ; i<this.state.selectedTopicPhrase.length ; i++)
         {
-          if(value == this.state.selectedCheckBox[i])
+          if(value == this.state.selectedTopicPhrase[i])
            {
             isPresent = true;
             numberofCheckBoxSelected -= 1;
@@ -405,24 +457,24 @@ class RenderComp extends Component {
         if(isPresent == false)
         {
           numberofCheckBoxSelected += 1;
-          temp = this.state.selectedCheckBox;
+          temp = this.state.selectedTopicPhrase;
           temp.push(value);
-          this.setState({selectedCheckBox: temp});
+          this.setState({selectedTopicPhrase: temp});
         }
         else
         {
-          for(let i = 0 ; i<this.state.selectedCheckBox.length ; i++)
+          for(let i = 0 ; i<this.state.selectedTopicPhrase.length ; i++)
           {
-            if(this.state.selectedCheckBox[i] == value)
+            if(this.state.selectedTopicPhrase[i] == value)
             {
               continue;
             }
-            temp.push(this.state.selectedCheckBox[i]);
+            temp.push(this.state.selectedTopicPhrase[i]);
           }
-          this.setState({selectedCheckBox: temp});
+          this.setState({selectedTopicPhrase: temp});
         }
         console.log("phrase selected");
-        console.log(this.state.selectedCheckBox);
+        console.log(this.state.selectedTopicPhrase);
     }
 
     handlePhraseSelected(event, {value}){
@@ -439,9 +491,9 @@ class RenderComp extends Component {
       {
       var temp = "";
       this.setState({loading: true});
-      for(let i = 0 ; i<this.state.selectedCheckBox.length; i++)
+      for(let i = 0 ; i<this.state.selectedTopicPhrase.length; i++)
       {
-        temp += this.state.selectedCheckBox[i] + ',';
+        temp += this.state.selectedTopicPhrase[i] + ',';
       }
       this.setState({phraseString: temp});
       var temp1 = "";
@@ -604,6 +656,10 @@ class RenderComp extends Component {
                           </div>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>Export</Button>
+                  <div>
+                    <CSVLink data={A} filename="data.csv" className="hidden" 
+                    ref={(r) => this.csvLink = r} target="_blank"/>
+                 </div>
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
@@ -646,9 +702,9 @@ class RenderComp extends Component {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
                              ) : (
-                               <div ><Medication data = {this.state.data.card_dict.medication_list}/></div>
+                               <div ><Medication data = {this.state.data.card_dict.medication_list} callbackformedication={this.myCallbackForMedication}/></div>
                             )
-                          }
+                        }
                         </Segment>
                          <Segment>
                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
@@ -786,8 +842,14 @@ class RenderComp extends Component {
 
                         {
                         this.state.data.length === 0 ? (<div></div>):
-                            (<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left"/>)
+                            (<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left" callbackFromParent={this.myCallbackForTweets}  />)
+                            
                         }
+                      
+                      {/* { isxport == false?(<div></div>):
+                      <CSVLink data={A}>Download me</CSVLink>
+                      // <CSVDownload data={A} target="_blank" />
+                      } */}
                     </Grid.Column>
                     <Grid.Column>
                           <h3>Insurance Related Messages</h3>
@@ -795,8 +857,12 @@ class RenderComp extends Component {
                           <Checkbox label="Pos" onChange={this.handleInsuranceSentimentNegative}></Checkbox>
                             {
                               this.state.data.length === 0 ? (<div></div>):
-                            (<MyTweets data = {this.state.data} insurancePositiveSentiment = {this.state.insuranceSentimentPositive} insuranceNegativeSentiment = {this.state.insuranceSentimentNegative} insurance={this.state.insur} card={this.state.card} col = "right"/>)
+                            (<MyTweets data = {this.state.data} insurancePositiveSentiment = {this.state.insuranceSentimentPositive} insuranceNegativeSentiment = {this.state.insuranceSentimentNegative} insurance={this.state.insur} card={this.state.card} col = "right"  callbackFromParent={this.myCallbackForTweets}  />)
                             }
+                      {/* { isxport == false?(<div></div>):
+                      <CSVLink data={A}>Download me</CSVLink>
+                      // <CSVDownload data={A} target="_blank" />
+                      } */}
                     </Grid.Column>
                 </Grid.Row>
                 <Grid.Row>
