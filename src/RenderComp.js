@@ -305,7 +305,6 @@ class RenderComp extends Component {
       }
 
       console.log(A);
-
       this.setState({ dataToDownload: A }, () => {
         // click the CSVLink component to trigger the CSV download
         this.csvLink.link.click()
@@ -657,7 +656,7 @@ class RenderComp extends Component {
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>Export</Button>
                   <div>
-                    <CSVLink data={A} filename="data.csv" className="hidden" 
+                    <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
                     ref={(r) => this.csvLink = r} target="_blank"/>
                  </div>
                             </Segment>
