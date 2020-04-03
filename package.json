@@ -15,6 +15,7 @@
     "google-map-react": "^1.1.5",
     "http-proxy-middleware": "^1.0.2",
     "jquery": "^3.4.1",
+    "json2csv": "^5.0.0",
     "material-ui": "^0.20.2",
     "randomcolor": "^0.5.3",
     "react": "^16.7.0",
@@ -22,6 +23,7 @@
     "react-bootstrap-carousel": "^4.0.3",
     "react-chartjs": "^1.2.0",
     "react-chartjs-2": "^2.7.4",
+    "react-csv": "^2.0.3",
     "react-dom": "^16.7.0",
     "react-facebook": "^6.0.15",
     "react-firebaseui": "^4.1.0",
@@ -53,7 +55,7 @@
     "semantic-ui-react": "^0.88.1"
   },
   "scripts": {
-    "start": "DANGEROUSLY_DISABLE_HOST_CHECK=true PORT=3001 react-scripts start",
+    "start": " react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
