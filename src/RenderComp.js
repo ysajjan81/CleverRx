@@ -248,6 +248,8 @@ class RenderComp extends Component {
             firsLoad:true,
             exportData:[],
             selectedTweets:[],
+            selectedFacebookData:[],
+            selectedTwitterData:[],
             dataToDownload: [],
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
@@ -261,6 +263,7 @@ class RenderComp extends Component {
          this.handleCardSentimentPositive = this.handleCardSentimentPositive.bind(this);
          this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
          this.myCallbackForTweets = this.myCallbackForTweets.bind(this);
+         this.facebookAndTwitterCallback = this.facebookAndTwitterCallback.bind(this);
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.export = this.export.bind(this);
     }
@@ -297,11 +300,11 @@ class RenderComp extends Component {
       console.log("insideExport");
       console.log(this.state.selectedTopicPhrase);
       A = [];
-      A.push(["Id", "Phrase", "Topic", "Tweets"]);
+      A.push(["Id", "Phrase", "Topic", "Tweets", "FacebookID", "TwitterID"]);
       var re = this.state.selectedTopicPhrase;
       for(let item =  0 ; item<re.length ; item++)
       {
-        A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item]]);
+        A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item], this.state.selectedFacebookData[item], this.state.selectedTwitterData[item]]);
       }
 
       console.log(A);
@@ -434,6 +437,25 @@ class RenderComp extends Component {
       temp.push(tweetsSelectedFromMyTweets);
       this.setState({selectedTweets:temp});
       // console.log(this.state.selectedTweets);
+    }
+
+    facebookAndTwitterCallback(facebookAndTwitterData){
+      var temp=[];
+      if(facebookAndTwitterData.type === "facebook"){
+        for(var i  = 0 ; i<this.state.selectedFacebookData.length;i++)
+        {
+          temp.push(this.state.selectedFacebookData[i]);
+        }
+        temp.push(facebookAndTwitterData.pagename);
+        this.setState({selectedFacebookData:temp});
+      }else if(facebookAndTwitterData.type === "twitter"){
+        for(var i  = 0 ; i<this.state.selectedTwitterData.length;i++)
+        {
+          temp.push(this.state.selectedTwitterData[i]);
+        }
+        temp.push(facebookAndTwitterData.link);
+        this.setState({selectedTwitterData:temp});
+      }
     }
     myCallbackForMedication(medicationSelectedFromMyMedication)
     {
@@ -665,7 +687,7 @@ class RenderComp extends Component {
                         </Grid.Column>
                         <Grid.Column width={8}>
                             <Segment>
-                              <FacebookAndTwitter data = {this.state.data}/>
+                              <FacebookAndTwitter data = {this.state.data} populateSelectedData={this.facebookAndTwitterCallback}/>
                             </Segment>
                         </Grid.Column>
                     </Grid.Row>

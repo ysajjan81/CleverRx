@@ -9,7 +9,7 @@ import ReactPlayer from 'react-player'
 import { FacebookProvider, EmbeddedPost, Page, Group, Comments} from 'react-facebook';
 // import { Row, Layout, Col, Card,  Menu, Breadcrumb, Carousel } from 'antd';
 
-export default class    Twitter extends React.Component {
+export default class Twitter extends React.Component {
   constructor(props) {
       super(props);
       this.state ={
@@ -26,7 +26,7 @@ export default class    Twitter extends React.Component {
       this.fbSelected = this.fbSelected.bind(this);
       this.twitterSelected = this.twitterSelected.bind(this);
   }
-  fbSelected = (event) =>{
+  fbSelected = (event, data) =>{
     var val = event.target.value;
     if(event.target.checked == true){
       if(this.state.fbClicked > 0){
@@ -46,9 +46,10 @@ export default class    Twitter extends React.Component {
         this.setState({fbClicked:0, fbSum: parseInt(this.state.fbTotalSum)});
       }
     }
+    this.props.populateSelectedData(data)
   }
 
-  twitterSelected(event){
+  twitterSelected(event, data){
     var val = event.target.value;
     if(event.target.checked == true){
       if(this.state.twClicked > 0){
@@ -68,6 +69,7 @@ export default class    Twitter extends React.Component {
         this.setState({twClicked:0, twitterSum: parseInt(this.state.twitterTotalSum)});
       }
     }
+    this.props.populateSelectedData(data)
   }
 
   componentDidUpdate(prevProps){
@@ -101,7 +103,7 @@ export default class    Twitter extends React.Component {
                     type="checkbox"
                     name="FB"
                     value={this.props.data.facebook[i].count}
-                    onChange={this.fbSelected} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                    onChange={(event)=>this.fbSelected(event,this.props.data.facebook[i])} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   />
                   <label style={{fontSize:'13px'}}>{this.props.data.facebook[i].phrase}</label>
                   {/* <label style={{fontSize:'13px'}}>{facebookPhrase}</label> */}
@@ -134,7 +136,7 @@ export default class    Twitter extends React.Component {
                     type="checkbox"
                     name="Twitter"
                     value={this.props.data.twitter[i].count}
-                    onChange={this.twitterSelected} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                    onChange={(event)=>this.twitterSelected(event,this.props.data.twitter[i])} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   />
                   <label>{this.props.data.twitter[i].phrase}</label>
                 </div>
