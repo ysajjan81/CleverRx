@@ -307,7 +307,7 @@ class RenderComp extends Component {
       console.log(A);
       this.setState({ dataToDownload: A }, () => {
         // click the CSVLink component to trigger the CSV download
-        this.csvLink.link.click()
+        // this.csvLink.link.click()
      })
     }
 
@@ -654,10 +654,12 @@ class RenderComp extends Component {
                                 </Paper>
                           </div>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
-                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>Export</Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>
+                                  <CSVLink style={{color:'black', textDecoration:'none'}}data={this.state.dataToDownload} filename={"data.csv"}>Export</CSVLink>
+                                </Button>
                   <div>
-                    <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
-                    ref={(r) => this.csvLink = r} target="_blank"/>
+                    {/* <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
+                    ref={(r) => this.csvLink = r} target="_blank"/> */}
                  </div>
                             </Segment>
                         </Grid.Column>
