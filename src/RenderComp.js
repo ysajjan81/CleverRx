@@ -220,7 +220,6 @@ var topicOptions = [
     text: 'Weight Loss',
     value: 'weight loss',
   },
-
 ];
 
 class RenderComp extends Component {
@@ -249,6 +248,9 @@ class RenderComp extends Component {
             exportData:[],
             selectedTweets:[],
             dataToDownload: [],
+            selectedFacebookLinks:[],
+            selectedTwitterLinks:[],
+            selectedMedication:[]
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -263,6 +265,7 @@ class RenderComp extends Component {
          this.myCallbackForTweets = this.myCallbackForTweets.bind(this);
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.export = this.export.bind(this);
+         this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
     }
     // export()
     // {
@@ -437,9 +440,15 @@ class RenderComp extends Component {
     }
     myCallbackForMedication(medicationSelectedFromMyMedication)
     {
-
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedMedication.length ; i++)
+          temp.push(this.state.selectedMedication[i]);
+        temp.push(medicationSelectedFromMyMedication);
+        this.setState({selectedMedication: temp});
+        console.log("InmyCallbackForMedication")
+        console.log(this.state.selectedMedication);
     }
-
+    
     checkBoxSelected = (event, {value}) =>
     {
         var temp = [] ;
@@ -658,7 +667,7 @@ class RenderComp extends Component {
                   <div>
                     <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
                     ref={(r) => this.csvLink = r} target="_blank"/>
-                 </div>
+                 </div> 
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
@@ -743,7 +752,7 @@ class RenderComp extends Component {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
                              ) : (
-                               <div ><Medication data = {this.state.data.without_insurance_dict.medication_list}/></div>
+                               <div ><Medication data = {this.state.data.without_insurance_dict.medication_list} callbackformedication={this.myCallbackForMedication}/></div>
                             )
                         }
                         </Segment>
@@ -786,7 +795,7 @@ class RenderComp extends Component {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
                              ) : (
-                               <div><Medication data = {this.state.data.insurance_dict.medication_list}/></div>
+                               <div><Medication data = {this.state.data.insurance_dict.medication_list} callbackformedication={this.myCallbackForMedication}/></div>
                             )
                         }
                         </Segment>
