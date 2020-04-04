@@ -247,6 +247,8 @@ class RenderComp extends Component {
             firsLoad:true,
             exportData:[],
             selectedTweets:[],
+            selectedFacebookData:[],
+            selectedTwitterData:[],
             dataToDownload: [],
             selectedFacebookLinks:[],
             selectedTwitterLinks:[],
@@ -263,6 +265,7 @@ class RenderComp extends Component {
          this.handleCardSentimentPositive = this.handleCardSentimentPositive.bind(this);
          this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
          this.myCallbackForTweets = this.myCallbackForTweets.bind(this);
+         this.facebookAndTwitterCallback = this.facebookAndTwitterCallback.bind(this);
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.export = this.export.bind(this);
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
@@ -300,17 +303,17 @@ class RenderComp extends Component {
       console.log("insideExport");
       console.log(this.state.selectedTopicPhrase);
       A = [];
-      A.push(["Id", "Phrase", "Topic", "Tweets"]);
+      A.push(["Id", "Phrase", "Topic", "Tweets", "FacebookID", "TwitterID"]);
       var re = this.state.selectedTopicPhrase;
       for(let item =  0 ; item<re.length ; item++)
       {
-        A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item]]);
+        A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item], this.state.selectedFacebookData[item], this.state.selectedTwitterData[item]]);
       }
 
       console.log(A);
       this.setState({ dataToDownload: A }, () => {
         // click the CSVLink component to trigger the CSV download
-        this.csvLink.link.click()
+        // this.csvLink.link.click()
      })
     }
 
@@ -437,6 +440,25 @@ class RenderComp extends Component {
       temp.push(tweetsSelectedFromMyTweets);
       this.setState({selectedTweets:temp});
       // console.log(this.state.selectedTweets);
+    }
+
+    facebookAndTwitterCallback(facebookAndTwitterData){
+      var temp=[];
+      if(facebookAndTwitterData.type === "facebook"){
+        for(var i  = 0 ; i<this.state.selectedFacebookData.length;i++)
+        {
+          temp.push(this.state.selectedFacebookData[i]);
+        }
+        temp.push(facebookAndTwitterData.pagename);
+        this.setState({selectedFacebookData:temp});
+      }else if(facebookAndTwitterData.type === "twitter"){
+        for(var i  = 0 ; i<this.state.selectedTwitterData.length;i++)
+        {
+          temp.push(this.state.selectedTwitterData[i]);
+        }
+        temp.push(facebookAndTwitterData.link);
+        this.setState({selectedTwitterData:temp});
+      }
     }
     myCallbackForMedication(medicationSelectedFromMyMedication)
     {
@@ -663,16 +685,18 @@ class RenderComp extends Component {
                                 </Paper>
                           </div>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
-                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>Export</Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>
+                                  <CSVLink style={{color:'black', textDecoration:'none'}}data={this.state.dataToDownload} filename={"data.csv"}>Export</CSVLink>
+                                </Button>
                   <div>
-                    <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
-                    ref={(r) => this.csvLink = r} target="_blank"/>
-                 </div> 
+                    {/* <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
+                    ref={(r) => this.csvLink = r} target="_blank"/> */}
+                 </div>
                             </Segment>
                         </Grid.Column>
                         <Grid.Column width={8}>
                             <Segment>
-                              <FacebookAndTwitter data = {this.state.data}/>
+                              <FacebookAndTwitter data = {this.state.data} populateSelectedData={this.facebookAndTwitterCallback}/>
                             </Segment>
                         </Grid.Column>
                     </Grid.Row>
