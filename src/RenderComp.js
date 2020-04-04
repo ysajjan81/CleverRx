@@ -296,7 +296,7 @@ class RenderComp extends Component {
     //   a.click();
     // }
 
-    export(){
+    export(shouldDownload){
       var jsonObject = [];
       var re = this.state.selectedTopicPhrase;
       for(let item =  0 ; item<re.length ; item++)
@@ -312,18 +312,26 @@ class RenderComp extends Component {
         })
       }
       this.setState({ dataToDownload: jsonObject }, () => {
-        let jsonFile = "data.json";
-        let contentType = "application/json;charset=utf-8;";
-        //Generating an href html element
-        var a = document.createElement('a');
-        a.download = jsonFile;
-        a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
-        a.target = '_blank';
 
-        //The following statement will add the html element, download data and removes the elements.
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        if(shouldDownload){
+          let jsonFile = "ExportData.json";
+          let contentType = "application/json;charset=utf-8;";
+          //Generating an href html element
+          var a = document.createElement('a');
+          a.download = jsonFile;
+          a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
+          a.target = '_blank';
+          
+          //The following statement will add the html element, download data and removes the elements.
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        }else{
+          //Convert the data into data URL, Open the new window and display it in a iframe
+          var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
+          var newWindow = window.open();
+          newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+        }
      })
     }
 
@@ -689,7 +697,8 @@ class RenderComp extends Component {
                                 </Paper>
                           </div>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
-                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>Export Data</Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={()=>this.export(true)}>Export Data</Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={()=>this.export(false)}>Show Data</Button>
                   <div>
                     {/* <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
                     ref={(r) => this.csvLink = r} target="_blank"/> */}
