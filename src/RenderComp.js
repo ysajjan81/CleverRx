@@ -297,20 +297,33 @@ class RenderComp extends Component {
     // }
 
     export(){
-      console.log("insideExport");
-      console.log(this.state.selectedTopicPhrase);
-      A = [];
-      A.push(["Id", "Phrase", "Topic", "Tweets", "FacebookID", "TwitterID"]);
+      var jsonObject = [];
       var re = this.state.selectedTopicPhrase;
       for(let item =  0 ; item<re.length ; item++)
       {
-        A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item], this.state.selectedFacebookData[item], this.state.selectedTwitterData[item]]);
+        // A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item], this.state.selectedFacebookData[item], this.state.selectedTwitterData[item]]);
+        jsonObject.push({
+          id:item,
+          Phrase:re[item],
+          Topic:this.state.myTopic,
+          Tweets:this.state.selectedTweets[item],
+          FacebookID:this.state.selectedFacebookData[item], 
+          TwitterID:this.state.selectedTwitterData[item]
+        })
       }
+      this.setState({ dataToDownload: jsonObject }, () => {
+        let jsonFile = "data.json";
+        let contentType = "application/json;charset=utf-8;";
+        //Generating an href html element
+        var a = document.createElement('a');
+        a.download = jsonFile;
+        a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
+        a.target = '_blank';
 
-      console.log(A);
-      this.setState({ dataToDownload: A }, () => {
-        // click the CSVLink component to trigger the CSV download
-        // this.csvLink.link.click()
+        //The following statement will add the html element, download data and removes the elements.
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
      })
     }
 
@@ -676,9 +689,7 @@ class RenderComp extends Component {
                                 </Paper>
                           </div>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
-                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>
-                                  <CSVLink style={{color:'black', textDecoration:'none'}}data={this.state.dataToDownload} filename={"data.csv"}>Export</CSVLink>
-                                </Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={this.export}>Export Data</Button>
                   <div>
                     {/* <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
                     ref={(r) => this.csvLink = r} target="_blank"/> */}
