@@ -242,7 +242,6 @@ class RenderComp extends Component {
             getApiResultForMultiplePhrase:[],
             phraseString:"",
             loading:false,
-
             insuranceSentimentPositive:true,
             insuranceSentimentNegative:true,
             cardSentimentPositive:true,
@@ -307,7 +306,6 @@ class RenderComp extends Component {
     export(shouldDownload)
     {
       var jsonObject = [];
-      // var re = this.state.selectedTopicPhrase;
 
       var maxiLength = 0 ; 
       if(maxiLength < this.state.selectedTopicPhrase.length)
@@ -338,7 +336,6 @@ class RenderComp extends Component {
       {
         // A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item], this.state.selectedFacebookData[item], this.state.selectedTwitterData[item]]);
         var tempPhrase = "";
-        var tempTopic = "";
         var tempTweets = "";
         var tempFacebookData = "";
         var tempTwitterData = "";
@@ -386,13 +383,18 @@ class RenderComp extends Component {
           Topic:this.state.myTopic,
           Tweets:tempTweets,
           FacebookID:tempFacebookData, 
-          TwitterID:tempTwitterData
+          TwitterID:tempTwitterData,
+          Medication:tempMedication,
+          ExternalLinks:tempExternalLinks,
+          TwitterLinks:tempLandingPageTwitterLink,
+          Memes:tempMemes,
         })
-
       }
+
       this.setState({ dataToDownload: jsonObject }, () => {
 
-        if(shouldDownload){
+        if(shouldDownload)
+        {
           let jsonFile = "ExportData.json";
           let contentType = "application/json;charset=utf-8;";
           //Generating an href html element
@@ -428,6 +430,7 @@ class RenderComp extends Component {
       else
       this.setState({cardSentimentNegative: true});
     }
+
     handleInsuranceSentimentPositive()
     {
       if(this.state.insuranceSentimentPositive == true)
