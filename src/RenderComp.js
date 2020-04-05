@@ -24,7 +24,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import MyCarousel from './MyCarousel';
 // import json2csv from "json2csv";
 import { CSVDownload, CSVLink } from "react-csv";
+import { Layout } from 'antd';
 
+
+const { Header, Footer, Content } = Layout;
 const loadingIcon = <Icon loading style={{ fontSize: 150, color:"black" }} name='spinner' />;
 let current = '';
 let prev = '';
@@ -299,7 +302,8 @@ class RenderComp extends Component {
     //   a.click();
     // }
 
-    export(shouldDownload){
+    export(shouldDownload)
+    {
       var jsonObject = [];
       var re = this.state.selectedTopicPhrase;
       for(let item =  0 ; item<re.length ; item++)
@@ -679,7 +683,24 @@ class RenderComp extends Component {
 
             <div>
                 <div>
-                <HeaderBar></HeaderBar>
+                {/* <HeaderBar></HeaderBar> */}
+                <div>
+                {/* <h1 style={this.styleObj} >CleverRx</h1> */}
+                {/* <h1 style={{color:'white'}}>CleverRx</h1> */}
+        <Layout >
+
+        <Header
+          style={{
+            width: '100%',
+            textAlign: 'center',
+            backgroundColor:'black'
+          }}
+        ><h1 style={{color:"white", fontSize:50}}><b>CleverRx</b>
+          </h1>
+      </Header>
+
+       </Layout>
+        </div>
                 </div>
                 <Grid textAlign='center' style={{padding:'20px'}} columns={2}>
                     <Grid.Row>
