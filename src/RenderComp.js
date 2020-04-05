@@ -1,6 +1,6 @@
 import React, { Component, ReactPropTypes } from 'react';
 import TextContent from './TextContent';
-import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon } from 'semantic-ui-react';
+import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon, Label } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
 import App from './App';
 import FacebookAndTwitter from './FacebookAndTwitter';
@@ -392,9 +392,7 @@ class RenderComp extends Component {
       }
 
       this.setState({ dataToDownload: jsonObject }, () => {
-
-        if(shouldDownload)
-        {
+        if(shouldDownload){
           let jsonFile = "ExportData.json";
           let contentType = "application/json;charset=utf-8;";
           //Generating an href html element
@@ -403,7 +401,7 @@ class RenderComp extends Component {
           a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
           a.target = '_blank';
           
-          //The following statement will add the html element, download data and removes the elements.
+          //The following statement will add the html element, download data and removes the element.
           document.body.appendChild(a);
           a.click();
           document.body.removeChild(a);
@@ -773,6 +771,10 @@ class RenderComp extends Component {
         ><h1 style={{color:"white", fontSize:50}}><b>CleverRx
           <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(true)}>Export At</Button>
           <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(false)}>Browse At</Button>
+          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}}>
+            <Label style={{padding:'unset', border:'unset', fontSize: '1rem', backgroundColor:'green', cursor:'pointer'}} as="label" basic htmlFor="upload">
+            <input hidden id="upload" multiple type="file"/>Choose file(s)</Label>
+          </Button>
           </b> </h1>
       </Header>
 
