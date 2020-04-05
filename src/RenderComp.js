@@ -242,20 +242,22 @@ class RenderComp extends Component {
             getApiResultForMultiplePhrase:[],
             phraseString:"",
             loading:false,
-            selectedTopicPhrase:[],
+
             insuranceSentimentPositive:true,
             insuranceSentimentNegative:true,
             cardSentimentPositive:true,
             cardSentimentNegative:true,
             firsLoad:true,
             exportData:[],
+            selectedTopicPhrase:[],
             selectedTweets:[],
             selectedFacebookData:[],
             selectedTwitterData:[],
             dataToDownload: [],
             selectedFacebookLinks:[],
             selectedTwitterLinks:[],
-            selectedMedication:[]
+            selectedMedication:[],
+            selectedMemes:[],
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -305,18 +307,88 @@ class RenderComp extends Component {
     export(shouldDownload)
     {
       var jsonObject = [];
-      var re = this.state.selectedTopicPhrase;
-      for(let item =  0 ; item<re.length ; item++)
+      // var re = this.state.selectedTopicPhrase;
+
+      var maxiLength = 0 ; 
+      if(maxiLength < this.state.selectedTopicPhrase.length)
+      maxiLength = this.state.selectedTopicPhrase.length;
+
+      if(maxiLength < this.state.selectedTweets.length)
+      maxiLength = this.state.selectedTweets.length;
+
+      if(maxiLength < this.state.selectedFacebookData.length)
+      maxiLength = this.state.selectedFacebookData.length;
+
+      if(maxiLength < this.state.selectedTwitterData.length)
+      maxiLength = this.state.selectedTwitterData.length;
+
+      if(maxiLength < this.state.selectedMedication.length)
+      maxiLength = this.state.selectedMedication.length;
+
+      if(maxiLength < this.state.selectedFacebookLinks.length)
+      maxiLength = this.state.selectedFacebookLinks.length;
+
+      if(maxiLength < this.state.selectedTwitterLinks.length)
+      maxiLength = this.state.selectedTwitterLinks.length;
+
+      if(maxiLength < this.state.selectedMemes.length)
+      maxiLength = this.state.selectedMemes.length;
+
+      for(let item =  0 ; item<maxiLength; item++)
       {
         // A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item], this.state.selectedFacebookData[item], this.state.selectedTwitterData[item]]);
+        var tempPhrase = "";
+        var tempTopic = "";
+        var tempTweets = "";
+        var tempFacebookData = "";
+        var tempTwitterData = "";
+        var tempMedication = "";
+        var tempExternalLinks = "";
+        var tempLandingPageTwitterLink = "";
+        var tempMemes = "";
+
+        if(item < this.state.selectedTopicPhrase.length)
+        tempPhrase = this.state.selectedTopicPhrase[item];
+
+        if(item < this.state.selectedTweets.length)
+        tempTweets = this.state.selectedMedication[item];
+
+        if(item < this.state.selectedFacebookData.length)
+        tempFacebookData = this.state.selectedFacebookData[item];
+
+        if(item < this.state.selectedTwitterData.length)
+        tempTwitterData = this.state.selectedTwitterData[item];
+
+        if(item < this.state.selectedMedication.length)
+        tempMedication = this.state.selectedMedication[item];
+
+        if(item < this.state.selectedFacebookLinks.length)
+        tempExternalLinks = this.state.selectedFacebookLinks[item];
+
+        if(item < this.state.selectedTwitterLinks.length)
+        tempLandingPageTwitterLink = this.state.selectedTwitterLinks[item];
+
+        if(item < this.state.selectedMemes.length)
+        tempMemes = this.state.selectedMemes[item];
+
+        // jsonObject.push({
+        //   id:item,
+        //   Phrase:re[item],
+        //   Topic:this.state.myTopic,
+        //   Tweets:this.state.selectedTweets[item],
+        //   FacebookID:this.state.selectedFacebookData[item], 
+        //   TwitterID:this.state.selectedTwitterData[item]
+        // })
+
         jsonObject.push({
           id:item,
-          Phrase:re[item],
+          Phrase:tempPhrase,
           Topic:this.state.myTopic,
-          Tweets:this.state.selectedTweets[item],
-          FacebookID:this.state.selectedFacebookData[item], 
-          TwitterID:this.state.selectedTwitterData[item]
+          Tweets:tempTweets,
+          FacebookID:tempFacebookData, 
+          TwitterID:tempTwitterData
         })
+
       }
       this.setState({ dataToDownload: jsonObject }, () => {
 
@@ -695,8 +767,10 @@ class RenderComp extends Component {
             textAlign: 'center',
             backgroundColor:'black'
           }}
-        ><h1 style={{color:"white", fontSize:50}}><b>CleverRx</b>
-          </h1>
+        ><h1 style={{color:"white", fontSize:50}}><b>CleverRx
+          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(true)}>Export At</Button>
+          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(false)}>Browse At</Button>
+          </b> </h1>
       </Header>
 
        </Layout>
@@ -727,8 +801,8 @@ class RenderComp extends Component {
                                 </Paper>
                           </div>
                                 <Button style={{marginTop:'10px', color:'black'}} onClick={this.sendPhrases}>Get Data</Button>
-                                <Button style={{marginTop:'10px', color:'black'}} onClick={()=>this.export(true)}>Export Data</Button>
-                                <Button style={{marginTop:'10px', color:'black'}} onClick={()=>this.export(false)}>Show Data</Button>
+                                {/* <Button style={{marginTop:'10px', color:'black'}} onClick={()=>this.export(true)}>Export Data</Button>
+                                <Button style={{marginTop:'10px', color:'black'}} onClick={()=>this.export(false)}>Show Data</Button> */}
                   <div>
                     {/* <CSVLink data={this.state.dataToDownload} filename="data.csv" className="hidden" 
                     ref={(r) => this.csvLink = r} target="_blank"/> */}
