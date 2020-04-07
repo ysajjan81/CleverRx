@@ -1,6 +1,6 @@
-import {Table, Image, Header, Icon} from 'semantic-ui-react'
+import {Table, Image, Header, Icon, Checkbox} from 'semantic-ui-react'
 import Paper from '@material-ui/core/Paper';
-import Checkbox from '@material-ui/core/Checkbox';
+// import Checkbox from '@material-ui/core/Checkbox';
 import React, { Component } from 'react';
 
 class Medication extends Component {
@@ -9,12 +9,13 @@ class Medication extends Component {
     this.state = {  }
     this.sendDataToParent = this.sendDataToParent.bind(this);
   }
-  sendDataToParent(value)
+  sendDataToParent(event, {value})
   {
     this.props.callbackformedication(value);
   }
 
-  render() { 
+  render() 
+  { 
     var l = [];
     if(this.props.data && this.props.data.length != 0)
     {
@@ -28,14 +29,14 @@ class Medication extends Component {
           l.push(<Table.Row>
               <Table.Cell>  
                 <div>
-                  <input
+                  {/* <input
                     type="checkbox"
                     name="Meds"
                     value={this.props.data[i][0]}
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange={(e) => this.sendDataToParent(this.props.data[i][0])} 
-                  />
-                  {/* <Checkbox Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={this.sendDataToParent} value={this.props.data[i][0]}/> */}
+                  /> */}
+                  <Checkbox Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={this.sendDataToParent} value={this.props.data[i][0]}/>
                   <label style={{fontSize:'13px', display: 'inline'}}>{this.props.data[i][0]}</label>
                 </div>
                 </Table.Cell>

@@ -769,11 +769,11 @@ class RenderComp extends Component {
             backgroundColor:'black'
           }}
         ><h1 style={{color:"white", fontSize:50}}><b>CleverRx
-          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(true)}>Export At</Button>
-          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(false)}>Browse At</Button>
+          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(true)}>ExportAt</Button>
+          {/* <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(false)}>Browse At</Button> */}
           <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}}>
             <Label style={{padding:'unset', border:'unset', fontSize: '1rem', backgroundColor:'green', cursor:'pointer'}} as="label" basic htmlFor="upload">
-            <input hidden id="upload" multiple type="file"/>Choose file(s)</Label>
+            <input hidden id="upload" multiple type="file"/>BrowseAt</Label>
           </Button>
           </b> </h1>
       </Header>
