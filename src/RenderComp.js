@@ -257,6 +257,7 @@ class RenderComp extends Component {
             selectedTwitterLinks:[],
             selectedMedication:[],
             selectedMemes:[],
+            showExportModal:false,
             inputFileName:"",
             listOfFiles:["file1.json", "file2.json", "file3.json", "file4.json"]
          }
@@ -276,6 +277,7 @@ class RenderComp extends Component {
          this.export = this.export.bind(this);
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.handleFileNameChange = this.handleFileNameChange.bind(this);
+         this.toggleExportModal = this.toggleExportModal.bind(this);
     }
     // export()
     // {
@@ -404,12 +406,9 @@ class RenderComp extends Component {
           a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
           a.target = '_blank';
           
-          //The following statement will add the html element, download data and removes the element.
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-        }else
-        {
+          //Logic to hit the api and save the data
+          this.toggleExportModal()
+        }else{
           //Convert the data into data URL, Open the new window and display it in a iframe
           var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
           var newWindow = window.open();
@@ -418,6 +417,9 @@ class RenderComp extends Component {
      })
     }
 
+    toggleExportModal(){
+      this.setState({ showExportModal: !this.state.showExportModal})
+    }
     handleCardSentimentPositive()
     {
       if(this.state.cardSentimentPositive == true)
@@ -783,8 +785,13 @@ class RenderComp extends Component {
             <h1 style={{color:"white", fontSize:50}}><b>CleverRx</b></h1>
           </div>
           <div class="headerButtons" style={{display:'inline-block', float:'right', marginTop:'2px'}}>
+<<<<<<< HEAD
             <Modal scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}} trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}}>Save Ad</Button>}>
               <Modal.Header>Save</Modal.Header>
+=======
+            <Modal open={this.state.showExportModal} scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}} trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#7dabee'}} onClick={this.toggleExportModal}>Export to</Button>}>
+              <Modal.Header>Export To</Modal.Header>
+>>>>>>> 641b08303dc5dab43255147aa70160f06f0cb3d5
               <Modal.Content>
                 <Modal.Description style={{textAlign:'center'}}>
                   <div class="ui focus input">
