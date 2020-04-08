@@ -1,6 +1,6 @@
 import React, { Component, ReactPropTypes } from 'react';
 import TextContent from './TextContent';
-import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon, Label } from 'semantic-ui-react';
+import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon, Label, Modal, Image, Input } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
 import App from './App';
 import FacebookAndTwitter from './FacebookAndTwitter';
@@ -257,6 +257,8 @@ class RenderComp extends Component {
             selectedTwitterLinks:[],
             selectedMedication:[],
             selectedMemes:[],
+            inputFileName:"",
+            listOfFiles:["file1.json", "file2.json", "file3.json", "file4.json"]
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -273,6 +275,7 @@ class RenderComp extends Component {
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.export = this.export.bind(this);
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
+         this.handleFileNameChange = this.handleFileNameChange.bind(this);
     }
     // export()
     // {
@@ -393,7 +396,7 @@ class RenderComp extends Component {
 
       this.setState({ dataToDownload: jsonObject }, () => {
         if(shouldDownload){
-          let jsonFile = "ExportData.json";
+          let jsonFile = this.state.inputFileName+'.json';
           let contentType = "application/json;charset=utf-8;";
           //Generating an href html element
           var a = document.createElement('a');
@@ -442,6 +445,13 @@ class RenderComp extends Component {
       this.setState({insuranceSentimentNegative: false})
       else
       this.setState({insuranceSentimentNegative: true})
+    }
+    handleFileNameChange(event){
+      this.setState({ inputFileName:event.target.value })
+    }
+    handleOpenButton(fileName){
+      //To be Implemented
+      console.log(fileName)
     }
     componentDidMount()
     {
@@ -764,19 +774,56 @@ class RenderComp extends Component {
 
         <Header
           style={{
-            width: '100%',
             textAlign: 'center',
             backgroundColor:'black'
           }}
-        ><h1 style={{color:"white", fontSize:50}}><b>CleverRx
-          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(true)}>ExportAt</Button>
-          {/* <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}} onClick={()=>this.export(false)}>Browse At</Button> */}
-          <Button style={{marginTop:'10px', color:'black', backgroundColor:'green'}}>
-            <Label style={{padding:'unset', border:'unset', fontSize: '1rem', backgroundColor:'green', cursor:'pointer'}} as="label" basic htmlFor="upload">
-            <input hidden id="upload" multiple type="file"/>BrowseAt</Label>
-          </Button>
-          </b> </h1>
-      </Header>
+        >
+          <div class="headerTitle" style={{display:'inline-block'}}>
+            <h1 style={{color:"white", fontSize:50}}><b>CleverRx</b></h1>
+          </div>
+          <div class="headerButtons" style={{display:'inline-block', float:'right', marginTop:'2px'}}>
+            <Modal scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}} trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#7dabee'}}>Export to</Button>}>
+              <Modal.Header>Export To</Modal.Header>
+              <Modal.Content>
+                <Modal.Description style={{textAlign:'center'}}>
+                  <div class="ui focus input">
+                    <Input placeholder="Enter the file Name..." onChange={this.handleFileNameChange} /></div>
+                  <Button style={{marginLeft:'10px'}} primary onClick={()=>this.export(true)}>
+                    Export <Icon style={{marginLeft:'2px'}} name='upload' />
+                  </Button>
+                </Modal.Description>
+              </Modal.Content>
+            </Modal>
+
+            <Modal style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}}  trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#7dabee'}}>Browse</Button>}>
+            <Modal.Header>Browse Files</Modal.Header>
+            <Modal.Content>
+              <Modal.Description>
+                <Table stickyHeader aria-label="sticky table">
+                  <TableHead>
+                    <TableRow>
+                      <TableCell style={{fontSize:'20px', color:'black'}}>Filename</TableCell>
+                      <TableCell></TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    {
+                      this.state.listOfFiles.map((data) =>{
+                        return(
+                          <TableRow style={{height:'unset !important'}}>
+                            <TableCell>{data}</TableCell>
+                            <TableCell><Button onClick={()=>this.handleOpenButton(data)} style={{color:'black', backgroundColor:'#7dabee'}}>Open</Button> </TableCell>
+                          </TableRow>
+                        )
+                      })
+                    }
+                  </TableBody>
+                </Table>
+              </Modal.Description>
+            </Modal.Content>
+          </Modal>
+          </div>
+        </Header>
 
        </Layout>
         </div>
