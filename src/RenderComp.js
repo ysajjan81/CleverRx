@@ -797,7 +797,6 @@ class RenderComp extends Component {
                 </Modal.Description>
               </Modal.Content>
             </Modal>
-
             <Modal style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}}  trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}}>Browse Ads</Button>}>
             <Modal.Header>Browse Files</Modal.Header>
             <Modal.Content>
