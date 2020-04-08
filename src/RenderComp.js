@@ -259,7 +259,8 @@ class RenderComp extends Component {
             selectedMemes:[],
             showExportModal:false,
             inputFileName:"",
-            listOfFiles:["file1.json", "file2.json", "file3.json", "file4.json"]
+            listOfFiles:["file1.json", "file2.json", "file3.json", "file4.json"],
+            selectedFileNamesToOpen:[]
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -398,15 +399,13 @@ class RenderComp extends Component {
 
       this.setState({ dataToDownload: jsonObject }, () => {
         if(shouldDownload){
-          let jsonFile = this.state.inputFileName+'.json';
-          let contentType = "application/json;charset=utf-8;";
-          //Generating an href html element
-          var a = document.createElement('a');
-          a.download = jsonFile;
-          a.href = 'data:' + contentType + ',' + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
-          a.target = '_blank';
-          
+          var jsonFile = this.state.inputFileName+'.json';
+          var listOfFiles = this.state.listOfFiles;
+          listOfFiles.push(this.state.inputFileName);
           //Logic to hit the api and save the data
+
+          //Updating the filename array
+          this.setState({ listOfFiles })
           this.toggleExportModal()
         }else{
           //Convert the data into data URL, Open the new window and display it in a iframe
@@ -452,10 +451,20 @@ class RenderComp extends Component {
     handleFileNameChange(event){
       this.setState({ inputFileName:event.target.value })
     }
-    handleOpenButton(fileName){
+
+    handleFileCheckBox(fileName){
       //To be Implemented
-      console.log(fileName)
+      var currentArray = this.state.selectedFileNamesToOpen;
+      var fileNameIndex = currentArray.indexOf(fileName);
+      if(currentArray.length > 0 && fileNameIndex !== -1){
+        currentArray.splice(fileNameIndex, 1);
+        this.setState({ selectedFileNamesToOpen: currentArray});
+      }else{
+        currentArray.push(fileName)
+        this.setState({ selectedFileNamesToOpen : currentArray})
+      }
     }
+
     componentDidMount()
     {
       this.setState({loading: true});
@@ -719,7 +728,6 @@ class RenderComp extends Component {
 }
     render()
     {
-      console.log(this.state.data);
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
@@ -800,9 +808,9 @@ class RenderComp extends Component {
 
             <Modal style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}}  trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#7dabee'}}>Browse</Button>}>
             <Modal.Header>Browse Files</Modal.Header>
-            <Modal.Content>
+            <Modal.Content scrolling>
               <Modal.Description>
-                <Table stickyHeader aria-label="sticky table">
+                <Table>
                   <TableHead>
                     <TableRow>
                       <TableCell style={{fontSize:'20px', color:'black'}}>Filename</TableCell>
@@ -815,7 +823,7 @@ class RenderComp extends Component {
                         return(
                           <TableRow style={{height:'unset !important'}}>
                             <TableCell>{data}</TableCell>
-                            <TableCell><Button onClick={()=>this.handleOpenButton(data)} style={{color:'black', backgroundColor:'#7dabee'}}>Open</Button> </TableCell>
+                            <TableCell><Checkbox onClick={()=>this.handleFileCheckBox(data)}/></TableCell>
                           </TableRow>
                         )
                       })
