@@ -408,7 +408,8 @@ class RenderComp extends Component {
           document.body.appendChild(a);
           a.click();
           document.body.removeChild(a);
-        }else{
+        }else
+        {
           //Convert the data into data URL, Open the new window and display it in a iframe
           var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
           var newWindow = window.open();
@@ -783,7 +784,7 @@ class RenderComp extends Component {
           </div>
           <div class="headerButtons" style={{display:'inline-block', float:'right', marginTop:'2px'}}>
             <Modal scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}} trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}}>Save Ad</Button>}>
-              <Modal.Header>Export To</Modal.Header>
+              <Modal.Header>Save</Modal.Header>
               <Modal.Content>
                 <Modal.Description style={{textAlign:'center'}}>
                   <div class="ui focus input">
