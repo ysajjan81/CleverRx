@@ -782,20 +782,20 @@ class RenderComp extends Component {
             <h1 style={{color:"white", fontSize:50}}><b>CleverRx</b></h1>
           </div>
           <div class="headerButtons" style={{display:'inline-block', float:'right', marginTop:'2px'}}>
-            <Modal scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}} trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#7dabee'}}>Export to</Button>}>
+            <Modal scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}} trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}}>Save Ad</Button>}>
               <Modal.Header>Export To</Modal.Header>
               <Modal.Content>
                 <Modal.Description style={{textAlign:'center'}}>
                   <div class="ui focus input">
                     <Input placeholder="Enter the file Name..." onChange={this.handleFileNameChange} /></div>
                   <Button style={{marginLeft:'10px'}} primary onClick={()=>this.export(true)}>
-                    Export <Icon style={{marginLeft:'2px'}} name='upload' />
+                    Save <Icon style={{marginLeft:'2px'}} name='upload' />
                   </Button>
                 </Modal.Description>
               </Modal.Content>
             </Modal>
 
-            <Modal style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}}  trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#7dabee'}}>Browse</Button>}>
+            <Modal style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}}  trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}}>Browse Ads</Button>}>
             <Modal.Header>Browse Files</Modal.Header>
             <Modal.Content>
               <Modal.Description>
