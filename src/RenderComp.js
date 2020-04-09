@@ -279,6 +279,7 @@ class RenderComp extends Component {
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.handleFileNameChange = this.handleFileNameChange.bind(this);
          this.toggleExportModal = this.toggleExportModal.bind(this);
+         this.handleOpenButton = this.handleOpenButton.bind(this);
     }
     // export()
     // {
@@ -418,6 +419,10 @@ class RenderComp extends Component {
 
     toggleExportModal(){
       this.setState({ showExportModal: !this.state.showExportModal})
+    }
+
+    handleOpenButton(){
+      console.log(this.state.listOfFiles)
     }
     handleCardSentimentPositive()
     {
@@ -830,6 +835,7 @@ class RenderComp extends Component {
                     }
                   </TableBody>
                 </Table>
+                <div style={{ marginTop:'10px', textAlign:'center'}}><Button primary onClick={this.handleOpenButton}>Open</Button></div>
               </Modal.Description>
             </Modal.Content>
           </Modal>
