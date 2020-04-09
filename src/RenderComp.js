@@ -1,6 +1,6 @@
 import React, { Component, ReactPropTypes } from 'react';
 import TextContent from './TextContent';
-import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon, Label, Modal, Image, Input } from 'semantic-ui-react';
+import {Grid, Divider, Segment, GridColumn, Dropdown, Form , Button, Checkbox, Icon, Label, Modal, Image, Input, Radio } from 'semantic-ui-react';
 import HeaderBar from './HeaderBar';
 import App from './App';
 import FacebookAndTwitter from './FacebookAndTwitter';
@@ -798,7 +798,7 @@ class RenderComp extends Component {
               <Modal.Content>
                 <Modal.Description style={{textAlign:'center'}}>
                   <div class="ui focus input">
-                    <Input placeholder="Enter the file Name..." onChange={this.handleFileNameChange} /></div>
+                  <Input placeholder="Enter the file Name..." onChange={this.handleFileNameChange} /></div>
                   <Button style={{marginLeft:'10px'}} primary onClick={()=>this.export(true)}>
                     Save <Icon style={{marginLeft:'2px'}} name='upload' />
                   </Button>
