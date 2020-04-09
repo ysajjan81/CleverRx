@@ -100,11 +100,18 @@ export default class Twitter extends React.Component {
                 <Table.Cell style={{minWidth:'150px'}}>
                 <div>
                   <input
+                    key = {this.props.data.facebook[i].count}
                     type="checkbox"
                     name="FB"
                     value={this.props.data.facebook[i].count}
                     onChange={(event)=>this.fbSelected(event,this.props.data.facebook[i])} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   />
+                  {/* <Checkbox
+                    key = {this.props.data.facebook[i].count} 
+                    type="checkbox"
+                    name="FB"
+                    value={this.props.data.facebook[i].count}
+                    onChange={(event)=>this.fbSelected(event,this.props.data.facebook[i])} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}} /> */}
                   <label style={{fontSize:'13px'}}>{this.props.data.facebook[i].phrase}</label>
                   {/* <label style={{fontSize:'13px'}}>{facebookPhrase}</label> */}
                 </div>
@@ -132,7 +139,7 @@ export default class Twitter extends React.Component {
                 <Table.Cell>
                 <div>
                   <input
-
+                    key = {this.props.data.twitter[i].count}
                     type="checkbox"
                     name="Twitter"
                     value={this.props.data.twitter[i].count}

@@ -827,7 +827,8 @@ class RenderComp extends Component {
                         return(
                           <TableRow style={{height:'unset !important'}}>
                             <TableCell>{data}</TableCell>
-                            <TableCell><Checkbox onClick={()=>this.handleFileCheckBox(data)}/></TableCell>
+                            {/* <TableCell><Checkbox onClick={()=>this.handleFileCheckBox(data)}/></TableCell> */}
+                            <TableCell><input type="radio" name="file" value="" onClick={()=>this.handleFileCheckBox(data)}></input></TableCell>
                           </TableRow>
                         )
                       })
@@ -891,7 +892,7 @@ class RenderComp extends Component {
                       ) : (<div/>)
                       }
                       <Grid.Column >
-                      <Checkbox label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
+                      <Checkbox key={this.state.myTopic} label="Card/Customer" style = {checkBoxStyle} onChange={this.cardSelected}></Checkbox>
                       </Grid.Column>
                       <Grid.Column>
                       {/* <Checkbox label="Insurance/Patient" style = {checkBoxStyle} onChange={this.insuranceSelected}></Checkbox> */}

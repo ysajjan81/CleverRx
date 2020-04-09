@@ -30,13 +30,14 @@ class Medication extends Component {
               <Table.Cell>  
                 <div>
                   {/* <input
+                    key = {this.props.data[i][0]}
                     type="checkbox"
                     name="Meds"
                     value={this.props.data[i][0]}
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange={(e) => this.sendDataToParent(this.props.data[i][0])} 
                   /> */}
-                  <Checkbox Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={this.sendDataToParent} value={this.props.data[i][0]}/>
+                  <Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={this.sendDataToParent} value={this.props.data[i][0]}/>
                   <label style={{fontSize:'13px', display: 'inline'}}>{this.props.data[i][0]}</label>
                 </div>
                 </Table.Cell>
@@ -53,8 +54,8 @@ class Medication extends Component {
                   {this.props.data[i][1][0]}
               </Table.Cell>
           </Table.Row>)
-        }
-
+      }
+    }
     return ( 
       <div className="center-col">
       <Paper>
@@ -72,7 +73,7 @@ class Medication extends Component {
       </Paper>
       </div>
      );
-  }
+
 }
 }
  

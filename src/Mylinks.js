@@ -26,6 +26,7 @@ function Mylinks(props) {
             <Table.Cell>
             <div>
                 <input
+                  key = {data.insurance_dict.external_links[i][1]}
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                 />
@@ -48,6 +49,7 @@ function Mylinks(props) {
             </Table.Cell>
             <Table.Cell><div>
                 <input
+                  key = {data.insurance_dict.facebook_links[i][1]}
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                 />
@@ -70,6 +72,7 @@ function Mylinks(props) {
           </Table.Cell>
           <Table.Cell><div>
               <input
+              key = {data.insurance_dict.twitter_links[i][1]}
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               />
@@ -92,6 +95,7 @@ function Mylinks(props) {
             </Table.Cell>
             <Table.Cell><div>
             <input
+             key = {data.card_dict.external_links[i][1]}
               type="checkbox"
               style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
             />
@@ -114,6 +118,7 @@ function Mylinks(props) {
           </Table.Cell>
           <Table.Cell><div>
           <input
+            key = {data.card_dict.facebook_links[i][1]}
             type="checkbox"
             style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
           />
@@ -137,6 +142,7 @@ function Mylinks(props) {
           </Table.Cell>
           <Table.Cell><div>
             <input
+              key = {data.card_dict.twitter_links[i][1]}
               type="checkbox"
               style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
             />
@@ -161,6 +167,7 @@ function Mylinks(props) {
             <Table.Cell>
             <div>
                 <input
+                  key = {data.without_insurance_dict.external_links[i][1]}
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                 />
@@ -186,6 +193,7 @@ function Mylinks(props) {
             <Table.Cell>
             <div>
                 <input
+                  key = {data.without_insurance_dict.facebook_links[i][1]}
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                 />
@@ -210,6 +218,7 @@ function Mylinks(props) {
             <Table.Cell>
               <div>
                   <input
+                    key = {data.without_insurance_dict.twitter_links[i][1]}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   />
