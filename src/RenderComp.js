@@ -313,7 +313,6 @@ class RenderComp extends Component {
     export(shouldDownload)
     {
       var jsonObject = [];
-
       var maxiLength = 0 ; 
       if(maxiLength < this.state.selectedTopicPhrase.length)
       maxiLength = this.state.selectedTopicPhrase.length;
@@ -341,7 +340,6 @@ class RenderComp extends Component {
 
       for(let item =  0 ; item<maxiLength; item++)
       {
-        // A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item], this.state.selectedFacebookData[item], this.state.selectedTwitterData[item]]);
         var tempPhrase = "";
         var tempTweets = "";
         var tempFacebookData = "";
@@ -375,15 +373,6 @@ class RenderComp extends Component {
         if(item < this.state.selectedMemes.length)
         tempMemes = this.state.selectedMemes[item];
 
-        // jsonObject.push({
-        //   id:item,
-        //   Phrase:re[item],
-        //   Topic:this.state.myTopic,
-        //   Tweets:this.state.selectedTweets[item],
-        //   FacebookID:this.state.selectedFacebookData[item], 
-        //   TwitterID:this.state.selectedTwitterData[item]
-        // })
-
         jsonObject.push({
           id:item,
           Phrase:tempPhrase,
@@ -404,7 +393,6 @@ class RenderComp extends Component {
           var listOfFiles = this.state.listOfFiles;
           listOfFiles.push(this.state.inputFileName);
           //Logic to hit the api and save the data
-
           //Updating the filename array
           this.setState({ listOfFiles })
           this.toggleExportModal()
@@ -482,7 +470,7 @@ class RenderComp extends Component {
       			headers: {
       				'Accept': 'application/json',
       				'Content-Type': 'application/json',
-                    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+              "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
             },
           }).then((response) => {
             if(response.status == 200)
