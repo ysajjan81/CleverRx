@@ -315,7 +315,25 @@ class RenderComp extends Component {
     export()
     {
       var jsonObject = [];
+      var cardData={};
+      var withoutInsuranceData = {};
+      if(this.state.card){
+        //Populate for insurance card
+      }else{
+        //Populate for without insurance card
+      }
+      var obj ={
+        twitter: this.state.selectedTwitterData,
+        facebook: this.state.selectedFacebookData,
+        insurance_dict:{
+          tweets:[], //populate tweet
+          medication:[] //populate medication
+        },
+        without_insurance_dict:withoutInsuranceData,
+        card_dict:cardData
+      };
 
+      console.log(obj)
       var maxiLength = 0 ; 
       if(maxiLength < this.state.selectedTopicPhrase.length)
       maxiLength = this.state.selectedTopicPhrase.length;
@@ -636,14 +654,14 @@ class RenderComp extends Component {
         {
           temp.push(this.state.selectedFacebookData[i]);
         }
-        temp.push(facebookAndTwitterData.pagename);
+        temp.push(facebookAndTwitterData);
         this.setState({selectedFacebookData:temp});
       }else if(facebookAndTwitterData.type === "twitter"){
         for(var i  = 0 ; i<this.state.selectedTwitterData.length;i++)
         {
           temp.push(this.state.selectedTwitterData[i]);
         }
-        temp.push(facebookAndTwitterData.link);
+        temp.push(facebookAndTwitterData);
         this.setState({selectedTwitterData:temp});
       }
     }

@@ -18,8 +18,10 @@ class MyTweets extends Component {
     this.sendDataToParent = this.sendDataToParent.bind(this);
     // this.callbackFromParent = this.props.callbackFromParent.bind(this);
   }
-  sendDataToParent(event, {value})
+  sendDataToParent(event, value)
   {
+    console.log("*****")
+    console.log(value)
   this.props.callbackFromParent(value);
   }
   
@@ -47,7 +49,7 @@ class MyTweets extends Component {
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                 /> */}
-                <Checkbox Checkbox key={data.insurance_dict.tweets[i][1]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.insurance_dict.tweets[i][0]}/>
+                <Checkbox Checkbox key={data.insurance_dict.tweets[i][1]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.insurance_dict.tweets[i][0]}/>
                 <label style={{fontSize:'13px'}}>{data.insurance_dict.tweets[i][1]}</label>
               </div>
             </Table.Cell>
@@ -65,7 +67,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.insurance_dict.tweets[i][1]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.insurance_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.insurance_dict.tweets[i][1]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.insurance_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.insurance_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
@@ -89,7 +91,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.card_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.card_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
@@ -108,7 +110,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.card_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.card_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
@@ -132,7 +134,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.without_insurance_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.without_insurance_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.without_insurance_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
@@ -151,7 +153,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.without_insurance_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.without_insurance_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.without_insurance_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>

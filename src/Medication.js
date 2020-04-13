@@ -9,7 +9,7 @@ class Medication extends Component {
     this.state = {  }
     this.sendDataToParent = this.sendDataToParent.bind(this);
   }
-  sendDataToParent(event, {value})
+  sendDataToParent(event, value)
   {
     this.props.callbackformedication(value);
   }
@@ -37,7 +37,7 @@ class Medication extends Component {
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange={(e) => this.sendDataToParent(this.props.data[i][0])} 
                   /> */}
-                  <Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={this.sendDataToParent} value={this.props.data[i][0]}/>
+                  <Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, this.props.data[i])} value={this.props.data[i][0]}/>
                   <label style={{fontSize:'13px', display: 'inline'}}>{this.props.data[i][0]}</label>
                 </div>
                 </Table.Cell>
