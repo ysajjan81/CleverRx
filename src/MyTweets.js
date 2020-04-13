@@ -89,7 +89,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.card_dict.tweets[i][0]}/>
+              <Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.card_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
@@ -108,7 +108,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.card_dict.tweets[i][0]}/>
+              <Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={this.sendDataToParent} value={data.card_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>

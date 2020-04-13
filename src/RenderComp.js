@@ -252,15 +252,16 @@ class RenderComp extends Component {
             selectedTweets:[],
             selectedFacebookData:[],
             selectedTwitterData:[],
-            dataToDownload: [],
+            dataToExport: [],
             selectedFacebookLinks:[],
             selectedTwitterLinks:[],
             selectedMedication:[],
             selectedMemes:[],
             showExportModal:false,
+            showBrowseModal:false,
             inputFileName:"",
-            listOfFiles:["file1.json", "file2.json", "file3.json", "file4.json"],
-            selectedFileNamesToOpen:[]
+            listOfFiles:[],
+            selectedFileNameToOpen:""
          }
          this.handleTopicSelect = this.handleTopicSelect.bind(this);
          this.getData = this.getData.bind(this);
@@ -279,6 +280,7 @@ class RenderComp extends Component {
          this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.handleFileNameChange = this.handleFileNameChange.bind(this);
          this.toggleExportModal = this.toggleExportModal.bind(this);
+         this.toggleBrowseModal = this.toggleBrowseModal.bind(this);
          this.handleOpenButton = this.handleOpenButton.bind(this);
     }
     // export()
@@ -310,7 +312,7 @@ class RenderComp extends Component {
     //   a.click();
     // }
 
-    export(shouldDownload)
+    export()
     {
       var jsonObject = [];
       var maxiLength = 0 ; 
@@ -353,7 +355,7 @@ class RenderComp extends Component {
         tempPhrase = this.state.selectedTopicPhrase[item];
 
         if(item < this.state.selectedTweets.length)
-        tempTweets = this.state.selectedMedication[item];
+        tempTweets = this.state.selectedTweets[item];
 
         if(item < this.state.selectedFacebookData.length)
         tempFacebookData = this.state.selectedFacebookData[item];
@@ -387,22 +389,69 @@ class RenderComp extends Component {
         })
       }
 
-      this.setState({ dataToDownload: jsonObject }, () => {
-        if(shouldDownload){
-          var jsonFile = this.state.inputFileName+'.json';
-          var listOfFiles = this.state.listOfFiles;
-          listOfFiles.push(this.state.inputFileName);
-          //Logic to hit the api and save the data
-          //Updating the filename array
-          this.setState({ listOfFiles })
+      this.setState({ dataToExport: jsonObject }, () => {
+        const url = '/add_files'
+
+        const formData = new URLSearchParams();
+
+        formData.append("data", JSON.stringify(this.state.dataToExport))
+        formData.append("file_name", this.state.inputFileName)
+        fetch(url, {
+          method: 'POST',
+          body:formData
+        }).then((response) => {
+          if(response.status == 200)
+            {
+              return response.json();
+            }
+          else {
+            alert('Uh Oh! Something went wrong');
+            return -1;
+          }
+        }).then((data) => {
+          if(data == -1)
+            return;
+          //Reset the state values
+          this.setState({selectedTopicPhrase:[], selectedMedication:[], selectedFacebookData:[],
+            selectedTwitterData:[],selectedMedication:[],selectedFacebookLinks:[],
+            selectedTwitterLinks:[], selectedMemes:[]
+          });
+
+          //Toggling Modal to close
           this.toggleExportModal()
-        }else{
-          //Convert the data into data URL, Open the new window and display it in a iframe
-          var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(this.state.dataToDownload));
-          var newWindow = window.open();
-          newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
-        }
+        })
      })
+    }
+
+    toggleBrowseModal(){
+      var url = '/get_files'
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+      }).then((response) => {
+        if(response.status == 200)
+          {
+            return response.json();
+          }
+        else {
+          alert('Uh Oh! Something went wrong');
+          return -1;
+        }
+      }).then((data) => {
+        if(data == -1)
+          return;
+
+        var fileNames=[];
+        for(var i=0;i<data.length;i++){
+          fileNames.push(data[i].file_name)
+        }
+        this.setState({listOfFiles:fileNames},()=>{
+          this.setState({ showBrowseModal: !this.state.showBrowseModal})
+        })
+      })
     }
 
     toggleExportModal(){
@@ -410,7 +459,31 @@ class RenderComp extends Component {
     }
 
     handleOpenButton(){
-      console.log(this.state.listOfFiles)
+      var url = '/get_file_data?file_name='+this.state.selectedFileNameToOpen
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+        }
+      }).then((response) => {
+        if(response.status == 200)
+          {
+            return response.json();
+          }
+        else {
+          alert('Uh Oh! Something went wrong');
+          return -1;
+        }
+      }).then((data) => {
+        if(data == -1)
+          return;
+          //Implement the display data
+          var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
+          var newWindow = window.open();
+          newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+      })
     }
     handleCardSentimentPositive()
     {
@@ -446,16 +519,7 @@ class RenderComp extends Component {
     }
 
     handleFileCheckBox(fileName){
-      //To be Implemented
-      var currentArray = this.state.selectedFileNamesToOpen;
-      var fileNameIndex = currentArray.indexOf(fileName);
-      if(currentArray.length > 0 && fileNameIndex !== -1){
-        currentArray.splice(fileNameIndex, 1);
-        this.setState({ selectedFileNamesToOpen: currentArray});
-      }else{
-        currentArray.push(fileName)
-        this.setState({ selectedFileNamesToOpen : currentArray})
-      }
+      this.setState({ selectedFileNameToOpen : fileName})
     }
 
     componentDidMount()
@@ -484,7 +548,7 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
-              console.log(data);
+              
               this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
@@ -518,6 +582,8 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
+              console.log("data = ")
+              console.log(data);
               this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
@@ -787,19 +853,25 @@ class RenderComp extends Component {
           </div>
           <div class="headerButtons" style={{display:'inline-block', float:'right', marginTop:'2px'}}>
             <Modal open={this.state.showExportModal} scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}} trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}} onClick={this.toggleExportModal}>Save Ad</Button>}>
-              <Modal.Header>Save Ad</Modal.Header>
+              <Modal.Header>
+                <div className="closeBtn" onClick={this.toggleExportModal} style={{fontWeight: 900, float: 'right', color: '#8c151f', cursor:'pointer'}}>x</div>
+                Save Ad
+              </Modal.Header>
               <Modal.Content>
                 <Modal.Description style={{textAlign:'center'}}>
                   <div class="ui focus input">
-                  <Input placeholder="Enter the file Name..." onChange={this.handleFileNameChange} /></div>
-                  <Button style={{marginLeft:'10px'}} primary onClick={()=>this.export(true)}>
-                    Save <Icon style={{marginLeft:'2px'}} name='upload' />
-                  </Button>
+                    <Input placeholder="Enter the file Name..." onChange={this.handleFileNameChange} /></div>
+                    <Button style={{marginLeft:'10px'}} primary onClick={this.export}>
+                      Save <Icon style={{marginLeft:'2px'}} name='upload' />
+                    </Button>
                 </Modal.Description>
               </Modal.Content>
             </Modal>
-            <Modal style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}}  trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}}>Browse Ads</Button>}>
-            <Modal.Header>Browse Files</Modal.Header>
+            <Modal open={this.state.showBrowseModal} scrollable style={{background:'unset', boxShadow:'unset', width:'25%', marginTop:'5%'}}  trigger={<Button style={{marginTop:'10px', color:'black', backgroundColor:'#66ff00'}} onClick={this.toggleBrowseModal}>Browse Ads</Button>}>
+            <Modal.Header>
+              <div className="closeBtn" onClick={this.toggleBrowseModal} style={{fontWeight: 900, float: 'right', color: '#8c151f', cursor:'pointer'}}>x</div>
+              Browse Files
+              </Modal.Header>
             <Modal.Content scrolling>
               <Modal.Description>
                 <Table>
