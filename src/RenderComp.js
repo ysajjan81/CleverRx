@@ -322,18 +322,14 @@ class RenderComp extends Component {
       }else{
         //Populate for without insurance card
       }
-      var obj ={
+      var masterObject ={
         twitter: this.state.selectedTwitterData,
         facebook: this.state.selectedFacebookData,
-        insurance_dict:{
-          tweets:[], //populate tweet
-          medication:[] //populate medication
-        },
-        without_insurance_dict:withoutInsuranceData,
-        card_dict:cardData
+        insurance_dict:this.state.data.insurance_dict,
+        without_insurance_dict:this.state.data.without_insurance_dict,
+        card_dict:this.state.data.card_dict
       };
 
-      console.log(obj)
       var maxiLength = 0 ; 
       if(maxiLength < this.state.selectedTopicPhrase.length)
       maxiLength = this.state.selectedTopicPhrase.length;
@@ -423,7 +419,7 @@ class RenderComp extends Component {
 
         const formData = new URLSearchParams();
 
-        formData.append("data", JSON.stringify(this.state.dataToExport))
+        formData.append("data", JSON.stringify(masterObject))
         formData.append("file_name", this.state.inputFileName)
         fetch(url, {
           method: 'POST',
@@ -431,7 +427,7 @@ class RenderComp extends Component {
         }).then((response) => {
           if(response.status == 200)
             {
-              return response.json();
+              return response;
             }
           else {
             alert('Uh Oh! Something went wrong');
@@ -509,9 +505,12 @@ class RenderComp extends Component {
         if(data == -1)
           return;
           //Implement the display data
-          var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
-          var newWindow = window.open();
-          newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+          this.setState({data:JSON.parse(data[0].data)},()=>{
+              this.toggleBrowseModal()
+          });
+          // var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
+          // var newWindow = window.open();
+          // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
       })
     }
     handleCardSentimentPositive()
