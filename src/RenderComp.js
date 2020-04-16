@@ -283,34 +283,6 @@ class RenderComp extends Component {
          this.toggleBrowseModal = this.toggleBrowseModal.bind(this);
          this.handleOpenButton = this.handleOpenButton.bind(this);
     }
-    // export()
-    // {
-    //   // console.log("inside export");
-    //   // console.log(this.state.selectedTweets);
-    //   // console.log("end");
-    //   var csvRow  = [];
-    //   var re = this.state.selectedTopicPhrase;
-    //   var A = [["Id", "Phrase", "Topic"]];
-    //   for(let item =  0 ; item<re.length ; item++)
-    //   {
-    //     A.push([item, re[item], this.state.myTopic, this.state.selectedTweets[item]]);
-    //   }
-    //   console.log("EXport data = ");
-    //   console.log(A);
-    //   for(let i = 0 ; i<A.length ; i++)
-    //   {
-    //     csvRow.push(A[i].join(","));
-    //   }
-    //   var csvString = csvRow.join("%0A");
-    //   console.log("csvString");
-    //   console.log(csvString);
-    //   var a = document.createElement("a");
-    //   a.href='data:attachment/json,'+ csvString;
-    //   a.target = "_Blank";
-    //   a.download = "testfile.json";
-    //   document.body.appendChild(a);
-    //   a.click();
-    // }
 
     export()
     {
@@ -395,7 +367,7 @@ class RenderComp extends Component {
           Phrase:tempPhrase,
           Topic:this.state.myTopic,
           Tweets:tempTweets,
-          FacebookID:tempFacebookData, 
+          FacebookID:tempFacebookData,
           TwitterID:tempTwitterData,
           Medication:tempMedication,
           ExternalLinks:tempExternalLinks,
@@ -494,6 +466,8 @@ class RenderComp extends Component {
       }).then((data) => {
         if(data == -1)
           return;
+          console.log("Getting data = ")
+          console.log(data)
           //Implement the display data
           this.setState({data:JSON.parse(data[0].data)},()=>{
               this.toggleBrowseModal()
@@ -636,7 +610,7 @@ class RenderComp extends Component {
       }
       temp.push(tweetsSelectedFromMyTweets);
       this.setState({selectedTweets:temp});
-      // console.log(this.state.selectedTweets);
+      console.log(this.state.selectedTweets);
     }
 
     facebookAndTwitterCallback(facebookAndTwitterData){

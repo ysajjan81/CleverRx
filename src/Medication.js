@@ -11,15 +11,18 @@ class Medication extends Component {
   }
   sendDataToParent(event, value)
   {
+    // console.log("In Medication callback = ")
+    // console.log(value)
     this.props.callbackformedication(value);
   }
-
   render() 
   { 
+    // console.log("In render =")
+    // console.log(this.props.data)
     var l = [];
     if(this.props.data && this.props.data.length != 0)
     {
-      for(var i in this.props.data)
+      for(let i = 0; i<this.props.data.length; i++)
       {
         // var img = props.data[i][1][1];
         // var img = "/medication_avatar/5.png";
@@ -37,7 +40,7 @@ class Medication extends Component {
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange={(e) => this.sendDataToParent(this.props.data[i][0])} 
                   /> */}
-                  <Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, this.props.data[i])} value={this.props.data[i][0]}/>
+                  <Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, this.props.data[i])}/>
                   <label style={{fontSize:'13px', display: 'inline'}}>{this.props.data[i][0]}</label>
                 </div>
                 </Table.Cell>

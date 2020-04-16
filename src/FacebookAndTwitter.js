@@ -12,7 +12,7 @@ import { FacebookProvider, EmbeddedPost, Page, Group, Comments} from 'react-face
 export default class Twitter extends React.Component {
   constructor(props) {
       super(props);
-      this.state ={
+      this.state = {
         fbSum:0,
         twitterSum: 0,
         fbTotalSum:0,
