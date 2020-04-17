@@ -250,6 +250,15 @@ class RenderComp extends Component {
             exportData:[],
             selectedTopicPhrase:[],
             selectedTweets:[],
+            selectedTweetsForInsurance:[],
+            selectedTweetsForWithoutInsurance:[],
+            selectedTweetsForCard:[],
+            selectedMedicationForInsurance:[],
+            selectedMedicationForWithoutInsurance:[],
+            selectedMedicationForCard:[],
+            selectedExternalLinksForWithoutInsurance:[],
+            selectedExternalLinksForInsurance:[],
+            selectedExternalLinksForCard:[],
             selectedFacebookData:[],
             selectedTwitterData:[],
             dataToExport: [],
@@ -275,13 +284,22 @@ class RenderComp extends Component {
          this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
          this.myCallbackForTweets = this.myCallbackForTweets.bind(this);
          this.facebookAndTwitterCallback = this.facebookAndTwitterCallback.bind(this);
-         this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
+        //  this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.export = this.export.bind(this);
-         this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
+        //  this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.handleFileNameChange = this.handleFileNameChange.bind(this);
          this.toggleExportModal = this.toggleExportModal.bind(this);
          this.toggleBrowseModal = this.toggleBrowseModal.bind(this);
          this.handleOpenButton = this.handleOpenButton.bind(this);
+         this.myCallbackForInsuranceMedication = this.myCallbackForInsuranceMedication.bind(this);
+         this.myCallbackForCardMedication = this.myCallbackForCardMedication.bind(this);
+         this.myCallbackForWithoutInsuranceMedication = this.myCallbackForWithoutInsuranceMedication.bind(this);
+         this.myCallbackForWithoutInsuranceTweets = this.myCallbackForWithoutInsuranceTweets.bind(this);
+         this.myCallbackForInsuranceTweets = this.myCallbackForInsuranceTweets.bind(this);
+         this.myCallbackForCardTweets = this.myCallbackForCardTweets.bind(this);
+         this.myCallbackForCardExternalLinks = this.myCallbackForCardExternalLinks.bind(this);
+         this.myCallbackForWithoutInsuranceExternalLinks = this.myCallbackForWithoutInsuranceExternalLinks.bind(this);
+         this.myCallbackForInsuranceExternalLinks = this.myCallbackForInsuranceExternalLinks.bind(this);
     }
 
     export()
@@ -294,89 +312,101 @@ class RenderComp extends Component {
       }else{
         //Populate for without insurance card
       }
+
       var masterObject ={
         twitter: this.state.selectedTwitterData,
         facebook: this.state.selectedFacebookData,
-        insurance_dict:this.state.data.insurance_dict,
-        without_insurance_dict:this.state.data.without_insurance_dict,
-        card_dict:this.state.data.card_dict
+        insurance_dict: this.state.data.insurance_dict,
+        without_insurance_dict: this.state.data.without_insurance_dict,
+        card_dict: this.state.data.card_dict
       };
+      masterObject.insurance_dict.medication_list = this.state.selectedMedicationForInsurance;
+      masterObject.without_insurance_dict.medication_list = this.state.selectedMedicationForWithoutInsurance;
+      masterObject.card_dict.medication_list = this.state.selectedMedicationForCard;
+      
+      masterObject.insurance_dict.tweets = this.state.selectedTweetsForInsurance;
+      masterObject.without_insurance_dict.tweets = this.state.selectedTweetsForWithoutInsurance;
+      masterObject.card_dict.tweets = this.state.selectedTweetsForCard;
 
-      var maxiLength = 0 ; 
-      if(maxiLength < this.state.selectedTopicPhrase.length)
-      maxiLength = this.state.selectedTopicPhrase.length;
+      masterObject.insurance_dict.external_links = this.state.selectedExternalLinksForInsurance;
+      masterObject.without_insurance_dict.external_links = this.state.selectedExternalLinksForWithoutInsurance;
+      masterObject.card_dict.external_links = this.state.selectedExternalLinksForCard;
+      
+      // var maxiLength = 0 ; 
+      // if(maxiLength < this.state.selectedTopicPhrase.length)
+      // maxiLength = this.state.selectedTopicPhrase.length;
 
-      if(maxiLength < this.state.selectedTweets.length)
-      maxiLength = this.state.selectedTweets.length;
+      // if(maxiLength < this.state.selectedTweets.length)
+      // maxiLength = this.state.selectedTweets.length;
 
-      if(maxiLength < this.state.selectedFacebookData.length)
-      maxiLength = this.state.selectedFacebookData.length;
+      // if(maxiLength < this.state.selectedFacebookData.length)
+      // maxiLength = this.state.selectedFacebookData.length;
 
-      if(maxiLength < this.state.selectedTwitterData.length)
-      maxiLength = this.state.selectedTwitterData.length;
+      // if(maxiLength < this.state.selectedTwitterData.length)
+      // maxiLength = this.state.selectedTwitterData.length;
 
-      if(maxiLength < this.state.selectedMedication.length)
-      maxiLength = this.state.selectedMedication.length;
+      // if(maxiLength < this.state.selectedMedication.length)
+      // maxiLength = this.state.selectedMedication.length;
 
-      if(maxiLength < this.state.selectedFacebookLinks.length)
-      maxiLength = this.state.selectedFacebookLinks.length;
+      // if(maxiLength < this.state.selectedFacebookLinks.length)
+      // maxiLength = this.state.selectedFacebookLinks.length;
 
-      if(maxiLength < this.state.selectedTwitterLinks.length)
-      maxiLength = this.state.selectedTwitterLinks.length;
+      // if(maxiLength < this.state.selectedTwitterLinks.length)
+      // maxiLength = this.state.selectedTwitterLinks.length;
 
-      if(maxiLength < this.state.selectedMemes.length)
-      maxiLength = this.state.selectedMemes.length;
+      // if(maxiLength < this.state.selectedMemes.length)
+      // maxiLength = this.state.selectedMemes.length;
 
-      for(let item =  0 ; item<maxiLength; item++)
-      {
-        var tempPhrase = "";
-        var tempTweets = "";
-        var tempFacebookData = "";
-        var tempTwitterData = "";
-        var tempMedication = "";
-        var tempExternalLinks = "";
-        var tempLandingPageTwitterLink = "";
-        var tempMemes = "";
+      // for(let item =  0 ; item<maxiLength; item++)
+      // {
+      //   var tempPhrase = "";
+      //   var tempTweets = "";
+      //   var tempFacebookData = "";
+      //   var tempTwitterData = "";
+      //   var tempMedication = "";
+      //   var tempExternalLinks = "";
+      //   var tempLandingPageTwitterLink = "";
+      //   var tempMemes = "";
 
-        if(item < this.state.selectedTopicPhrase.length)
-        tempPhrase = this.state.selectedTopicPhrase[item];
+      //   if(item < this.state.selectedTopicPhrase.length)
+      //   tempPhrase = this.state.selectedTopicPhrase[item];
 
-        if(item < this.state.selectedTweets.length)
-        tempTweets = this.state.selectedTweets[item];
+      //   if(item < this.state.selectedTweets.length)
+      //   tempTweets = this.state.selectedTweets[item];
 
-        if(item < this.state.selectedFacebookData.length)
-        tempFacebookData = this.state.selectedFacebookData[item];
+      //   if(item < this.state.selectedFacebookData.length)
+      //   tempFacebookData = this.state.selectedFacebookData[item];
 
-        if(item < this.state.selectedTwitterData.length)
-        tempTwitterData = this.state.selectedTwitterData[item];
+      //   if(item < this.state.selectedTwitterData.length)
+      //   tempTwitterData = this.state.selectedTwitterData[item];
 
-        if(item < this.state.selectedMedication.length)
-        tempMedication = this.state.selectedMedication[item];
+      //   if(item < this.state.selectedMedication.length)
+      //   tempMedication = this.state.selectedMedication[item];
 
-        if(item < this.state.selectedFacebookLinks.length)
-        tempExternalLinks = this.state.selectedFacebookLinks[item];
+      //   if(item < this.state.selectedFacebookLinks.length)
+      //   tempExternalLinks = this.state.selectedFacebookLinks[item];
 
-        if(item < this.state.selectedTwitterLinks.length)
-        tempLandingPageTwitterLink = this.state.selectedTwitterLinks[item];
+      //   if(item < this.state.selectedTwitterLinks.length)
+      //   tempLandingPageTwitterLink = this.state.selectedTwitterLinks[item];
 
-        if(item < this.state.selectedMemes.length)
-        tempMemes = this.state.selectedMemes[item];
+      //   if(item < this.state.selectedMemes.length)
+      //   tempMemes = this.state.selectedMemes[item];
 
-        jsonObject.push({
-          id:item,
-          Phrase:tempPhrase,
-          Topic:this.state.myTopic,
-          Tweets:tempTweets,
-          FacebookID:tempFacebookData,
-          TwitterID:tempTwitterData,
-          Medication:tempMedication,
-          ExternalLinks:tempExternalLinks,
-          TwitterLinks:tempLandingPageTwitterLink,
-          Memes:tempMemes,
-        })
-      }
+      //   jsonObject.push({
+      //     id:item,
+      //     Phrase:tempPhrase,
+      //     Topic:this.state.myTopic,
+      //     Tweets:tempTweets,
+      //     FacebookID:tempFacebookData,
+      //     TwitterID:tempTwitterData,
+      //     Medication:tempMedication,
+      //     ExternalLinks:tempExternalLinks,
+      //     TwitterLinks:tempLandingPageTwitterLink,
+      //     Memes:tempMemes,
+      //   })
+      // }
 
-      this.setState({ dataToExport: jsonObject }, () => {
+      this.setState({ dataToExport: masterObject }, () => {
         const url = '/add_files'
 
         const formData = new URLSearchParams();
@@ -631,17 +661,86 @@ class RenderComp extends Component {
         this.setState({selectedTwitterData:temp});
       }
     }
-    myCallbackForMedication(medicationSelectedFromMyMedication)
+    myCallbackForInsuranceMedication(medicationSelectedFromMyMedication)
     {
-        var temp = [];
-        for(let i = 0 ; i<this.state.selectedMedication.length ; i++)
-          temp.push(this.state.selectedMedication[i]);
-        temp.push(medicationSelectedFromMyMedication);
-        this.setState({selectedMedication: temp});
-        console.log("InmyCallbackForMedication")
-        console.log(this.state.selectedMedication);
+      var temp = [];
+      if(this.state.selectedMedicationForInsurance != null)
+      {
+      for(let i = 0 ; i<this.state.selectedMedicationForInsurance.length ; i++)
+        temp.push(this.state.selectedMedicationForInsurance[i]);
+      temp.push(medicationSelectedFromMyMedication);
+      this.setState({selectedMedicationForInsurance: temp});
     }
-    
+  }
+
+    myCallbackForCardMedication(medicationSelectedFromMyMedication)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selecteMedicationForCard.length ; i++)
+        temp.push(this.state.selecteMedicationForCard[i]);
+      temp.push(medicationSelectedFromMyMedication);
+      this.setState({selecteMedicationForCard: temp});
+
+    }
+    myCallbackForWithoutInsuranceMedication(medicationSelectedFromMyMedication)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedMedicationForWithoutInsurance.length ; i++)
+        temp.push(this.state.selectedMedicationForWithoutInsurance[i]);
+      temp.push(medicationSelectedFromMyMedication);
+      this.setState({selectedMedicationForWithoutInsurance: temp});
+
+    }
+    myCallbackForWithoutInsuranceTweets(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedTweetsForWithoutInsurance.length ; i++)
+        temp.push(this.state.selectedTweetsForWithoutInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedTweetsForWithoutInsurance: temp});
+    }
+    myCallbackForInsuranceTweets(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedTweetsForInsurance.length ; i++)
+        temp.push(this.state.selectedTweetsForInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedTweetsForInsurance: temp});
+
+    }
+    myCallbackForCardTweets(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedTweetsForCard.length ; i++)
+        temp.push(this.state.selectedTweetsForCard[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedTweetsForCard: temp});
+
+    }
+    myCallbackForCardExternalLinks(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedExternalLinksForCard.length ; i++)
+        temp.push(this.state.selectedExternalLinksForCard[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedExternalLinksForCard: temp});
+    }
+    myCallbackForWithoutInsuranceExternalLinks(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedExternalLinksForWithoutInsurance.length ; i++)
+        temp.push(this.state.selectedExternalLinksForWithoutInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedExternalLinksForWithoutInsurance: temp});
+    }
+    myCallbackForInsuranceExternalLinks(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedExternalLinksForInsurance.length ; i++)
+        temp.push(this.state.selectedExternalLinksForInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedExternalLinksForInsurance: temp});
+    }
     checkBoxSelected = (event, {value}) =>
     {
         var temp = [] ;
@@ -970,7 +1069,7 @@ class RenderComp extends Component {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
                              ) : (
-                               <div ><Medication data = {this.state.data.card_dict.medication_list} callbackformedication={this.myCallbackForMedication}/></div>
+                               <div ><Medication data = {this.state.data.card_dict.medication_list} callbackformedication={this.myCallbackForCardMedication}/></div>
                             )
                         }
                         </Segment>
@@ -1012,7 +1111,7 @@ class RenderComp extends Component {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
                              ) : (
-                               <div ><Medication data = {this.state.data.without_insurance_dict.medication_list} callbackformedication={this.myCallbackForMedication}/></div>
+                               <div ><Medication data = {this.state.data.without_insurance_dict.medication_list} callbackformedication={this.myCallbackForWithoutInsuranceMedication}/></div>
                             )
                         }
                         </Segment>
@@ -1055,7 +1154,7 @@ class RenderComp extends Component {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
                              ) : (
-                               <div><Medication data = {this.state.data.insurance_dict.medication_list} callbackformedication={this.myCallbackForMedication}/></div>
+                               <div><Medication data = {this.state.data.insurance_dict.medication_list} callbackformedication={this.myCallbackForInsuranceMedication} /></div>
                             )
                         }
                         </Segment>
@@ -1107,11 +1206,15 @@ class RenderComp extends Component {
                       <h3>Card Related Messages</h3>
                       <Checkbox label="Neg" style={{marginRight:"10px"}} onChange={this.handleCardSentimentPositive}></Checkbox>
                       <Checkbox label="Pos"  onChange={this.handleCardSentimentNegative}></Checkbox>
-
-                        {
+                        {/* {
                         this.state.data.length === 0 ? (<div></div>):
                             (<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left" callbackFromParent={this.myCallbackForTweets}  />)
-                            
+                        } */}
+                        {
+                        this.state.data.length != 0 && this.state.card == true?(<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left" callbackFromParent={this.myCallbackForCardTweets}  />) : (<div></div>)
+                        }
+                        {
+                        this.state.data.length != 0 && this.state.card == false? (<MyTweets cardSentimentPositive = {this.state.cardSentimentPositive} cardSentimentNegative = {this.state.cardSentimentNegative} data = {this.state.data} insurance={this.state.insur} card={this.state.card}  col = "left" callbackFromParent={this.myCallbackForWithoutInsuranceTweets}  />) : (<div></div>)
                         }
                       
                       {/* { isxport == false?(<div></div>):
@@ -1125,7 +1228,7 @@ class RenderComp extends Component {
                           <Checkbox label="Pos" onChange={this.handleInsuranceSentimentNegative}></Checkbox>
                             {
                               this.state.data.length === 0 ? (<div></div>):
-                            (<MyTweets data = {this.state.data} insurancePositiveSentiment = {this.state.insuranceSentimentPositive} insuranceNegativeSentiment = {this.state.insuranceSentimentNegative} insurance={this.state.insur} card={this.state.card} col = "right"  callbackFromParent={this.myCallbackForTweets}  />)
+                            (<MyTweets data = {this.state.data} insurancePositiveSentiment = {this.state.insuranceSentimentPositive} insuranceNegativeSentiment = {this.state.insuranceSentimentNegative} insurance={this.state.insur} card={this.state.card} col = "right"  callbackFromParent={this.myCallbackForInsuranceTweets}  />)
                             }
                       {/* { isxport == false?(<div></div>):
                       <CSVLink data={A}>Download me</CSVLink>
@@ -1145,7 +1248,7 @@ class RenderComp extends Component {
                         <h3>Insurance Related Landing Pages</h3>
                         {
                         this.state.data.length === 0 ? (<div></div>):
-                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right"/>
+                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right" myCallBack = {this.myCallbackForInsuranceExternalLinks}/>
                         }
                     </Grid.Column>
                 </Grid.Row>

@@ -20,7 +20,7 @@ class Medication extends Component {
     // console.log("In render =")
     // console.log(this.props.data)
     var l = [];
-    if(this.props.data && this.props.data.length != 0)
+    if(this.props.data != null && this.props.data.length != 0)
     {
       for(let i = 0; i<this.props.data.length; i++)
       {
@@ -40,7 +40,7 @@ class Medication extends Component {
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange={(e) => this.sendDataToParent(this.props.data[i][0])} 
                   /> */}
-                  <Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, this.props.data[i])}/>
+                  <Checkbox key={this.props.data[i][0]} style={{marginRight:'10px', transform:'scale(1.5)', 'margin':'10px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, this.props.data[i])} value = {this.props.data[i]}/>
                   <label style={{fontSize:'13px', display: 'inline'}}>{this.props.data[i][0]}</label>
                 </div>
                 </Table.Cell>
