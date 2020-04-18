@@ -256,9 +256,13 @@ class RenderComp extends Component {
             selectedMedicationForInsurance:[],
             selectedMedicationForWithoutInsurance:[],
             selectedMedicationForCard:[],
+            
             selectedExternalLinksForWithoutInsurance:[],
             selectedExternalLinksForInsurance:[],
             selectedExternalLinksForCard:[],
+            selectedMemesForCard:[],
+            selectedMemesForInsurance:[],
+            selectedMemesForWithoutInsurance:[],
             selectedFacebookData:[],
             selectedTwitterData:[],
             dataToExport: [],
@@ -300,6 +304,10 @@ class RenderComp extends Component {
          this.myCallbackForCardExternalLinks = this.myCallbackForCardExternalLinks.bind(this);
          this.myCallbackForWithoutInsuranceExternalLinks = this.myCallbackForWithoutInsuranceExternalLinks.bind(this);
          this.myCallbackForInsuranceExternalLinks = this.myCallbackForInsuranceExternalLinks.bind(this);
+         this.myCallbackForInsuranceMemes = this.myCallbackForInsuranceMemes.bind(this);
+         this.myCallbackForCardMemes = this.myCallbackForCardMemes.bind(this);
+         this.myCallbackForWithoutInsuranceMemes = this.myCallbackForWithoutInsuranceMemes.bind(this);
+         
     }
 
     export()
@@ -312,14 +320,15 @@ class RenderComp extends Component {
       }else{
         //Populate for without insurance card
       }
-
-      var masterObject ={
+      // var masterObject = this.state.data;
+      var masterObject = {
         twitter: this.state.selectedTwitterData,
         facebook: this.state.selectedFacebookData,
         insurance_dict: this.state.data.insurance_dict,
         without_insurance_dict: this.state.data.without_insurance_dict,
         card_dict: this.state.data.card_dict
       };
+
       masterObject.insurance_dict.medication_list = this.state.selectedMedicationForInsurance;
       masterObject.without_insurance_dict.medication_list = this.state.selectedMedicationForWithoutInsurance;
       masterObject.card_dict.medication_list = this.state.selectedMedicationForCard;
@@ -331,6 +340,10 @@ class RenderComp extends Component {
       masterObject.insurance_dict.external_links = this.state.selectedExternalLinksForInsurance;
       masterObject.without_insurance_dict.external_links = this.state.selectedExternalLinksForWithoutInsurance;
       masterObject.card_dict.external_links = this.state.selectedExternalLinksForCard;
+
+      masterObject.insurance_dict.tid = this.state.selectedMemesForInsurance;
+      masterObject.without_insurance_dict.tid = this.state.selectedMemesForWithoutInsurance;
+      masterObject.card_dict.tid = this.state.selectedTweetsForCard;
       
       // var maxiLength = 0 ; 
       // if(maxiLength < this.state.selectedTopicPhrase.length)
@@ -441,6 +454,7 @@ class RenderComp extends Component {
     }
 
     toggleBrowseModal(){
+      console.log("")
       var url = '/get_files'
       fetch(url, {
         method: 'GET',
@@ -462,7 +476,8 @@ class RenderComp extends Component {
           return;
 
         var fileNames=[];
-        for(var i=0;i<data.length;i++){
+        for(var i=0;i<data.length;i++)
+        {
           fileNames.push(data[i].file_name)
         }
         this.setState({listOfFiles:fileNames},()=>{
@@ -476,6 +491,7 @@ class RenderComp extends Component {
     }
 
     handleOpenButton(){
+      console.log("insideOpenButton");
       var url = '/get_file_data?file_name='+this.state.selectedFileNameToOpen
       fetch(url, {
         method: 'GET',
@@ -676,11 +692,10 @@ class RenderComp extends Component {
     myCallbackForCardMedication(medicationSelectedFromMyMedication)
     {
       var temp = [];
-      for(let i = 0 ; i<this.state.selecteMedicationForCard.length ; i++)
-        temp.push(this.state.selecteMedicationForCard[i]);
+      for(let i = 0 ; i<this.state.selectedMedicationForCard.length ; i++)
+        temp.push(this.state.selectedMedicationForCard[i]);
       temp.push(medicationSelectedFromMyMedication);
-      this.setState({selecteMedicationForCard: temp});
-
+      this.setState({selectedMedicationForCard: temp});
     }
     myCallbackForWithoutInsuranceMedication(medicationSelectedFromMyMedication)
     {
@@ -715,7 +730,6 @@ class RenderComp extends Component {
         temp.push(this.state.selectedTweetsForCard[i]);
       temp.push(rowFromChild);
       this.setState({selectedTweetsForCard: temp});
-
     }
     myCallbackForCardExternalLinks(rowFromChild)
     {
@@ -740,6 +754,30 @@ class RenderComp extends Component {
         temp.push(this.state.selectedExternalLinksForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedExternalLinksForInsurance: temp});
+    }
+    myCallbackForInsuranceMemes(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedMemesForInsurance.length ; i++)
+        temp.push(this.state.selectedMemesForInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedMemesForInsurance: temp});
+    }
+    myCallbackForCardMemes(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedMemesForCard.length ; i++)
+        temp.push(this.state.selectedMemesForCard[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedMemesForCard: temp});
+    }
+    myCallbackForWithoutInsuranceMemes(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedMemesForWithoutInsurance.length ; i++)
+        temp.push(this.state.selectedMemesForWithoutInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedMemesForWithoutInsurance: temp});
     }
     checkBoxSelected = (event, {value}) =>
     {
@@ -846,7 +884,6 @@ class RenderComp extends Component {
 
     getData = (value) =>
     {
-
       this.setState({loading: true});
       if(this.state.myTopic != ''){
         var url = "/topic?topic_name="+value;
@@ -1257,7 +1294,7 @@ class RenderComp extends Component {
                   <Grid.Column width = {16} style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
                     {
                       this.state.data.length === 0?<div></div>:
-                      <MyCarousel data = {this.state.data} card = {this.state.card}/>
+                      <MyCarousel data = {this.state.data} card = {this.state.card} myCallback = {this.myCallbackForInsuranceMemes}/>
                     }
                   </Grid.Column>
                   </Grid.Row>

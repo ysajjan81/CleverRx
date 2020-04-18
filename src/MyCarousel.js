@@ -9,6 +9,11 @@ class MyCarousel extends Component
   {
     super(props);
     this.state = {  }
+    this.sendDataToParent = this.sendDataToParent.bind(this);
+  }
+  sendDataToParent(event, {value})
+  {
+    this.props.myCallback(value);
   }
 
   getJpgs = (value) =>
@@ -43,6 +48,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParent(event,this.props.data.insurance_dict.tid[i])}
                         />
                       </div><img
                         src={img1}
@@ -87,6 +93,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParent(event,this.props.data.insurance_dict.tid[i])}
                       />
                     </div><img
                         src={img1}
@@ -116,6 +123,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParent(event,this.props.data.insurance_dict.tid[i])}
                         />
                       </div><img
                         src={img1}

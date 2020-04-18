@@ -8,9 +8,12 @@ class Mylinks extends Component {
   constructor(props) {
     super(props);
     this.state = {  }
+    this.sendDataToParent = this.sendDataToParent.bind(this);
   }
-
-
+sendDataToParent(event, {value})
+{
+  this.props.myCallBack(value);
+}
 
   render() {
     var l = [];
@@ -36,6 +39,7 @@ class Mylinks extends Component {
                     key = {data.insurance_dict.external_links[i][1]}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                    onChange ={(event)=>this.sendDataToParent(event, data.insurance_dict.external_links[i])}
                   />
                   <label style={{fontSize:'13px'}}>{data.insurance_dict.external_links[i][1]}</label>
                 </div></Table.Cell>
@@ -59,6 +63,7 @@ class Mylinks extends Component {
                     key = {data.insurance_dict.facebook_links[i][1]}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                    onChange ={(event)=>this.sendDataToParent(event, data.insurance_dict.facebook_links[i])}
                   />
                   <label style={{fontSize:'13px'}}>{data.insurance_dict.facebook_links[i][1]}</label>
                 </div></Table.Cell>
@@ -82,6 +87,7 @@ class Mylinks extends Component {
                 key = {data.insurance_dict.twitter_links[i][1]}
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                  onChange ={(event)=>this.sendDataToParent(event, data.insurance_dict.twitter_links[i])}
                 />
                 <label style={{fontSize:'13px'}}>{data.insurance_dict.twitter_links[i][1]}</label>
               </div>
