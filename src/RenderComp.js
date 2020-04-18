@@ -313,25 +313,36 @@ class RenderComp extends Component {
         //Populate for without insurance card
       }
 
-      var masterObject ={
-        twitter: this.state.selectedTwitterData,
-        facebook: this.state.selectedFacebookData,
-        insurance_dict: this.state.data.insurance_dict,
-        without_insurance_dict: this.state.data.without_insurance_dict,
-        card_dict: this.state.data.card_dict
-      };
-      masterObject.insurance_dict.medication_list = this.state.selectedMedicationForInsurance;
-      masterObject.without_insurance_dict.medication_list = this.state.selectedMedicationForWithoutInsurance;
-      masterObject.card_dict.medication_list = this.state.selectedMedicationForCard;
-      
-      masterObject.insurance_dict.tweets = this.state.selectedTweetsForInsurance;
-      masterObject.without_insurance_dict.tweets = this.state.selectedTweetsForWithoutInsurance;
-      masterObject.card_dict.tweets = this.state.selectedTweetsForCard;
 
-      masterObject.insurance_dict.external_links = this.state.selectedExternalLinksForInsurance;
-      masterObject.without_insurance_dict.external_links = this.state.selectedExternalLinksForWithoutInsurance;
-      masterObject.card_dict.external_links = this.state.selectedExternalLinksForCard;
-      
+      var masterObject ={
+        twitter: this.state.selectedTwitterData.length > 0 ? this.state.selectedTwitterData : this.state.data.twitter,
+        facebook: this.state.selectedFacebookData.length > 0 ? this.state.selectedFacebookData : this.state.data.facebook,
+        insurance_dict: {...this.state.data.insurance_dict,
+                            medication_list:this.state.selectedMedicationForInsurance.length > 0
+                              ? this.state.selectedMedicationForInsurance : this.state.data.insurance_dict.medication_list,
+                            tweets:this.state.selectedTweetsForInsurance.length > 0
+                              ? this.state.selectedTweetsForInsurance : this.state.data.insurance_dict.tweets,
+                            external_links:this.state.selectedExternalLinksForInsurance.length > 0
+                              ? this.state.selectedExternalLinksForInsurance : this.state.data.insurance_dict.external_links
+                            },
+        without_insurance_dict:{...this.state.data.without_insurance_dict,
+                            medication_list:this.state.selectedMedicationForWithoutInsurance.length > 0
+                            ? this.state.selectedMedicationForWithoutInsurance : this.state.data.without_insurance_dict.medication_list,
+                            tweets:this.state.selectedTweetsForWithoutInsurance.length  > 0
+                            ? this.state.selectedTweetsForWithoutInsurance : this.state.data.without_insurance_dict.tweets,
+                            external_links:this.state.selectedExternalLinksForWithoutInsurance.length > 0
+                            ? this.state.selectedExternalLinksForWithoutInsurance : this.state.data.without_insurance_dict.external_links
+        },
+        card_dict: {...this.state.data.card_dict, 
+                            medication_list:this.state.selectedMedicationForCard.length > 0
+                            ? this.state.selectedMedicationForCard : this.state.data.card_dict.medication_list,
+                            tweets:this.state.selectedTweetsForCard.length  > 0
+                            ? this.state.selectedTweetsForCard : this.state.data.card_dict.tweets,
+                            external_links:this.state.selectedExternalLinksForCard.length > 0
+                            ? this.state.selectedExternalLinksForCard : this.state.data.card_dict.external_links
+        }
+      };
+
       // var maxiLength = 0 ; 
       // if(maxiLength < this.state.selectedTopicPhrase.length)
       // maxiLength = this.state.selectedTopicPhrase.length;
