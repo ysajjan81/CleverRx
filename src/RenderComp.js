@@ -314,6 +314,7 @@ class RenderComp extends Component {
          this.myCallbackForCardTwitterLinks = this.myCallbackForCardTwitterLinks.bind(this);
          this.myCallbackForInsuranceTwitterLinks = this.myCallbackForInsuranceTwitterLinks.bind(this);
          this.myCallbackForWithoutInsuranceTwitterLinks = this.myCallbackForWithoutInsuranceTwitterLinks.bind(this);
+         this.myCallbackForCardCustomerMemes = this.myCallbackForCardCustomerMemes.bind(this);
     }
 
     export()
@@ -374,7 +375,8 @@ class RenderComp extends Component {
                             external_links:this.state.selectedExternalLinksForInsurance.length > 0
                               ? this.state.selectedExternalLinksForInsurance : {},
                             twitter_links:this.state.selectedTwitterLinksForInsurance.length > 0 
-                              ? this.state.selectedTwitterLinksForInsurance : {}
+                              ? this.state.selectedTwitterLinksForInsurance : {},
+                            tid:this.state.selectedMemesForInsurance.length > 0 ? this.state.selectedMemesForInsurance : {}
                             },
         without_insurance_dict:{...this.state.data.without_insurance_dict,
                             medication_list:this.state.selectedMedicationForWithoutInsurance.length > 0
@@ -384,8 +386,9 @@ class RenderComp extends Component {
                             external_links:this.state.selectedExternalLinksForWithoutInsurance.length > 0
                             ? this.state.selectedExternalLinksForWithoutInsurance : {},
                             twitter_links:this.state.selectedTwitterLinksForWithoutInsurance.length > 0 
-                              ? this.state.selectedTwitterLinksForWithoutInsurance : {}
-        },
+                              ? this.state.selectedTwitterLinksForWithoutInsurance : {},
+                            tid:this.state.selectedMemesForWithoutInsurance.length > 0 ? this.state.selectedMemesForWithoutInsurance : {}
+                            },
         card_dict: {...this.state.data.card_dict, 
                             medication_list:this.state.selectedMedicationForCard.length > 0
                             ? this.state.selectedMedicationForCard : {},
@@ -394,8 +397,9 @@ class RenderComp extends Component {
                             external_links:this.state.selectedExternalLinksForCard.length > 0
                             ? this.state.selectedExternalLinksForCard : {},
                             twitter_links:this.state.selectedTwitterLinksForCard.length > 0 
-                              ? this.state.selectedTwitterLinksForCard : {}
-        }
+                              ? this.state.selectedTwitterLinksForCard : {},
+                            tid:this.state.selectedMemesForCard.length > 0 ? this.state.selectedMemesForCard : {}
+                          }
       };
 
       // var maxiLength = 0 ; 
@@ -566,7 +570,6 @@ class RenderComp extends Component {
         if(data == -1)
           return;
           console.log("Getting data = ")
-          console.log(data)
           //Implement the display data
           this.setState({data:JSON.parse(data[0].data)},()=>{
               this.toggleBrowseModal()
@@ -574,6 +577,7 @@ class RenderComp extends Component {
           // var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
           // var newWindow = window.open();
           // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+          console.log(this.state.data)
       })
     }
     handleCardSentimentPositive()
@@ -807,8 +811,6 @@ class RenderComp extends Component {
         temp.push(this.state.selectedExternalLinksForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedExternalLinksForInsurance: temp});
-      console.log("external links = ");
-      console.log(this.state.selectedExternalLinksForInsurance);
     }
     myCallbackForInsuranceMemes(rowFromChild)
     {
@@ -833,6 +835,13 @@ class RenderComp extends Component {
         temp.push(this.state.selectedMemesForWithoutInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForWithoutInsurance: temp});
+    }
+    myCallbackForCardCustomerMemes(rowFromChild)
+    {
+      if(this.state.card == true)
+      this.myCallbackForCardMemes(rowFromChild);
+      else 
+      this.myCallbackForWithoutInsuranceMemes(rowFromChild);
     }
     cardCustomerCallbackForExternalLinks(rowFromChild)
     {
@@ -1387,7 +1396,7 @@ class RenderComp extends Component {
                   <Grid.Column width = {16} style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>
                     {
                       this.state.data.length === 0?<div></div>:
-                      <MyCarousel data = {this.state.data} card = {this.state.card} myCallback = {this.myCallbackForInsuranceMemes}/>
+                      <MyCarousel data = {this.state.data} card = {this.state.card} propsForCardCustomer = {this.myCallbackForCardCustomerMemes} propsForInsurance ={this.myCallbackForInsuranceMemes}/>
                     }
                   </Grid.Column>
                   </Grid.Row>

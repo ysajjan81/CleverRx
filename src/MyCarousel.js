@@ -9,17 +9,21 @@ class MyCarousel extends Component
   {
     super(props);
     this.state = {  }
-    this.sendDataToParent = this.sendDataToParent.bind(this);
+    this.sendDataToParentToCardCustomer = this.sendDataToParentToCardCustomer.bind(this);
+    this.sendDataToParentToInsurance = this.sendDataToParentToInsurance.bind(this);
   }
-  sendDataToParent(event, {value})
+  sendDataToParentToCardCustomer(event, value)
   {
-    this.props.myCallback(value);
+    this.props.propsForCardCustomer(value);
+  }
+  sendDataToParentToInsurance(event, value)
+  {
+    this.props.propsForInsurance(value);
   }
 
   getJpgs = (value) =>
   {
     let data=[];
-
     if(this.props.data!=null && value == "insurance" && this.props.data.insurance_dict.tid != null && this.props.data.insurance_dict.tid.length > 0)
     {
               var count = 0;
@@ -36,19 +40,17 @@ class MyCarousel extends Component
                 {
                 if(count - i >= 3)
                 {
-
                 var img1 = '/memes/jpgs/' + imageTid[i++];
-                var img2 = '/memes/jpgs/' +imageTid[i++];
-                var img3 = '/memes/jpgs/' +imageTid[i++];
+                var img2 = '/memes/jpgs/' + imageTid[i++];
+                var img3 = '/memes/jpgs/' + imageTid[i++];
                    data.push(
                     <Carousel.Item>
-
                       <div style={{width:'33.3%',  display:'inline-block'}}>
                         <div>
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
-                          onChange={(event)=>this.sendDataToParent(event,this.props.data.insurance_dict.tid[i])}
+                          onChange={(event)=>this.sendDataToParentToInsurance(event,this.props.data.insurance_dict.tid[i-3])}
                         />
                       </div><img
                         src={img1}
@@ -60,6 +62,7 @@ class MyCarousel extends Component
                         <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParentToInsurance(event,this.props.data.insurance_dict.tid[i-2])}
                       />
                     </div><img
                         src={img2}
@@ -71,6 +74,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToInsurance(event,this.props.data.insurance_dict.tid[i-1])}
                         />
                       </div><img
                         src={img3}
@@ -93,7 +97,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
-                        onChange={(event)=>this.sendDataToParent(event,this.props.data.insurance_dict.tid[i])}
+                        onChange={(event)=>this.sendDataToParentToInsurance(event,this.props.data.insurance_dict.tid[i-2])}
                       />
                     </div><img
                         src={img1}
@@ -105,6 +109,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToInsurance(event,this.props.data.insurance_dict.tid[i-1])}
                         />
                       </div><img
                         src={img2}
@@ -123,7 +128,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
-                          onChange={(event)=>this.sendDataToParent(event,this.props.data.insurance_dict.tid[i])}
+                          onChange={(event)=>this.sendDataToParentToInsurance(event,this.props.data.insurance_dict.tid[i-1])}
                         />
                       </div><img
                         src={img1}
@@ -166,6 +171,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.card_dict.tid[i-3])}
                         />
                       </div><img
                         src={img1}
@@ -177,6 +183,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.card_dict.tid[i-2])}
                       />
                     </div><img
                         src={img2}
@@ -188,6 +195,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.card_dict.tid[i-1])}
                       />
                     </div><img
                         src={img3}
@@ -208,6 +216,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.card_dict.tid[i-2])}
                       />
                     </div><img
                         src={img1}
@@ -219,6 +228,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.card_dict.tid[i-1])}
                       />
                     </div><img
                         src={img2}
@@ -237,6 +247,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.card_dict.tid[i-1])}
                       />
                     </div><img
                         src={img1}
@@ -279,6 +290,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.without_insurance_dict.tid[i-3])}
                         />
                       </div><img
                         src={img1}
@@ -290,6 +302,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.without_insurance_dict.tid[i-2])}
                         />
                       </div><img
                         src={img2}
@@ -301,6 +314,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.without_insurance_dict.tid[i-1])}
                         />
                       </div><img
                         src={img3}
@@ -322,6 +336,7 @@ class MyCarousel extends Component
                       <input
                         type="checkbox"
                         style={{ transform: 'scale(1.5)', }}
+                        onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.without_insurance_dict.tid[i-2])}
                       />
                     </div><img
                         src={img1}
@@ -333,6 +348,7 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.without_insurance_dict.tid[i-1])}
                         />
                       </div><img
                         src={img2}
@@ -351,11 +367,11 @@ class MyCarousel extends Component
                         <input
                           type="checkbox"
                           style={{ transform: 'scale(1.5)', }}
+                          onChange={(event)=>this.sendDataToParentToCardCustomer(event,this.props.data.without_insurance_dict.tid[i-1])}
                         />
                       </div><img
                         src={img1}
                         alt="logo" style={{height:'250px', width:'350px'}}
-
                       /></div>
                     </Carousel.Item>
                   );
