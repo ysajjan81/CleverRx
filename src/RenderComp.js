@@ -577,7 +577,7 @@ class RenderComp extends Component {
           // var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
           // var newWindow = window.open();
           // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
-          console.log(this.state.data)
+          console.log(this.state.data.insurance_dict.tid)
       })
     }
     handleCardSentimentPositive()
@@ -814,11 +814,13 @@ class RenderComp extends Component {
     }
     myCallbackForInsuranceMemes(rowFromChild)
     {
+      
       var temp = [];
       for(let i = 0 ; i<this.state.selectedMemesForInsurance.length ; i++)
         temp.push(this.state.selectedMemesForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForInsurance: temp});
+      console.log("InsidedMyCallbackForInsuranceMemes" + temp);
     }
     myCallbackForCardMemes(rowFromChild)
     {

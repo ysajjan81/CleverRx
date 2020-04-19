@@ -19,13 +19,15 @@ class MyCarousel extends Component
   sendDataToParentToInsurance(event, value)
   {
     this.props.propsForInsurance(value);
-  }
+  }   
 
   getJpgs = (value) =>
   {
+
     let data=[];
     if(this.props.data!=null && value == "insurance" && this.props.data.insurance_dict.tid != null && this.props.data.insurance_dict.tid.length > 0)
     {
+        
               var count = 0;
               var imageTid= [];
               for(let j = 0 ; j<this.props.data.insurance_dict.tid.length; j++)
@@ -36,6 +38,7 @@ class MyCarousel extends Component
                    count+= images[this.props.data.insurance_dict.tid[j]].length;
 
                }
+
               for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
@@ -152,14 +155,13 @@ class MyCarousel extends Component
                 imageTid.push.apply(imageTid, img);
                 if(img != null && imageTid.length>0)
                    count+= images[this.props.data.card_dict.tid[j]].length;
-
                }
+              //  console.log("count = " + count);
 
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
                 {
-
                 var img1 = '/memes/jpgs/' + imageTid[i++];
                 var img2 = '/memes/jpgs/' +imageTid[i++];
                 var img3 = '/memes/jpgs/' +imageTid[i++];
@@ -262,26 +264,26 @@ class MyCarousel extends Component
             }
             else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid != null && this.props.data.without_insurance_dict.tid.length > 0 )
             {
+              // console.log("insidegetJpgs =" + this.props.data.without_insurance_dict.tid.length);
               var count = 0;
               var imageTid= [];
+
               for(let j = 0 ; j<this.props.data.without_insurance_dict.tid.length; j++)
               {
-
                 var img = images[this.props.data.without_insurance_dict.tid[j]];
                 imageTid.push.apply(imageTid, img);
                 if(img != null && imageTid.length>0)
                    count+= images[this.props.data.without_insurance_dict.tid[j]].length;
-
                }
+
+              //  console.log("count = " + count);
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
                 {
-
                 var img1 = '/memes/jpgs/' + imageTid[i++];
                 var img2 = '/memes/jpgs/' +imageTid[i++];
                 var img3 = '/memes/jpgs/' +imageTid[i++];
-
 
                   data.push(
                     <Carousel.Item>
@@ -387,7 +389,6 @@ class MyCarousel extends Component
           <Card.Content>
             <Card.Header>Card Memes</Card.Header>
           </Card.Content>
-
           { this.props.data != null ? <Carousel interval={null}>
             {this.getJpgs("card")}
           </Carousel> : null}
