@@ -256,10 +256,12 @@ class RenderComp extends Component {
             selectedMedicationForInsurance:[],
             selectedMedicationForWithoutInsurance:[],
             selectedMedicationForCard:[],
-            
             selectedExternalLinksForWithoutInsurance:[],
             selectedExternalLinksForInsurance:[],
             selectedExternalLinksForCard:[],
+            selectedTwitterLinksForInsurance:[],
+            selectedTwitterLinksForCard:[],
+            selectedTwitterLinksForWithoutInsurance:[],
             selectedMemesForCard:[],
             selectedMemesForInsurance:[],
             selectedMemesForWithoutInsurance:[],
@@ -307,7 +309,12 @@ class RenderComp extends Component {
          this.myCallbackForInsuranceMemes = this.myCallbackForInsuranceMemes.bind(this);
          this.myCallbackForCardMemes = this.myCallbackForCardMemes.bind(this);
          this.myCallbackForWithoutInsuranceMemes = this.myCallbackForWithoutInsuranceMemes.bind(this);
-         
+         this.cardCustomerCallbackForExternalLinks = this.cardCustomerCallbackForExternalLinks.bind(this);
+         this.cardCustomerCallbackForTwitterLinks = this.cardCustomerCallbackForTwitterLinks.bind(this);
+         this.myCallbackForCardTwitterLinks = this.myCallbackForCardTwitterLinks.bind(this);
+         this.myCallbackForInsuranceTwitterLinks = this.myCallbackForInsuranceTwitterLinks.bind(this);
+         this.myCallbackForWithoutInsuranceTwitterLinks = this.myCallbackForWithoutInsuranceTwitterLinks.bind(this);
+
     }
 
     export()
@@ -330,7 +337,9 @@ class RenderComp extends Component {
                             tweets:this.state.selectedTweetsForInsurance.length > 0
                               ? this.state.selectedTweetsForInsurance : this.state.data.insurance_dict.tweets,
                             external_links:this.state.selectedExternalLinksForInsurance.length > 0
-                              ? this.state.selectedExternalLinksForInsurance : this.state.data.insurance_dict.external_links
+                              ? this.state.selectedExternalLinksForInsurance : this.state.data.insurance_dict.external_links,
+                            twitter_links:this.state.selectedTwitterLinksForInsurance.length > 0 
+                              ? this.state.selectedTwitterLinksForInsurance : this.state.data.insurance_dict.twitter_links
                             },
         without_insurance_dict:{...this.state.data.without_insurance_dict,
                             medication_list:this.state.selectedMedicationForWithoutInsurance.length > 0
@@ -338,7 +347,9 @@ class RenderComp extends Component {
                             tweets:this.state.selectedTweetsForWithoutInsurance.length  > 0
                             ? this.state.selectedTweetsForWithoutInsurance : this.state.data.without_insurance_dict.tweets,
                             external_links:this.state.selectedExternalLinksForWithoutInsurance.length > 0
-                            ? this.state.selectedExternalLinksForWithoutInsurance : this.state.data.without_insurance_dict.external_links
+                            ? this.state.selectedExternalLinksForWithoutInsurance : this.state.data.without_insurance_dict.external_links,
+                            twitter_links:this.state.selectedTwitterLinksForWithoutInsurance.length > 0 
+                              ? this.state.selectedTwitterLinksForWithoutInsurance : this.state.data.without_insurance_dict.twitter_links
         },
         card_dict: {...this.state.data.card_dict, 
                             medication_list:this.state.selectedMedicationForCard.length > 0
@@ -346,7 +357,9 @@ class RenderComp extends Component {
                             tweets:this.state.selectedTweetsForCard.length  > 0
                             ? this.state.selectedTweetsForCard : this.state.data.card_dict.tweets,
                             external_links:this.state.selectedExternalLinksForCard.length > 0
-                            ? this.state.selectedExternalLinksForCard : this.state.data.card_dict.external_links
+                            ? this.state.selectedExternalLinksForCard : this.state.data.card_dict.external_links,
+                            twitter_links:this.state.selectedTwitterLinksForCard.length > 0 
+                              ? this.state.selectedTwitterLinksForCard : this.state.data.card_dict.twitter_links
         }
       };
 
@@ -759,6 +772,8 @@ class RenderComp extends Component {
         temp.push(this.state.selectedExternalLinksForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedExternalLinksForInsurance: temp});
+      console.log("external links = ");
+      console.log(this.state.selectedExternalLinksForInsurance);
     }
     myCallbackForInsuranceMemes(rowFromChild)
     {
@@ -783,6 +798,44 @@ class RenderComp extends Component {
         temp.push(this.state.selectedMemesForWithoutInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForWithoutInsurance: temp});
+    }
+    cardCustomerCallbackForExternalLinks(rowFromChild)
+    {
+      if(this.state.card == true)
+      this.myCallbackForCardExternalLinks(rowFromChild);
+      else 
+      this.myCallbackForWithoutInsuranceExternalLinks(rowFromChild);
+    }
+    myCallbackForCardTwitterLinks(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedTwitterLinksForCard.length ; i++)
+        temp.push(this.state.selectedTwitterLinksForCard[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedTwitterLinksForCard: temp});
+    }
+    myCallbackForInsuranceTwitterLinks(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedTwitterLinksForInsurance.length ; i++)
+        temp.push(this.state.selectedTwitterLinksForInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedTwitterLinksForInsurance: temp});
+    }
+    myCallbackForWithoutInsuranceTwitterLinks(rowFromChild)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedTwitterLinksForWithoutInsurance.length ; i++)
+        temp.push(this.state.selectedTwitterLinksForWithoutInsurance[i]);
+      temp.push(rowFromChild);
+      this.setState({selectedTwitterLinksForWithoutInsurance: temp});
+    }
+    cardCustomerCallbackForTwitterLinks(rowFromChild)
+    {
+      if(this.state.card == true)
+      this.myCallbackForCardTwitterLinks(rowFromChild);
+      else 
+      this.myCallbackForWithoutInsuranceTwitterLinks(rowFromChild);
     }
     checkBoxSelected = (event, {value}) =>
     {
@@ -1283,14 +1336,14 @@ class RenderComp extends Component {
                         <h3>Card Related Landing Pages</h3>
                         {
                         this.state.data.length === 0 ? (<div></div>):
-                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left"/>
+                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "left" myCallBack =  {this.cardCustomerCallbackForExternalLinks} myCallBackForTwitterLinks = {this.cardCustomerCallbackForTwitterLinks}/>
                         }
                     </Grid.Column>
                     <Grid.Column>
                         <h3>Insurance Related Landing Pages</h3>
                         {
                         this.state.data.length === 0 ? (<div></div>):
-                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right" myCallBack = {this.myCallbackForInsuranceExternalLinks}/>
+                        <Mylinks data = {this.state.data} insurance={this.state.insur} card={this.state.card} col = "right" myCallBack = {this.myCallbackForInsuranceExternalLinks} InsuranceTwitterLinks = {this.myCallbackForInsuranceTwitterLinks}/>
                         }
                     </Grid.Column>
                 </Grid.Row>
@@ -1304,7 +1357,6 @@ class RenderComp extends Component {
                   </Grid.Column>
                   </Grid.Row>
                 </Grid>
-
             </div>
          );
     }

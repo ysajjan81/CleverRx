@@ -148,7 +148,6 @@ export default class Twitter extends React.Component {
                   <label>{this.props.data.twitter[i].phrase}</label>
                 </div>
                 </Table.Cell>
-
                 <Table.Cell>
                   {this.props.data.twitter[i].count.toLocaleString()}
                 </Table.Cell>

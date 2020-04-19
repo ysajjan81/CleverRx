@@ -9,10 +9,19 @@ class Mylinks extends Component {
     super(props);
     this.state = {  }
     this.sendDataToParent = this.sendDataToParent.bind(this);
+    this.sendDataToParentForTwitterLinksForCardCustomer = this.sendDataToParentForTwitterLinksForCardCustomer.bind(this);
   }
-sendDataToParent(event, {value})
+sendDataToParent(event, value)
 {
   this.props.myCallBack(value);
+}
+sendDataToParentForTwitterLinksForCardCustomer(event, value)
+{
+  this.props.myCallBackForTwitterLinks(value);
+}
+sendDataToParentForTwitterLinksForInsurance(event, value)
+{
+  this.props.InsuranceTwitterLinks(value);
 }
 
   render() {
@@ -23,10 +32,12 @@ sendDataToParent(event, {value})
     data = this.props.data;
     if(data.length != 0 )
     {
-      if(data.insurance_dict.external_links && loc == "right")
+      if(this.props.data != null && data.insurance_dict.external_links != null && loc == "right")
       {
         for(let i = 0 ; i<data.insurance_dict.external_links.length; i++)
         {
+          if(data.insurance_dict.external_links == null)
+          continue;
           var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.insurance_dict.external_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
           e.push(
               <Table.Row>
@@ -39,7 +50,7 @@ sendDataToParent(event, {value})
                     key = {data.insurance_dict.external_links[i][1]}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
-                    onChange ={(event)=>this.sendDataToParent(event, data.insurance_dict.external_links[i])}
+                    onChange ={(event)=>this.sendDataToParent(event, this.props.data.insurance_dict.external_links[i])}
                   />
                   <label style={{fontSize:'13px'}}>{data.insurance_dict.external_links[i][1]}</label>
                 </div></Table.Cell>
@@ -47,10 +58,12 @@ sendDataToParent(event, {value})
           )
         }
       }
-      if(data.insurance_dict.facebook_links && loc == "right")
+      if(this.props.data != null && data.insurance_dict.facebook_links != null && loc == "right")
       {
         for(let i = 0 ; i<data.insurance_dict.facebook_links.length; i++)
         {
+          if(data.insurance_dict.facebook_links == null)
+          continue;
           var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.insurance_dict.facebook_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
           l.push(
               <Table.Row>
@@ -63,7 +76,7 @@ sendDataToParent(event, {value})
                     key = {data.insurance_dict.facebook_links[i][1]}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
-                    onChange ={(event)=>this.sendDataToParent(event, data.insurance_dict.facebook_links[i])}
+                    onChange ={(event)=>this.sendDataToParent(event, this.props.data.insurance_dict.facebook_links[i])}
                   />
                   <label style={{fontSize:'13px'}}>{data.insurance_dict.facebook_links[i][1]}</label>
                 </div></Table.Cell>
@@ -71,10 +84,12 @@ sendDataToParent(event, {value})
           )
         }
       }
-      if(data.insurance_dict.twitter_links && loc == "right")
+      if(this.props.data != null && data.insurance_dict.twitter_links != null && loc == "right")
       {
       for(let i = 0 ; i<data.insurance_dict.twitter_links.length; i++)
       {
+        if(data.insurance_dict.twitter_links == null)
+        continue;
         var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.insurance_dict.twitter_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <Table.Row>
@@ -87,7 +102,7 @@ sendDataToParent(event, {value})
                 key = {data.insurance_dict.twitter_links[i][1]}
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
-                  onChange ={(event)=>this.sendDataToParent(event, data.insurance_dict.twitter_links[i])}
+                  onChange ={(event)=>this.sendDataToParentForTwitterLinksForInsurance(event, this.props.data.insurance_dict.twitter_links[i])}
                 />
                 <label style={{fontSize:'13px'}}>{data.insurance_dict.twitter_links[i][1]}</label>
               </div>
@@ -96,10 +111,12 @@ sendDataToParent(event, {value})
         )
       }
       }
-      if(this.props.card == true && data.card_dict.external_links && loc == "left")
+      if(this.props.data != null && this.props.card == true && data.card_dict.external_links && loc == "left")
       {
         for(let i = 0 ; i<data.card_dict.external_links.length; i++)
         {
+          if(data.card_dict.external_links == null)
+          continue;
           var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.external_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
           e.push(
               <Table.Row>
@@ -111,6 +128,7 @@ sendDataToParent(event, {value})
                key = {data.card_dict.external_links[i][1]}
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                onChange ={(event)=>this.sendDataToParent(event, this.props.data.card_dict.external_links[i])}
               />
               <label style={{fontSize:'13px'}}>{data.card_dict.external_links[i][1]}</label>
             </div>
@@ -119,10 +137,12 @@ sendDataToParent(event, {value})
           )
         }
       }
-    if(this.props.card == true && data.card_dict.facebook_links && loc == "left")
+    if(this.props.data != null && this.props.card == true && data.card_dict.facebook_links && loc == "left")
     {
       for(let i = 0 ; i<data.card_dict.facebook_links.length; i++)
       {
+        if(data.card_dict.facebook_links == null)
+          continue;
         var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.facebook_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <Table.Row>
@@ -134,6 +154,7 @@ sendDataToParent(event, {value})
               key = {data.card_dict.facebook_links[i][1]}
               type="checkbox"
               style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+              onChange ={(event)=>this.sendDataToParent(event, this.props.data.card_dict.facebook_links[i])}
             />
             <label style={{fontSize:'13px'}}>{data.card_dict.facebook_links[i][1]}</label>
           </div>
@@ -142,10 +163,12 @@ sendDataToParent(event, {value})
         )
       }
       }
-      if(this.props.card == true && data.card_dict.twitter_links && loc == "left")
+      if(this.props.data != null && this.props.card == true && data.card_dict.twitter_links && loc == "left")
       {
       for(let i = 0 ; i<data.card_dict.twitter_links.length; i++)
       {
+        if(data.card_dict.twitter_links == null)
+          continue;
         var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.card_dict.twitter_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
         l.push(
             <Table.Row>
@@ -158,6 +181,7 @@ sendDataToParent(event, {value})
                 key = {data.card_dict.twitter_links[i][1]}
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                onChange ={(event)=>this.sendDataToParentForTwitterLinksForCardCustomer(event, this.props.data.card_dict.twitter_links[i])}
               />
               <label style={{fontSize:'13px'}}>{data.card_dict.twitter_links[i][1]}</label>
             </div></Table.Cell>
@@ -165,10 +189,12 @@ sendDataToParent(event, {value})
         )
       }
       }
-      if(this.props.card == false && data.without_insurance_dict.external_links && loc == "left")
+      if(this.props.data != null && this.props.card == false && data.without_insurance_dict.external_links && loc == "left")
       {
         for(let i = 0 ; i<data.without_insurance_dict.external_links.length; i++)
         {
+          if(data.without_insurance_dict.external_links == null)
+          continue;
   
           var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.external_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
           e.push(
@@ -183,6 +209,7 @@ sendDataToParent(event, {value})
                     key = {data.without_insurance_dict.external_links[i][1]}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                    onChange ={(event)=>this.sendDataToParent(event, this.props.data.without_insurance_dict.external_links[i])}
                   />
                   <label style={{fontSize:'13px'}}>{data.without_insurance_dict.external_links[i][1]}</label>
                 </div>
@@ -191,10 +218,12 @@ sendDataToParent(event, {value})
           )
         }
       }
-      if(this.props.card == false && data.without_insurance_dict.facebook_links && loc == "left")
+      if(this.props.data != null && this.props.card == false && data.without_insurance_dict.facebook_links && loc == "left")
       {
         for(let i = 0 ; i<data.without_insurance_dict.facebook_links.length; i++)
         {
+          if(data.without_insurance_dict.facebook_links == null)
+          continue;
           var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.facebook_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
           l.push(
               <Table.Row>
@@ -209,6 +238,7 @@ sendDataToParent(event, {value})
                     key = {data.without_insurance_dict.facebook_links[i][1]}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                    onChange ={(event)=>this.sendDataToParentForTwitterLinks(event, this.props.data.without_insurance_dict.facebook_links[i])}
                   />
                   <label style={{fontSize:'13px'}}>{data.without_insurance_dict.facebook_links[i][1]}</label>
                 </div>
@@ -217,14 +247,15 @@ sendDataToParent(event, {value})
           )
         }
       }
-      if(this.props.card == false && data.without_insurance_dict.twitter_links && loc == "left")
+      if(this.props.data != null && this.props.card == false && data.without_insurance_dict.twitter_links && loc == "left")
       {
         for(let i = 0 ; i<data.without_insurance_dict.twitter_links.length; i++)
         {
+          if(data.without_insurance_dict.twitter_links == null)
+          continue;
           var iframe = '<iframe style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/api/iframe?url=' + data.without_insurance_dict.twitter_links[i][0] + '&api_key=9ae8d9c2e9f179fa866756"></iframe><script async style="width:100%; height:300px; border:0; border-radius: 4px; overflow:hidden;" src="//cdn.iframe.ly/embed.js"></script>'
           l.push(
               <Table.Row>
-  
               <Table.Cell>
                 <IframeApp data={iframe} />
               </Table.Cell>
@@ -234,6 +265,7 @@ sendDataToParent(event, {value})
                       key = {data.without_insurance_dict.twitter_links[i][1]}
                       type="checkbox"
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
+                      onChange ={(event)=>this.sendDataToParentForTwitterLinksForCardCustomer(event, this.props.data.without_insurance_dict.twitter_links[i])}
                     />
                     <label style={{fontSize:'13px'}}>{data.without_insurance_dict.twitter_links[i][1]}</label>
                   </div></Table.Cell>
