@@ -319,51 +319,6 @@ class RenderComp extends Component {
 
     export()
     {
-      var jsonObject = [];
-      var cardData={};
-      var withoutInsuranceData = {};
-      if(this.state.card){
-        //Populate for insurance card
-      }else{
-        //Populate for without insurance card
-      }
-
-      // var masterObject ={
-      //   twitter: this.state.selectedTwitterData.length > 0 ? this.state.selectedTwitterData : this.state.data.twitter,
-      //   facebook: this.state.selectedFacebookData.length > 0 ? this.state.selectedFacebookData : this.state.data.facebook,
-      //   insurance_dict: {...this.state.data.insurance_dict,
-      //                       medication_list:this.state.selectedMedicationForInsurance.length > 0
-      //                         ? this.state.selectedMedicationForInsurance : this.state.data.insurance_dict.medication_list,
-      //                       tweets:this.state.selectedTweetsForInsurance.length > 0
-      //                         ? this.state.selectedTweetsForInsurance : this.state.data.insurance_dict.tweets,
-      //                       external_links:this.state.selectedExternalLinksForInsurance.length > 0
-      //                         ? this.state.selectedExternalLinksForInsurance : this.state.data.insurance_dict.external_links,
-      //                       twitter_links:this.state.selectedTwitterLinksForInsurance.length > 0 
-      //                         ? this.state.selectedTwitterLinksForInsurance : this.state.data.insurance_dict.twitter_links
-      //                       },
-      //   without_insurance_dict:{...this.state.data.without_insurance_dict,
-      //                       medication_list:this.state.selectedMedicationForWithoutInsurance.length > 0
-      //                       ? this.state.selectedMedicationForWithoutInsurance : this.state.data.without_insurance_dict.medication_list,
-      //                       tweets:this.state.selectedTweetsForWithoutInsurance.length  > 0
-      //                       ? this.state.selectedTweetsForWithoutInsurance : this.state.data.without_insurance_dict.tweets,
-      //                       external_links:this.state.selectedExternalLinksForWithoutInsurance.length > 0
-      //                       ? this.state.selectedExternalLinksForWithoutInsurance : this.state.data.without_insurance_dict.external_links,
-      //                       twitter_links:this.state.selectedTwitterLinksForWithoutInsurance.length > 0 
-      //                         ? this.state.selectedTwitterLinksForWithoutInsurance : this.state.data.without_insurance_dict.twitter_links
-      //   },
-      //   card_dict: {...this.state.data.card_dict, 
-      //                       medication_list:this.state.selectedMedicationForCard.length > 0
-      //                       ? this.state.selectedMedicationForCard : this.state.data.card_dict.medication_list,
-      //                       tweets:this.state.selectedTweetsForCard.length  > 0
-      //                       ? this.state.selectedTweetsForCard : this.state.data.card_dict.tweets,
-      //                       external_links:this.state.selectedExternalLinksForCard.length > 0
-      //                       ? this.state.selectedExternalLinksForCard : this.state.data.card_dict.external_links,
-      //                       twitter_links:this.state.selectedTwitterLinksForCard.length > 0 
-      //                         ? this.state.selectedTwitterLinksForCard : this.state.data.card_dict.twitter_links
-      //   }
-      // };
-
-
       var masterObject ={
         twitter: this.state.selectedTwitterData.length > 0 ? this.state.selectedTwitterData : {},
         facebook: this.state.selectedFacebookData.length > 0 ? this.state.selectedFacebookData : {},
@@ -402,79 +357,7 @@ class RenderComp extends Component {
                           }
       };
 
-      // var maxiLength = 0 ; 
-      // if(maxiLength < this.state.selectedTopicPhrase.length)
-      // maxiLength = this.state.selectedTopicPhrase.length;
-
-      // if(maxiLength < this.state.selectedTweets.length)
-      // maxiLength = this.state.selectedTweets.length;
-
-      // if(maxiLength < this.state.selectedFacebookData.length)
-      // maxiLength = this.state.selectedFacebookData.length;
-
-      // if(maxiLength < this.state.selectedTwitterData.length)
-      // maxiLength = this.state.selectedTwitterData.length;
-
-      // if(maxiLength < this.state.selectedMedication.length)
-      // maxiLength = this.state.selectedMedication.length;
-
-      // if(maxiLength < this.state.selectedFacebookLinks.length)
-      // maxiLength = this.state.selectedFacebookLinks.length;
-
-      // if(maxiLength < this.state.selectedTwitterLinks.length)
-      // maxiLength = this.state.selectedTwitterLinks.length;
-
-      // if(maxiLength < this.state.selectedMemes.length)
-      // maxiLength = this.state.selectedMemes.length;
-
-      // for(let item =  0 ; item<maxiLength; item++)
-      // {
-      //   var tempPhrase = "";
-      //   var tempTweets = "";
-      //   var tempFacebookData = "";
-      //   var tempTwitterData = "";
-      //   var tempMedication = "";
-      //   var tempExternalLinks = "";
-      //   var tempLandingPageTwitterLink = "";
-      //   var tempMemes = "";
-
-      //   if(item < this.state.selectedTopicPhrase.length)
-      //   tempPhrase = this.state.selectedTopicPhrase[item];
-
-      //   if(item < this.state.selectedTweets.length)
-      //   tempTweets = this.state.selectedTweets[item];
-
-      //   if(item < this.state.selectedFacebookData.length)
-      //   tempFacebookData = this.state.selectedFacebookData[item];
-
-      //   if(item < this.state.selectedTwitterData.length)
-      //   tempTwitterData = this.state.selectedTwitterData[item];
-
-      //   if(item < this.state.selectedMedication.length)
-      //   tempMedication = this.state.selectedMedication[item];
-
-      //   if(item < this.state.selectedFacebookLinks.length)
-      //   tempExternalLinks = this.state.selectedFacebookLinks[item];
-
-      //   if(item < this.state.selectedTwitterLinks.length)
-      //   tempLandingPageTwitterLink = this.state.selectedTwitterLinks[item];
-
-      //   if(item < this.state.selectedMemes.length)
-      //   tempMemes = this.state.selectedMemes[item];
-
-      //   jsonObject.push({
-      //     id:item,
-      //     Phrase:tempPhrase,
-      //     Topic:this.state.myTopic,
-      //     Tweets:tempTweets,
-      //     FacebookID:tempFacebookData,
-      //     TwitterID:tempTwitterData,
-      //     Medication:tempMedication,
-      //     ExternalLinks:tempExternalLinks,
-      //     TwitterLinks:tempLandingPageTwitterLink,
-      //     Memes:tempMemes,
-      //   })
-      // }
+      console.log(masterObject)
 
       this.setState({ dataToExport: masterObject }, () => {
         const url = '/add_files'
