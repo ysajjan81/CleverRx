@@ -19,7 +19,7 @@ class MyCarousel extends Component
   sendDataToParentToInsurance(event, value)
   {
     this.props.propsForInsurance(value);
-  }   
+  }
 
   getJpgs = (value) =>
   {
@@ -27,9 +27,9 @@ class MyCarousel extends Component
     let data=[];
     if(this.props.data!=null && value == "insurance" && this.props.data.insurance_dict.tid != null && this.props.data.insurance_dict.tid.length > 0)
     {
-        
               var count = 0;
               var imageTid= [];
+              var mymap = {};
               for(let j = 0 ; j<this.props.data.insurance_dict.tid.length; j++)
               {
                 var img = images[this.props.data.insurance_dict.tid[j]];
@@ -82,7 +82,6 @@ class MyCarousel extends Component
                       </div><img
                         src={img3}
                         alt="logo" style={{height:'250px', width:'350px'}}
-
                       /></div>
                     </Carousel.Item>
                   );
@@ -90,7 +89,6 @@ class MyCarousel extends Component
 
                 else if(count - i  == 2)
                 {
-
                   var img1 = '/memes/jpgs/' + imageTid[i++];
                   var img2 = '/memes/jpgs/' +imageTid[i++];
                   data.push(
@@ -122,7 +120,7 @@ class MyCarousel extends Component
                     </Carousel.Item>
                   );
                 }
-                else {
+                else if (count - i  == 1){
                   var img1 = '/memes/jpgs/' + imageTid[i++];
                   data.push(
                     <Carousel.Item>
@@ -150,7 +148,6 @@ class MyCarousel extends Component
               var imageTid= [];
               for(let j = 0 ; j<this.props.data.card_dict.tid.length; j++)
               {
-
                 var img = images[this.props.data.card_dict.tid[j]];
                 imageTid.push.apply(imageTid, img);
                 if(img != null && imageTid.length>0)
@@ -264,7 +261,7 @@ class MyCarousel extends Component
             }
             else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid != null && this.props.data.without_insurance_dict.tid.length > 0 )
             {
-              // console.log("insidegetJpgs =" + this.props.data.without_insurance_dict.tid.length);
+              console.log("insidegetJpgs =" + this.props.data.without_insurance_dict.tid.length);
               var count = 0;
               var imageTid= [];
 
@@ -276,7 +273,7 @@ class MyCarousel extends Component
                    count+= images[this.props.data.without_insurance_dict.tid[j]].length;
                }
 
-              //  console.log("count = " + count);
+               console.log("count = " + count);
                 for(let i = 0 ; i<count ; i++)
                 {
                 if(count - i >= 3)
