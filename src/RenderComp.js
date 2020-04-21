@@ -319,52 +319,8 @@ class RenderComp extends Component {
 
     export()
     {
-      var jsonObject = [];
-      var cardData={};
-      var withoutInsuranceData = {};
-      if(this.state.card){
-        //Populate for insurance card
-      }else{
-        //Populate for without insurance card
-      }
-
-      // var masterObject ={
-      //   twitter: this.state.selectedTwitterData.length > 0 ? this.state.selectedTwitterData : this.state.data.twitter,
-      //   facebook: this.state.selectedFacebookData.length > 0 ? this.state.selectedFacebookData : this.state.data.facebook,
-      //   insurance_dict: {...this.state.data.insurance_dict,
-      //                       medication_list:this.state.selectedMedicationForInsurance.length > 0
-      //                         ? this.state.selectedMedicationForInsurance : this.state.data.insurance_dict.medication_list,
-      //                       tweets:this.state.selectedTweetsForInsurance.length > 0
-      //                         ? this.state.selectedTweetsForInsurance : this.state.data.insurance_dict.tweets,
-      //                       external_links:this.state.selectedExternalLinksForInsurance.length > 0
-      //                         ? this.state.selectedExternalLinksForInsurance : this.state.data.insurance_dict.external_links,
-      //                       twitter_links:this.state.selectedTwitterLinksForInsurance.length > 0 
-      //                         ? this.state.selectedTwitterLinksForInsurance : this.state.data.insurance_dict.twitter_links
-      //                       },
-      //   without_insurance_dict:{...this.state.data.without_insurance_dict,
-      //                       medication_list:this.state.selectedMedicationForWithoutInsurance.length > 0
-      //                       ? this.state.selectedMedicationForWithoutInsurance : this.state.data.without_insurance_dict.medication_list,
-      //                       tweets:this.state.selectedTweetsForWithoutInsurance.length  > 0
-      //                       ? this.state.selectedTweetsForWithoutInsurance : this.state.data.without_insurance_dict.tweets,
-      //                       external_links:this.state.selectedExternalLinksForWithoutInsurance.length > 0
-      //                       ? this.state.selectedExternalLinksForWithoutInsurance : this.state.data.without_insurance_dict.external_links,
-      //                       twitter_links:this.state.selectedTwitterLinksForWithoutInsurance.length > 0 
-      //                         ? this.state.selectedTwitterLinksForWithoutInsurance : this.state.data.without_insurance_dict.twitter_links
-      //   },
-      //   card_dict: {...this.state.data.card_dict, 
-      //                       medication_list:this.state.selectedMedicationForCard.length > 0
-      //                       ? this.state.selectedMedicationForCard : this.state.data.card_dict.medication_list,
-      //                       tweets:this.state.selectedTweetsForCard.length  > 0
-      //                       ? this.state.selectedTweetsForCard : this.state.data.card_dict.tweets,
-      //                       external_links:this.state.selectedExternalLinksForCard.length > 0
-      //                       ? this.state.selectedExternalLinksForCard : this.state.data.card_dict.external_links,
-      //                       twitter_links:this.state.selectedTwitterLinksForCard.length > 0 
-      //                         ? this.state.selectedTwitterLinksForCard : this.state.data.card_dict.twitter_links
-      //   }
-      // };
-
-
       var masterObject ={
+        phrase: this.state.selectedTopicPhrase.length > 0 ? this.state.selectedTopicPhrase : {},
         twitter: this.state.selectedTwitterData.length > 0 ? this.state.selectedTwitterData : {},
         facebook: this.state.selectedFacebookData.length > 0 ? this.state.selectedFacebookData : {},
         insurance_dict: {...this.state.data.insurance_dict,
@@ -402,79 +358,7 @@ class RenderComp extends Component {
                           }
       };
 
-      // var maxiLength = 0 ; 
-      // if(maxiLength < this.state.selectedTopicPhrase.length)
-      // maxiLength = this.state.selectedTopicPhrase.length;
-
-      // if(maxiLength < this.state.selectedTweets.length)
-      // maxiLength = this.state.selectedTweets.length;
-
-      // if(maxiLength < this.state.selectedFacebookData.length)
-      // maxiLength = this.state.selectedFacebookData.length;
-
-      // if(maxiLength < this.state.selectedTwitterData.length)
-      // maxiLength = this.state.selectedTwitterData.length;
-
-      // if(maxiLength < this.state.selectedMedication.length)
-      // maxiLength = this.state.selectedMedication.length;
-
-      // if(maxiLength < this.state.selectedFacebookLinks.length)
-      // maxiLength = this.state.selectedFacebookLinks.length;
-
-      // if(maxiLength < this.state.selectedTwitterLinks.length)
-      // maxiLength = this.state.selectedTwitterLinks.length;
-
-      // if(maxiLength < this.state.selectedMemes.length)
-      // maxiLength = this.state.selectedMemes.length;
-
-      // for(let item =  0 ; item<maxiLength; item++)
-      // {
-      //   var tempPhrase = "";
-      //   var tempTweets = "";
-      //   var tempFacebookData = "";
-      //   var tempTwitterData = "";
-      //   var tempMedication = "";
-      //   var tempExternalLinks = "";
-      //   var tempLandingPageTwitterLink = "";
-      //   var tempMemes = "";
-
-      //   if(item < this.state.selectedTopicPhrase.length)
-      //   tempPhrase = this.state.selectedTopicPhrase[item];
-
-      //   if(item < this.state.selectedTweets.length)
-      //   tempTweets = this.state.selectedTweets[item];
-
-      //   if(item < this.state.selectedFacebookData.length)
-      //   tempFacebookData = this.state.selectedFacebookData[item];
-
-      //   if(item < this.state.selectedTwitterData.length)
-      //   tempTwitterData = this.state.selectedTwitterData[item];
-
-      //   if(item < this.state.selectedMedication.length)
-      //   tempMedication = this.state.selectedMedication[item];
-
-      //   if(item < this.state.selectedFacebookLinks.length)
-      //   tempExternalLinks = this.state.selectedFacebookLinks[item];
-
-      //   if(item < this.state.selectedTwitterLinks.length)
-      //   tempLandingPageTwitterLink = this.state.selectedTwitterLinks[item];
-
-      //   if(item < this.state.selectedMemes.length)
-      //   tempMemes = this.state.selectedMemes[item];
-
-      //   jsonObject.push({
-      //     id:item,
-      //     Phrase:tempPhrase,
-      //     Topic:this.state.myTopic,
-      //     Tweets:tempTweets,
-      //     FacebookID:tempFacebookData,
-      //     TwitterID:tempTwitterData,
-      //     Medication:tempMedication,
-      //     ExternalLinks:tempExternalLinks,
-      //     TwitterLinks:tempLandingPageTwitterLink,
-      //     Memes:tempMemes,
-      //   })
-      // }
+      console.log(masterObject)
 
       this.setState({ dataToExport: masterObject }, () => {
         const url = '/add_files'
@@ -571,13 +455,19 @@ class RenderComp extends Component {
           return;
           console.log("Getting data = ")
           //Implement the display data
+          // this.setState({cloudData:JSON.parse(data[0].data.phrase)});
           this.setState({data:JSON.parse(data[0].data)},()=>{
               this.toggleBrowseModal()
           });
+          console.log("here = ");
+          console.log(this.state.data);
+          this.setState({cloudData:this.state.data.phrase});
+          // console.log("here2 = ")
+          // console.log(this.state.cloudData);
           // var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
           // var newWindow = window.open();
           // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
-          console.log(this.state.data.insurance_dict.tid)
+          // console.log(this.state.data.insurance_dict.tid)
       })
     }
     handleCardSentimentPositive()
@@ -704,7 +594,7 @@ class RenderComp extends Component {
 
     myCallbackForTweets(tweetsSelectedFromMyTweets)
     {
-      console.log("inside myCallBack")
+      // console.log("inside myCallBack")
       // console.log(tweetsSelectedFromMyTweets)
       var temp = [];
       for(var i  = 0 ; i<this.state.selectedTweets.length;i++)
@@ -713,7 +603,7 @@ class RenderComp extends Component {
       }
       temp.push(tweetsSelectedFromMyTweets);
       this.setState({selectedTweets:temp});
-      console.log(this.state.selectedTweets);
+      // console.log(this.state.selectedTweets);
     }
 
     facebookAndTwitterCallback(facebookAndTwitterData){
@@ -820,7 +710,7 @@ class RenderComp extends Component {
         temp.push(this.state.selectedMemesForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForInsurance: temp});
-      console.log("InsidedMyCallbackForInsuranceMemes" + temp);
+      // console.log("InsidedMyCallbackForInsuranceMemes" + temp);
     }
     myCallbackForCardMemes(rowFromChild)
     {
@@ -925,6 +815,7 @@ class RenderComp extends Component {
 
     sendPhrases()
     {
+      console.log("SendPhrase = " + this.state.selectedTopicPhrase);
       if(numberofCheckBoxSelected === 0)
       {
         this.getData(this.state.myTopic);
@@ -970,20 +861,24 @@ class RenderComp extends Component {
     {
         var myData = [];
         let myoptions = [];
+        var temp = [];
+        if(this.state.data.phrase == null)
+        {
         for(let i = 0 ; i<phrase.length ; i++)
         {
-          var temp = [];
-
           if(phrase[i].Topic === this.state.myTopic)
           {
             temp.push(phrase[i].Phrase);
-            // temp.push(phrase[i].Frequency);
-            myData.push(temp);
+            // myData.push(temp);
             myoptions.push({key: phrase[i].Phrase, text: phrase[i].Phrase, value: phrase[i].Phrase});
           }
         }
-        this.setState({cloudData: myData});
+        this.setState({cloudData: temp});
         this.setState({phraseSelected: myoptions})
+      }
+        // console.log("insideCreateWord")
+        // console.log(temp);
+
     }
 
     getData = (value) =>
@@ -1019,12 +914,15 @@ class RenderComp extends Component {
 }
     render()
     {
+
         const checkBoxStyle = {
             fontSize: '30px', paddingBottom:'18px'
         }
 
         if(this.state.cloudData.length !== 0)
         {
+          // console.log("insideRender = ");
+          // console.log(this.state.cloudData);
         var l = [];
         var data = [];
         data = this.state.cloudData;
@@ -1041,23 +939,23 @@ class RenderComp extends Component {
                 <input type="checkbox" class="hidden" readonly="" tabindex="0" /><h3>"I am here"</h3>
                 <label>{data[i++][0]}</label>
               </div> */}
-              <Checkbox key={data[i][0]} style={{marginRight:'5px', display:'inline'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}
+              <Checkbox key={data[i]} style={{marginRight:'5px', display:'inline'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}
               </TableCell>
             </TableRow>)
             }
             else if( data.length - i == 2)
             {
               l.push(<TableRow>
-                <TableCell><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]} />{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell><Checkbox key={data[i]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]} />{data[i++]}</TableCell>
+                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
             </TableRow>)
             }
             else if(data.length - i >= 3)
               {
                   l.push(<TableRow>
-                <TableCell><Checkbox key={data[i][0]} style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
-                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i][0]}/>{data[i++][0]}</TableCell>
+                <TableCell><Checkbox key={data[i]} style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
+                <TableCell ><Checkbox key={data[i]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
+                <TableCell ><Checkbox key={data[i]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
             </TableRow>)
               }
         }
