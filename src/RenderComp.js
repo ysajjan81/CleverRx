@@ -358,7 +358,7 @@ class RenderComp extends Component {
                           }
       };
 
-      console.log(masterObject)
+
 
       this.setState({ dataToExport: masterObject }, () => {
         const url = '/add_files'
@@ -387,22 +387,6 @@ class RenderComp extends Component {
             selectedTwitterData:[],selectedMedication:[],selectedFacebookLinks:[],
             selectedTwitterLinks:[], selectedMemes:[], selectedTweetsForInsurance:[],selectedTweetsForWithoutInsurance:[],selectedTweetsForCard:[], selectedMedicationForCard:[], selectedMedicationForInsurance:[], selectedMedicationForWithoutInsurance:[], selectedTopicPhrase:[], selectedExternalLinksForCard:[], selectedExternalLinksForInsurance:[], selectedExternalLinksForWithoutInsurance:[], selectedTwitterLinksForCard:[], selectedTwitterLinksForInsurance:[], selectedTwitterLinksForWithoutInsurance:[], selectedMemesForCard:[], selectedMemesForInsurance:[], selectedMemesForWithoutInsurance:[]
           });
-          // this.setState({selectedTweetsForInsurance:[]});
-          // this.setState({selectedTweetsForWithoutInsurance:[]});
-          // this.setState({selectedTweetsForCard:[]});
-          // this.setState({selectedMedicationForCard:[]});
-          // this.setState({selectedMedicationForInsurance:[]});
-          // this.setState({selectedMedicationForWithoutInsurance:[]});
-          // this.setState({selectedTopicPhrase:[]});
-          // this.setState({selectedExternalLinksForCard:[]});
-          // this.setState({selectedExternalLinksForInsurance:[]});
-          // this.setState({selectedExternalLinksForWithoutInsurance:[]});
-          // this.setState({selectedTwitterLinksForCard:[]});
-          // this.setState({selectedTwitterLinksForInsurance:[]});
-          // this.setState({selectedTwitterLinksForWithoutInsurance:[]});
-          // this.setState({selectedMemesForCard:[]});
-          // this.setState({selectedMemesForInsurance:[]});
-          // this.setState({selectedMemesForWithoutInsurance:[]});
 
           //Toggling Modal to close
           this.toggleExportModal()
@@ -411,7 +395,7 @@ class RenderComp extends Component {
     }
 
     toggleBrowseModal(){
-      console.log("")
+    
       var url = '/get_files'
       fetch(url, {
         method: 'GET',
@@ -448,7 +432,6 @@ class RenderComp extends Component {
     }
 
     handleOpenButton(){
-      console.log("insideOpenButton");
       var url = '/get_file_data?file_name='+this.state.selectedFileNameToOpen
       fetch(url, {
         method: 'GET',
@@ -469,39 +452,18 @@ class RenderComp extends Component {
       }).then((data) => {
         if(data == -1)
           return;
-          console.log("Getting data = ")
           //Implement the display data
           // this.setState({cloudData:JSON.parse(data[0].data.phrase)});
           this.setState({data:JSON.parse(data[0].data)},()=>{
               this.toggleBrowseModal()
           });
-          // console.log("here = ");
-          // console.log(this.state.data);
+
           this.setState({cloudData:this.state.data.phrase});
-          // console.log("here2 = ")
-          // console.log(this.state.cloudData);
+
           // var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
           // var newWindow = window.open();
           // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
-          // console.log(this.state.data.insurance_dict.tid)
-          // this.setState({selectedTweetsForInsurance:[]});
-          // this.setState({selectedTweetsForWithoutInsurance:[]});
-          // this.setState({selectedTweetsForCard:[]});
-          // this.setState({selectedMedicationForCard:[]});
-          // this.setState({selectedMedicationForInsurance:[]});
-          // this.setState({selectedMedicationForWithoutInsurance:[]});
-          // this.setState({selectedTopicPhrase:[]});
-          // this.setState({selectedExternalLinksForCard:[]});
-          // this.setState({selectedExternalLinksForInsurance:[]});
-          // this.setState({selectedExternalLinksForWithoutInsurance:[]});
-          // this.setState({selectedTwitterLinksForCard:[]});
-          // this.setState({selectedTwitterLinksForInsurance:[]});
-          // this.setState({selectedTwitterLinksForWithoutInsurance:[]});
-          // this.setState({selectedMemesForCard:[]});
-          // this.setState({selectedMemesForInsurance:[]});
-          // this.setState({selectedMemesForWithoutInsurance:[]});
-          // this.setState({selectedFacebookData:[]});
-          // this.setState({selectedTwitterData:[]});
+
       })
     }
     handleCardSentimentPositive()
@@ -602,8 +564,7 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
-              console.log("data = ")
-              console.log(data);
+
               this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
@@ -629,8 +590,7 @@ class RenderComp extends Component {
 
     myCallbackForTweets(tweetsSelectedFromMyTweets)
     {
-      // console.log("inside myCallBack")
-      // console.log(tweetsSelectedFromMyTweets)
+
       var temp = [];
       for(var i  = 0 ; i<this.state.selectedTweets.length;i++)
       {
@@ -638,7 +598,7 @@ class RenderComp extends Component {
       }
       temp.push(tweetsSelectedFromMyTweets);
       this.setState({selectedTweets:temp});
-      // console.log(this.state.selectedTweets);
+
     }
 
     facebookAndTwitterCallback(facebookAndTwitterData){
@@ -745,7 +705,7 @@ class RenderComp extends Component {
         temp.push(this.state.selectedMemesForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForInsurance: temp});
-      // console.log("InsidedMyCallbackForInsuranceMemes" + temp);
+ 
     }
     myCallbackForCardMemes(rowFromChild)
     {
@@ -840,8 +800,7 @@ class RenderComp extends Component {
           }
           this.setState({selectedTopicPhrase: temp});
         }
-        console.log("phrase selected");
-        console.log(this.state.selectedTopicPhrase);
+
     }
 
     handlePhraseSelected(event, {value}){
@@ -850,7 +809,7 @@ class RenderComp extends Component {
 
     sendPhrases()
     {
-      console.log("SendPhrase = " + this.state.selectedTopicPhrase);
+
       if(numberofCheckBoxSelected === 0)
       {
         this.getData(this.state.myTopic);
@@ -904,15 +863,13 @@ class RenderComp extends Component {
           if(phrase[i].Topic === this.state.myTopic)
           {
             temp.push(phrase[i].Phrase);
-            // myData.push(temp);
             myoptions.push({key: phrase[i].Phrase, text: phrase[i].Phrase, value: phrase[i].Phrase});
           }
         }
         this.setState({cloudData: temp});
         this.setState({phraseSelected: myoptions})
       }
-        // console.log("insideCreateWord")
-        // console.log(temp);
+
 
     }
 
@@ -940,7 +897,7 @@ class RenderComp extends Component {
           }).then((data) => {
       			if(data == -1)
               return;
-              // console.log(data);
+              
               this.setState({data: data, loading:false});
               this.createWordCloudData();
       		}
@@ -956,8 +913,7 @@ class RenderComp extends Component {
 
         if(this.state.cloudData.length !== 0)
         {
-          // console.log("insideRender = ");
-          // console.log(this.state.cloudData);
+
         var l = [];
         var data = [];
         data = this.state.cloudData;
@@ -974,23 +930,23 @@ class RenderComp extends Component {
                 <input type="checkbox" class="hidden" readonly="" tabindex="0" /><h3>"I am here"</h3>
                 <label>{data[i++][0]}</label>
               </div> */}
-              <Checkbox key={data[i]} style={{marginRight:'5px', display:'inline'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}
+              <Checkbox key={data.length} style={{marginRight:'5px', display:'inline'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}
               </TableCell>
             </TableRow>)
             }
             else if( data.length - i == 2)
             {
               l.push(<TableRow>
-                <TableCell><Checkbox key={data[i]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]} />{data[i++]}</TableCell>
-                <TableCell ><Checkbox key={data[i][0]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
+                <TableCell><Checkbox key={data.length} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]} />{data[i++]}</TableCell>
+                <TableCell ><Checkbox key={data.length} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
             </TableRow>)
             }
             else if(data.length - i >= 3)
               {
                   l.push(<TableRow>
-                <TableCell><Checkbox key={data[i]} style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
-                <TableCell ><Checkbox key={data[i]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
-                <TableCell ><Checkbox key={data[i]} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
+                <TableCell><Checkbox key={data.length} style={{marginRight:'5px'}}  onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
+                <TableCell ><Checkbox key={data.length} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
+                <TableCell ><Checkbox key={data.length} style={{marginRight:'5px'}} onChange = {this.checkBoxSelected} value = {data[i]}/>{data[i++]}</TableCell>
             </TableRow>)
               }
         }
@@ -1011,8 +967,7 @@ class RenderComp extends Component {
           style={{
             textAlign: 'center',
             backgroundColor:'black'
-          }}
-        >
+          }}>
           <div class="headerTitle" style={{display:'inline-block'}}>
             <h1 style={{color:"white", fontSize:50}}><b>CleverRx</b></h1>
           </div>
@@ -1138,7 +1093,7 @@ class RenderComp extends Component {
                           }
                         </Segment>
                         <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div>
+                        {/* <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Medication</div> */}
                         {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>

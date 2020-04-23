@@ -47,7 +47,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
               <Table.Cell>
               <div>
                   <input
-                    key = {data.insurance_dict.external_links[i][1]}
+                    key = {data.insurance_dict.external_links.length}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange ={(event)=>this.sendDataToParent(event, this.props.data.insurance_dict.external_links[i])}
@@ -73,7 +73,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
               </Table.Cell>
               <Table.Cell><div>
                   <input
-                    key = {data.insurance_dict.facebook_links[i][1]}
+                    key = {data.insurance_dict.facebook_links.length}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange ={(event)=>this.sendDataToParent(event, this.props.data.insurance_dict.facebook_links[i])}
@@ -99,7 +99,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
             </Table.Cell>
             <Table.Cell><div>
                 <input
-                key = {data.insurance_dict.twitter_links[i][1]}
+                key = {data.insurance_dict.twitter_links.length}
                   type="checkbox"
                   style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   onChange ={(event)=>this.sendDataToParentForTwitterLinksForInsurance(event, this.props.data.insurance_dict.twitter_links[i])}
@@ -125,7 +125,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
               </Table.Cell>
               <Table.Cell><div>
               <input
-               key = {data.card_dict.external_links[i][1]}
+               key = {data.card_dict.external_links.length}
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                 onChange ={(event)=>this.sendDataToParent(event, this.props.data.card_dict.external_links[i])}
@@ -151,7 +151,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
             </Table.Cell>
             <Table.Cell><div>
             <input
-              key = {data.card_dict.facebook_links[i][1]}
+              key = {data.card_dict.facebook_links.length}
               type="checkbox"
               style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               onChange ={(event)=>this.sendDataToParent(event, this.props.data.card_dict.facebook_links[i])}
@@ -178,7 +178,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
             </Table.Cell>
             <Table.Cell><div>
               <input
-                key = {data.card_dict.twitter_links[i][1]}
+                key = {data.card_dict.twitter_links.length}
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                 onChange ={(event)=>this.sendDataToParentForTwitterLinksForCardCustomer(event, this.props.data.card_dict.twitter_links[i])}
@@ -206,7 +206,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
               <Table.Cell>
               <div>
                   <input
-                    key = {data.without_insurance_dict.external_links[i][1]}
+                    key = {data.without_insurance_dict.external_links.length}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange ={(event)=>this.sendDataToParent(event, this.props.data.without_insurance_dict.external_links[i])}
@@ -235,7 +235,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
               <Table.Cell>
               <div>
                   <input
-                    key = {data.without_insurance_dict.facebook_links[i][1]}
+                    key = {data.without_insurance_dict.facebook_links.length}
                     type="checkbox"
                     style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                     onChange ={(event)=>this.sendDataToParentForTwitterLinks(event, this.props.data.without_insurance_dict.facebook_links[i])}
@@ -262,7 +262,7 @@ sendDataToParentForTwitterLinksForInsurance(event, value)
               <Table.Cell>
                 <div>
                     <input
-                      key = {data.without_insurance_dict.twitter_links[i][1]}
+                      key = {data.without_insurance_dict.twitter_links.length}
                       type="checkbox"
                       style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                       onChange ={(event)=>this.sendDataToParentForTwitterLinksForCardCustomer(event, this.props.data.without_insurance_dict.twitter_links[i])}

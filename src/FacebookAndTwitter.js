@@ -1,13 +1,11 @@
 
 import Paper from '@material-ui/core/Paper';
 import React from 'react'
-
 import { Tab, Form, Comment, Table, Checkbox} from 'semantic-ui-react'
-// import Cards from './Card.js';
 import TweetEmbed from 'react-tweet-embed'
 import ReactPlayer from 'react-player'
 import { FacebookProvider, EmbeddedPost, Page, Group, Comments} from 'react-facebook';
-// import { Row, Layout, Col, Card,  Menu, Breadcrumb, Carousel } from 'antd';
+
 
 export default class Twitter extends React.Component {
   constructor(props) {
@@ -83,27 +81,15 @@ export default class Twitter extends React.Component {
             for(let i = 0 ; i<this.props.data.facebook.length ; i++)
             {
               var img = "/avatar_pages/" + this.props.data.facebook[i].id + ".png"
-              // var img = "/Users/adityarohilla/Desktop/Documents/1_JMhUEV2L_SQrQ55lqtqIhw.png"
-              // var img = "https://image.shutterstock.com/image-photo/hands-holding-credit-card-using-600w-289585190.jpg";
-              // var img = "http://cips2.engineering.asu.edu:3001/avatar_pages/"  + this.props.data.facebook[i].id + ".png";
-            //   var facebookPhrase = "";
-            //   if(this.props.data.facebook != null && this.props.data.facebook[i].phrase != null)
-            //   {
-            //   for(let j = 0 ; j<this.props.data.facebook[i].phrase.length ; j++)
-            //   {
-            //     facebookPhrase += this.props.data.facebook[i].phrase[j] + " " ; 
-            //     if(j >= 3)
-            //     break;
-            //   }
-            // }
               facebookData.push(<Table.Row>
                 <Table.Cell style={{minWidth:'150px'}}>
                 <div>
                   <input
-                    key = {this.props.data.facebook[i].count}
+                    key = {this.props.data.facebook.length}
                     type="checkbox"
                     name="FB"
                     value={this.props.data.facebook[i].count}
+                    
                     onChange={(event)=>this.fbSelected(event,this.props.data.facebook[i])} style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
                   />
                   {/* <Checkbox
@@ -139,7 +125,7 @@ export default class Twitter extends React.Component {
                 <Table.Cell>
                 <div>
                   <input
-                    key = {this.props.data.twitter[i].count}
+                    key = {this.props.data.twitter.length}
                     type="checkbox"
                     name="Twitter"
                     value={this.props.data.twitter[i].count}
