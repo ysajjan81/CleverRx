@@ -787,7 +787,7 @@ class RenderComp extends Component {
     myCallbackForCardTweets(rowFromChild)
     {
       //if not present in list then add 
-      if(this.state.selectedTweetsForInsurance != null && this.state.selectedTweetsForInsurance.includes(rowFromChild) == false)
+      if(this.state.selectedTweetsForCard != null && this.state.selectedTweetsForCard.includes(rowFromChild) == false)
       {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedTweetsForCard.length ; i++)
