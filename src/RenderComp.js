@@ -588,79 +588,38 @@ class RenderComp extends Component {
         this.setState({insur: temp});
     }
 
-    // myCallbackForTweets(tweetsSelectedFromMyTweets)
-    // {
-    //   var temp = [];
-    //   for(var i  = 0 ; i<this.state.selectedTweets.length;i++)
-    //   {
-    //     temp.push(this.state.selectedTweets[i]);
-    //   }
-    //   temp.push(tweetsSelectedFromMyTweets);
-    //   this.setState({selectedTweets:temp});
-    // }
-
-    // facebookAndTwitterCallback(facebookAndTwitterData)
-    // {
-    //   if(facebookAndTwitterData.type === "facebook" )
-    //   {
-    //     // if(this.state.selectedFacebookData != null && this.state.selectedFacebookData.includes(facebookAndTwitterData) == false)
-    //     // {
-    //     var temp=[];
-    //     for(var i  = 0 ; i<this.state.selectedFacebookData.length;i++)
-    //     {
-    //       temp.push(this.state.selectedFacebookData[i]);
-    //     }
-    //     temp.push(facebookAndTwitterData);
-    //     this.setState({selectedFacebookData:temp});
-    //   // }
-    //   // else if(this.state.selectedFacebookData != null && this.state.selectedFacebookData.includes(facebookAndTwitterData) == true)
-    //   // {
-    //   //   var temp = [];
-    //   //   for(let i = 0 ; i<this.state.selectedFacebookData.length ; i++)
-    //   //   {
-    //   //     if(this.state.selectedFacebookData[i] == facebookAndTwitterData)
-    //   //     continue;
-    //   //     temp.push(this.state.selectedFacebookData[i]);
-    //   //   }
-    //   //   this.setState({selectedFacebookData:temp});
-    //   // }
-
-    //   }
-    //   else if(facebookAndTwitterData.type === "twitter")
-    //   {
-    //     // if(this.state.selectedTwitterData != null && this.state.selectedTwitterData.includes(facebookAndTwitterData) == false)
-    //     // {
-    //     for(var i  = 0 ; i<this.state.selectedTwitterData.length;i++)
-    //     {
-    //       temp.push(this.state.selectedTwitterData[i]);
-    //     }
-    //     temp.push(facebookAndTwitterData);
-    //     this.setState({selectedTwitterData:temp});
-    //   // }
-    //   // else if(this.state.selectedTwitterData != null && this.state.selectedTwitterData.includes(facebookAndTwitterData) == true)
-    //   // {
-    //   //   var temp = [];
-    //   //   for(let i = 0 ; i<this.state.selectedTwitterData.length ; i++)
-    //   //   {
-    //   //     if(this.state.selectedTwitterData[i] == facebookAndTwitterData)
-    //   //     continue;
-    //   //     temp.push(this.state.selectedTwitterData[i]);
-    //   //   }
-    //   //   this.setState({selectedTwitterData:temp});
-    //   // }
-    //   }
-    // }
     facebookAndTwitterCallback(facebookAndTwitterData)
     {
-      var temp=[];
-      if(facebookAndTwitterData.type === "facebook"){
+      if(facebookAndTwitterData.type === "facebook" )
+      {
+        if(this.state.selectedFacebookData != null && this.state.selectedFacebookData.includes(facebookAndTwitterData) == false)
+        {
+        var temp=[];
         for(var i  = 0 ; i<this.state.selectedFacebookData.length;i++)
         {
           temp.push(this.state.selectedFacebookData[i]);
         }
         temp.push(facebookAndTwitterData);
         this.setState({selectedFacebookData:temp});
-      }else if(facebookAndTwitterData.type === "twitter"){
+      }
+      else if(this.state.selectedFacebookData != null && this.state.selectedFacebookData.includes(facebookAndTwitterData) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedFacebookData.length ; i++)
+        {
+          if(this.state.selectedFacebookData[i] == facebookAndTwitterData)
+          continue;
+          temp.push(this.state.selectedFacebookData[i]);
+        }
+        this.setState({selectedFacebookData:temp});
+      }
+
+      }
+      else if(facebookAndTwitterData.type === "twitter")
+      {
+        if(this.state.selectedTwitterData != null && this.state.selectedTwitterData.includes(facebookAndTwitterData) == false)
+        {
+          var temp = [];
         for(var i  = 0 ; i<this.state.selectedTwitterData.length;i++)
         {
           temp.push(this.state.selectedTwitterData[i]);
@@ -668,7 +627,38 @@ class RenderComp extends Component {
         temp.push(facebookAndTwitterData);
         this.setState({selectedTwitterData:temp});
       }
+      else if(this.state.selectedTwitterData != null && this.state.selectedTwitterData.includes(facebookAndTwitterData) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedTwitterData.length ; i++)
+        {
+          if(this.state.selectedTwitterData[i] == facebookAndTwitterData)
+          continue;
+          temp.push(this.state.selectedTwitterData[i]);
+        }
+        this.setState({selectedTwitterData:temp});
+      }
+      }
     }
+    // facebookAndTwitterCallback(facebookAndTwitterData)
+    // {
+    //   var temp=[];
+    //   if(facebookAndTwitterData.type === "facebook"){
+    //     for(var i  = 0 ; i<this.state.selectedFacebookData.length;i++)
+    //     {
+    //       temp.push(this.state.selectedFacebookData[i]);
+    //     }
+    //     temp.push(facebookAndTwitterData);
+    //     this.setState({selectedFacebookData:temp});
+    //   }else if(facebookAndTwitterData.type === "twitter"){
+    //     for(var i  = 0 ; i<this.state.selectedTwitterData.length;i++)
+    //     {
+    //       temp.push(this.state.selectedTwitterData[i]);
+    //     }
+    //     temp.push(facebookAndTwitterData);
+    //     this.setState({selectedTwitterData:temp});
+    //   }
+    // }
     myCallbackForInsuranceMedication(medicationSelectedFromMyMedication)
     {
       if(this.state.selectedMedicationForInsurance != null && this.state.selectedMedicationForInsurance.includes(medicationSelectedFromMyMedication) == false)
