@@ -91,7 +91,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.card_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.card_dict.tweets[i])} value={data.card_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
@@ -110,7 +110,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.card_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.card_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.card_dict.tweets[i])} value={data.card_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.card_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
@@ -122,7 +122,8 @@ class MyTweets extends Component {
   {
     for(let i = 0 ; i<data.without_insurance_dict.tweets.length ; i++)
     {
-      if(data.without_insurance_dict.tweets[i][2] == '+' && this.props.cardSentimentPositive == true){
+      if(data.without_insurance_dict.tweets[i][2] == '+' && this.props.cardSentimentPositive == true)
+    {
       l.push(<Table.Row>
   
           <Table.Cell style={{backgroundColor:'lightgreen'}}>
@@ -134,12 +135,12 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.without_insurance_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.without_insurance_dict.tweets[i])} value={data.without_insurance_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.without_insurance_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>
       </Table.Row>)
-      }
+    }
       else if(data.without_insurance_dict.tweets[i][2] == '-' && this.props.cardSentimentNegative == true)
       {
         l.push(<Table.Row>
@@ -153,7 +154,7 @@ class MyTweets extends Component {
                 type="checkbox"
                 style={{marginRight:'10px', transform: 'scale(1.5)', 'margin': '10px'}}
               /> */}
-              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.insurance_dict.tweets[i])} value={data.without_insurance_dict.tweets[i][0]}/>
+              <Checkbox Checkbox key={data.without_insurance_dict.tweets[i][0]} style={{marginRight:'5px', display:'inline'}} onChange={(event)=>this.sendDataToParent(event, data.without_insurance_dict.tweets[i])} value={data.without_insurance_dict.tweets[i][0]}/>
               <label style={{fontSize:'13px'}}>{data.without_insurance_dict.tweets[i][1]}</label>
             </div>
           </Table.Cell>

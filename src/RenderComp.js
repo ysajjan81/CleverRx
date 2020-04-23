@@ -385,8 +385,24 @@ class RenderComp extends Component {
           //Reset the state values
           this.setState({selectedTopicPhrase:[], selectedMedication:[], selectedFacebookData:[],
             selectedTwitterData:[],selectedMedication:[],selectedFacebookLinks:[],
-            selectedTwitterLinks:[], selectedMemes:[]
+            selectedTwitterLinks:[], selectedMemes:[], selectedTweetsForInsurance:[],selectedTweetsForWithoutInsurance:[],selectedTweetsForCard:[], selectedMedicationForCard:[], selectedMedicationForInsurance:[], selectedMedicationForWithoutInsurance:[], selectedTopicPhrase:[], selectedExternalLinksForCard:[], selectedExternalLinksForInsurance:[], selectedExternalLinksForWithoutInsurance:[], selectedTwitterLinksForCard:[], selectedTwitterLinksForInsurance:[], selectedTwitterLinksForWithoutInsurance:[], selectedMemesForCard:[], selectedMemesForInsurance:[], selectedMemesForWithoutInsurance:[]
           });
+          // this.setState({selectedTweetsForInsurance:[]});
+          // this.setState({selectedTweetsForWithoutInsurance:[]});
+          // this.setState({selectedTweetsForCard:[]});
+          // this.setState({selectedMedicationForCard:[]});
+          // this.setState({selectedMedicationForInsurance:[]});
+          // this.setState({selectedMedicationForWithoutInsurance:[]});
+          // this.setState({selectedTopicPhrase:[]});
+          // this.setState({selectedExternalLinksForCard:[]});
+          // this.setState({selectedExternalLinksForInsurance:[]});
+          // this.setState({selectedExternalLinksForWithoutInsurance:[]});
+          // this.setState({selectedTwitterLinksForCard:[]});
+          // this.setState({selectedTwitterLinksForInsurance:[]});
+          // this.setState({selectedTwitterLinksForWithoutInsurance:[]});
+          // this.setState({selectedMemesForCard:[]});
+          // this.setState({selectedMemesForInsurance:[]});
+          // this.setState({selectedMemesForWithoutInsurance:[]});
 
           //Toggling Modal to close
           this.toggleExportModal()
@@ -459,8 +475,8 @@ class RenderComp extends Component {
           this.setState({data:JSON.parse(data[0].data)},()=>{
               this.toggleBrowseModal()
           });
-          console.log("here = ");
-          console.log(this.state.data);
+          // console.log("here = ");
+          // console.log(this.state.data);
           this.setState({cloudData:this.state.data.phrase});
           // console.log("here2 = ")
           // console.log(this.state.cloudData);
@@ -468,6 +484,24 @@ class RenderComp extends Component {
           // var newWindow = window.open();
           // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
           // console.log(this.state.data.insurance_dict.tid)
+          // this.setState({selectedTweetsForInsurance:[]});
+          // this.setState({selectedTweetsForWithoutInsurance:[]});
+          // this.setState({selectedTweetsForCard:[]});
+          // this.setState({selectedMedicationForCard:[]});
+          // this.setState({selectedMedicationForInsurance:[]});
+          // this.setState({selectedMedicationForWithoutInsurance:[]});
+          // this.setState({selectedTopicPhrase:[]});
+          // this.setState({selectedExternalLinksForCard:[]});
+          // this.setState({selectedExternalLinksForInsurance:[]});
+          // this.setState({selectedExternalLinksForWithoutInsurance:[]});
+          // this.setState({selectedTwitterLinksForCard:[]});
+          // this.setState({selectedTwitterLinksForInsurance:[]});
+          // this.setState({selectedTwitterLinksForWithoutInsurance:[]});
+          // this.setState({selectedMemesForCard:[]});
+          // this.setState({selectedMemesForInsurance:[]});
+          // this.setState({selectedMemesForWithoutInsurance:[]});
+          // this.setState({selectedFacebookData:[]});
+          // this.setState({selectedTwitterData:[]});
       })
     }
     handleCardSentimentPositive()
@@ -503,7 +537,8 @@ class RenderComp extends Component {
       this.setState({ inputFileName:event.target.value })
     }
 
-    handleFileCheckBox(fileName){
+    handleFileCheckBox(fileName)
+    {
       this.setState({ selectedFileNameToOpen : fileName})
     }
 
