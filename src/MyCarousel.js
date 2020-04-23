@@ -146,6 +146,7 @@ class MyCarousel extends Component
                     </Carousel.Item>
                   );
                 }
+                i--;
 
           }
       }
@@ -272,6 +273,7 @@ class MyCarousel extends Component
                   );
 
               }
+              i--;
             }
             }
             else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid != null && this.props.data.without_insurance_dict.tid.length > 0 )
@@ -398,11 +400,13 @@ class MyCarousel extends Component
                     </Carousel.Item>
                   );
               }
+              i--;
             }
             }
         return data;
   }
-    render(){
+    render()
+    {
       return(
         <div style={{marginBottom:'30px'}}>
         <Card style={{width:'unset'}}>

@@ -800,7 +800,6 @@ class RenderComp extends Component {
           }
           this.setState({selectedTopicPhrase: temp});
         }
-
     }
 
     handlePhraseSelected(event, {value}){
