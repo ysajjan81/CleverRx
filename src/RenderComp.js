@@ -23,7 +23,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 // import {Carousel} from 'react-responsive-carousel';
 import MyCarousel from './MyCarousel';
 // import json2csv from "json2csv";
-import { CSVDownload, CSVLink } from "react-csv";
+// import { CSVDownload, CSVLink } from "react-csv";
 import { Layout } from 'antd';
 
 
