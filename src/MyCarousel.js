@@ -34,7 +34,8 @@ class MyCarousel extends Component
               {
                 var img = images[this.props.data.insurance_dict.tid[j]];
                 imageTid.push.apply(imageTid, img);
-                if(img != null && imageTid.length>0){
+                if(img != null && imageTid.length>0)
+                {
                    count+= images[this.props.data.insurance_dict.tid[j]].length;
                    validInsuranceMemes.push(this.props.data.insurance_dict.tid[j])
                 }
@@ -126,7 +127,8 @@ class MyCarousel extends Component
                     </Carousel.Item>
                   );
                 }
-                else if (count - i  == 1){
+                else if (count - i  == 1)
+                {
                   var img1 = '/memes/jpgs/' + imageTid[i++];
                   data.push(
                     <Carousel.Item>
@@ -146,8 +148,7 @@ class MyCarousel extends Component
                     </Carousel.Item>
                   );
                 }
-                i--;
-
+                i = i - 1;
           }
       }
             if(this.props.card == true && value == "card" && this.props.data.card_dict.tid != null && this.props.data && this.props.data.card_dict.tid.length > 0  )
@@ -273,7 +274,7 @@ class MyCarousel extends Component
                   );
 
               }
-              i--;
+              i = i-1;
             }
             }
             else if(this.props.card == false && value == "card" && this.props.data && this.props.data.without_insurance_dict.tid != null && this.props.data.without_insurance_dict.tid.length > 0 )
@@ -348,7 +349,7 @@ class MyCarousel extends Component
                 else if(count - i  == 2)
                 {
                   var img1 = '/memes/jpgs/' + imageTid[i++];
-                  var img2 = '/memes/jpgs/' +imageTid[i++];
+                  var img2 = '/memes/jpgs/' + imageTid[i++];
 
                   data.push(
                     <Carousel.Item>
@@ -400,7 +401,7 @@ class MyCarousel extends Component
                     </Carousel.Item>
                   );
               }
-              i--;
+              i = i-1;
             }
             }
         return data;

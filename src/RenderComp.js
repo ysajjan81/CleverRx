@@ -288,7 +288,7 @@ class RenderComp extends Component {
          this.handleInsuranceSentimentNegative = this.handleInsuranceSentimentNegative.bind(this);
          this.handleCardSentimentPositive = this.handleCardSentimentPositive.bind(this);
          this.handleCardSentimentNegative = this.handleCardSentimentNegative.bind(this);
-         this.myCallbackForTweets = this.myCallbackForTweets.bind(this);
+        //  this.myCallbackForTweets = this.myCallbackForTweets.bind(this);
          this.facebookAndTwitterCallback = this.facebookAndTwitterCallback.bind(this);
         //  this.myCallbackForMedication = this.myCallbackForMedication.bind(this);
          this.export = this.export.bind(this);
@@ -588,20 +588,70 @@ class RenderComp extends Component {
         this.setState({insur: temp});
     }
 
-    myCallbackForTweets(tweetsSelectedFromMyTweets)
+    // myCallbackForTweets(tweetsSelectedFromMyTweets)
+    // {
+    //   var temp = [];
+    //   for(var i  = 0 ; i<this.state.selectedTweets.length;i++)
+    //   {
+    //     temp.push(this.state.selectedTweets[i]);
+    //   }
+    //   temp.push(tweetsSelectedFromMyTweets);
+    //   this.setState({selectedTweets:temp});
+    // }
+
+    // facebookAndTwitterCallback(facebookAndTwitterData)
+    // {
+    //   if(facebookAndTwitterData.type === "facebook" )
+    //   {
+    //     // if(this.state.selectedFacebookData != null && this.state.selectedFacebookData.includes(facebookAndTwitterData) == false)
+    //     // {
+    //     var temp=[];
+    //     for(var i  = 0 ; i<this.state.selectedFacebookData.length;i++)
+    //     {
+    //       temp.push(this.state.selectedFacebookData[i]);
+    //     }
+    //     temp.push(facebookAndTwitterData);
+    //     this.setState({selectedFacebookData:temp});
+    //   // }
+    //   // else if(this.state.selectedFacebookData != null && this.state.selectedFacebookData.includes(facebookAndTwitterData) == true)
+    //   // {
+    //   //   var temp = [];
+    //   //   for(let i = 0 ; i<this.state.selectedFacebookData.length ; i++)
+    //   //   {
+    //   //     if(this.state.selectedFacebookData[i] == facebookAndTwitterData)
+    //   //     continue;
+    //   //     temp.push(this.state.selectedFacebookData[i]);
+    //   //   }
+    //   //   this.setState({selectedFacebookData:temp});
+    //   // }
+
+    //   }
+    //   else if(facebookAndTwitterData.type === "twitter")
+    //   {
+    //     // if(this.state.selectedTwitterData != null && this.state.selectedTwitterData.includes(facebookAndTwitterData) == false)
+    //     // {
+    //     for(var i  = 0 ; i<this.state.selectedTwitterData.length;i++)
+    //     {
+    //       temp.push(this.state.selectedTwitterData[i]);
+    //     }
+    //     temp.push(facebookAndTwitterData);
+    //     this.setState({selectedTwitterData:temp});
+    //   // }
+    //   // else if(this.state.selectedTwitterData != null && this.state.selectedTwitterData.includes(facebookAndTwitterData) == true)
+    //   // {
+    //   //   var temp = [];
+    //   //   for(let i = 0 ; i<this.state.selectedTwitterData.length ; i++)
+    //   //   {
+    //   //     if(this.state.selectedTwitterData[i] == facebookAndTwitterData)
+    //   //     continue;
+    //   //     temp.push(this.state.selectedTwitterData[i]);
+    //   //   }
+    //   //   this.setState({selectedTwitterData:temp});
+    //   // }
+    //   }
+    // }
+    facebookAndTwitterCallback(facebookAndTwitterData)
     {
-
-      var temp = [];
-      for(var i  = 0 ; i<this.state.selectedTweets.length;i++)
-      {
-        temp.push(this.state.selectedTweets[i]);
-      }
-      temp.push(tweetsSelectedFromMyTweets);
-      this.setState({selectedTweets:temp});
-
-    }
-
-    facebookAndTwitterCallback(facebookAndTwitterData){
       var temp=[];
       if(facebookAndTwitterData.type === "facebook"){
         for(var i  = 0 ; i<this.state.selectedFacebookData.length;i++)
@@ -621,107 +671,275 @@ class RenderComp extends Component {
     }
     myCallbackForInsuranceMedication(medicationSelectedFromMyMedication)
     {
-      var temp = [];
-      if(this.state.selectedMedicationForInsurance != null)
+      if(this.state.selectedMedicationForInsurance != null && this.state.selectedMedicationForInsurance.includes(medicationSelectedFromMyMedication) == false)
       {
+      var temp = [];
       for(let i = 0 ; i<this.state.selectedMedicationForInsurance.length ; i++)
         temp.push(this.state.selectedMedicationForInsurance[i]);
       temp.push(medicationSelectedFromMyMedication);
       this.setState({selectedMedicationForInsurance: temp});
+      }
+    else if(this.state.selectedMedicationForInsurance != null && this.state.selectedMedicationForInsurance.includes(medicationSelectedFromMyMedication) == true)
+    {
+      var temp = [];
+      for(let i = 0 ; i<this.state.selectedMedicationForInsurance.length ; i++)
+      {
+        if(this.state.selectedMedicationForInsurance[i] == medicationSelectedFromMyMedication)
+        continue;
+        temp.push(this.state.selectedMedicationForInsurance[i]);
+      }
+      this.setState({selectedMedicationForInsurance:temp});
     }
   }
 
     myCallbackForCardMedication(medicationSelectedFromMyMedication)
     {
+      if(this.state.selectedMedicationForCard != null && this.state.selectedMedicationForCard.includes(medicationSelectedFromMyMedication) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedMedicationForCard.length ; i++)
         temp.push(this.state.selectedMedicationForCard[i]);
       temp.push(medicationSelectedFromMyMedication);
       this.setState({selectedMedicationForCard: temp});
+      }
+      else if(this.state.selectedMedicationForCard != null && this.state.selectedMedicationForCard.includes(medicationSelectedFromMyMedication) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedMedicationForCard.length ; i++)
+        {
+          if(this.state.selectedMedicationForCard[i] == medicationSelectedFromMyMedication)
+          continue;
+          temp.push(this.state.selectedMedicationForCard[i]);
+        }
+        this.setState({selectedMedicationForCard:temp});
+      }
     }
     myCallbackForWithoutInsuranceMedication(medicationSelectedFromMyMedication)
     {
+      if(this.state.selectedMedicationForWithoutInsurance != null && this.state.selectedMedicationForWithoutInsurance.includes(medicationSelectedFromMyMedication) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedMedicationForWithoutInsurance.length ; i++)
         temp.push(this.state.selectedMedicationForWithoutInsurance[i]);
       temp.push(medicationSelectedFromMyMedication);
       this.setState({selectedMedicationForWithoutInsurance: temp});
+      }
 
+      else if(this.state.selectedMedicationForWithoutInsurance != null && this.state.selectedMedicationForWithoutInsurance.includes(medicationSelectedFromMyMedication) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedMedicationForWithoutInsurance.length ; i++)
+        {
+          if(this.state.selectedMedicationForWithoutInsurance[i] == medicationSelectedFromMyMedication)
+          continue;
+          temp.push(this.state.selectedMedicationForWithoutInsurance[i]);
+        }
+        this.setState({selectedMedicationForWithoutInsurance:temp});
+      }
     }
+
     myCallbackForWithoutInsuranceTweets(rowFromChild)
     {
+      if(this.state.selectedTweetsForWithoutInsurance != null && this.state.selectedTweetsForWithoutInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedTweetsForWithoutInsurance.length ; i++)
         temp.push(this.state.selectedTweetsForWithoutInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedTweetsForWithoutInsurance: temp});
+      }
+      else if(this.state.selectedTweetsForWithoutInsurance != null && this.state.selectedTweetsForWithoutInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedTweetsForWithoutInsurance.length ; i++)
+        {
+          if(this.state.selectedTweetsForWithoutInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedTweetsForWithoutInsurance[i]);
+        }
+        this.setState({selectedTweetsForWithoutInsurance:temp});
+      }
+
     }
     myCallbackForInsuranceTweets(rowFromChild)
     {
+      if(this.state.selectedTweetsForInsurance != null && this.state.selectedTweetsForInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedTweetsForInsurance.length ; i++)
         temp.push(this.state.selectedTweetsForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedTweetsForInsurance: temp});
-
+      }
+      else if(this.state.selectedTweetsForInsurance != null && this.state.selectedTweetsForInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedTweetsForInsurance.length ; i++)
+        {
+          if(this.state.selectedTweetsForInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedTweetsForInsurance[i]);
+        }
+        this.setState({selectedTweetsForInsurance:temp});
+      }
     }
+
     myCallbackForCardTweets(rowFromChild)
     {
+      //if not present in list then add 
+      if(this.state.selectedTweetsForInsurance != null && this.state.selectedTweetsForInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedTweetsForCard.length ; i++)
         temp.push(this.state.selectedTweetsForCard[i]);
       temp.push(rowFromChild);
       this.setState({selectedTweetsForCard: temp});
+      }
+      // if present in list remove.
+      else if(this.state.selectedTweetsForCard != null && this.state.selectedTweetsForCard.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedTweetsForCard.length ; i++)
+        {
+          if(this.state.selectedTweetsForCard[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedTweetsForCard[i]);
+        }
+        this.setState({selectedTweetsForCard:temp});
+      }
     }
     myCallbackForCardExternalLinks(rowFromChild)
     {
+      if(this.state.selectedExternalLinksForCard != null && this.state.selectedExternalLinksForCard.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedExternalLinksForCard.length ; i++)
         temp.push(this.state.selectedExternalLinksForCard[i]);
       temp.push(rowFromChild);
       this.setState({selectedExternalLinksForCard: temp});
+      }
+      else if(this.state.selectedExternalLinksForCard != null && this.state.selectedExternalLinksForCard.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedExternalLinksForCard.length ; i++)
+        {
+          if(this.state.selectedExternalLinksForCard[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedExternalLinksForCard[i]);
+        }
+        this.setState({selectedExternalLinksForCard:temp});
+      }
     }
     myCallbackForWithoutInsuranceExternalLinks(rowFromChild)
     {
+      if(this.state.selectedExternalLinksForWithoutInsurance != null && this.state.selectedExternalLinksForWithoutInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedExternalLinksForWithoutInsurance.length ; i++)
         temp.push(this.state.selectedExternalLinksForWithoutInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedExternalLinksForWithoutInsurance: temp});
+      }
+      else if(this.state.selectedExternalLinksForWithoutInsurance != null && this.state.selectedExternalLinksForWithoutInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedExternalLinksForWithoutInsurance.length ; i++)
+        {
+          if(this.state.selectedExternalLinksForWithoutInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedExternalLinksForWithoutInsurance[i]);
+        }
+        this.setState({selectedExternalLinksForWithoutInsurance:temp});
+      }
     }
     myCallbackForInsuranceExternalLinks(rowFromChild)
     {
+      if(this.state.selectedExternalLinksForInsurance != null && this.state.selectedExternalLinksForInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedExternalLinksForInsurance.length ; i++)
         temp.push(this.state.selectedExternalLinksForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedExternalLinksForInsurance: temp});
+      }
+      else if(this.state.selectedExternalLinksForInsurance != null && this.state.selectedExternalLinksForInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedExternalLinksForInsurance.length ; i++)
+        {
+          if(this.state.selectedExternalLinksForInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedExternalLinksForInsurance[i]);
+        }
+        this.setState({selectedExternalLinksForInsurance:temp});
+      }
     }
     myCallbackForInsuranceMemes(rowFromChild)
     {
-      
+      if(this.state.selectedMemesForInsurance != null && this.state.selectedMemesForInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedMemesForInsurance.length ; i++)
         temp.push(this.state.selectedMemesForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForInsurance: temp});
+      }
+      else if(this.state.selectedMemesForInsurance != null && this.state.selectedMemesForInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedMemesForInsurance.length ; i++)
+        {
+          if(this.state.selectedMemesForInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedMemesForInsurance[i]);
+        }
+        this.setState({selectedMemesForInsurance:temp});
+      }
  
     }
     myCallbackForCardMemes(rowFromChild)
     {
+      if(this.state.selectedMemesForCard != null && this.state.selectedMemesForCard.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedMemesForCard.length ; i++)
         temp.push(this.state.selectedMemesForCard[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForCard: temp});
+      }
+      else if(this.state.selectedMemesForCard != null && this.state.selectedMemesForCard.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedMemesForCard.length ; i++)
+        {
+          if(this.state.selectedMemesForCard[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedMemesForCard[i]);
+        }
+        this.setState({selectedMemesForCard:temp});
+      }
     }
     myCallbackForWithoutInsuranceMemes(rowFromChild)
     {
+      if(this.state.selectedMemesForWithoutInsurance != null && this.state.selectedMemesForWithoutInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedMemesForWithoutInsurance.length ; i++)
         temp.push(this.state.selectedMemesForWithoutInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedMemesForWithoutInsurance: temp});
+      }
+      else if(this.state.selectedMemesForWithoutInsurance != null && this.state.selectedMemesForWithoutInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedMemesForWithoutInsurance.length ; i++)
+        {
+          if(this.state.selectedMemesForWithoutInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedMemesForWithoutInsurance[i]);
+        }
+        this.setState({selectedMemesForWithoutInsurance:temp});
+      }
     }
     myCallbackForCardCustomerMemes(rowFromChild)
     {
@@ -739,30 +957,73 @@ class RenderComp extends Component {
     }
     myCallbackForCardTwitterLinks(rowFromChild)
     {
+      if(this.state.selectedTwitterLinksForCard != null && this.state.selectedTwitterLinksForCard.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedTwitterLinksForCard.length ; i++)
         temp.push(this.state.selectedTwitterLinksForCard[i]);
       temp.push(rowFromChild);
       this.setState({selectedTwitterLinksForCard: temp});
+      }
+      else if(this.state.selectedTwitterLinksForCard != null && this.state.selectedTwitterLinksForCard.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedTwitterLinksForCard.length ; i++)
+        {
+          if(this.state.selectedTwitterLinksForCard[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedTwitterLinksForCard[i]);
+        }
+        this.setState({selectedTwitterLinksForCard:temp});
+      }
     }
     myCallbackForInsuranceTwitterLinks(rowFromChild)
     {
+      if(this.state.selectedTwitterLinksForInsurance != null && this.state.selectedTwitterLinksForInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedTwitterLinksForInsurance.length ; i++)
         temp.push(this.state.selectedTwitterLinksForInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedTwitterLinksForInsurance: temp});
+      }
+      else if(this.state.selectedTwitterLinksForInsurance != null && this.state.selectedTwitterLinksForInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedTwitterLinksForInsurance.length ; i++)
+        {
+          if(this.state.selectedTwitterLinksForInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedTwitterLinksForInsurance[i]);
+        }
+        this.setState({selectedTwitterLinksForInsurance:temp});
+      }
     }
     myCallbackForWithoutInsuranceTwitterLinks(rowFromChild)
     {
+      if(this.state.selectedTwitterLinksForWithoutInsurance != null && this.state.selectedTwitterLinksForWithoutInsurance.includes(rowFromChild) == false)
+      {
       var temp = [];
       for(let i = 0 ; i<this.state.selectedTwitterLinksForWithoutInsurance.length ; i++)
         temp.push(this.state.selectedTwitterLinksForWithoutInsurance[i]);
       temp.push(rowFromChild);
       this.setState({selectedTwitterLinksForWithoutInsurance: temp});
+      }
+      else if(this.state.selectedTwitterLinksForWithoutInsurance != null && this.state.selectedTwitterLinksForWithoutInsurance.includes(rowFromChild) == true)
+      {
+        var temp = [];
+        for(let i = 0 ; i<this.state.selectedTwitterLinksForWithoutInsurance.length ; i++)
+        {
+          if(this.state.selectedTwitterLinksForWithoutInsurance[i] == rowFromChild)
+          continue;
+          temp.push(this.state.selectedTselectedTwitterLinksForWithoutInsuranceweetsForCard[i]);
+        }
+        this.setState({selectedTwitterLinksForWithoutInsurance:temp});
+      }
     }
     cardCustomerCallbackForTwitterLinks(rowFromChild)
     {
+
       if(this.state.card == true)
       this.myCallbackForCardTwitterLinks(rowFromChild);
       else 
