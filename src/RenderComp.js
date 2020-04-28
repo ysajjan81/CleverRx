@@ -432,39 +432,41 @@ class RenderComp extends Component {
     }
 
     handleOpenButton(){
-      var url = '/get_file_data?file_name='+this.state.selectedFileNameToOpen
-      fetch(url, {
-        method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        }
-      }).then((response) => {
-        if(response.status == 200)
-          {
-            return response.json();
+      if(this.state.selectedFileNameToOpen && this.state.selectedFileNameToOpen !== ""){
+        var url = '/get_file_data?file_name='+this.state.selectedFileNameToOpen
+        fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
           }
-        else {
-          alert('Uh Oh! Something went wrong');
-          return -1;
-        }
-      }).then((data) => {
-        if(data == -1)
-          return;
-          //Implement the display data
-          // this.setState({cloudData:JSON.parse(data[0].data.phrase)});
-          this.setState({data:JSON.parse(data[0].data)},()=>{
-              this.toggleBrowseModal()
-          });
+        }).then((response) => {
+          if(response.status == 200)
+            {
+              return response.json();
+            }
+          else {
+            alert('Uh Oh! Something went wrong');
+            return -1;
+          }
+        }).then((data) => {
+          if(data == -1)
+            return;
+            //Implement the display data
+            // this.setState({cloudData:JSON.parse(data[0].data.phrase)});
+            this.setState({data:JSON.parse(data[0].data)},()=>{
+                this.toggleBrowseModal()
+            });
 
-          this.setState({cloudData:this.state.data.phrase});
+            this.setState({cloudData:this.state.data.phrase});
 
-          // var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
-          // var newWindow = window.open();
-          // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
+            // var dataURL = "data:application/json;charset=utf-8;," + encodeURIComponent(JSON.stringify(data));
+            // var newWindow = window.open();
+            // newWindow.document.write('<iframe src="' + dataURL  + '" frameborder="0" style="border:0; top:0px; left:0px; bottom:0px; right:0px; width:100%; height:100%;" allowfullscreen></iframe>');
 
-      })
+        })
+      }
     }
     handleCardSentimentPositive()
     {
