@@ -1335,7 +1335,7 @@ class RenderComp extends Component {
                     { this.state.card == true ? (
                       <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                          <Segment>
-                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Card</div>
+                         <div style={{zIndex:'10',fontWeight: 'bold' }}>Card</div>
                         {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
