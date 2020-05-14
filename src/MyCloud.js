@@ -22,8 +22,17 @@ class MyCloud extends Component {
     super(props)
     this.state={
       li: [],
+      selectedWords: [],
     }
+    this.handleCloudWordClick = this.handleCloudWordClick.bind(this);
   }
+
+  handleCloudWordClick(event, word){
+      var selectedWords = this.state.selectedWords;
+      selectedWords.push(word);
+      this.setState({ selectedWords})
+  }
+
   componentDidUpdate(prevProps){
      if(this.props != prevProps){
       let temp = []
@@ -37,17 +46,17 @@ class MyCloud extends Component {
           count+=1
         }
 
-        for (var i in this.props.data){
-          /*scaled four times, with the upper bound of 100 and lower bound of 5*/
+        for (let i in this.props.data){
+          /*scaled four times, with the upper bound of 45 and lower bound of 5*/
           size = Math.ceil((this.props.data[i][0]/total_size)*(100) * 4);
-          if(size > 100)
-            size = 100
+          if(size > 40)
+            size = 40
           else if(size < 5)
             size = 5
           if(this.props.data[i][1] == '-')
-            temp.push(<div style={{fontSize: size, color:"red"}}>{i}</div>);
+            temp.push(<div style={{fontSize: size, color:"red", cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
           else
-            temp.push(<div style={{fontSize: size, color:"green"}}>{i}</div>);
+            temp.push(<div style={{fontSize: size, color:"green", cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
         }
         this.setState({li:temp});
       }

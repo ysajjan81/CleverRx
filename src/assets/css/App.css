@@ -310,9 +310,8 @@ h1 {
 }
 
 .app-outer {
-  align-items: center;
   bottom: 0;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   left: 0;

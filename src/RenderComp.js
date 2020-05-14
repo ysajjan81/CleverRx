@@ -1335,7 +1335,7 @@ class RenderComp extends Component {
                     { this.state.card == true ? (
                       <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                          <Segment>
-                         <div style={{zIndex:'10',fontWeight: 'bold' }}>Card</div>
+                         <div style={{display:'flex', alignItems:'flex-start',zIndex:'10',fontWeight: 'bold' }}>Card</div>
                         {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
@@ -1355,7 +1355,7 @@ class RenderComp extends Component {
                         }
                         </Segment>
                          <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
+                        <div style={{display:'flex', alignItems:'flex-start',zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                         {
                           this.state.data.length == 0 ? (
                                <div></div>
@@ -1365,7 +1365,7 @@ class RenderComp extends Component {
                           }
                         </Segment>
                        <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
+                        <div style={{display:'flex', alignItems:'flex-start', zIndex:'10',fontWeight: 'bold' }}>Service</div>
                         {
                           this.state.data.length == 0 ? (
                                <div></div>
@@ -1378,7 +1378,7 @@ class RenderComp extends Component {
                     ) : (
                       <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                          <Segment>
-                         <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Card</div>
+                         <div style={{ display:'flex', alignItems:'flex-start',zIndex:'10',fontWeight: 'bold' }}>Card</div>
                         {
                           this.state.data.length == 0 ? (
                                <div style={{'width':'5px'}}></div>
@@ -1397,7 +1397,7 @@ class RenderComp extends Component {
                         }
                         </Segment>
                           <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
+                        <div style={{ display:'flex', alignItems:'flex-start',zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                         {
                           this.state.data.length == 0 ? (
                                <div></div>
@@ -1407,7 +1407,7 @@ class RenderComp extends Component {
                           }
                         </Segment>
                        <Segment>
-                        <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
+                        <div style={{display:'flex', alignItems:'flex-start',zIndex:'10',fontWeight: 'bold' }}>Service</div>
                         {
                           this.state.data.length == 0 ? (
                                <div></div>
@@ -1420,7 +1420,7 @@ class RenderComp extends Component {
                     )}
                       <Grid.Column style={{maxHeight:'1200px', overflowY:'auto'}}>
                      <Segment>
-                       <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Insurance</div>
+                       <div style={{ display:'flex', alignItems:'flex-start',zIndex:'10',fontWeight: 'bold' }}>Insurance</div>
                       {
                         this.state.data.length == 0 ? (
                              <div></div>
@@ -1461,7 +1461,7 @@ class RenderComp extends Component {
                       </Segment>
                        <Segment>
                       */}
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Cost</div>
+                      <div style={{ display:'flex', alignItems:'flex-start',zIndex:'10',fontWeight: 'bold' }}>Cost</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
@@ -1471,7 +1471,7 @@ class RenderComp extends Component {
                         }
                       </Segment>
                      <Segment>
-                      <div style={{position:'absolute', zIndex:'10',fontWeight: 'bold' }}>Service</div>
+                      <div style={{display:'flex', alignItems:'flex-start', zIndex:'10',fontWeight: 'bold' }}>Service</div>
                       {
                         this.state.data.card_dict == null ? (
                              <div></div>
