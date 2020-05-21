@@ -23,6 +23,7 @@ class MyCloud extends Component {
     this.state={
       li: [],
       selectedWords: [],
+      wordColor:{}
     }
     this.handleCloudWordClick = this.handleCloudWordClick.bind(this);
   }
@@ -30,7 +31,13 @@ class MyCloud extends Component {
   handleCloudWordClick(event, word){
       var selectedWords = this.state.selectedWords;
       selectedWords.push(word);
-      this.setState({ selectedWords})
+      
+      var wordColor = {...this.state.wordColor}
+      wordColor[word] = 'yellow';
+      
+      this.setState({ selectedWords, wordColor:{...wordColor}},()=>{
+        console.log(this.state.wordColor)
+      })
   }
 
   componentDidUpdate(prevProps){
@@ -53,10 +60,19 @@ class MyCloud extends Component {
             size = 40
           else if(size < 5)
             size = 5
-          if(this.props.data[i][1] == '-')
-            temp.push(<div style={{fontSize: size, color:"red", cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
-          else
-            temp.push(<div style={{fontSize: size, color:"green", cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
+          
+          let colorArray=this.state.wordColor
+          
+          if(this.props.data[i][1] == '-'){
+            colorArray[i]='red'
+            this.setState({wordColor:colorArray})
+            temp.push(<div style={{fontSize: size, color:this.state.wordColor[i], cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
+          }
+          else{
+            colorArray[i] = 'green'
+            this.setState({wordColor:colorArray})
+            temp.push(<div style={{fontSize: size, color:this.state.wordColor[i], cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
+          }
         }
         this.setState({li:temp});
       }
