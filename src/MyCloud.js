@@ -45,7 +45,7 @@ class MyCloud extends Component {
     this.setState({selectedWords, data});
   }
 
-  componentDidMount(prevProps){
+  componentDidUpdate(prevProps){
      if(this.props != prevProps){
       if(Object.keys(this.props.data).length >= 0){
         var total_size = 1;
@@ -54,7 +54,7 @@ class MyCloud extends Component {
           total_size+=this.props.data[i][0]
         }
 
-        let wordData=this.state.data
+        let wordData=[]
         let index=0;
         for (let i in this.props.data){
           /*scaled four times, with the upper bound of 80 and lower bound of 8*/
