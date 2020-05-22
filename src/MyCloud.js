@@ -1,113 +1,91 @@
 import React, { Component } from "react";
-import randomColor from "randomcolor";
-import TagCloud from "react-tag-cloud";
-import CloudItem from "./CloudItem";
+import WordCloud from "./WordCloud";
 import './assets/css/App.css'
 
-const styles = {
-  large: {
-    fontSize: 60,
-    fontWeight: "bold"
-        },
-  small:
-  {
-    opacity: 0.7,
-    fontSize: 16
-  }
-};
+/*Dull Yellow Color*/
+const selectedColor = "#cbcb11";
 
 class MyCloud extends Component {
 
   constructor(props){
     super(props)
     this.state={
-      li: [],
       selectedWords: [],
-      wordColor:{}
+      data:[]
     }
     this.handleCloudWordClick = this.handleCloudWordClick.bind(this);
   }
 
-  handleCloudWordClick(event, word){
-      var selectedWords = this.state.selectedWords;
-      selectedWords.push(word);
-      
-      var wordColor = {...this.state.wordColor}
-      wordColor[word] = 'yellow';
-      
-      this.setState({ selectedWords, wordColor:{...wordColor}},()=>{
-        console.log(this.state.wordColor)
+  
+  handleCloudWordClick(event){
+    var selectedWords = this.state.selectedWords;
+    var data = this.state.data;
+    var index = selectedWords.indexOf(event.value)
+
+    if(index>=0) { /*Unselecting the word*/
+      selectedWords.splice(index,1);
+      data = data.map((item) =>{
+        if(item.key == event.key){
+          item.color = event.originalColor;
+          return item;
+        }
+        return item;
       })
+    }else{ /*Selecting the word*/
+      selectedWords.push(event.value);
+      data = data.map((item) =>{
+        if(item.key == event.key){
+          item.color = selectedColor;
+          return item;
+        }
+        return item;
+      })
+    }
+
+    this.setState({selectedWords, data});
   }
 
-  componentDidUpdate(prevProps){
+  componentDidMount(prevProps){
      if(this.props != prevProps){
-      let temp = []
-      if(Object.keys(this.props.data).length != 0){
-
+      if(Object.keys(this.props.data).length >= 0){
         var total_size = 1;
         var size = 0
-        var count = 0
         for (var i in this.props.data){
           total_size+=this.props.data[i][0]
-          count+=1
         }
 
+        let wordData=this.state.data
+        let index=0;
         for (let i in this.props.data){
-          /*scaled four times, with the upper bound of 45 and lower bound of 5*/
+          /*scaled four times, with the upper bound of 80 and lower bound of 8*/
           size = Math.ceil((this.props.data[i][0]/total_size)*(100) * 4);
-          if(size > 40)
-            size = 40
-          else if(size < 5)
-            size = 5
-          
-          let colorArray=this.state.wordColor
-          
-          if(this.props.data[i][1] == '-'){
-            colorArray[i]='red'
-            this.setState({wordColor:colorArray})
-            temp.push(<div style={{fontSize: size, color:this.state.wordColor[i], cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
-          }
-          else{
-            colorArray[i] = 'green'
-            this.setState({wordColor:colorArray})
-            temp.push(<div style={{fontSize: size, color:this.state.wordColor[i], cursor:"pointer"}} onClick={(event)=>this.handleCloudWordClick(event,i)}>{i}</div>);
-          }
+          if(size > 80)
+            size = 80
+          else if(size < 8)
+            size = 8
+
+          let temp = {}
+          temp.value = i;
+          temp.count = size;
+          temp.color = this.props.data[i][1] == '-' ? 'red': 'green';
+          temp.originalColor = temp.color
+          temp.key = index;
+          wordData.push(temp);
+
+          index = index + 1;
         }
-        this.setState({li:temp});
+        
+        this.setState({data:wordData})
       }
       else{
-        this.setState({li:[]});
+        this.setState({data:[]});
       }
     }
   }
+
   render() {
     return (
-      <div>
-      {
-        this.state.li.length == 0 ?
-        (<div></div>) :
-        (
-        <div className="word-cloud">
-        <div className="app-outer">
-          <div className="app-inner">
-            <TagCloud
-              className="tag-cloud"
-              style={{
-                fontFamily: "sans-serif",
-                padding: 2,
-                backgroundColor:"white",
-                whitespace:"no-wrap off"
-              }}
-            >
-            {this.state.li}
-            </TagCloud>
-          </div>
-        </div>
-        </div>
-      )
-    }
-    </div>
+      this.state.data.length != 0 ? <WordCloud data={this.state.data} handleClick={this.handleCloudWordClick}/> : null
   )}
 }
 

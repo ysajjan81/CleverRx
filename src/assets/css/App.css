@@ -645,3 +645,13 @@ position: sticky;
   height: 100px;
   position:absolute;
 }
+
+.myTagCloud{
+  height: 170px;
+}
+
+.myTagCloud span{
+  vertical-align: unset !important;
+  cursor: pointer;
+  padding: 3px 5px 3px 5px;
+}

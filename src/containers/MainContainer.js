@@ -15,7 +15,6 @@ import comp from '../assets/img/computer.jpg';
 
 import Slider from "react-slick";
 import randomColor from 'randomcolor';
-import TagCloud from 'react-tag-cloud';
 import $ from 'jquery';
 import { Timeline, Tweet} from 'react-twitter-widgets';
 import {ToastContainer, toast} from 'react-toastify'
